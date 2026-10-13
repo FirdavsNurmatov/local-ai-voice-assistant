@@ -1,0 +1,48 @@
+# Created 2026-10-13. Nothing here deletes anything; it only keeps local-only material out of git.
+# See docs/SECURITY.md ("What should and should not be version-controlled").
+
+# --- Python environments and caches ---
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+
+# --- Model weights and voice data (obtain separately; see docs/MODELS_AND_VOICES.md) ---
+madlad400-3b-ct2-int8/
+nllb-int8/
+kokoro-models/
+*.onnx
+*.onnx.json
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# --- Nested third-party git repositories (each has its own .git and its own author) ---
+# stt-tts-uz is required at runtime: clone it separately and apply docs/patches/.
+stt-tts-uz/
+tts-test-code/
+Uzbek_TTS-test/
+
+# --- Generated audio, logs, temporary files ---
+*.wav
+kokoro-test-output/
+logs/
+*.log
+*.tmp
+
+# --- Local backups (history belongs in git once the repository exists) ---
+*.bak
+
+# --- Secrets (none exist today; keep it that way) ---
+.env
+.env.*
+*.pem
+*.key
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.claude/

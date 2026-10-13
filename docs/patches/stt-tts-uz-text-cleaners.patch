@@ -1,0 +1,35 @@
+diff --git a/text/cleaners.py b/text/cleaners.py
+index 7af5b7e..1815028 100644
+--- a/text/cleaners.py
++++ b/text/cleaners.py
+@@ -14,8 +14,10 @@ hyperparameter. Some cleaners are English-specific. You'll typically want to use
+ 
+ import re
+ from unidecode import unidecode
+-from phonemizer import phonemize
+-
++try:
++    from phonemizer import phonemize
++except ImportError:
++    phonemize = None
+ 
+ # Regular expression matching whitespace:
+ _whitespace_re = re.compile(r'\s+')
+@@ -85,6 +87,8 @@ def english_cleaners(text):
+   text = convert_to_ascii(text)
+   text = lowercase(text)
+   text = expand_abbreviations(text)
++  if phonemize is None:
++    return text
+   phonemes = phonemize(text, language='en-us', backend='espeak', strip=True)
+   phonemes = collapse_whitespace(phonemes)
+   return phonemes
+@@ -95,6 +99,8 @@ def english_cleaners2(text):
+   text = convert_to_ascii(text)
+   text = lowercase(text)
+   text = expand_abbreviations(text)
++  if phonemize is None:
++    return text
+   phonemes = phonemize(text, language='en-us', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
+   phonemes = collapse_whitespace(phonemes)
+   return phonemes

@@ -50,3 +50,11 @@ desktop.ini
 # --- STT model and test audio ---
 stt-models/
 stt-test-audio/
+
+# --- STT evaluation: large, downloadable or scratch material (scripts, datasets lists, runs and results are tracked) ---
+stt-eval/fleurs/
+stt-eval/results-interim/
+stt-eval/_discarded/
+stt-eval/runs/_selftest/
+stt-eval/runs/smoke_*.json
+stt-eval/runs/*.partial.jsonl

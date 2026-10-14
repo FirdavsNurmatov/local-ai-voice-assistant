@@ -1,0 +1,5 @@
+id,file,dataset,speech,lang,kind,seconds,sha256,ref_raw
+en_req,C:\local-ai-translator\stt-test-audio\en_req.wav,synthetic_ru_en_kokoro,synthetic (Kokoro masha/af_heart),en,req,3.75,3a7d4acd41ac871ac5dd47e3606e591e98fbd0e107379e8ca40408e700858c66,Hello! Please explain how artificial intelligence works.
+en_short,C:\local-ai-translator\stt-test-audio\en_short.wav,synthetic_ru_en_kokoro,synthetic (Kokoro masha/af_heart),en,short,1.425,724cee29e8d728f4d36adf2798778a46ecb27805f5654b1a1c1aec62562a9e11,Thank you.
+en_long,C:\local-ai-translator\stt-test-audio\en_long.wav,synthetic_ru_en_kokoro,synthetic (Kokoro masha/af_heart),en,long,12.425,1ef5297b24b5965f00fdbf44016e94df6bc63e4e06c3d7e292d170abe1f38106,"The weather is very nice today. I woke up early in the morning and went to work. After lunch I met my friends in the park. In the evening I want to read a book, because tomorrow I have an important exam."
+en_req_noise,C:\local-ai-translator\stt-test-audio\en_req_noise.wav,synthetic_ru_en_kokoro,synthetic (Kokoro masha/af_heart),en,noise,3.75,bc6ad89e880eadccf5c24682db99e03d0540bb4488e807bea1ff6ab4dc1c1c33,Hello! Please explain how artificial intelligence works.

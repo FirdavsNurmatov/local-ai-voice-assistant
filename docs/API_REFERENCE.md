@@ -327,6 +327,12 @@ Example (real response, Russian test clip):
  "duration": 5.14, "processing_time": 3.87, "model": "small"}
 ```
 
+**Proposed change (not implemented, see [STT_EVALUATION.md §9](STT_EVALUATION.md#9-recommendation-and-proposed-production-change-not-implemented)):**
+the request and response format would stay the same; only the model behind `language=uz` (and
+auto-detected Uzbek) would change to the NavAI Uzbek model. `/api/health` would then report both
+models. Clients that know the user speaks Uzbek should already send `?language=uz` — it skips
+detection (≈ 1.7 s) and, with the evaluated model, would select the Uzbek-specialised path.
+
 Errors — `{"ok": false, "error": "…"}` (all observed except `500`):
 
 | Status | When |

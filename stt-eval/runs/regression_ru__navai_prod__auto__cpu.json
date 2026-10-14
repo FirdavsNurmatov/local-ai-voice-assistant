@@ -1,0 +1,92 @@
+{
+ "config": "navai_prod",
+ "lang_mode": "auto",
+ "dataset": "stt-eval\\datasets\\regression_ru.csv",
+ "device": "cpu",
+ "n": 4,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "faster-whisper 1.2.1 / ctranslate2 4.8.3",
+  "model_dir": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "pipeline": "stt_server.transcribe (production code)",
+  "beam_size": 5,
+  "vad_filter": true,
+  "condition_on_previous_text": false,
+  "initial_prompt": {
+   "uz": "Assalomu alaykum! Bugun ob-havo yaxshi. Men o'zbek tilida gapiryapman, menga yordam bering."
+  },
+  "language_options": {
+   "uz": {
+    "no_speech_threshold": "None",
+    "log_prob_threshold": "None",
+    "temperature": "(0.0, 0.4)"
+   }
+  },
+  "auto_rule": "ru/en if p>=0.5 else uz"
+ },
+ "load_s": 0.72,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 4370,
+ "rss_after_load_mb": 379,
+ "commit_after_load_mb": 2604,
+ "peak_rss_inference_mb": 607,
+ "peak_commit_inference_mb": 2890,
+ "peak_rss_process_mb": 609,
+ "peak_commit_process_mb": 2893,
+ "gpu_base_mb": null,
+ "gpu_peak_mb": null,
+ "gpu_util_mean": null,
+ "gpu_util_max": null,
+ "results": [
+  {
+   "text": "orni eshitib qoʻygan edi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 0.9888,
+   "duration": 5.14,
+   "id": "ru_req",
+   "latency": 4.03,
+   "process_start": "2026-10-14 22:46:14"
+  },
+  {
+   "text": "boʻlmishdek deyishgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 0.9986,
+   "duration": 1.6,
+   "id": "ru_short",
+   "latency": 3.817,
+   "process_start": "2026-10-14 22:46:14"
+  },
+  {
+   "text": "a savol doʻstovida savol doʻstovga oʻxshaydi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 0.9995,
+   "duration": 15.91,
+   "id": "ru_long",
+   "latency": 4.566,
+   "process_start": "2026-10-14 22:46:14"
+  },
+  {
+   "text": "ukolga qoʻyilgandi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 0.9492,
+   "duration": 5.14,
+   "id": "ru_req_noise",
+   "latency": 3.797,
+   "process_start": "2026-10-14 22:46:14"
+  }
+ ]
+}

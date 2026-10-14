@@ -1,0 +1,247 @@
+{
+ "config": "navai_card_nots",
+ "lang_mode": "uz",
+ "dataset": "stt-eval\\datasets\\fleurs_parity.csv",
+ "device": "cpu",
+ "n": 20,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "faster-whisper 1.2.1 / ctranslate2 4.8.3",
+  "model_dir": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "pipeline": "WhisperModel.transcribe",
+  "task": "transcribe",
+  "condition_on_previous_text": false,
+  "no_repeat_ngram_size": 4,
+  "without_timestamps": true,
+  "beam_size": 1,
+  "vad_filter": false,
+  "temperature": "default (0.0..1.0 fallback)",
+  "initial_prompt": null,
+  "language": "uz"
+ },
+ "load_s": 0.71,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 4235,
+ "rss_after_load_mb": 378,
+ "commit_after_load_mb": 2602,
+ "peak_rss_inference_mb": 546,
+ "peak_commit_inference_mb": 2841,
+ "peak_rss_process_mb": 560,
+ "peak_commit_process_mb": 2841,
+ "gpu_base_mb": null,
+ "gpu_peak_mb": null,
+ "gpu_util_mean": null,
+ "gpu_util_max": null,
+ "results": [
+  {
+   "text": "hamkasb kurashchilar ham lunaga hurmat bajo keltirishdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.4,
+   "id": "fleurs_003",
+   "latency": 2.04,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "mazza avlod oʻzlarining eng dahshatli yirtqichi boʻlgan shu sovrin va boshqa mazza avl odam boshqaga yetish narsadan qoʻrqmagan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.54,
+   "id": "fleurs_009",
+   "latency": 2.627,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "natijada ijrochilar sahnada kanabis oʻramolanib chekishdi va teatrning oʻz tomoshabinlarini qoʻshilishga undadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.14,
+   "id": "fleurs_015",
+   "latency": 2.433,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "rosbi soni qanchalik kichik boʻlsa yulduzning magnitik oʻzgarishlarga nisbatan faolligi shuncha past boʻldi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.62,
+   "id": "fleurs_021",
+   "latency": 2.525,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "vodorod iyullari elektronlar olib tashlangan protonlardir sababi vodorod atomlar bitta proton va bitta elektronni tarkib topgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.04,
+   "id": "fleurs_027",
+   "latency": 2.397,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "finlyandiya qayiqda suzishga borish uchun eng yaxshi manzil ming koʻmrakatning gollarida va qirgʻoqda arxipelaglarda hamini falonlar bor",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.18,
+   "id": "fleurs_033",
+   "latency": 2.684,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "qoʻshinlar yetib kelishdan avval goyimida bir ming sakkiz yuz yillardan buyon mazkur kasallik bilan bogʻliq muammolar kuzatilmagan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.6,
+   "id": "fleurs_039",
+   "latency": 2.843,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "oʻtgan hafta media apple kompaniyasi jiddiy emas deb atalgan xatdan ortiq qizib ketish bilan bort oʻttiz toʻrt taqoʻshimcha holat toʻgʻrisida xabar bergani eʻlon qildi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.26,
+   "id": "fleurs_045",
+   "latency": 2.973,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "piramida tovushi va chiroqlar shousi bolalar uchun hududdagi eng qiziqarli narsalardan biri",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.5,
+   "id": "fleurs_051",
+   "latency": 2.281,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "fa daʻvo qilishicha nexiaʻning samolyotlariga qisqa yoʻnalishda uchish va har yili millionlab gaolom yonilgacha hamda uglerod chiqqunini kamaytirish imkonini beruvchi tizimdir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.8,
+   "id": "fleurs_057",
+   "latency": 2.939,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "internetdan urush muhiti kursi deb izlash hoynahoy mahalliy kompaniya manzilini chiqarib beradi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.34,
+   "id": "fleurs_063",
+   "latency": 2.368,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "kundalini yoga bilan kundalini quvvati maʻrifat quvvori yoga poʻzalari nafas mashqlari mantralar hamda vizualizatsiyalar yordamida uygʻotiladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.88,
+   "id": "fleurs_069",
+   "latency": 2.678,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "u kamaytirishlar boʻyicha biror raqamni keltirmadi ularning xitoy iqtisodiyoti natijalari asosida amalga oshirilishini aytdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.48,
+   "id": "fleurs_075",
+   "latency": 2.513,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "yigirma asrdagi tadqiqotlar genetik oʻzgarishning ikki havzasi yashirin va ochiq ifodalangan havzalari mavjudligini koʻrsatdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.26,
+   "id": "fleurs_081",
+   "latency": 2.543,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "uning yetmish sakkiz taʻsiri san birinchisi shu kechki yil oxiriga qadar iroq chegaralarini tajovuzlardan himoya qilish va qoʻshnilar bilan diplomatik aloqalarni qayd etishga oid yangi diplomatik choralarini boshlashni topshirish lozim",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.74,
+   "id": "fleurs_087",
+   "latency": 3.347,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "shuni yodda tutingki garchi asosiy sahnadagi musiqa tugagan boʻlsa ham festivalning yarim tungacha musiqa ijrosi davom etiladigan boʻlimlari boʻlishi mumkin",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.76,
+   "id": "fleurs_093",
+   "latency": 2.731,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "biroq sardor bekitini yoʻqotganidan keyin hindiston uzatmalarini yakunlash uchun yettita bekit yoʻlqotishlar bilan faqatgina oʻttiz oltita ranni amalga oshirdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 16.32,
+   "id": "fleurs_099",
+   "latency": 2.808,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "arslon toʻdalari xuddi boʻrilar yoki itlar toʻdagʻiga oʻxshab harakat qiladi hayvonlar lekin boshqa katta mushuklarimiz hayratlanarli darajada sherlarga xatti harakat va shuningdek oʻljalar uchun halokatli ekanligi bilan oʻ xoʻxashdir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 19.14,
+   "id": "fleurs_105",
+   "latency": 3.286,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "bosh vazir bilan uchrashuv paytida layton konservatorlarning atrof muhit haqidagi qonun loyihasini batafsil va toʻliq qayta yozishni konservator partiyasining atrof mudhidagi qomin loyihalariga oʻzgartirishlar kiritishini soʻradi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.18,
+   "id": "fleurs_111",
+   "latency": 3.117,
+   "process_start": "2026-10-14 22:53:47"
+  },
+  {
+   "text": "anʻanaviyroq cherkovlar tez tez masʻixning qaytatilishini nishonlashni buzish uchun yarim tunda jamoat bilan pasxaning dam olish kunlari davomida shanba oqshomida pasxa hushyorligini oʻtkazadilar",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 22.62,
+   "id": "fleurs_117",
+   "latency": 2.985,
+   "process_start": "2026-10-14 22:53:47"
+  }
+ ]
+}

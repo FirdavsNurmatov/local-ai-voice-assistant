@@ -1,0 +1,171 @@
+{
+ "config": "small_prod",
+ "lang_mode": "uz",
+ "dataset": "stt-eval\\datasets\\synthetic_uz.csv",
+ "device": "cpu",
+ "n": 12,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "faster-whisper 1.2.1 / ctranslate2 4.8.3",
+  "model_dir": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "pipeline": "stt_server.transcribe (production code)",
+  "beam_size": 5,
+  "vad_filter": true,
+  "condition_on_previous_text": false,
+  "initial_prompt": {
+   "uz": "Assalomu alaykum! Bugun ob-havo yaxshi. Men o'zbek tilida gapiryapman, menga yordam bering."
+  },
+  "language_options": {
+   "uz": {
+    "no_speech_threshold": "None",
+    "log_prob_threshold": "None",
+    "temperature": "(0.0, 0.4)"
+   }
+  },
+  "auto_rule": "ru/en if p>=0.5 else uz"
+ },
+ "load_s": 1.93,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 3820,
+ "rss_after_load_mb": 379,
+ "commit_after_load_mb": 2604,
+ "peak_rss_inference_mb": 1060,
+ "peak_commit_inference_mb": 3342,
+ "peak_rss_process_mb": 1062,
+ "peak_commit_process_mb": 3344,
+ "gpu_base_mb": null,
+ "gpu_peak_mb": null,
+ "gpu_util_mean": null,
+ "gpu_util_max": null,
+ "results": [
+  {
+   "text": "Menge bugun gapiryapman, menga yordam bering.",
+   "language": "uz",
+   "raw_language": "hy",
+   "raw_language_p": 0.3998,
+   "duration": 3.16,
+   "id": "synth_01",
+   "latency": 4.444,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "",
+   "error": "422 Nutq aniqlanmadi (faqat sukunat yoki shovqin)",
+   "language": "uz",
+   "duration": 0.3715625,
+   "id": "synth_02",
+   "latency": 1.72,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "Bugun ob-havo yaxshi. Sair ge-chqamizma.",
+   "language": "uz",
+   "raw_language": "fa",
+   "raw_language_p": 0.3248,
+   "duration": 2.81,
+   "id": "synth_03",
+   "latency": 4.084,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "ṢaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞaĞa",
+   "language": "uz",
+   "raw_language": "fa",
+   "raw_language_p": 0.9782,
+   "duration": 2.3,
+   "id": "synth_04",
+   "latency": 18.87,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "Tumos mengi in yakun dorghanane kursad.",
+   "language": "uz",
+   "raw_language": "hy",
+   "raw_language_p": 0.304,
+   "duration": 2.66,
+   "id": "synth_05",
+   "latency": 3.896,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "Taoshgentan samarkand keche bayizda kanche vakti ke tady.",
+   "language": "uz",
+   "raw_language": "fa",
+   "raw_language_p": 0.349,
+   "duration": 3.04,
+   "id": "synth_06",
+   "latency": 4.059,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "Bar lik yaw u'ch do'u bishal d'ya gapta y'serkes to'u qas'an.",
+   "language": "uz",
+   "raw_language": "lt",
+   "raw_language_p": 0.1678,
+   "duration": 3.16,
+   "id": "synth_07",
+   "latency": 4.352,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "Khādat al-bāt, al-bāt.",
+   "language": "uz",
+   "raw_language": "ar",
+   "raw_language_p": 0.5916,
+   "duration": 1.58,
+   "id": "synth_08",
+   "latency": 15.482,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "yordam bering. Bugun de yemas.",
+   "language": "uz",
+   "raw_language": "ja",
+   "raw_language_p": 0.3997,
+   "duration": 1.4,
+   "id": "synth_09",
+   "latency": 3.833,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "nananan delmi man dekin xarek yab quleman.",
+   "language": "uz",
+   "raw_language": "hy",
+   "raw_language_p": 0.3109,
+   "duration": 2.1,
+   "id": "synth_10",
+   "latency": 3.912,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "El talab saad sakizda unirisitge barisim kerekim. Doslar milan uchiashaman takish koronesi uyge kaytip, onamge o'qatayur laxde yordam bering.",
+   "language": "uz",
+   "raw_language": "hy",
+   "raw_language_p": 0.2593,
+   "duration": 8.49,
+   "id": "synth_11",
+   "latency": 5.427,
+   "process_start": "2026-10-14 22:40:15"
+  },
+  {
+   "text": "Assalomu alaykum kuskerypsiz. Sizi gapiryapman, menga yordam bering.",
+   "language": "uz",
+   "raw_language": "az",
+   "raw_language_p": 0.413,
+   "duration": 3.77,
+   "id": "synth_12",
+   "latency": 4.304,
+   "process_start": "2026-10-14 22:40:15"
+  }
+ ]
+}

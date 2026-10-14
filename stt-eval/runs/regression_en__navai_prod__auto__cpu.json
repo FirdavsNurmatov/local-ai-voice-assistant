@@ -1,0 +1,91 @@
+{
+ "config": "navai_prod",
+ "lang_mode": "auto",
+ "dataset": "stt-eval\\datasets\\regression_en.csv",
+ "device": "cpu",
+ "n": 4,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "faster-whisper 1.2.1 / ctranslate2 4.8.3",
+  "model_dir": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "pipeline": "stt_server.transcribe (production code)",
+  "beam_size": 5,
+  "vad_filter": true,
+  "condition_on_previous_text": false,
+  "initial_prompt": {
+   "uz": "Assalomu alaykum! Bugun ob-havo yaxshi. Men o'zbek tilida gapiryapman, menga yordam bering."
+  },
+  "language_options": {
+   "uz": {
+    "no_speech_threshold": "None",
+    "log_prob_threshold": "None",
+    "temperature": "(0.0, 0.4)"
+   }
+  },
+  "auto_rule": "ru/en if p>=0.5 else uz"
+ },
+ "load_s": 0.71,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 4406,
+ "rss_after_load_mb": 379,
+ "commit_after_load_mb": 2604,
+ "peak_rss_inference_mb": 577,
+ "peak_commit_inference_mb": 2861,
+ "peak_rss_process_mb": 579,
+ "peak_commit_process_mb": 2862,
+ "gpu_base_mb": null,
+ "gpu_peak_mb": null,
+ "gpu_util_mean": null,
+ "gpu_util_max": null,
+ "results": [
+  {
+   "text": "iga qoʻygan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 0.8067,
+   "duration": 3.75,
+   "id": "en_req",
+   "latency": 3.888,
+   "process_start": "2026-10-14 22:47:27"
+  },
+  {
+   "text": "",
+   "error": "422 Nutq aniqlanmadi (faqat sukunat yoki shovqin)",
+   "language": null,
+   "duration": 1.425,
+   "id": "en_short",
+   "latency": 3.532,
+   "process_start": "2026-10-14 22:47:27"
+  },
+  {
+   "text": "a boʻldi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 0.4512,
+   "duration": 12.43,
+   "id": "en_long",
+   "latency": 3.713,
+   "process_start": "2026-10-14 22:47:27"
+  },
+  {
+   "text": "iga qoʻygan ku",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 0.8695,
+   "duration": 3.75,
+   "id": "en_req_noise",
+   "latency": 3.771,
+   "process_start": "2026-10-14 22:47:27"
+  }
+ ]
+}

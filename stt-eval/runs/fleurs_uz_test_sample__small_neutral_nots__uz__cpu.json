@@ -1,0 +1,1247 @@
+{
+ "config": "small_neutral_nots",
+ "lang_mode": "uz",
+ "dataset": "stt-eval\\datasets\\fleurs_uz_test_sample.csv",
+ "device": "cpu",
+ "n": 120,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "faster-whisper 1.2.1 / ctranslate2 4.8.3",
+  "model_dir": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "pipeline": "WhisperModel.transcribe",
+  "task": "transcribe",
+  "condition_on_previous_text": false,
+  "no_repeat_ngram_size": 4,
+  "without_timestamps": true,
+  "beam_size": 5,
+  "vad_filter": true,
+  "temperature": "default (0.0..1.0 fallback)",
+  "initial_prompt": null,
+  "language": "uz"
+ },
+ "load_s": 1.33,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 4455,
+ "rss_after_load_mb": 378,
+ "commit_after_load_mb": 2602,
+ "peak_rss_inference_mb": 1076,
+ "peak_commit_inference_mb": 3360,
+ "peak_rss_process_mb": 1076,
+ "peak_commit_process_mb": 3360,
+ "gpu_base_mb": null,
+ "gpu_peak_mb": null,
+ "gpu_util_mean": null,
+ "gpu_util_max": null,
+ "results": [
+  {
+   "text": "Arkhay pilak vakullardas zizgay axta shard bol mayde.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 4.56,
+   "id": "fleurs_001",
+   "latency": 2.43,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Khud duşu tersi ergegler tazalan yukdur uçşim ki işlerzli lazim.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.22,
+   "id": "fleurs_002",
+   "latency": 2.518,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Khankas vkurashchlar khanulun qe hukumar baca geldirishti.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.4,
+   "id": "fleurs_003",
+   "latency": 5.937,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Bu jusklikler farcentar ju ansrap alish rijasin talinash munkun.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.4,
+   "id": "fleurs_004",
+   "latency": 2.53,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Qob chev ulam din zaablar da boi lam hayre cunki ulam nipat lara borva uchi halad.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.46,
+   "id": "fleurs_005",
+   "latency": 2.976,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Bu maksutki moafakta gchunki gyer khariket lamaydiqan dekhti bilatisun deyemas mu?",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.76,
+   "id": "fleurs_006",
+   "latency": 2.94,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "bular barza tokan qe bar nyozahol bulatisin qadar dokollar bar alia bi bilayajdard jomun ishaqsis.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.88,
+   "id": "fleurs_007",
+   "latency": 2.815,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "afta olavnim ousa ousa kuma khatsa jayda tahni nan saot unik kinona jamanda da alib ke tergyen.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.36,
+   "id": "fleurs_008",
+   "latency": 13.801,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Masuzavela, nozdavela, indasha diyevq qeburniq qeysa gruboshku masuzavel, ata mozda hiqti nase dan kurq meye.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.54,
+   "id": "fleurs_009",
+   "latency": 17.885,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Su shunin neg ozingiz nikitin basha yi kumetleran masahat nan shun haqwa shingiz mkumbraq mani masahat ozingi fqara dar u qe mul jeningi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.72,
+   "id": "fleurs_010",
+   "latency": 18.359,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Trump Turqya President Rajab Tayyip Erdogan bulan telefonu qepeşkene, kem bukhaq da malum kolende.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.78,
+   "id": "fleurs_011",
+   "latency": 2.534,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "shirlar dodalardab mehamman uchikette gurukhlar diya shay digan eng ishtimayu mushkulardir.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.96,
+   "id": "fleurs_012",
+   "latency": 2.574,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Bu baza perfel va pritmetla na farkhlaşnim muxom su leder.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.08,
+   "id": "fleurs_013",
+   "latency": 2.473,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "qadusa yuzi birgenden zongipsnosh vaxane ki yidke zelgene braqgopotme halamdan utgene.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.14,
+   "id": "fleurs_014",
+   "latency": 2.706,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Netige de ici rojjlar sakna de kanna biz oro malan cekishti vadyatrni, ostama shabili arna koshiliske ondete.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.14,
+   "id": "fleurs_015",
+   "latency": 14.653,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Qasabu anga xarit qalashu cun budun maragesh tege in qizi qarsiz jaylardan bara.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.26,
+   "id": "fleurs_016",
+   "latency": 2.589,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Ares tortanin barca fan masalallara jumladan psikhaloge boyca qarashlara qabuklingen.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.32,
+   "id": "fleurs_017",
+   "latency": 2.458,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "qusustan ki qiqi qiqis qiqa dana toqru tarqanq lusha rqa liqis qilgan qiqan qiqya puri yadgan iqya qiqgan qiya puri mulli dgan anqaqaqis munkun di dabaqa lam mokda.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.44,
+   "id": "fleurs_018",
+   "latency": 22.094,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "MīīĪĪīĞīĐīđīĤīĨīĥīįīĭīĵīıīĸīķīěīġīĴīĻīęīČīĘīİīĚīĈīĜīĦīģīļīďīĊīĹīğīĬīĝīĀĐĐįĐĞĐČĐĘĐĝĐĥĐĈĐġĐęĐđĐĜĐĸĐĭĐĨĐģĐİĐĀĈĈġġĈČ�",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.44,
+   "id": "fleurs_019",
+   "latency": 15.837,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Afsis ke qatna wa aqumun organish mashaq qat le cunki haida u cunni hadd khariketan news waiz anaqli qitna all the night the bullmide.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.56,
+   "id": "fleurs_020",
+   "latency": 2.974,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Rost besanaqan cale kicik bolsa yulduzni magnidik, ozgarishtar ginesi batanfa olegi şun qe past bolada.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.62,
+   "id": "fleurs_021",
+   "latency": 2.72,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Ula aravadashwak mamani ke kya qar shtax ditlana aytu kuch keryat ke nubabak keryat kya odamna tudas mamar gerikta parishya qayit ke lullar.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.68,
+   "id": "fleurs_022",
+   "latency": 18.181,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Televizyon xaberlarda zavoddan qeyotkan oq tutun tasverlengan.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.74,
+   "id": "fleurs_023",
+   "latency": 2.31,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Aalymlar ayni shousslde enyiri qeishtep qeara alad yana rea aktori yarat shoussdede ish aalym barmakteler.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.74,
+   "id": "fleurs_024",
+   "latency": 2.851,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Echkiler ilik bar onmin ilikce ahval Iranin zakris tahlar da kolge orgyatili gen korunadi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.92,
+   "id": "fleurs_025",
+   "latency": 2.505,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Qusum niktar insala nafaz alu shi kislarot nishtaf qezni qeznigitad.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.92,
+   "id": "fleurs_026",
+   "latency": 2.565,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "watarut iullar, edikturullar al pleshengem protullar dar sapapavatarut atomnara bitte praton wa bitte edikturul nadar kiptopke.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.04,
+   "id": "fleurs_027",
+   "latency": 2.851,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Suvasi tapalo yeh sabab liya khaithiq qe aqqa marqa qe qe qukuraq burmanar dopanat. O yehder qukur suda tez aqqan payda bulad.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.04,
+   "id": "fleurs_028",
+   "latency": 3.181,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Se grega, ce vari kombinat, ce harbar avyot blan ek ke lapul urtas ta qe variat, ce dana aralashtrad.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.04,
+   "id": "fleurs_029",
+   "latency": 2.63,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Shunhe bolsada hukumat olgullar mazlaxatlarga klak tutingi kha ma birgilerit gara yakrein wakhafslib aqaqlandirisilare ke citti yeti balkaradi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.88,
+   "id": "fleurs_030",
+   "latency": 19.702,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Kelgeller son shokadar kop edik ke barcha ni afge peter majdan da gedafun mara usma gekarishe imi konces ede.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.0,
+   "id": "fleurs_031",
+   "latency": 2.669,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Khartam allama ravajanya atlet yul barstir mas ptushqa shekhsh bolun mas edi suzushket tamas afla visak reshwada nan visi warabar kuk kuch plantar tushkya khatir.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.18,
+   "id": "fleurs_032",
+   "latency": 23.664,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Filma ndiaq aqqayq da susushqe barushqen en yaxxu mazali minkumum me kati minkumda da vaqq raqda arkhaype da qwerdaqa minkum da parallar par.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.18,
+   "id": "fleurs_033",
+   "latency": 3.355,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "and 10 lab grade yarmuttake james pocket shufakhanasike yad qizelda",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.24,
+   "id": "fleurs_034",
+   "latency": 2.269,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Qatishmatzalar asosan iki ya qi unnan kop me tanmin qarushmatzadir. Davrijad valo kop elemetlar barlegine isteni qar main.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.3,
+   "id": "fleurs_035",
+   "latency": 14.923,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Halaqat taqli khududin baran qsunda sadar bolyan wadushmanlani od otsi shi narijasakilip cheqan da pishan ilmaqda.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.42,
+   "id": "fleurs_036",
+   "latency": 15.938,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Bu, bu dalaşu bulmaydi. Bu, butte babni yabilişi, hamda yengesilni, açilişi dur.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.54,
+   "id": "fleurs_037",
+   "latency": 2.702,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Muqhamat budun ya xayatun zashqardha burgi masale kuchukur kufukan uta fakir u tshuk chun nur yara gulik da gulik khekharon naumrata nga qarketis tis barut dirge.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.6,
+   "id": "fleurs_038",
+   "latency": 24.356,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "qoşunlar yedik keleştan apal gaygit ida birmiz aqgizun qi illerdan yun maskur kya sallik bulan baoluk mu anbaolar kuzahtelim aqen.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.6,
+   "id": "fleurs_039",
+   "latency": 3.164,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Karpanido, Çorşamba, Tatbırıdan Taşkara, Çimpiyanatta, Iqtitayak yalik poygem zabaqalar da ıştiroq iqtta.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.6,
+   "id": "fleurs_040",
+   "latency": 2.999,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "karre, gyaxlar, xamda, zravarlar bilan brigalikta, gousht, yaxut, sabzaotlarga asos nanyan oqatter.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.72,
+   "id": "fleurs_041",
+   "latency": 2.822,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Iya piraqlar khafna duqqeq di ekillardabar bulgna aqslar eng ansani yetiştirqetna usmniq mehan badara buddardadeeken basingara prematkar acum pisirilma gunchi oda naxhaisum klişmushku.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.96,
+   "id": "fleurs_042",
+   "latency": 3.934,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.08,
+   "id": "fleurs_043",
+   "latency": 3.677,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Chol kumdlani, xhaf, sdababli. Burmintakoy, sdawsan, jilo, xhafa, asda, burgion, boton, jaxon. Madhani, mi, raza, abyeqtlaroy, xadige, kırdilde.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.14,
+   "id": "fleurs_044",
+   "latency": 3.683,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "utkin hafta meti apple campanya ciddi imaas da batayen hatan arti qizu kechi ben baku tsurtakur jim caholat orsda hapar bir gen elan kolde.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.26,
+   "id": "fleurs_045",
+   "latency": 18.625,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Yunanistan daige, bilim pasayishi bilan, qarpozni greq falsafi va ilmini gizlardan üzülub qaldi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.32,
+   "id": "fleurs_046",
+   "latency": 2.72,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Qadimgir madaniyatlar xamda qabiralar, ular nusut njun koşt vatir ladan, konsant koge krtish maksatada sanktay boşligellar.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.32,
+   "id": "fleurs_047",
+   "latency": 3.048,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Roushtige gheneden iki il utigeç sabıq ıtfaktaşlar indilikta düşmange ailen gendi hamde savuq roush başlendi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.32,
+   "id": "fleurs_048",
+   "latency": 2.801,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Maldava poi taxta kxinyof mahali tel rumin tel bolsada rostele kim qullan lada.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.44,
+   "id": "fleurs_049",
+   "latency": 2.448,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Italyada gyebasha kobkene shakharlardha khanda dunyanyan qalikyan qasimda xlus san pohushada, kob tsali kishtar tamandata man shakad yung yashimglokshash kensruktsia lao urnatelde.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.44,
+   "id": "fleurs_050",
+   "latency": 22.153,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Pirami dhe tovişi, va çuraqlar şousi, bolalar uçun hudutdagi in qizikarli narsalardan bere.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.5,
+   "id": "fleurs_051",
+   "latency": 2.672,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Kongresik imi vishin qe maaliafi, ilah waxsuznih bochiwta shabusn maalilashti rapashti dva fakha bakya tada pornografiyasikya unnafar agnit at shat shlalsimigin iberiktad.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.5,
+   "id": "fleurs_052",
+   "latency": 3.765,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Onda assozi subyeqtu qen eni samarali joy suratni vertikal vakar izantantar suqe bulad yin cizqlar qiz shmansi qe liya idiliya. Namunna gyakaray.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.5,
+   "id": "fleurs_053",
+   "latency": 3.185,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Ayrm yunalishlerde yirek rakkampanyelar os samanyut lari ke ege ama bashqa yunalishtar vaqtik firmalar uchun maa maa maavjut edi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.5,
+   "id": "fleurs_054",
+   "latency": 3.095,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Apia, samani paitahti dir, shakhar upolu aralida, wa krikhmi inahverdan kamrak ahalige ige.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.68,
+   "id": "fleurs_055",
+   "latency": 2.603,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Qabukhnei qalilnege aini yirdan kurun adigan tamana da 70 km, orqa tamana da isa 100 km.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.8,
+   "id": "fleurs_056",
+   "latency": 2.69,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "F-A-A-D-A-V-A-K-A-L-I-S-S-K-I-N-Z-A-MA-Y-U-TAR-Y-A-X-K-Y-N-AR-SH-T-U-CH-U-A-HA-RE-DI-M-N-Y-O-N-D-D-G-A-W-A-M-T-N-G-AN-O-K-AN-DI-J-A-S-CH-HA-M-DA-U-G-D-Y-RO-CH-K-UN-AN-I-K-E-MA-I-T-R-SH-I-M-K-ON-I-B-RO-C-T-I-Z-M-D-RE.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.8,
+   "id": "fleurs_057",
+   "latency": 9.01,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Aksh gimnes ko yusuk kur maksuk gige gimnes ko esportun haqanda boshqa lana atlet laning oza arzularge hafsiz icakir haqanda vaqaulak limuhte. Yerishlero qe imkon qader hafsiz kalish.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.04,
+   "id": "fleurs_058",
+   "latency": 3.762,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Ayrum khudutlar da, su qaynaşu uchun, ber daqaqa yitarli boladi. Boşqa lar da, ber nece daqa qirek boladi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.1,
+   "id": "fleurs_059",
+   "latency": 2.936,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Yana da shuman rakta keket da khudut lanin akhalisi judasirak. Ayrm yerlarese qareib kimsasi sakhradir.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.16,
+   "id": "fleurs_060",
+   "latency": 2.706,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Aqersis xaraket qeyaqin bolishnu haqla sangis, Musiqa qeyaqi yaqin ulaqar qeoyna qolge krti shiqun, Ertaraq kyrshingis qeyreq bolada.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.28,
+   "id": "fleurs_061",
+   "latency": 3.369,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Adamlar ʿʿʾʾʿʰʿi ʿakaita yotgan sayahlar ʾʸʿon sabr taqat wa ʿtʿʃunʾxam ʿzarur ʿiqanligene bilmazdiglara mumkun.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.28,
+   "id": "fleurs_062",
+   "latency": 3.862,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Internet dan rush muxtukursa deb izzilash, haina hai mahalley kampania manzilene txikara berada.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.34,
+   "id": "fleurs_063",
+   "latency": 2.552,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Latin turdan dini mara su mnarda desies faydara nelsar, italyan tere davlat ishde ishde hiye insa dhanen kop, txelgi tamana faydaran ar jen kondarei ki tele xusabla nadir.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.4,
+   "id": "fleurs_064",
+   "latency": 3.567,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Завод да radiaktiv seizei wa yod anakhlangyana haqda, Japonya yadrovi agentlegi khabar bergen.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.4,
+   "id": "fleurs_065",
+   "latency": 2.627,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Sank piter bug dingi sayehadlara shakhadar vaxdod qazishno ozu qi qe alade dingi sayehad ishti okshlerhe, visi avishter etterdan azad qulmaad, shatlari qe karein.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.64,
+   "id": "fleurs_066",
+   "latency": 20.857,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Qayta kurush sayxareket lan irkin tanqit qilish, vashinton ichi dagi shaxlarge, qayta kurus betimlerni takdim qilishki karatil gen.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.88,
+   "id": "fleurs_067",
+   "latency": 2.943,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Khar bir adam jemiyat ʃtiraqçisi bulib jen transportizimlarna kulleydi. Diyarlib barj adamla transportizimlerna nali diler.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.88,
+   "id": "fleurs_068",
+   "latency": 2.87,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "kundalini yogab nan kundalina kuvatem arfat kuvatem yogab ozalar nafaz masklara man travar khamda visualizacialar yordamda yohatilad.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.88,
+   "id": "fleurs_069",
+   "latency": 2.9,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Amma selkes talik naxas talik yada meni butungurukhtay htrtb uruşi kharxan pas konun ceni babtik edes talik yama'iyan laxada jamun qizot ismik shatun yina farkesal lenge.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.06,
+   "id": "fleurs_070",
+   "latency": 21.09,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Barchen arsiler xxob kalingan khalde agar ajdodlarumiz ozlani aqsil moa moa larini, bugun kunde savar naşim panziyeler ki, okşarş ussolda halkil gen boziler acablan maslikimiz gerek.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.24,
+   "id": "fleurs_071",
+   "latency": 3.876,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Massar urik tarawadi segiz apolatas yake kiz aqabri stanan brqan cye piramida da ula ni yengi rege bi piramida bune se ke cye qabr dar brqan cey bada txonalar wa bix fings nuz e cye yolad.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.24,
+   "id": "fleurs_072",
+   "latency": 26.243,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "6 nafar, garovga olingenlar, cümladan, bolalar vakiksalardan, filip binlik surat qeşlar ka'abı irtazot qilindi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.3,
+   "id": "fleurs_073",
+   "latency": 3.13,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Tashqilotni, funksional bulimlarida, mawjod barcha manbalardan samarali faydalan ilganda, ujod karlik va topkirlik payda bulishi mumkun.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.36,
+   "id": "fleurs_074",
+   "latency": 3.28,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "uro kamayatrishlar boyuja borar rakamni kil tirmadi, ularni khtay uksadyatu nadejjalara asas da amalgia usherrullishin aida dham.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.48,
+   "id": "fleurs_075",
+   "latency": 3.099,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Miya pathologiasi bilan fil atvorni uzaura baqlaxlege alem narni tatqaqot larada bularni fkirlarno qullab quvad layde.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.66,
+   "id": "fleurs_076",
+   "latency": 2.944,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Avstral yalik Mitjel gole irkaglar ortafzegi super gerbjelaşonu unun brin coorna yakilna da chex yalik raqe ve oldrik silnik irkagllar ortafsegi supe gerbjelnaşonu onu oldrincpa kona da yakilna de.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.84,
+   "id": "fleurs_077",
+   "latency": 4.416,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "tibit mediditas jasning markyasi ilakha yoga xsaplanada, turli ilakha nivizorizatsyaqla sharqa reinergei kanallara dazalanada. chakralar faulash trilada wa marfadli onyaradilada.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.08,
+   "id": "fleurs_078",
+   "latency": 3.643,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Manjmoa cek yas ta ekopla binalar sa yakhachilar qe ular asla qan leqla payda bul yana haqda yakshroq chunche birish maksad da qayta kurulyan.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.2,
+   "id": "fleurs_079",
+   "latency": 3.164,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Marakesh Sultan shakhar nundar u ibadye sifat edakayita kurulde. Khamda, u iirde savda, baazalanda shkil qalqen ispan savda agarlari tamandun unge kasa bovankanama berelde.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.2,
+   "id": "fleurs_080",
+   "latency": 3.623,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Yigir manchi asir dagi tatqaqatlar genetik uzgarşni ikki hafzasi, yashirun wa aqqq fodalingen hafzaları mawgutligini kursa atti.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.26,
+   "id": "fleurs_081",
+   "latency": 3.108,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Qoprik Austinin Vertkal Boşlaqa 15 Medir. Qorulash 2011 cil Agusta Yakunlanda. 2017 cil Marketsha Katnav uchun achilmada.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.32,
+   "id": "fleurs_082",
+   "latency": 2.85,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Waxshi balalar tashlap kitile shem ya ki qachup kitxidan awwal jiddi duravallik ya ki teraxatlarne bashtan kitirgan bulishlar mumkun.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.44,
+   "id": "fleurs_083",
+   "latency": 2.951,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Lakha singh, chapdan bohok. Bakha janne ham takdim itta. Qushkhe, rajo, khandelval bunge jor bolda.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.5,
+   "id": "fleurs_084",
+   "latency": 2.706,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Bygun, atlanska umonida atlansqa dowullar mafsumunin unanchi dowull bulgian jere subtropik dowullo hosen bulda.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.56,
+   "id": "fleurs_085",
+   "latency": 2.849,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Aslada, hatta agar kimdur unin mawzudlegini bilgiani daham, unu taapush umuman azan imas. Arni iti gyekirish bu, butun le yek galanishtir.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.62,
+   "id": "fleurs_086",
+   "latency": 3.165,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Uninget, mesak, qysit afsi, asan bransis shuki, shul, afar yaqatar, iroq, qe gerilan, tajavus ladan, xemo yaqadish, wa qorsunar bansi bormadiq alalqanana qatitiklash qawid yengi tibormadiq qawralan nan baashlash lansan.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.74,
+   "id": "fleurs_087",
+   "latency": 4.817,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Masqurumun ozallar, katrein atofaun ek yengi orta mqamna qaydi teqnansh khele jettarabo jettat shudar qesapa pold. Bunum baz mali mali evi kanservatrlar buna khaz lamuz tazdabo shun yi yu arvlayan kyrilishu vada batashit.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.8,
+   "id": "fleurs_088",
+   "latency": 28.706,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "u vici fransuzlar tamannan başkhar elgan. Bilar birmitok uzi qarqan cili niemus tarblantin cilik ornetgan, vabaskan cilergya qar shi kurashesh ornige, ular bilan bregya iştegan fransuzları edhe.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.1,
+   "id": "fleurs_089",
+   "latency": 3.939,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Sundar ban Yunisqa butuncahan mirasa abyeqtetip ilanqlendem. Ormani Hindustan hududi daige qisma, Sundar ban Milley baqadep ataladi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.22,
+   "id": "fleurs_090",
+   "latency": 3.013,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Yekşenba okşomide aksh presidenta Donald Trump, Matbot Kotobi Orkal bir gen Bayonadi da aksh kushinlari Surya'dan çikip gitşini elonklde.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.34,
+   "id": "fleurs_091",
+   "latency": 3.036,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Kesavkhana, yukumda kesaliklarna nazarat kliş, protokolige, cümledan infiksiyanik boşkalarge yukşunik, aldina alish uçun, bi morna boşkalarda aciradşike amal klde.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.64,
+   "id": "fleurs_092",
+   "latency": 3.602,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Shunu yadda tutunki, gerche asasie sakhna dagi muzeqa tugegan bolzaqan, fist valin yarum tungece muzeqajrasa davam itiladigan bolimlara bolishim umkon.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.76,
+   "id": "fleurs_093",
+   "latency": 3.254,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Ikele qarishma bere bere bilen reyekse ye kri shadi, wa bayur ekne faulya ten toxta atup qoyş mumkum bulgen kristallar ne khasilqladi. Didi? Ali gaq zanochilare.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.76,
+   "id": "fleurs_094",
+   "latency": 3.426,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Gertxu ushbo bulwakada, utgen ikki asunimbrne ishta khawqara shardna manar bina gadifikatsya qalingan umum makbul qalingan khawqarah koknu bussada strategya samarari buld. Umuhum, kharbi wa fukaralik tam yinadana uzubgoyde.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 15.42,
+   "id": "fleurs_095",
+   "latency": 4.255,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Attava kanadanin jazbadar ekitili poi taht bulup kanadanin tarakhha wa bugununa aksitruu qe barqator sanat galerialara wa muzilerge iya.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 15.42,
+   "id": "fleurs_096",
+   "latency": 2.911,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Agar, shmoli baltukhna kishtekisip utadigan bulsangis, kabine jola shughe akhomet biri, chunki muz oralab utush utda dakshatli shokinni kiltirip çikaradi, wa u bazilarga tasir kaleşi mum kon.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 15.48,
+   "id": "fleurs_097",
+   "latency": 3.982,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Firmid toq visesmi sakhizin chilayin bir avoz bir uchilar vakuzat uchilar poshanshta kanivertler mawishti masdilege. Maus tarda saman genu avakulat belin ya avoz biruqiladan tashkara hech kanivertlar qoshil masdileg ki wakhrik bira uchilar uchilar. Sayla u kutulan isha fakh purishe talad kanemayda.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 16.08,
+   "id": "fleurs_098",
+   "latency": 5.463,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Broq sardor vikitene yukad qanadan qiyen, hndistan uzat malarna, yakun lax uchun, yitda vikit yukad shiler bilan fakad qiyene utduzalti da ranna amalga aşirda.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 16.32,
+   "id": "fleurs_099",
+   "latency": 3.683,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Wa albat da xasharad, kemo ruqe, kelta ke sak vaqushlar ke oqshagan mit da ojjelerne ge yuqe, jude kop ke cheq mushuk sumalar shu cümleden uyu mushuklara mawjud.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 16.5,
+   "id": "fleurs_100",
+   "latency": 3.393,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Gangkong, Garizant, Chizgana, Khosl, Klujche, Bnolart, Tizmasa, Victoria Porte, Solarni, Mawjutlegi Sabapli, Anak, Kurinadi gen, Yaltro, Shtrikhla, Jedvaldak, Ushatil gen.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 16.56,
+   "id": "fleurs_101",
+   "latency": 3.816,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Unin haxamat margazas faddage maxkurlege tahminan miladi turu zunciyelda bashlingan, wa tahminan meladi birmin bru zunchiyelge qe qadar davan edkin.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 17.04,
+   "id": "fleurs_102",
+   "latency": 3.302,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Hawoza talin birish usulli imas, bar ki yengi computer dasduriden foydalanish, yagi yengi loyhani boşlaş, singari yengi tajribanin boşudan utgeze yotgen kişilerge kursatiladigen yordamdir.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 18.96,
+   "id": "fleurs_103",
+   "latency": 3.852,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Lekin tsavide itfaqa qizla armiad nizak kizmina olda qasqela rikati qi qi shat na mazite javuz kha mazite orsi savet pursha pakta khande bozhkai kitam olam wa wakob tam olam na shat na malan pizgen khalda pursha rin shat qe hodit lana basbak gen nasu Belorusia wa Ukrainii ki krush khanda frontla ierad gen mas krush vadeyade burke qe qizkri gende.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 19.08,
+   "id": "fleurs_104",
+   "latency": 6.832,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Arslan doda lara, hodda borlar yaq itlar doda lari ki, okhshab kharekat qalad khayvallar. Likim, boşgha ketta muşklar maz, khayrat lanandli, darac edesherlar ki, khetha khareket vaşun indiq ulcelar ucun, havaketli ikel li qe blan okhshashdur.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 19.14,
+   "id": "fleurs_105",
+   "latency": 5.022,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Aval raq zadi dijem karlik wa funksionalik amillar uchun dunya boilab işlap qarila boşlangan Asus E.P.C. 2017 yili Taypeydaage A.T.A. ili gedep dauzdar mavzugi ailanda.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 19.2,
+   "id": "fleurs_106",
+   "latency": 4.11,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Bir gina tajriba vaksin ase e boladan uliş khafana kemaitre uliş ke qodir kurun zakham, shu vaqt ke qadar mawjud inşeyp cianiz davolash ukin moskeledigan anat bror ta dariv o sitase kurzatil magan.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 19.5,
+   "id": "fleurs_107",
+   "latency": 3.983,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Musol 3'un Shmoli Karolina daige binnit maketabni yukuchilari har ielhe shtad boy tahtige qilgen safarlara haqda website tuzadi. Website har ielha qaitama dilaştiriladi. Lekend iski versyalara album sifati da khizmat klişu cün online tarza saklanadi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 20.28,
+   "id": "fleurs_108",
+   "latency": 4.409,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Aqsh qibnasikya qumitasa qushmaştatlar alimpya qumitasin makdubina qullab quvadlaydi. Hamda bizni hamma atlitlarumus buchun hafsiz muqtni tamillash maksadida olimpya amir oilasini mutlak ixtiyotslarina qabulqladi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 20.4,
+   "id": "fleurs_109",
+   "latency": 4.213,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Orta azzirlarnin akhryge kilip, gharbi yu vurape, uz uslubini yaradxini başlardim. Salp yurushlare netijasige, usha vaxtdagi in kettar vajdanishlardan bire. Adamlar kiyimlarna must mahkemlash uçun tügmalardan faydalana başladiler.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.06,
+   "id": "fleurs_110",
+   "latency": 4.716,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Bosh wazir belag uchrashu paitida, light on conservator larni atrof mukhut haqadag qanun laiha zin batafsil wa tul qaita yaze shinun. Conservator larn partya zin i atrof Mukhut haqi zin qanun laya zin uzgartrishlar kirti shinun sura ade.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.18,
+   "id": "fleurs_111",
+   "latency": 5.119,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Dengiz kuchularini vazifasa an anayge kura, davlatin gizni nkişilar va makzulotlarini kuchirish qabilatini saqlaş shu bilan ber vaxta raqa bingizni uz adamlari va makzullotlarini Kuchirish, qabilatige tusqalli kliştir.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.3,
+   "id": "fleurs_112",
+   "latency": 4.292,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Kirxinirxanam, Argentina teatrda, prezidentlikya namzadana quyshna, niyat qiliyanana elan qilda. Xut shu joyda u, ikimin bişin cili, bu yunas Aires Provincesi delegatsias azasis fadda, senat uchun uskampanyasina boşla yanda.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.48,
+   "id": "fleurs_113",
+   "latency": 4.615,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Gorgizmadan besh daqeqa otir shama lesa baştara. Daqmenan bur daqe qadan sumi shaman utiyazda ki yetmish kilometir saad ki yetadi. Un nankin yamgur yagush nan baştadi. Shunaqan yaqat daqa wa shiddatni yagadi ki tanaqe igin adek san ciladi. Shun nankin asman nan dor yaguladi. Adanar wakhe mage tuxkian wak chqere berberni usdige yugura baştidi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.72,
+   "id": "fleurs_114",
+   "latency": 6.651,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Bas us o sini sportilar amiz va kulublar amiz khamda ularniq sporti manfaatlar niq certificate da mahrum klişten kora, taşkilatumiz icide ciddi ozgarişlar kliş ar qalib, aqasilciş yaxşuraq tamin laşi mumkul digan fgiria qoşilamiz.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 22.38,
+   "id": "fleurs_115",
+   "latency": 4.669,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Bosqa naminatsialar, iinyaxhe film, rejisior, kinematografya, kim desayne, film nmaantash kliş, uzige hos rol, makhzulot desayne. Ovoz mantaje, ovoz larne aralash tereş, va uzige hoss sinarilarne uz ıchi eol hade.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 22.44,
+   "id": "fleurs_116",
+   "latency": 4.267,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Anana ve roq çirkyo'lar des des masihni qaita trilişi'n nishonlashini buzushikun yarimtun da jamuat bilan paskhani'n dham oluş günlara davamide shanbe oqshomide paskhaq siyorli'gini utgyezadirlar.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 22.62,
+   "id": "fleurs_117",
+   "latency": 4.201,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Svilizatse suze fqarao manasini bildero uchi latinche siviz va shakar yoke shakar davlat manasini buldero uche. Va ayrim halderde jamiyat uld qemini anilat uche sivitas suze blen baqolok bolip fqaraolik manasini bildero uce latinche Sivili suze den alingen.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 23.34,
+   "id": "fleurs_118",
+   "latency": 4.799,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Perre, bu geca utgazilga partya nii selo alde kin gaşun adicalarini, paholaş, maskur kurashda uzun uçun aldin ga boradigan, yun bor yuknigen aneknaş uçun texasqe kaytaman, dedem. Legen kinroq, o kurashda qolishini, hamda yigirma brinci yan var da canubi Karolinaştati dagi ilg selolarda katnaşşini bildirdi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 26.28,
+   "id": "fleurs_119",
+   "latency": 5.883,
+   "process_start": "2026-10-14 23:01:18"
+  },
+  {
+   "text": "Broq, bu fakat kina tajribalar imaz, va tajriba bu munkun bolgian bir yuki bir neştagip hoteza, masalanin koyilişi, va ilmi tataiqotlar uçun adiyen terboluk hamxizmaat qalo qi tuza dolarna utgazışna isnaqliş uçun foydalan moqi testir.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 26.7,
+   "id": "fleurs_120",
+   "latency": 4.744,
+   "process_start": "2026-10-14 23:01:18"
+  }
+ ]
+}

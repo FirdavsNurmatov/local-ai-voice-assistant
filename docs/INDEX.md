@@ -52,6 +52,8 @@ were deliberately not started. Therefore all runtime behaviour of the services i
 | [ARCHITECTURE.md](ARCHITECTURE.md) | System, component and sequence diagrams; port/process map; per-service design |
 | [DATA_FLOW.md](DATA_FLOW.md) | Step-by-step path from typed text to played audio |
 | [STT.md](STT.md) | Speech-to-text (Faster-Whisper `small`, port 8769): install, API, language handling, measured accuracy/speed/memory, limits. **Added 2026-10-14** |
+| [STT_EVALUATION.md](STT_EVALUATION.md) | Uzbek STT model comparison (current `small` vs NavAI) on real human speech: method, results, error analysis, recommendation. **Added 2026-10-14** |
+| [STT_EVALUATION_REPRODUCE.md](STT_EVALUATION_REPRODUCE.md) | Exact commands to reproduce that evaluation |
 | [API_REFERENCE.md](API_REFERENCE.md) | Every HTTP route of the five services with examples |
 | [DEVELOPMENT_SETUP.md](DEVELOPMENT_SETUP.md) | Rebuilding environments and obtaining models |
 | [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK.md) | Operator manual: start, stop, health, logs, recovery, smoke test |

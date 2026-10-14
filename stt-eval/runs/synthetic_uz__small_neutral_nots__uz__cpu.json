@@ -1,0 +1,167 @@
+{
+ "config": "small_neutral_nots",
+ "lang_mode": "uz",
+ "dataset": "stt-eval\\datasets\\synthetic_uz.csv",
+ "device": "cpu",
+ "n": 12,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "faster-whisper 1.2.1 / ctranslate2 4.8.3",
+  "model_dir": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "pipeline": "WhisperModel.transcribe",
+  "task": "transcribe",
+  "condition_on_previous_text": false,
+  "no_repeat_ngram_size": 4,
+  "without_timestamps": true,
+  "beam_size": 5,
+  "vad_filter": true,
+  "temperature": "default (0.0..1.0 fallback)",
+  "initial_prompt": null,
+  "language": "uz"
+ },
+ "load_s": 1.32,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 4349,
+ "rss_after_load_mb": 378,
+ "commit_after_load_mb": 2601,
+ "peak_rss_inference_mb": 999,
+ "peak_commit_inference_mb": 3283,
+ "peak_rss_process_mb": 999,
+ "peak_commit_process_mb": 3283,
+ "gpu_base_mb": null,
+ "gpu_peak_mb": null,
+ "gpu_util_mean": null,
+ "gpu_util_max": null,
+ "results": [
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.1579375,
+   "id": "synth_01",
+   "latency": 2.316,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 0.3715625,
+   "id": "synth_02",
+   "latency": 0.012,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "bubum xawakute yaxşe sehirge çqamizme.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.809625,
+   "id": "synth_03",
+   "latency": 2.168,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "Aqtukona sa'ad n'eachadi aqtuladi.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.2988125,
+   "id": "synth_04",
+   "latency": 7.513,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "mos mingi ndyaqin darqanane kursad.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.6586875,
+   "id": "synth_05",
+   "latency": 9.816,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "Tashkentan samarkand keche bayizda kanche vakti ke tady.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.041875,
+   "id": "synth_06",
+   "latency": 2.234,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.1579375,
+   "id": "synth_07",
+   "latency": 2.262,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "xaadad adadadadad",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 1.579,
+   "id": "synth_08",
+   "latency": 1.953,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "yob yob yub yob bundey yem as.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 1.4048125,
+   "id": "synth_09",
+   "latency": 2.081,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "nananan dil mi man dekin khare keb qule nanan.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.1014375,
+   "id": "synth_10",
+   "latency": 2.109,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.4869375,
+   "id": "synth_11",
+   "latency": 3.273,
+   "process_start": "2026-10-14 23:13:40"
+  },
+  {
+   "text": "Asalamu alaqum khush qeribsiz. Siz qe qanney yorden bir olaman.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.77325,
+   "id": "synth_12",
+   "latency": 2.396,
+   "process_start": "2026-10-14 23:13:40"
+  }
+ ]
+}

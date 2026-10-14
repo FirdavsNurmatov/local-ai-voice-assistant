@@ -1,0 +1,5 @@
+id,file,dataset,speech,lang,kind,seconds,sha256,ref_raw
+ru_req,C:\local-ai-translator\stt-test-audio\ru_req.wav,synthetic_ru_en_kokoro,synthetic (Kokoro masha/af_heart),ru,req,5.145,553d30519092b87a682683e7d5afedadb05356d510bd53a505ec7c8163dfc146,Привет! Расскажи мне короткую интересную историю.
+ru_short,C:\local-ai-translator\stt-test-audio\ru_short.wav,synthetic_ru_en_kokoro,synthetic (Kokoro masha/af_heart),ru,short,1.6,9e8e3f301ff93e4346a7311f1874469a0e39fb15d71a6720a556116581142d2c,Спасибо.
+ru_long,C:\local-ai-translator\stt-test-audio\ru_long.wav,synthetic_ru_en_kokoro,synthetic (Kokoro masha/af_heart),ru,long,15.91,bb197b73b31005c292c764369ae4d4b0b66514db7e60008e01711a7dd241119a,"Сегодня очень хорошая погода. Утром я рано встал и пошёл на работу. После обеда я встретился с друзьями в парке. А вечером хочу почитать книгу, потому что завтра у меня важный экзамен."
+ru_req_noise,C:\local-ai-translator\stt-test-audio\ru_req_noise.wav,synthetic_ru_en_kokoro,synthetic (Kokoro masha/af_heart),ru,noise,5.145,4d4ad75970fc97ff1692a4ca27d22347618a7cc03bda51b2e62b3de554d023f9,Привет! Расскажи мне короткую интересную историю.

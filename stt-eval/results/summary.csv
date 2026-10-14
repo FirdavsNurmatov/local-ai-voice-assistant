@@ -1,0 +1,30 @@
+﻿dataset,config,lang_mode,device,n,micro_WER,macro_WER,micro_CER,WER_no_digit_refs,sub,del,ins,ref_words,exact_match_rate,repetition_rate,repetition_n,wrong_language_rate,cyrillic_output_n,empty_or_error_n,latency_median_s,latency_p95_s,audio_s,RTF,load_s,rss_after_load_mb,peak_rss_inference_mb,peak_commit_process_mb,peak_rss_process_mb,gpu_vram_delta_mb,gpu_util_mean,gpu_util_max,services_running
+fleurs_parity,hf_navai,uz,cpu,20,0.2361,0.2175,0.0815,0.1891,70,9,6,360,0.25,0.0,0,n/a (forced),0,0,14.83,22.74,241.8,1.285,25.55,1358,2051,2627,2051,,,,ollama
+fleurs_parity,navai_card,uz,cpu,20,0.2722,0.2584,0.1012,0.2327,80,15,3,360,0.2,0.0,0,n/a (forced),0,0,3.01,3.47,241.8,0.253,1.23,378,545,2841,560,,,,ollama
+fleurs_parity,navai_card_nots,uz,cpu,20,0.2556,0.2335,0.0878,0.2145,74,9,9,360,0.25,0.0,0,n/a (forced),0,0,2.68,3.29,241.8,0.224,0.71,378,546,2841,560,,,,ollama
+fleurs_uz_test_sample,navai_neutral,uz,cpu,120,0.2545,0.2408,0.1013,0.2245,399,116,55,2240,0.1,0.0,0,n/a (forced),0,0,3.27,5.04,1465.9,0.283,1.01,378,613,2896,614,,,,ollama
+fleurs_uz_test_sample,navai_neutral,uz,cuda,120,0.2429,0.2349,0.0936,0.2103,391,99,54,2240,0.1,0.0,0,n/a (forced),0,0,0.9,1.38,1465.9,0.077,0.83,221,602,1714,614,474,84.6,93,ollama
+fleurs_uz_test_sample,navai_neutral_nots,uz,cpu,120,0.2071,0.1931,0.0672,0.1718,385,38,41,2240,0.175,0.0,0,n/a (forced),0,0,3.13,4.53,1465.9,0.268,0.71,378,609,2896,612,,,,ollama
+fleurs_uz_test_sample,navai_prod,auto,cpu,120,0.4853,0.4882,0.3418,0.4626,445,581,61,2240,0.0167,0.0,0,0.0,0,0,4.93,7.91,1465.9,0.432,1.04,377,1003,3300,1003,,,,ollama
+fleurs_uz_test_sample,navai_prod,uz,cpu,120,0.496,0.4954,0.3507,0.4762,446,604,61,2240,0.0167,0.0,0,n/a (forced),0,0,5.03,7.3,1465.9,0.425,2.78,379,1025,3309,1025,,,,ollama
+fleurs_uz_test_sample,small_neutral,uz,cpu,120,1.1027,1.0972,0.3978,1.1049,1983,77,410,2240,0.0,0.025,3,n/a (forced),3,0,3.69,21.58,1465.9,0.567,1.91,378,1054,3339,1056,,,,ollama
+fleurs_uz_test_sample,small_neutral,uz,cuda,120,1.0705,1.0705,0.395,1.0669,1992,79,327,2240,0.0,0.0083,1,n/a (forced),3,0,1.1,4.41,1465.9,0.133,1.51,223,616,1910,843,716,79.4,90,ollama
+fleurs_uz_test_sample,small_neutral_nots,uz,cpu,120,1.0893,1.0823,0.3806,1.0981,2005,54,381,2240,0.0,0.0083,1,n/a (forced),1,0,3.36,21.14,1465.9,0.487,1.33,378,1076,3360,1076,,,,ollama
+fleurs_uz_test_sample,small_prod,auto,cpu,120,1.2893,1.2782,0.4423,1.3061,2046,42,800,2240,0.0,0.1,12,0.0,0,0,5.96,23.89,1465.9,0.688,1.88,379,979,3377,981,,,,ollama
+fleurs_uz_test_sample,small_prod,uz,cpu,120,1.2393,1.2275,0.435,1.2489,2042,44,690,2240,0.0,0.1,12,n/a (forced),0,0,5.9,22.05,1465.9,0.651,1.95,379,1074,3359,1075,,,,ollama
+regression_en,navai_prod,auto,cpu,4,0.9828,0.994,0.9429,0.9828,6,51,0,58,0.0,0.0,0,0.75,0,1,3.74,3.87,21.4,0.698,0.71,379,577,2862,579,,,,ollama
+regression_en,navai_prod,en,cpu,4,1.0172,1.0357,0.819,1.0172,18,40,1,58,0.0,0.0,0,n/a (forced),0,1,4.04,4.24,21.4,0.743,0.72,379,572,2855,573,,,,ollama
+regression_en,small_prod,auto,cpu,4,0.0,0.0,0.0,0.0,0,0,0,58,1.0,0.0,0,0.0,0,0,3.79,4.82,21.4,0.756,1.32,379,576,2863,726,,,,ollama
+regression_en,small_prod,en,cpu,4,0.0,0.0,0.0,0.0,0,0,0,58,1.0,0.0,0,n/a (forced),0,0,3.81,4.84,21.4,0.759,1.3,379,586,2873,726,,,,ollama
+regression_ru,navai_prod,auto,cpu,4,1.0222,1.25,1.0179,1.0222,13,32,1,45,0.0,0.0,0,1.0,0,0,3.92,4.49,27.8,0.583,0.72,379,607,2893,609,,,,ollama
+regression_ru,navai_prod,ru,cpu,4,1.0,1.0,0.9357,1.0,31,14,0,45,0.0,0.0,0,n/a (forced),0,0,3.95,5.33,27.8,0.625,0.72,379,985,3273,988,,,,ollama
+regression_ru,small_prod,auto,cpu,4,0.0222,0.0078,0.0036,0.0222,1,0,0,45,0.75,0.0,0,0.0,0,0,3.99,4.92,27.8,0.597,1.32,379,592,2876,725,,,,ollama
+regression_ru,small_prod,ru,cpu,4,0.0222,0.0078,0.0036,0.0222,1,0,0,45,0.75,0.0,0,n/a (forced),0,0,3.97,4.92,27.8,0.595,1.32,379,584,2872,726,,,,ollama
+synthetic_uz,navai_neutral,uz,cpu,12,0.3793,0.4462,0.2095,0.3793,15,15,3,87,0.0,0.0,0,n/a (forced),0,0,2.17,2.73,34.8,0.711,0.7,378,575,2862,580,,,,ollama
+synthetic_uz,navai_neutral_nots,uz,cpu,12,0.2989,0.3552,0.1329,0.2989,14,11,1,87,0.0,0.0,0,n/a (forced),0,0,2.12,2.72,34.8,0.703,0.72,378,582,2869,586,,,,ollama
+synthetic_uz,navai_prod,auto,cpu,12,0.7816,0.8333,0.6337,0.7816,22,45,1,87,0.0,0.0,0,0.0,0,3,3.9,4.51,34.8,1.303,0.71,379,600,2888,603,,,,ollama
+synthetic_uz,navai_prod,uz,cpu,12,0.7816,0.8333,0.6337,0.7816,22,45,1,87,0.0,0.0,0,n/a (forced),0,3,3.73,4.52,34.8,1.27,0.92,379,607,2893,608,,,,ollama
+synthetic_uz,small_neutral,uz,cpu,12,1.6322,1.7792,0.9182,1.6322,43,43,56,87,0.0,0.0833,1,n/a (forced),0,0,2.33,10.08,34.8,1.212,1.31,377,999,3284,1000,,,,ollama
+synthetic_uz,small_neutral_nots,uz,cpu,12,1.069,1.0849,0.6848,1.069,42,44,7,87,0.0,0.0,0,n/a (forced),0,0,2.25,8.55,34.8,1.094,1.32,378,999,3283,999,,,,ollama
+synthetic_uz,small_prod,auto,cpu,12,1.7816,2.4486,1.4055,1.7816,72,9,74,87,0.0,0.1667,2,0.0,0,1,4.14,19.87,34.8,2.304,1.33,379,1053,3341,1057,,,,ollama
+synthetic_uz,small_prod,uz,cpu,12,0.9885,1.0111,0.6831,0.9885,72,9,5,87,0.0,0.0833,1,n/a (forced),0,1,4.19,17.01,34.8,2.135,1.93,379,1060,3344,1062,,,,ollama

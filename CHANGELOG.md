@@ -5,6 +5,19 @@ The project was put under version control on 2026-10-13. Everything before that 
 recorded work of 2026-10-13 — inferences from timestamps and file contents, not from commit history.
 No version numbers have been assigned.
 
+## 2026-10-14 — Uzbek STT evaluation and hardware notes (no production change)
+
+- Evaluated `navai-uz/whisper-small-uzbek` (CTranslate2 int8) against the production Faster-Whisper `small`
+  on 120 real human Uzbek recordings (FLEURS test), 12 synthetic Uzbek clips and 8 synthetic RU/EN clips,
+  on CPU and on the GTX 1650. Result: Uzbek WER 1.24 → 0.21–0.26 with NavAI, no repetition, lower latency
+  and memory; NavAI cannot handle Russian/English. Recommendation: NavAI for Uzbek only (not implemented).
+- Added `docs/STT_EVALUATION.md`, `docs/STT_EVALUATION_REPRODUCE.md`, the `stt-eval/` scripts, dataset lists,
+  raw run outputs, per-sample and summary CSVs, checksum manifest and pinned evaluation requirements.
+- `docs/STT.md`, `docs/API_REFERENCE.md`: evaluation summary and the proposed routing, clearly marked as not implemented
+  (backups `*.before_eval.bak`).
+- `README.md`: "Hardware and expected performance" section — measured results on the reference PC and
+  estimates for an Ubuntu server (i7-13700, 64 GB RAM, RTX 4060 8 GB). Backup `README.md.before_hardware.bak`.
+
 ## 2026-10-14 — STT through `server.py` (iPhone / HTTPS tunnel)
 
 - `server.py`: new `POST /api/transcribe` (forwards audio, `Content-Type` and `?language=` to

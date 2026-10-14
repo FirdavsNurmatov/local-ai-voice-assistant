@@ -1,0 +1,1246 @@
+{
+ "config": "navai_neutral",
+ "lang_mode": "uz",
+ "dataset": "stt-eval\\datasets\\fleurs_uz_test_sample.csv",
+ "device": "cuda",
+ "n": 120,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "faster-whisper 1.2.1 / ctranslate2 4.8.3",
+  "model_dir": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+  "device": "cuda",
+  "compute_type": "int8_float16",
+  "cpu_threads": 4,
+  "pipeline": "WhisperModel.transcribe",
+  "task": "transcribe",
+  "condition_on_previous_text": false,
+  "no_repeat_ngram_size": 4,
+  "beam_size": 5,
+  "vad_filter": true,
+  "temperature": "default (0.0..1.0 fallback)",
+  "initial_prompt": null,
+  "language": "uz"
+ },
+ "load_s": 0.83,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 4508,
+ "rss_after_load_mb": 221,
+ "commit_after_load_mb": 850,
+ "peak_rss_inference_mb": 602,
+ "peak_commit_inference_mb": 1714,
+ "peak_rss_process_mb": 614,
+ "peak_commit_process_mb": 1714,
+ "gpu_base_mb": 417,
+ "gpu_peak_mb": 891,
+ "gpu_util_mean": 84.6,
+ "gpu_util_max": 93,
+ "results": [
+  {
+   "text": "archipelag vakillarda sizga yaxta shart boʻlmaydi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 4.56,
+   "id": "fleurs_001",
+   "latency": 0.941,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "ida xuddi shu tarzda erkaklar tizilam yopib turtishim kiyishlari lozim",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.22,
+   "id": "fleurs_002",
+   "latency": 0.705,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "kasbkurashchilar ham lunaga hurmat bajo keltirishdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.4,
+   "id": "fleurs_003",
+   "latency": 0.565,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "bu juftliklar farzandlar uchun asrab olish rejasini tanlashi mumkin",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.4,
+   "id": "fleurs_004",
+   "latency": 0.622,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "zaablarda boʻylamaydi chunki ularning patlari bor va oʻcha oladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.46,
+   "id": "fleurs_005",
+   "latency": 0.641,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "bu maqsadga muvofiqdang chunki yer harakatlanmaydigandek tuyuladi shunday emasmi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.76,
+   "id": "fleurs_006",
+   "latency": 0.703,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "bular baʻzida tiqinchi boʻlgan sohil boʻylab tizimga qadar doʻkonlari bor oilaviy plyajlar uchun minish xavfsiz",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 5.88,
+   "id": "fleurs_007",
+   "latency": 0.861,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "avtoulovining oʻzi oʻsha kuni hodisa joyida taxminan sodiq uning kinoni jamoatida olib ketilgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.36,
+   "id": "fleurs_008",
+   "latency": 0.747,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "zavrlarni oʻzlarining eng dahshatli yirtqichi boʻlguncha sovgʻa boshqa mavzul zavrlaridan boshqaga yetish narsadan qoʻrqmagan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.54,
+   "id": "fleurs_009",
+   "latency": 0.93,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "iz shuningdek oʻzingiznikidan boshqa hukumatlarga maslahat maoshini xohlashingiz mumkin biroqlarning maslahati oʻzining fuqarolari uchun moʻljallangan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.72,
+   "id": "fleurs_010",
+   "latency": 0.908,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "tramp turkiya prezidenti rajab toyyib erdoʻgʻon bilan telefoni gaplashgandan keyin bu haqda maʻlum qilindi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.78,
+   "id": "fleurs_011",
+   "latency": 0.82,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "sheʻrlar toʻdalar deb nomlanuvchi katta guruhlarda yashaydigan eng ijtimoiy mushuklardir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 6.96,
+   "id": "fleurs_012",
+   "latency": 0.704,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "bir feʻl va predmetlarni farqlashning muhim usulidir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.08,
+   "id": "fleurs_013",
+   "latency": 0.643,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "hodisa yuz bergandan soʻng gipsni shifoxonaga yetkazilgan biroq koʻp oʻtmay olamdan oʻlgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.14,
+   "id": "fleurs_014",
+   "latency": 0.789,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "natijada ijrochilar sahnada kanabis oʻramalanib chekishdi va teatrning oʻz tomoshabinlarini qoʻshilishga undadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.14,
+   "id": "fleurs_015",
+   "latency": 0.879,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "kasablanka xarid qilish uchun butun marokashdagi eng qiziqarsiz joylardan biri",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.26,
+   "id": "fleurs_016",
+   "latency": 0.663,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "onning barcha fan masalalari jumladan psixologiya boʻyicha qarashlari qabul qilingan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.32,
+   "id": "fleurs_017",
+   "latency": 0.7,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i xususan kichik shifodani toʻgʻri tarqalish orqali kishi yolgʻon gapirayotgan yoki yolgʙon gapirmayotgani aniqlash mumkin deya daʻvo qilinmoqda",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.44,
+   "id": "fleurs_018",
+   "latency": 1.024,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "lekin bu toʻgʻri emas hujjat orqasida nimasi yozilgan boʻlishiga qaramay u xazinalarning xaritasi emas",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.44,
+   "id": "fleurs_019",
+   "latency": 0.769,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "afsuski qatnovi oqimini oʻrganish mashaqqatli chunki haydovchining xattiharakatlarining yuz foizi aniqligi bilan oldindan aytib boʻlmaydi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.56,
+   "id": "fleurs_020",
+   "latency": 0.949,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "roʻzpesona qanchalik kichik boʻlsa yulduzning magnitik oʻzgarishlarga nisbatan faolligi shuncha past boʻldi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.62,
+   "id": "fleurs_021",
+   "latency": 0.829,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i ular aravada shoh va malikaga qarshi tahdidlarni aytib qichqirayotgani va baqiraydigan odamlar toʻdasini birgalikda parijga qaytib keldilar",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.68,
+   "id": "fleurs_022",
+   "latency": 0.916,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "televizion xabarlarda zavoddan chiqayotgan oq tutun tasvirlangan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.74,
+   "id": "fleurs_023",
+   "latency": 0.631,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "oʻlimlar ayni shu usulda energiya ishlab chiqara oladigan reaktor yaratish ustida ish olib bormoqdalar",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.74,
+   "id": "fleurs_024",
+   "latency": 0.799,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "lar ilk bor oʻn ming yilcha avval eronning zagreb togʻlarida qoʻlga oʻrgatilgan koʻrinadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.92,
+   "id": "fleurs_025",
+   "latency": 0.774,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "ir oʻsimliklar insonlar nafas oluvchi kislorodni ishlab chiqaradi va ular chiqaradigan nafas chiqarganda karbonat angidrid gazini yutadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 7.92,
+   "id": "fleurs_026",
+   "latency": 0.895,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "lar elektrolari olib tashlangan protonlardir sababi vodorod atomlar bitta proton va bitta elektrolni tarkib topgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.04,
+   "id": "fleurs_027",
+   "latency": 0.749,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "sababli haydovchi oqimi bir qancha chuqur boʻlmalar toʻplanadi va u yerda chuqur suvda sez oqimi paydo boʻldi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.04,
+   "id": "fleurs_028",
+   "latency": 0.857,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "irigatsiya va rekombinatsiya har bir avlod bilan ikkala pul oʻrtasidagi variatsiyalarni aralashtiradi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.04,
+   "id": "fleurs_029",
+   "latency": 0.741,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "shunday boʻlsada hukumat organlari maslahatlariga quloq tuting hamma belgilariga rioya qiling va xavfsizlik ogohlantirishlariga jiddiy eʻtibor qarating",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.88,
+   "id": "fleurs_030",
+   "latency": 0.918,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "lar soni shu qadar koʻp ediki barchaning abdupiter maydonidagi dafn marosimiga kirishi imkonsiz edi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.0,
+   "id": "fleurs_031",
+   "latency": 0.747,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "atlet yoʻlbars tirmashib chiqish yaxshi boʻlinmasida suzish katta masofaviy sakrash va odamdan besh baravar koʻp kuch bilan tortishga qodir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.18,
+   "id": "fleurs_032",
+   "latency": 0.96,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "finlyandiya qayiqda suzishga borish uchun eng yaxshi manzil ming kun mamlakatning goʻllarida va qirgʻoqda arxipaloklarda ham ming nafar onlar bor",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.18,
+   "id": "fleurs_033",
+   "latency": 0.912,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "u dastlab garet yarmuddagi jeyms paket shifoxonasiga yotqizildi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.24,
+   "id": "fleurs_034",
+   "latency": 0.658,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "iyamizda qotishmasalar asosan ikki yoki undan koʻp metallning qorishmasidir davriy jadvali koʻplab elementlar borligini esdan chiqarmang",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.3,
+   "id": "fleurs_035",
+   "latency": 0.848,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "halokat togʻli hududning baland qismida sodir boʻlgan va dushmanlarning oʻt ochishi natijasida kelib chiqqan deb ishonilmoqda",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.42,
+   "id": "fleurs_036",
+   "latency": 0.861,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "bu vidolashuv boʻlmaydi bu bitta bobning yopilishi hamda yangi zilning ochilishidir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.54,
+   "id": "fleurs_037",
+   "latency": 0.682,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "muhammad bu dunyo hayotini tashqarida boʻlgan masalalar hoʻchqor qiziqqan oʻtafakkur oʻtishi uchun nur yorugʻlik toqidagi xirom nomida tanimga qorga tez tez borib turgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.6,
+   "id": "fleurs_038",
+   "latency": 1.075,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "qoʻshinlar yetib kelishdan avval goyimida bir ming sakkiz yillardan buyon mazkur kasallik bilan bogʻliq muammolar kuzatilmagan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.6,
+   "id": "fleurs_039",
+   "latency": 0.86,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "idor chorshanba tadbiridan tashqari chempionatda ikkita yakkalik poyga musobaqalarda ishtirok etdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.6,
+   "id": "fleurs_040",
+   "latency": 0.757,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "ohlar hamda ziravorlar bilan birgalikda goʻsht yoxud sabzavotlarga asoslangan ovqatdir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.72,
+   "id": "fleurs_041",
+   "latency": 0.747,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "yaproqlar hamda dukkakda ekinlarda bor boʻlgan oqsillar eng oson yetishtirilgan oʻsimlik manbalari boʻldi lekin biz singari primatlar uchun pishirilmaguncha ularni hazm qilish mushkul",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 9.96,
+   "id": "fleurs_042",
+   "latency": 1.013,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "metroda odatiy ravonlar faqat katalon tili aytiladi biroq rejalashtirilmay oʻzgarishlar avtomatlashtirilgan tizimlarimni koʻplab tushuntirish va minglisi bilan asos avtomashalarda eʻlon qilinadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.08,
+   "id": "fleurs_043",
+   "latency": 1.141,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "xavfi sababli bir ming toʻqqiz yuz toʻrt yil u xavf ostida boʻlgan butunjahon madaniy merosi obyektlari roʻyxatiga kiritildi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.14,
+   "id": "fleurs_044",
+   "latency": 0.915,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "apple kompaniyasi jiddiy emas tubatdagi xatdan ortiq qizib ketish bilan bort oʻtdi toʻrtta qoʻshimcha holat toʻgʻrisida xabar berganini eʻlon qildi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.26,
+   "id": "fleurs_045",
+   "latency": 1.003,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "onistondagi bilim pasayishi bilan gʻarb oʻzining grek falsafiy va ilmiy negizlaridan uzilib qoldi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.32,
+   "id": "fleurs_046",
+   "latency": 0.749,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i qadimgi madaniyatlar hamda qabilalar ularni sud jun goʻsht va terlardan oson qoʻlga kiritish maqsadida saqlay boshlaganlar",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.32,
+   "id": "fleurs_047",
+   "latency": 0.842,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "tugaganidan ikki yil oʻtgach sobiq ittifoqdoshlar endilikda dushmanga aylangandi hamda sovuq urush boshlandi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.32,
+   "id": "fleurs_048",
+   "latency": 0.803,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "a poytaxti kishinyov mahalliy til rumiyin til boʻlsa da rus tili keng qoʻllaniladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.44,
+   "id": "fleurs_049",
+   "latency": 0.727,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "italiyadagi boshqa koʻpgina shaharlarda hamda dunyoning qolgan qismida xususan polshada koʻp sonli kishilar tomonidan tomosha qilingan shunga oʻxshash konstruksiyalar oʻrnatildi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.44,
+   "id": "fleurs_050",
+   "latency": 1.039,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "piramida tovushi va chiroqlar shousi bolalar uchun hududdagi eng qiziqarli narsalardan biri",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.5,
+   "id": "fleurs_051",
+   "latency": 0.711,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "maryaviy yilda axloqsizlik boʻyicha tashabbusni moliyalashtira boshladi va qabr kabi pornografiyasiga oʻn nafar agent ajratish lozimligini belgiladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.5,
+   "id": "fleurs_052",
+   "latency": 0.925,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "asosiy subyekt uchun eng samarali joy suratni vertikal va gorizontal tarzda uchga boʻladigan chiziqlar kesishmasligi aytilgan namunaga qarang",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.5,
+   "id": "fleurs_053",
+   "latency": 0.882,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "yoʻnalishlarda yirikroq kompaniyalar oʻz samolyotlariga ega ammo boshqa yoʻnalishlar va kichik firmalar uchun muammo mavjud edi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.5,
+   "id": "fleurs_054",
+   "latency": 0.875,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "apia samoaning poytaxtidir shahar u polo orolida va qirq ming nafardan kamroq aholiga ega",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.68,
+   "id": "fleurs_055",
+   "latency": 0.731,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "ligi oyning yerdan koʻrinadigan tomonida yetmish km orqa tomonda esa yuz km",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.8,
+   "id": "fleurs_056",
+   "latency": 0.749,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "ba daʻvo qilishicha meksikin samolyotlarga qisqa yoʻnalishda uchish va har yili millionlab gallon yonilgʻi tejash hamda uglerod chiqindini kamaytirish imkonini beruvchi tizimdir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 10.8,
+   "id": "fleurs_057",
+   "latency": 1.018,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "aqish gimnastika va yusuf bir maqsadga ega gimnastik va sport turi hamda boshqalarning atletlarining oʻz orzulariga xavfsiz ijobiy hamda vakolatli muhitda erishilar uchun imkon qadar xavfsir qilish",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.04,
+   "id": "fleurs_058",
+   "latency": 1.113,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "hududlarda suv qaynashi uchun bir daqiqa yetarli boʻladi boshqalarda bir necha daqiqat kerak boʻldi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.1,
+   "id": "fleurs_059",
+   "latency": 0.817,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i yanada shimoliroqdagi katta hududlarning aholisi juda siyrak ayrim yerlari esa qariyb kimsasiz sahrodir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.16,
+   "id": "fleurs_060",
+   "latency": 0.767,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "agar siz harakatga yaqin boʻlishni xohlasangiz musiqaga yaqin lager choyni qoʻlga kiritish uchun ertaroq kiritishingiz kerak boʻladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.28,
+   "id": "fleurs_061",
+   "latency": 0.889,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "odamlar uylariga qaytayotgan sayyohlar uchun sabr toqat va tushunish ham zarur ekanligini bilmasliklari mumkin",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.28,
+   "id": "fleurs_062",
+   "latency": 0.835,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "tdan urush muhiti kursi deb izlash hoynahoy mahalliy kompaniya manzilini chiqarib beradi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.34,
+   "id": "fleurs_063",
+   "latency": 0.695,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "marosimlarda teztez foydalanilsa italyan tili davlat ishida ishlaydigan insonlarning koʻpchiligi tomonidan foydalanadigan kundalik tili hisoblanadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.4,
+   "id": "fleurs_064",
+   "latency": 0.901,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "radioaktiv seyzi va yod aniqlangani haqida yaponiya yadroviy agentligi xabar bergan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.4,
+   "id": "fleurs_065",
+   "latency": 0.699,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "sanktpeterburg dengiz sayohatlari shaharda vaqt oʻtkazishni oʻz ichiga oladi dengiz salohiy ishtirokchilari viza olish talablaridan ozod qilinadi shartlariga qarang",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.64,
+   "id": "fleurs_066",
+   "latency": 1.009,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "qayta qurish saʻyharakatlarni erkin tanqid qilish vashington ichidagi shaxslarga qaytaqurish bitimlarini taqdim qilishga qaratilgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.88,
+   "id": "fleurs_067",
+   "latency": 0.877,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "ishtirokchisi boʻlib transport tizimlarini qoʻllaydi deyarli barcha odamlar transport tizimalaridan noliydilar",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.88,
+   "id": "fleurs_068",
+   "latency": 0.786,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "a bilan kundalining quvvati maʻrifat quvvori yoga poʻzalari nafas mashqlari mantralar hamda vizualizatsiyalar yordamida uygʻotiladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 11.88,
+   "id": "fleurs_069",
+   "latency": 0.884,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "almasala kasallikni xastaning yordamini butun guruhdagi ehtiyar tibbiy ulushi hali ham past koʻrinuvchini va afrika doʻstlarga muayyan lahzada jami uch yuz oʻttiz ming sakkiz ming nafariga saylangan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.06,
+   "id": "fleurs_070",
+   "latency": 1.121,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "barcha narsalar hisobga olingan holda agar ajdodlarimiz oʻzlarining oqsil muammolarini bugungi kunda savana shimpanzelarga oʻxshash usulda hal qilgan boʻlsalar ajablanmasligimiz kerak",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.24,
+   "id": "fleurs_071",
+   "latency": 1.009,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i misr oʻliklari vodiysida giza platosi yoki giza qabristoni bir qancha piramidada ularning eng yirigi buyuk piramida bir nechta kichik qabullar bir qanche ibodatxonalar va buyksfinksni oʻz ichiga oladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.24,
+   "id": "fleurs_072",
+   "latency": 1.116,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i olti nafar garovga olinganlar jumladan bolalar va keksalaridan filippinlik suratkashlar kabi erta ozod qilindi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.3,
+   "id": "fleurs_073",
+   "latency": 0.783,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "tashkilotning funksional boʻlimlarida mavjud barcha manbalardan samarali foydalanilganda ijodkorlik va topqirlik paydo boʻlishi mumkin",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.36,
+   "id": "fleurs_074",
+   "latency": 0.84,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i u kamaytirishlar boʻyicha biror raqamni keltirmadi ularning xitoy iqtisodiyoti natijalari asosida amalga oshirilishini aytdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.48,
+   "id": "fleurs_075",
+   "latency": 0.875,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "miya patologiyasi bilan fil atvorning oʻzaro bogʻliqligi olimlarning tadqiqotlarida ularning fikrlarini qoʻllabquvvatlaydi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.66,
+   "id": "fleurs_076",
+   "latency": 0.875,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i avstraliyalik mijoz golli erkaklar oʻrtasidagi supergar bellashuvni oʻn birinchi oʻrinni yakunladi chexiyalik raqibi oʻldirksilmik erkaklar orasida supergar bellashovini oʻrnidan yakunlashadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 12.84,
+   "id": "fleurs_077",
+   "latency": 1.151,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "meditatsiyasining markazi ilohiy yoga hisoblanadi turli ilohlarni vizualizatsiya qilish orqali energiya kanallari tozalanadi chakralar faollashtiriladi va maʻrifatli ong yaratiladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.08,
+   "id": "fleurs_078",
+   "latency": 1.029,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "majmua chekkasidagi koʻplab binolar sayohatchilarga ular asli qanday qilib paydo boʻlgani haqida yaxshiroq tushuncha berish maqsadida qayta qurilgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.2,
+   "id": "fleurs_079",
+   "latency": 0.931,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "marokash sultoni shaharni darrov badiiy sifatida qayta qurildi hamda u yerda savdo bazalarini tashkil qilgan ispan savdogarlari tomonidan unga kasablanka nomi berildi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.2,
+   "id": "fleurs_080",
+   "latency": 0.932,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "yigirma asrdagi tadqiqotlar genetik oʻzgarishning ikki havzasi yashirin va ochiq ifodalangan havzalari mavjudligini koʻrsatdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.26,
+   "id": "fleurs_081",
+   "latency": 0.889,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "koʻprik ostining vertikal boshligʻi oʻn besh metr qurilish ikki ming oʻttiz bir avgustda yakunlandi ikki mingt yetti yil martgacha qatnov uchun ochilmadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.32,
+   "id": "fleurs_082",
+   "latency": 0.965,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "vahshiy bolalar tashlab ketilishi yoki qochib ketishidan avval jiddiy zoʻravonlik yoki jarohatlarni boshdan kechirgan boʻlishlari mumkin",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.44,
+   "id": "fleurs_083",
+   "latency": 0.878,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "chapdan bahok bhajanni ham taqdim etdi qoʻshiqchi rayjo handelval unga joʻr boʻldi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.5,
+   "id": "fleurs_084",
+   "latency": 0.747,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "atlantika ummonida atlantka dovullar mavsumining oʻninchi dovuli boʻlgan jerri subtropik dovuli hosil boʻldi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.56,
+   "id": "fleurs_085",
+   "latency": 0.796,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "aslida hatto agar kimdir uning mavjudligini bilganida ham uni topish umuman oson emas gʻorning ichiga kirish bu butunlay yakkalanishdir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.62,
+   "id": "fleurs_086",
+   "latency": 0.817,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "yetmish sakkiz taʻsiridan birinchisi shu kechki yil oxiriga qadar iroq chegaralarini tajovuzlardan himoya qilish va qoʻshnilar bilan diplomatik aloqalarni qayd etishga oid yangi diplomatik choralarini boshlashlansin",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.74,
+   "id": "fleurs_087",
+   "latency": 1.121,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i keyingi yordam hamda qayta tiklanish xarajatlari boʻyicha tortishuvlarga sabab boʻldi buni baʻzi moliyaviy konservatorlar buni hazilomuz tarzida boʻshining nyuyorklyan kelishuvi deb atashdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 13.8,
+   "id": "fleurs_088",
+   "latency": 1.146,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i u viche fransuzlar tomonidan boshqarilgan bular bir ming toʻqqiz yuz qirqinchli nemislar bilan tinchlik oʻrnatgan va bosqinchilarga qarshi kurashish oʻrtniga ular bilan birga ishlagan fransuz edi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.1,
+   "id": "fleurs_089",
+   "latency": 1.101,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "zka butunjahon merosi obʻekti deb eʻlon qilindi oʻrmonning hindiston hududidagi qismi sundarban milliy bogʻi deb ataladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.22,
+   "id": "fleurs_090",
+   "latency": 0.843,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "yakshanba oqshomidan aqsh prezidenti donald tramp matbuot kotibi orqali bergan bayonotidan aqish qoʻshinlari suriyadan chiqib ketishini eʻlon qildi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.34,
+   "id": "fleurs_091",
+   "latency": 1.014,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "kasalxona yuqumli kasalliklarni nazorat qilish protokoliga jumladan infeksiyaning boshqalarga yuqishining oldini olish uchun bemorni boshqalardan ajratishga amal qildi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.64,
+   "id": "fleurs_092",
+   "latency": 0.974,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "shuni yodda tutingki garchi asosiy sahnadagi musiqa tugagan boʻlsa ham festivalning yarim tungacha musiqa ijrosi davom etiladigan boʻlimlari boʻlishi mumkin",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.76,
+   "id": "fleurs_093",
+   "latency": 0.944,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "ikkala qorishma bir biri bilan reaksiyaga kirishadi va buyrakni faoliyatdan toʻxtatib qoʻyishi mumkin boʻlgan kristallarni hosil qiladi dedi oliygoh zanuvchilari",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 14.76,
+   "id": "fleurs_094",
+   "latency": 0.99,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "garchi ushbu blokada oʻtgan ikki asrning bir nechta xalqaro shartnomalar bilan kodifikatsiya qilingan umuman maqbul qilingan xalqroqni buzsada strategiya samarali boʻldi u muhim harbiy va fuqarolik taʻminotini uzib qoʻydi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 15.42,
+   "id": "fleurs_095",
+   "latency": 1.217,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "a atama kanadaning jozibador ikki tilla poytaxti boʻlib kanadaning tarixi va bugunini aks ettiruvchi bir qator sanʻat galereyalari va muzeylarga ega",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 15.42,
+   "id": "fleurs_096",
+   "latency": 0.91,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "shimoliy boltiqni qishda kesib oʻtadigan boʻlsangiz kabina joylashuviga ahamiyat bering chunki muz oralab oʻtirish oʻta dahshatli shovqinni keltirib chiqaradi va u baʻzilariga taʻsir qilishi mumkin",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 15.48,
+   "id": "fleurs_097",
+   "latency": 1.203,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "bir ming toʻqqiz yuz sakkiz yildan beri ovoz beruvchilar va kuzatuvchilar toshlanishida konvertlar mavjud emasligi va mos tarzda sanalgan va vakolat berilgan ovoz yoʻlovchilardan tashqari hech qanday konvertlar qoʻshilmasligiga guvohlik bera olishlari uchun saylov qutilanishiaffaq boʻlishi talab qilinadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 16.08,
+   "id": "fleurs_098",
+   "latency": 1.482,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "sardor bekitini yoʻqotganidan keyin hindiston uzatmalarini yakunlash uchun yettita bekit yoʻlqotishlar bilan faqatgina oʻttiz oltita ranni amalga oshirdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 16.32,
+   "id": "fleurs_099",
+   "latency": 0.977,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "albatta hasharot kemiruvchi kaltakesak va qushlarga oʻxshagan mitti oʻljalarni yeyuvchi juda koʻp kichik mushuk somonlar shu jumladan uy mushuklari mavjud",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 16.5,
+   "id": "fleurs_100",
+   "latency": 0.983,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "gonkong gorizont chizigʻini hosil qiluvchi binolar tizmasi viktoriya porti suvlarining mavjudligi sababli aniq koʻrinadigan yaltiroq shishtrixli jadvalda oʻxshatilgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 16.56,
+   "id": "fleurs_101",
+   "latency": 1.015,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "hashamat markazi sifatidagi mashhurligi taxminan milodiy toʻrt yuz yilda boshlangan va taxminan maʻlumot bir ming bir yuz yilga qadar davom etgan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 17.04,
+   "id": "fleurs_102",
+   "latency": 0.916,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "havoza taʻlim berish usuli emas balki yangi kompyuter dasturidan foydalanish yoki yangi loyihani boshlash singari yangi tajribani boshidan oʻtkazayotgan kishilarga koʻrsatiladigan yordamdir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 18.96,
+   "id": "fleurs_103",
+   "latency": 1.081,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i lekin sovet ittifoqi qizil armiyadagi sakkiz minglab ortiq askarlarga ega tinchlik shartnomasida jozib xolmasiga toʻgʻri sovet boʻlishi fakti hamda boshqa ikki tomonlama va koʻp tomonlama shartnomalarni buzgan holda polshaning sharqiy hududlari bosib olganidan soʻng belorussiya va ukrainaga kirish hamda frontlar yaratgan mazkur ish va deyada bir kechaga eskiz kirgandi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 19.08,
+   "id": "fleurs_104",
+   "latency": 1.684,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "arslon toʻdalari xuddi boʻrilar yoki itlar toʻdagʻiga oʻxshab harakat qiladi hayvonlar lekin boshqa katta mushuklarimiz hayratlanarli darajada sherlarga xatti harakat va shuningdek oʻljalari uchun halokatli ekanligi bilan oʻ xushlashdir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 19.14,
+   "id": "fleurs_105",
+   "latency": 1.38,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "avvalroq iqtisodiy tejamkorlik va funksionallik omillari uchun dunyo boʻylab ishlab chiqarila boshlangan asus epc ikki ming yetti yili taypeydagi iti oyligida dolzarb mavzuga aylandi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 19.2,
+   "id": "fleurs_106",
+   "latency": 1.06,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "tajriba vaksinasi eboladan oʻlish xavfini kamaytira olishga qodir koʻrinsa ham shu vaqtga qadar mavjud infeksiyani davolash uchun mos keladigan aniq birorta dori vositasi koʻrsatilmagan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 19.5,
+   "id": "fleurs_107",
+   "latency": 1.107,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "misol uchun shimoliy karolinadagi binnit maktabning oʻquvchilari har yili shtat poytaxtiga qilgan safarlari haqida vebsayt tuzadi vebsayti har yili qayta modellashtiriladi lekin eski versallari albom sifatida xizmat qilish uchun onlayn tarzda saqlanadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 20.28,
+   "id": "fleurs_108",
+   "latency": 1.295,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i aqsh gimnastika qoʻmitasi qo�ra shtatlar olimpiya qo� izning maktubini qoʙ quvvatlaydi hamda bizning ham atletlarimiz uchun xavfsiz muhitni taʻminlash maqsadida olimpiya amir oilasining mutlaq ehtiyojlarini qabul qiladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 20.4,
+   "id": "fleurs_109",
+   "latency": 1.235,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "asrlarning oxiriga kelib gʻarbiy yevropa oʻz uslubini yaratishni boshladim salb yurishlari natijasiga oʻsha vaqtdagi eng katta rivojlanishlardan biri odamlar kiyimlarni mahkamlash uchun tugmalardan foydalana boshladilar",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.06,
+   "id": "fleurs_110",
+   "latency": 1.24,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "bosh vazir bilan uchrashuv paytida layton konservatorlarning atrofmuhit haqidagi qonun loyihasini batafsil va toʻliq qayta yozishni konservator partiyasining atrof muhit haqidaki qonun roʻyxasiga oʻzgartirishlar kiritishini soʻradi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.18,
+   "id": "fleurs_111",
+   "latency": 1.29,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "iz kuchlarining vazifasi anʻanaga koʻra davlatingizning kishilar va mahsulotlarni koʻchirish qobiliyatini saqlash shu bilan bir vaqtda raqibingizning oʻz odamlari va mahsullotlarini koʻcirish qobiladigan toʻsqinlik qilishdir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.3,
+   "id": "fleurs_112",
+   "latency": 1.273,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "erxonim argentina teatrida prezidentlikka nomzodini qoʻyishni niyat qilganini eʻlon qildi xuddi shu joyda u ikki ming besh yili buenosayres provinsiyasi delegatsiyasi aʻzosi sifatida senat uchun oʻz kompaniyasini boshlagandi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.48,
+   "id": "fleurs_113",
+   "latency": 1.204,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "i koʻrgazmadan besh daqiqa oʻtib shamol esa boshlari taxminan bir daqiqadan soʻng shamolning tezligi yetmish kilometr soatiga yetadi undan keyin yomgʻir yogʻishni boshladi shunaqangi qattiq va shiddatni yogʻadiki tanaga ignadek sanchiladi shundan keyin osmondan doʻl yogʻiladi odamlar vahimaga tushgan va qichqirib bir birining ustiga yugura boshlashiladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 21.72,
+   "id": "fleurs_114",
+   "latency": 1.635,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "sportchilar va klublarimiz hamda ularning sporti manfaatlarini sertifikatdan mahrum qilishdan koʻra tashkilotimiz ichida jiddiy oʻzgarishlar qilish orqali ogʻir siljish yaxshiroq taʻminlashi mumkin degan fikrga qoʻshilamiz",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 22.38,
+   "id": "fleurs_115",
+   "latency": 1.212,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "nominatsiyalar eng yaxshi film rejissyor kinematografiya kiyim dizayni filmni montaj qilish oʻziga xos rol mahsulot dizayni ovoz montaji ovozlarni aralashtirish va oʻizga xos ssenariylarni oʻzi ichiga oladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 22.44,
+   "id": "fleurs_116",
+   "latency": 1.186,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "aviyroq cherkovlar tez tez masihning qayta tirilishini nishonlashni buzish uchun yarim tunda jamoat bilan pasxaning dam olish kunlari davomida shanba oqshomida pasxa hushyorligini oʻtkazadilar",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 22.62,
+   "id": "fleurs_117",
+   "latency": 1.097,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "sivilizatsiya soʻzi fuqaro maʻnosini bildiruvchi lotincha seviz va shahar yoki shahar davlat maʻnozini bildirʻuvchi va ayrim hollarda jamiyat oʻlchamini anglatuvchi svetaz soʻzlari bilan bogʻliq boʻlib fuqarolik maʻ nosini bildirvchi lotinchi sevilya soʻ zidan olingan",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 23.34,
+   "id": "fleurs_118",
+   "latency": 1.408,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "perre bu kecha oʻtkazilgan partiyaning saylovoldi kengashi natijalarini baholash mazkur kurashda uzun uchun oldinga boradigan yoʻl bor yoʻqligini aniqlash uchun texasga qaytaman dedim lekin keyinroq u kurashda qolishini hamda yigirma bir yanvarda janubiy karolina shtatidagi ilk saylovlarda qatnashishini bildirdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 26.28,
+   "id": "fleurs_119",
+   "latency": 1.474,
+   "process_start": "2026-10-14 22:51:37"
+  },
+  {
+   "text": "iroq bu faqatgina tajribalar emas va tajriba bu mumkin boʻlgan bir yoki bir nechta gipotiza masalaning qoʻyilishi va ilmiy tadqiqotlar uchun adyentr boʻlib ham xizmat qiluvchi kuzatuvlarni oʻtkazishni istisno qilish uchun foydalanuvchi testdir",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 26.7,
+   "id": "fleurs_120",
+   "latency": 1.375,
+   "process_start": "2026-10-14 22:51:37"
+  }
+ ]
+}

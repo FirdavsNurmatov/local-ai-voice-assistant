@@ -1,6 +1,6 @@
 # Speech-to-text (STT)
 
-- **Last verified:** 2026-10-14 (tests run on the night of 2026-10-13/14)
+- **Last verified:** 2026-10-14 (tests run on the night of 2026-10-13/14; Uzbek model evaluation added later on 2026-10-14)
 - **Status:** implementation `SOURCE-CODE CONFIRMED`; every number below is a measurement from this machine (`VERIFIED` at that time) unless marked otherwise
 - **Related source:** `stt_server.py`, `start_stt.ps1`, `local_voice_chat.html` (microphone button), `server.py` (`run_chat` language handling)
 - **Related:** [ARCHITECTURE.md](ARCHITECTURE.md), [API_REFERENCE.md](API_REFERENCE.md#stt--stt_serverpy-port-8769), [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK.md), [MEMORY_AND_PERFORMANCE.md](MEMORY_AND_PERFORMANCE.md)
@@ -347,6 +347,30 @@ their own browser, allow the microphone, and say each of the three sentences onc
 6. Requires PyAV < 17 with faster-whisper 1.2.1.
 7. The page calls `http://127.0.0.1:8769` directly: STT works only in a browser on the same machine (same as Kokoro). Browsers allow microphone capture only on `localhost`/HTTPS origins, so opening the page via a LAN IP will also block the microphone.
 8. The load-time memory guard (1200 MB) is too low for the measured need.
+
+## Uzbek model evaluation (2026-10-14) and proposed improvement
+
+> **Status: evaluated, NOT implemented.** Production still runs Faster-Whisper `small` exactly as described above.
+> Full report: [STT_EVALUATION.md](STT_EVALUATION.md) · reproduction: [STT_EVALUATION_REPRODUCE.md](STT_EVALUATION_REPRODUCE.md).
+
+Measured on 120 **real human** Uzbek recordings (FLEURS test, female speakers, read speech), CPU int8, language forced to `uz`:
+
+| Model and settings | WER | CER | Repetition | Median latency | Peak RSS / commit |
+|---|---|---|---|---|---|
+| Current production (`small` + Uzbek prompt/overrides) | 1.239 | 0.435 | 12/120 | 5.9 s | 1.07 / 3.36 GB |
+| `navai-uz/whisper-small-uzbek` (CT2 int8), neutral settings | 0.255 | 0.101 | 0 | 3.3 s | 0.61 / 2.90 GB |
+| same + `without_timestamps=True` (post-hoc) | **0.207** | **0.067** | 0 | 3.1 s | 0.61 / 2.90 GB |
+
+This also corrects the earlier synthetic-only estimate in this document (Uzbek WER 0.56–1.00 on five
+TTS clips): on human speech the current setup is worse than that, and its language detector never
+labels Uzbek speech as `uz` (it guesses `hy`, `fa`, `az`, `ka`, …); only the "not Russian/English → Uzbek"
+rule makes auto mode work.
+
+NavAI **cannot** transcribe Russian or English (WER ≈ 1.0) and detects every language as Uzbek, so the
+proposal is: **NavAI for Uzbek, the current model for Russian, English and language detection**
+(routing table and rollout steps in [STT_EVALUATION.md §9](STT_EVALUATION.md#9-recommendation-and-proposed-production-change-not-implemented)).
+NavAI must run **without** the production Uzbek prompt and threshold overrides (they double its error rate)
+and with `without_timestamps=True`. Before switching: validate on fresh human recordings, including real iPhone audio.
 
 ## Next steps (`PROPOSED`)
 

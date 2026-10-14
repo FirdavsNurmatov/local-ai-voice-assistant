@@ -1,0 +1,200 @@
+{
+ "config": "hf_navai",
+ "lang_mode": "uz",
+ "dataset": "stt-eval\\datasets\\fleurs_parity.csv",
+ "device": "cpu",
+ "n": 20,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "transformers 5.19.0 / torch 2.14.1+cpu fp32",
+  "generate_kwargs": {
+   "language": "uz",
+   "task": "transcribe"
+  },
+  "generation_config": "shipped (greedy, no_repeat_ngram_size=4)",
+  "chunk_length_s": 30,
+  "vad": false
+ },
+ "load_s": 25.55,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 3308,
+ "rss_after_load_mb": 1358,
+ "commit_after_load_mb": 1611,
+ "peak_rss_inference_mb": 2051,
+ "peak_commit_inference_mb": 2622,
+ "peak_rss_process_mb": 2051,
+ "peak_commit_process_mb": 2627,
+ "gpu_base_mb": null,
+ "gpu_peak_mb": null,
+ "gpu_util_mean": null,
+ "gpu_util_max": null,
+ "results": [
+  {
+   "text": "hamkasb kurashchilar ham lunaga hurmat bajo keltirishdi",
+   "language": "uz",
+   "duration": 5.4,
+   "id": "fleurs_003",
+   "latency": 7.27,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "aziz avlarni oʻzlarining eng dahshatli yirtqichi boʻlguncha sovgʻa boshqa masulzavrlardan boshqacha yetish narsadan qoʻrqmagan",
+   "language": "uz",
+   "duration": 6.54,
+   "id": "fleurs_009",
+   "latency": 16.852,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "natijada ijrochilar sahnada kanabis oʻramalanib chekishdi va teatrning oʻz tomoshabinlarini qoʻshilishga undadi",
+   "language": "uz",
+   "duration": 7.14,
+   "id": "fleurs_015",
+   "latency": 13.243,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "rosbi soni qanchalik kichik boʻlsa yulduzning magnitik oʻzgarishlarga nisbatan faolligi shuncha past boʻldi",
+   "language": "uz",
+   "duration": 7.62,
+   "id": "fleurs_021",
+   "latency": 12.54,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "vodorod iyullari elektronlar olib tashlangan protonlardir sababi vodorod atomlar bitta proton va bitta elektrondan tarkib topgan",
+   "language": "uz",
+   "duration": 8.04,
+   "id": "fleurs_027",
+   "latency": 11.708,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "finlyandiya qayiqda suzishga borish uchun eng yaxshi manzil ming kun mamlakatning gullarida va qirgʻoqda arxipelaglarda ham ming nafar onlar farzand",
+   "language": "uz",
+   "duration": 9.18,
+   "id": "fleurs_033",
+   "latency": 14.83,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "qoʻshinlar yetib kelishdan avval goyimida bir ming sakkiz yuz yillardan buyon mazkur kasallik bilan bogʻliq muammolar kuzatilmagan",
+   "language": "uz",
+   "duration": 9.6,
+   "id": "fleurs_039",
+   "latency": 13.643,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "oʻtgan hafta media apple kompaniyasi jiddiy emas deb atalgan xatdan ortiq qizib ketish bilan bort oʻttiz toʻrt taqoʻshimcha holat toʻgʻrisida xabar bergani eʻlon qildi",
+   "language": "uz",
+   "duration": 10.26,
+   "id": "fleurs_045",
+   "latency": 19.261,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "piramida tovushi va chiroqlar shousi bolalar uchun hududdagi eng qiziqarli narsalardan biri",
+   "language": "uz",
+   "duration": 10.5,
+   "id": "fleurs_051",
+   "latency": 9.602,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "faʻda daʻvo qilishicha meksikin samolyotlarga qisqa yoʻnalishda uchish va har yili millionlab gallon yonilgacha hamda uglerod chiqqanini kamaytirish imkonini beruvchi tizimdir",
+   "language": "uz",
+   "duration": 10.8,
+   "id": "fleurs_057",
+   "latency": 19.06,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "internetdan urush muhiti kursi deb izlash hoynahoy mahalliy kompaniya manzilini chiqarib beradi",
+   "language": "uz",
+   "duration": 11.34,
+   "id": "fleurs_063",
+   "latency": 9.795,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "kundalini yoga bilan kundalini quvvati maʻrifat quvvati yoga poʻzalari nafas mashqlari mantralar hamda vizualizatsiyalar yordamida uygʻotiladi",
+   "language": "uz",
+   "duration": 11.88,
+   "id": "fleurs_069",
+   "latency": 14.942,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "u kamaytirishlar boʻyicha biror raqamni keltirmadi ularning xitoy iqtisodiyoti natijalari asosida amalga oshirilishini aytdi",
+   "language": "uz",
+   "duration": 12.48,
+   "id": "fleurs_075",
+   "latency": 13.917,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "yigirma asrdagi tadqiqotlar genetik oʻzgarishning ikki havzasi yashirin va ochiq ifodalangan havzalari mavjudligini koʻrsatdi",
+   "language": "uz",
+   "duration": 13.26,
+   "id": "fleurs_081",
+   "latency": 13.66,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "uning yetmish sakkiz taʻsiri san birinchisi shu kechki yil oxiriga qadar iroq chegaralarini tajovuzlardan himoya qilish va qoʻshnilar bilan diplomatik aloqalarni qayd etishga oid yangi diplomatik choralarini boshlashlansin",
+   "language": "uz",
+   "duration": 13.74,
+   "id": "fleurs_087",
+   "latency": 22.025,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "shuni yodda tutingki garchi asosiy sahnadagi musiqa tugagan boʻlsa ham festivalning yarim tungacha musiqa ijrosi davom etiladigan boʻlimlari boʻlishi mumkin",
+   "language": "uz",
+   "duration": 14.76,
+   "id": "fleurs_093",
+   "latency": 14.83,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "biroq sardor bekitini yoʻqotganidan keyin hindiston uzatmalarini yakunlash uchun yettita bekit yoʻlqotishlar bilan faqatgina oʻttiz oltita ranni amalga oshirdi",
+   "language": "uz",
+   "duration": 16.32,
+   "id": "fleurs_099",
+   "latency": 16.657,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "arslon toʻdalari xuddi boʻrilar yoki itlar toʻdalariga oʻxshab harakat qiladi hayvonlar lekin boshqa katta mushuklar mos hayratlanarli darajada sherlarga xattiharakat va shuningdek oʻlchalar uchun halokatli ekanligi bilan oʵxshashdir",
+   "language": "uz",
+   "duration": 19.14,
+   "id": "fleurs_105",
+   "latency": 25.409,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "bosh vazir bilan uchrashuv paytida layton konservatorlarning atrof muhit haqidagi qonun loyihasini batafsil va toʻliq qayta yozishni konservatorlar partiyasining atrof murd huquqidan qotirishga oʻzgartirishlar kiritishini soʻradi",
+   "language": "uz",
+   "duration": 21.18,
+   "id": "fleurs_111",
+   "latency": 22.599,
+   "process_start": "2026-10-14 22:34:37"
+  },
+  {
+   "text": "anʻanaviyroq cherkovlar tez tez masʻixning qayta tirilishini nishonlashni buzish uchun yarim tunda jamoat bilan pasxaning dam olish kunlari davomida shanba oqshomida pasxa hushyorligini oʻtkazadilar",
+   "language": "uz",
+   "duration": 22.62,
+   "id": "fleurs_117",
+   "latency": 18.953,
+   "process_start": "2026-10-14 22:34:37"
+  }
+ ]
+}

@@ -17,6 +17,7 @@ Full documentation: **[docs/INDEX.md](docs/INDEX.md)**.
 - Local translation (MADLAD-400 3B, CTranslate2 INT8) and local LLM (Ollama `qwen3:1.7b`).
 - Voice input: a microphone button records speech and a local Faster-Whisper `small` service
   transcribes it into the message box for review (Russian and English accurate; **Uzbek recognition is poor** — see [docs/STT.md](docs/STT.md)).
+  An Uzbek-specialised model was evaluated on real speech and cuts Uzbek errors by ≈ 80 % (WER 1.24 → 0.21); it is not deployed yet — see [docs/STT_EVALUATION.md](docs/STT_EVALUATION.md).
 - Local TTS engines routed by language: Uzbek VITS (ONNX), Kokoro (`af_heart`, `masha`);
   Piper (`lessac`, `irina`) and the browser's built-in voice remain as selectable modes.
 - Memory-aware Kokoro loading so a large model cannot starve the other services.
@@ -110,6 +111,95 @@ Then open <http://localhost:8765>. Full procedure, health checks and shutdown:
 
 There is no automated test suite. Manual health checks and an end-to-end smoke test are in
 [docs/TESTING.md](docs/TESTING.md), together with the recorded results of the tests run on 2026-10-13.
+
+## Hardware and expected performance
+
+This section helps you predict how the system will behave on your own machine. **Measured** values
+come from the reference PC (October 2026, details in [docs/MEMORY_AND_PERFORMANCE.md](docs/MEMORY_AND_PERFORMANCE.md)
+and [docs/STT.md](docs/STT.md)). **Estimated** values for the second machine are extrapolations from
+those measurements and the hardware differences — **nothing has been run on it yet.**
+
+### The two machines
+
+| | Reference PC (measured) | Ubuntu server (estimated) |
+|---|---|---|
+| OS | Windows 11 Pro | Ubuntu 24.04.4 LTS, kernel 6.14 |
+| CPU | Intel i7-9700K — 8 cores / 8 threads, 3.6 GHz | Intel i7-13700 — 16 cores (8P + 8E) / 24 threads |
+| RAM | 7.9 GB DDR4 | 64 GB DDR4 |
+| Memory limit that matters | Windows **commit limit** ≈ 18–25 GB (RAM + system-managed pagefile) | physical RAM; Linux overcommits, so "commit" is not a hard wall |
+| GPU | GTX 1650, 4 GB, **no tensor cores** | RTX 4060, 8 GB, tensor cores |
+| GPU driver / CUDA | 617.42 | 550.163.01 / CUDA 12.4 |
+| Disk needed by this project | ≈ 10–12 GB (more with CUDA builds of PyTorch) | same |
+
+The estimates assume the project gets the whole GPU and enough free disk on the server (other
+workloads that currently run there are expected to be stopped or moved).
+| Python | 3.12.10 | 3.12.3 |
+| Ollama | 0.40.3 | 0.13.4 |
+
+### Speed per pipeline stage
+
+Times are wall-clock for one short utterance or answer unless stated.
+
+| Stage | Reference PC — measured | Ubuntu server, CPU only — estimate | Ubuntu server, model on RTX 4060 — estimate |
+|---|---|---|---|
+| Speech-to-text, Whisper `small` int8, 3–5 s of speech | 3.5–5 s (CPU) | 2–3 s | 0.3–0.8 s |
+| Speech-to-text on 12 s average FLEURS clips, current model | median 5.9 s (CPU); 1.1 s (GTX 1650) | 3–4 s | 0.5–1 s |
+| Same, NavAI Uzbek model (120 clips) | median 3.1–3.3 s (CPU); 0.9 s (GTX 1650, +474 MB VRAM) | 2–2.5 s | 0.3–0.6 s |
+| Translation in (MADLAD-400 3B int8) | 0.8–1.8 s | 0.5–1 s | 0.2–0.5 s |
+| Chat answer (Ollama `qwen3:1.7b`, ≤ 100 tokens) | 0.2–1.0 s warm; 4.6–7.3 s when the model was cold | 0.2–0.6 s warm | < 0.5 s |
+| Translation out (MADLAD) | 1.0–6.4 s (longer answers take longer) | 0.6–3.5 s | 0.2–1 s |
+| Uzbek TTS (VITS ONNX), ≈ 3 s of audio | 0.5–0.6 s | 0.3–0.4 s | (CPU is enough) |
+| Kokoro English, ≈ 3 s of audio | 0.9–1.2 s | 0.5–0.8 s | 0.1–0.3 s |
+| Kokoro Russian `masha`, ≈ 5–7 s of audio | 1.6–2.4 s | 1–1.5 s | 0.2–0.5 s |
+| Piper (new process per request) | 3.4–5.4 s | 1.5–3 s | — |
+| **Spoken question → start of spoken answer** | **≈ 10–20 s** | **≈ 5–10 s** | **≈ 2–4 s** |
+| Model load: chat backend / STT / Kokoro EN+RU | ~8–16 s / 1.3–3.4 s / ~19 s | faster (NVMe-dependent) | similar |
+
+### Memory: what fits together
+
+Per-service memory, measured on the reference PC (commit = memory Windows reserves; RSS = memory actually resident):
+
+| Service | Commit (Windows) | RSS (resident) |
+|---|---|---|
+| Chat backend (`server.py`, MADLAD) | ≈ 9.9 GB | 0.3–2.6 GB |
+| Kokoro, English + Russian | ≈ 5.5 GB | ≈ 4.2 GB after load (2.4–3.0 GB later) |
+| Kokoro, English only | ≈ 1.8 GB | ≈ 1.4 GB |
+| STT (Faster-Whisper small) | 2.6–3.4 GB | 0.4–1.1 GB |
+| Uzbek TTS | 0.4–0.7 GB | 0.1–0.3 GB |
+| Ollama with `qwen3:1.7b` | — | ≈ 1.4 GB |
+| **Everything together** | **≈ 20 GB** | **≈ 9–11 GB** |
+
+| Configuration | Reference PC, 8 GB (measured) | 16 GB RAM (estimate) | Ubuntu server, 64 GB (estimate) |
+|---|---|---|---|
+| Chat + Uzbek TTS + STT | fits (≈ 0.7–1.2 GB commit left) | fits | fits easily |
+| Chat + Uzbek TTS + Kokoro | English voice only; Russian refused for memory | fits | fits easily |
+| Chat + STT + Kokoro (full system) | **does not fit** | fits on Linux; on Windows needs a pagefile ≥ 8 GB | fits with > 30 GB to spare |
+| Two STT models (NavAI Uzbek + small for ru/en) | not with chat running | fits | fits easily |
+| NavAI **medium** STT (not measured) | not realistic next to chat | likely fits | fits; GPU recommended for speed |
+
+### GPU memory budget (RTX 4060, 8 GB) — estimates
+
+| Model on GPU | VRAM |
+|---|---|
+| STT small / NavAI small (int8_float16) | ≈ 0.5 GB (measured +472 MB on the GTX 1650) |
+| STT medium | ≈ 1.5–2 GB |
+| Ollama `qwen3:1.7b` | ≈ 1.5–2 GB |
+| MADLAD-400 3B int8 | ≈ 3–3.5 GB |
+| Kokoro (PyTorch, EN + RU) | ≈ 1–1.5 GB |
+
+Suggested split on an 8 GB card: STT + MADLAD + Ollama on the GPU (≈ 5–7 GB), Kokoro and the
+Uzbek TTS on the CPU (estimated 0.3–1.5 s per answer on the i7-13700, see the speed table). With ≈ 1–3 GB of VRAM
+left, a larger Uzbek STT model (NavAI medium) or Kokoro on the GPU can be tried instead.
+If other GPU programs run at the same time, move models back to the CPU until they fit.
+
+### Notes for planning your own setup
+
+- **RAM is the first bottleneck, GPU the second.** 8 GB runs only part of the system; 16 GB runs all of it on Linux (Windows needs a larger pagefile); 32 GB+ leaves room for larger models.
+- **Windows counts "commit", not resident memory.** CTranslate2 models (MADLAD, Whisper) commit 3–5× their file size, so Windows runs out long before Task Manager shows full RAM.
+- **GTX-class cards without tensor cores help, but modestly.** RTX cards (tensor cores) give much larger speed-ups for Whisper, MADLAD and the LLM.
+- **Disk:** about 10–12 GB for environments and models (more with CUDA builds of PyTorch).
+- **CUDA:** the GPU tests here used CUDA 12 runtime wheels (`nvidia-cublas-cu12`, `nvidia-cudnn-cu12`) inside the virtual environment; no system CUDA toolkit (`nvcc`) is needed. Driver 550 / CUDA 12.4 should work with them but has not been tested.
+- **Porting to Linux** needs small changes: the Piper interpreter path (`.venv-piper\Scripts\python.exe`), the PowerShell start scripts (use bash or `systemd`), and `device="cuda"` where a GPU is wanted. The memory guards use a Windows API and are skipped automatically on Linux.
 
 ## Known limitations
 

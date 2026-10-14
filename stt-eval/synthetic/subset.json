@@ -1,0 +1,86 @@
+[
+ {
+  "id": "synth_01",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_01.wav",
+  "ref": "Salom, menga bugungi kun uchun qisqa reja tuzib ber.",
+  "kind": "natural",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_02",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_02.wav",
+  "ref": "Rahmat.",
+  "kind": "one word",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_03",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_03.wav",
+  "ref": "Bugun havo juda yaxshi, sayrga chiqamizmi?",
+  "kind": "natural",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_04",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_04.wav",
+  "ref": "Kutubxona soat nechada ochiladi?",
+  "kind": "natural",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_05",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_05.wav",
+  "ref": "Iltimos, menga eng yaqin dorixonani ko'rsat.",
+  "kind": "natural",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_06",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_06.wav",
+  "ref": "Toshkentdan Samarqandgacha poyezdda qancha vaqt ketadi?",
+  "kind": "natural",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_07",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_07.wav",
+  "ref": "Bir, ikki, uch, to'rt, besh, olti, yetti, sakkiz, to'qqiz, o'n.",
+  "kind": "repetition-prone: counting",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_08",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_08.wav",
+  "ref": "Ha, ha, albatta, albatta.",
+  "kind": "repetition-prone: repeated words",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_09",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_09.wav",
+  "ref": "Yo'q, yo'q, yo'q, bunday emas.",
+  "kind": "repetition-prone: repeated words",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_10",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_10.wav",
+  "ref": "Men, men, men bilmayman, lekin harakat qilaman.",
+  "kind": "repetition-prone: stutter",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_11",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_11.wav",
+  "ref": "Ertaga ertalab soat sakkizda universitetga borishim kerak, keyin do'stlarim bilan uchrashaman, kechqurun esa uyga qaytib, onamga ovqat tayyorlashda yordam beraman.",
+  "kind": "long",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ },
+ {
+  "id": "synth_12",
+  "file": "C:\\local-ai-translator\\stt-eval\\synthetic\\synth_12.wav",
+  "ref": "Assalomu alaykum! Xush kelibsiz. Sizga qanday yordam bera olaman?",
+  "kind": "natural",
+  "source": "synthetic: project Uzbek VITS ONNX TTS"
+ }
+]

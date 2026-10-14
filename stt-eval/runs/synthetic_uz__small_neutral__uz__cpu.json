@@ -1,0 +1,166 @@
+{
+ "config": "small_neutral",
+ "lang_mode": "uz",
+ "dataset": "stt-eval\\datasets\\synthetic_uz.csv",
+ "device": "cpu",
+ "n": 12,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "faster-whisper 1.2.1 / ctranslate2 4.8.3",
+  "model_dir": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "pipeline": "WhisperModel.transcribe",
+  "task": "transcribe",
+  "condition_on_previous_text": false,
+  "no_repeat_ngram_size": 4,
+  "beam_size": 5,
+  "vad_filter": true,
+  "temperature": "default (0.0..1.0 fallback)",
+  "initial_prompt": null,
+  "language": "uz"
+ },
+ "load_s": 1.31,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 4451,
+ "rss_after_load_mb": 377,
+ "commit_after_load_mb": 2602,
+ "peak_rss_inference_mb": 999,
+ "peak_commit_inference_mb": 3282,
+ "peak_rss_process_mb": 1000,
+ "peak_commit_process_mb": 3284,
+ "gpu_base_mb": null,
+ "gpu_peak_mb": null,
+ "gpu_util_mean": null,
+ "gpu_util_max": null,
+ "results": [
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.1579375,
+   "id": "synth_01",
+   "latency": 2.725,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 0.3715625,
+   "id": "synth_02",
+   "latency": 0.013,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "bubum xawakute yaxşe sairge çqamizma.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.809625,
+   "id": "synth_03",
+   "latency": 2.26,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "ʃakhtukona sa'ad mei tʃa'da aʃilad.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.2988125,
+   "id": "synth_04",
+   "latency": 9.95,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "Ṣe Ṣa Ṣi Ṣu Ṣo Ṣai Ṣibu Ṭi Ṭe Ṭa Ṭu ṭe ṭa ṭi ṭo Ṭo ṭu Ṝa Ṝi Ṝu Ṥa Ṥo Ṝe Ṝo Ṥi Ṥu ṧa ṯa ṧu ṯe ṧi ṧo ṧe Ṥe ṯo ṯi ṯu ṝa ṝi ṝe ṝu Ṧa Ṛi Ṛa ṟu Ṛe Ṛu ṙa ṙu ṟi ṙo Ṛo ṝo ṙi ṟo �",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.6586875,
+   "id": "synth_05",
+   "latency": 10.239,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "Taşgentan samarkand keche bayizda kanche vakti ke tady.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.041875,
+   "id": "synth_06",
+   "latency": 2.252,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.1579375,
+   "id": "synth_07",
+   "latency": 2.923,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "xaadad adadadadad",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 1.579,
+   "id": "synth_08",
+   "latency": 1.982,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "yob yob yop yop yob bundey yem as",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 1.4048125,
+   "id": "synth_09",
+   "latency": 2.096,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "nananan delmi man dekin xare keb quleman.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.1014375,
+   "id": "synth_10",
+   "latency": 2.151,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.4869375,
+   "id": "synth_11",
+   "latency": 3.23,
+   "process_start": "2026-10-14 22:42:18"
+  },
+  {
+   "text": "Asalamu alaqum khush qeribsiz, siz qe qanney yorden bir olaman.",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.77325,
+   "id": "synth_12",
+   "latency": 2.397,
+   "process_start": "2026-10-14 22:42:18"
+  }
+ ]
+}

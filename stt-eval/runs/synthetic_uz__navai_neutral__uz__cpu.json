@@ -1,0 +1,166 @@
+{
+ "config": "navai_neutral",
+ "lang_mode": "uz",
+ "dataset": "stt-eval\\datasets\\synthetic_uz.csv",
+ "device": "cpu",
+ "n": 12,
+ "resumed_from": 0,
+ "options": {
+  "runtime": "faster-whisper 1.2.1 / ctranslate2 4.8.3",
+  "model_dir": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "pipeline": "WhisperModel.transcribe",
+  "task": "transcribe",
+  "condition_on_previous_text": false,
+  "no_repeat_ngram_size": 4,
+  "beam_size": 5,
+  "vad_filter": true,
+  "temperature": "default (0.0..1.0 fallback)",
+  "initial_prompt": null,
+  "language": "uz"
+ },
+ "load_s": 0.7,
+ "services_at_start": {
+  "chat": false,
+  "uz_tts": false,
+  "piper": false,
+  "kokoro": false,
+  "stt": false,
+  "ollama": true
+ },
+ "sys_free_commit_mb_at_start": 4480,
+ "rss_after_load_mb": 378,
+ "commit_after_load_mb": 2602,
+ "peak_rss_inference_mb": 575,
+ "peak_commit_inference_mb": 2857,
+ "peak_rss_process_mb": 580,
+ "peak_commit_process_mb": 2862,
+ "gpu_base_mb": null,
+ "gpu_peak_mb": null,
+ "gpu_util_mean": null,
+ "gpu_util_max": null,
+ "results": [
+  {
+   "text": "salom menga bugungi kun uchun qisqa yarasha tuzib ber",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.1579375,
+   "id": "synth_01",
+   "latency": 2.347,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 0.3715625,
+   "id": "synth_02",
+   "latency": 0.012,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "i buvim havo juda yaxshi sayrga chiqamizmi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.809625,
+   "id": "synth_03",
+   "latency": 2.184,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "i qutugʻini soat nechada ochiladi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.2988125,
+   "id": "synth_04",
+   "latency": 2.093,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "itimos menga eng yaqin dorixonani koʻrsatdi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.6586875,
+   "id": "synth_05",
+   "latency": 2.146,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "dan samarqandgacha poyezdda qancha vaqti ketadi",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.041875,
+   "id": "synth_06",
+   "latency": 2.261,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "idagi sakkiz toʻqqiz olti",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.1579375,
+   "id": "synth_07",
+   "latency": 2.187,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "ida haqiqat albatta albatta",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 1.579,
+   "id": "synth_08",
+   "latency": 2.013,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "yoʻl yoʻq bunday emas",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 1.4048125,
+   "id": "synth_09",
+   "latency": 2.055,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "iyman lekin harakat qilaman",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 2.1014375,
+   "id": "synth_10",
+   "latency": 2.008,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "soat sakkizda universitetga borishim kerakki doʻstlarim bilan uchrashaman da kechqurun esa uyga qaytib onamga ovqat tayyorlashda yordam beraman",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 8.4869375,
+   "id": "synth_11",
+   "latency": 3.192,
+   "process_start": "2026-10-14 22:43:02"
+  },
+  {
+   "text": "assalomu alaykum xush kelibsiz sizga qanday yordam berolaman",
+   "language": "uz",
+   "raw_language": "uz",
+   "raw_language_p": 1,
+   "duration": 3.77325,
+   "id": "synth_12",
+   "latency": 2.288,
+   "process_start": "2026-10-14 22:43:02"
+  }
+ ]
+}

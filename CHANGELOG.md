@@ -5,6 +5,28 @@ The project was put under version control on 2026-10-13. Everything before that 
 recorded work of 2026-10-13 — inferences from timestamps and file contents, not from commit history.
 No version numbers have been assigned.
 
+## 2026-10-14 — STT through `server.py` (iPhone / HTTPS tunnel)
+
+- `server.py`: new `POST /api/transcribe` (forwards audio, `Content-Type` and `?language=` to
+  `127.0.0.1:8769`) and `GET /api/stt/health`. Existing routes unchanged. Backup: `server.py.before_stt_proxy.bak`.
+- `local_voice_chat.html`: STT requests go to the page's own origin (`/api/transcribe`); `audio/mp4`
+  (iPhone Safari) added to accepted recorder types; header shows STT status. Backup: `local_voice_chat.html.before_stt_proxy.bak`.
+
+## 2026-10-14 — Speech-to-text
+
+- Added `stt_server.py` (port 8769): Faster-Whisper `small`, CPU, int8, background loading, raw or
+  multipart upload, language mapped to `uz`/`ru`/`en`, Uzbek-specific decoding options, VAD filter,
+  queue limit, memory check. Added `start_stt.ps1`, `.venv-stt\`, `stt-models\` (not in git), `docs/STT.md`,
+  `docs/requirements/stt-venv.freeze.txt`.
+- `local_voice_chat.html`: microphone button (record → transcribe → insert into the message box for
+  review); the detected language is sent with the next chat request; typed messages now send
+  `language: "auto"`. **Kokoro mode no longer falls back to Piper** — the real Kokoro error is shown.
+  Previous version: `local_voice_chat.html.before_stt.bak`.
+- `server.py`: `run_chat` honours an explicit `language` of `uz`/`ru`/`en` again, otherwise detects
+  from the text (one line). Previous version: `server.py.before_stt.bak`.
+- Measured: Russian/English WER 0.00 on synthetic test speech; Uzbek WER 0.56–1.00; STT ≈ 2.6 GB commit;
+  chat + STT + Kokoro do not fit together on the reference machine. Not yet tested with a real microphone.
+
 ## 2026-10-13 — First publication
 
 - Repository created at <https://github.com/FirdavsNurmatov/local-ai-voice-assistant> with an MIT `LICENSE`.

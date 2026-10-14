@@ -17,6 +17,9 @@ MODEL_DIR = str(BASE_DIR / "madlad400-3b-ct2-int8")
 OLLAMA_URL = "http://127.0.0.1:11434/api/chat"
 TTS_URL = "http://127.0.0.1:8766/api/tts"
 TTS_HEALTH_URL = "http://127.0.0.1:8766/api/health"
+STT_URL = "http://127.0.0.1:8769/api/transcribe"
+STT_HEALTH_URL = "http://127.0.0.1:8769/api/health"
+STT_MAX_BODY = 25 * 1024 * 1024
 QWEN_MODEL = "qwen3:1.7b"
 HOST = "0.0.0.0"
 PORT = 8765
@@ -99,7 +102,9 @@ def translate(text: str, target: str):
 
 def run_chat(text: str, requested_language: str):
     started = time.perf_counter()
-    lang = detect_language(text)
+    # An explicit language (e.g. the one detected by the STT service) wins;
+    # "auto" or anything else falls back to text-based detection.
+    lang = requested_language if requested_language in ("uz", "ru", "en") else detect_language(text)
     if lang == "en":
         english, input_time = text, 0.0
     else:
@@ -179,10 +184,50 @@ class Handler(BaseHTTPRequestHandler):
                 "tts_model": "vits_uzbek_finetuned.onnx" if tts_ok else None,
             }, ensure_ascii=False))
             return
+        if path == "/api/stt/health":
+            # STT is reached through this server so it also works over HTTPS tunnels / phones.
+            try:
+                stt_response = requests.get(STT_HEALTH_URL, timeout=3)
+                self._send(stt_response.status_code, stt_response.content,
+                           stt_response.headers.get("Content-Type", "application/json; charset=utf-8"))
+            except requests.RequestException as exc:
+                self._send(502, json.dumps({
+                    "ok": False, "ready": False,
+                    "error": f"STT serveriga ulanib bo'lmadi (8769): {type(exc).__name__}",
+                }, ensure_ascii=False))
+            return
         self._send(404, json.dumps({"ok": False, "error": "Not found"}))
+
+    def proxy_transcribe(self):
+        """Pass the uploaded audio (raw or multipart) and ?language= to the STT server unchanged."""
+        try:
+            length = int(self.headers.get("Content-Length", "0"))
+        except ValueError:
+            length = -1
+        if length <= 0 or length > STT_MAX_BODY:
+            self._send(400 if length <= 0 else 413, json.dumps({
+                "ok": False, "error": "Audio yuborilmadi yoki 25 MB dan katta"}, ensure_ascii=False))
+            return
+        body = self.rfile.read(length)
+        query = urlparse(self.path).query
+        try:
+            stt_response = requests.post(
+                STT_URL + (f"?{query}" if query else ""), data=body, timeout=300,
+                headers={"Content-Type": self.headers.get("Content-Type", "application/octet-stream")})
+        except requests.RequestException as exc:
+            self._send(502, json.dumps({
+                "ok": False,
+                "error": f"STT serveriga ulanib bo'lmadi (8769): {type(exc).__name__}",
+            }, ensure_ascii=False))
+            return
+        self._send(stt_response.status_code, stt_response.content,
+                   stt_response.headers.get("Content-Type", "application/json; charset=utf-8"))
 
     def do_POST(self):
         path = urlparse(self.path).path
+        if path == "/api/transcribe":
+            self.proxy_transcribe()
+            return
         try:
             length = int(self.headers.get("Content-Length", "0"))
             if length <= 0 or length > 100_000:
@@ -243,6 +288,7 @@ class Handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     print(f"\nChat server: http://localhost:{PORT}")
     print("TTS proxy: /api/tts -> http://127.0.0.1:8766/api/tts")
+    print("STT proxy: /api/transcribe, /api/stt/health -> http://127.0.0.1:8769")
     print("Faqat ishonchli lokal tarmoqda ishlating; autentifikatsiya yo'q.")
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()
 

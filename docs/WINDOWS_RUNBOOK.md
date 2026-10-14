@@ -1,6 +1,6 @@
 # Windows runbook (operator manual)
 
-- **Last verified:** 2026-10-13
+- **Last verified:** 2026-10-14 (STT start-up, port 8769 and the memory combinations were exercised that day)
 - **Status:** file paths and commands `VERIFIED` against the directory; start-up commands were used successfully earlier on 2026-10-13 (`HISTORICAL TEST RESULT`); services were not started during the documentation audit
 - **Related:** [MEMORY_AND_PERFORMANCE.md](MEMORY_AND_PERFORMANCE.md), [TROUBLESHOOTING.md](TROUBLESHOOTING.md), [TESTING.md](TESTING.md)
 
@@ -30,7 +30,7 @@ Set-Location C:\local-ai-translator
 
 ```powershell
 Get-NetTCPConnection -State Listen -ErrorAction SilentlyContinue |
-  Where-Object { $_.LocalPort -in 8765,8766,8767,8768,11434 } |
+  Where-Object { $_.LocalPort -in 8765,8766,8767,8768,8769,11434 } |
   Select-Object LocalAddress, LocalPort, OwningProcess | Sort-Object LocalPort
 ```
 
@@ -56,7 +56,7 @@ $o = Get-CimInstance Win32_OperatingSystem
 
 "Commit free" is the number that matters. Approximate needs (historical, see
 [MEMORY_AND_PERFORMANCE.md](MEMORY_AND_PERFORMANCE.md)): `server.py` ≈ 10 GB, Kokoro English ≈ 2 GB,
-Kokoro Russian ≈ 3.5 GB more, Uzbek TTS ≈ 0.7 GB, Ollama model ≈ 1.4 GB.
+Kokoro Russian ≈ 3.5 GB more, STT ≈ 2.6 GB, Uzbek TTS ≈ 0.7 GB, Ollama model ≈ 1.4 GB.
 
 ## 4. Start-up
 
@@ -102,7 +102,26 @@ Set-Location C:\local-ai-translator
 .\.venv-kokoro\Scripts\python.exe .\kokoro_tts_server.py
 ```
 
-Equivalent: `.\start_kokoro_tts.ps1`. The script only does `Set-Location` to its own folder and runs
+**Window 5 — STT / voice input (8769).** Optional; wait for `[STT] model tayyor`:
+
+```powershell
+Set-Location C:\local-ai-translator
+.\.venv-stt\Scripts\python.exe .\stt_server.py
+```
+
+Equivalent: `.\start_stt.ps1`. Needs ≈ 2.6 GB of free commit. **On the reference machine chat + STT +
+Kokoro do not fit together** (measured 2026-10-14): with chat and STT loaded, Kokoro refused both
+voices; with chat and Kokoro (English) loaded there is no room for STT. Choose per session:
+
+| Goal | Start |
+|---|---|
+| Voice input + chat, Uzbek answers spoken | 8766, 8765, 8769 (Kokoro will show a memory error for ru/en answers) |
+| Typed chat with English Kokoro voice | 8766, 8765, 8768 |
+| Try STT with both Kokoro voices, no chat | 8766, 8769, 8768 |
+
+Details: [STT.md](STT.md#memory).
+
+About the Kokoro start: `.\start_kokoro_tts.ps1` is equivalent to the Window 4 command. The script only does `Set-Location` to its own folder and runs
 the same interpreter with `-X utf8`. Neither form is "preferred" functionally: without `-X utf8`
 the server re-launches itself in UTF-8 mode (one extra process). The script is location-independent
 and avoids the extra process.
@@ -126,7 +145,7 @@ Remove-Item Env:KOKORO_LANGS  # back to default
 ## 5. Health checks
 
 ```powershell
-foreach ($port in 8765, 8766, 8767, 8768) {
+foreach ($port in 8765, 8766, 8767, 8768, 8769) {
     try   { '{0}  {1}' -f $port, (Invoke-RestMethod "http://127.0.0.1:$port/api/health" -TimeoutSec 5 | ConvertTo-Json -Compress -Depth 4) }
     catch { '{0}  DOWN  {1}' -f $port, $_.Exception.Message }
 }
@@ -140,6 +159,7 @@ How to read the result:
 | 8766 | `"ok":true` | — |
 | 8767 | `"ok":true` | static; does not prove the models exist |
 | 8768 | `"loading":false` and `"ready":{"ru":…,"en":true}` | `ok:false` with `ready.en:true` is the normal state on a memory-constrained machine; read `errors` |
+| 8769 | `"ready":true,"model":"small","compute_type":"int8"` | `ready:false` with `loading:false` → read `error` |
 
 Kokoro readiness in one line:
 
@@ -158,7 +178,14 @@ Pick a language under "Suhbat tili" and press **Test ovozi**; watch the status l
 | O‘zbekcha | `Mahalliy Uzbek TTS ovozi ijro etilmoqda…` then `Tayyor.` |
 | Inglizcha | `Kokoro (Heart) ovozi ijro etilmoqda…` then `Tayyor.` |
 | Ruscha, `masha` loaded | `Kokoro (Masha) ovozi ijro etilmoqda…` |
-| Ruscha, `masha` not loaded | `Kokoro TTS xatosi: ru modeli tayyor emas… Piper zaxira ovozi ishlatilmoqda...` and the Piper voice plays |
+| Ruscha, `masha` not loaded | `Kokoro (Masha) TTS xatosi: ru modeli tayyor emas: MemoryError…` and nothing plays (no Piper fallback since 2026-10-14) |
+
+**Voice input check** (needs 8769 and a working microphone): press **🎤 Gapirish**, allow the
+microphone, say a sentence, press **⏹ To‘xtatish**. Expected: `Nutq matnga aylantirilmoqda…`, then
+`Transkript tayyor · til: ru, ishonch 94% …` and the text appears in the message box **without being
+sent**. Edit if needed, press **Yuborish**. `STT xatosi: mikrofonga ruxsat berilmadi…` means the
+browser blocked the microphone; `STT serveriga ulanib bo‘lmadi (8769)` means the STT server is not running.
+The microphone works only when the page is opened as `http://localhost:8765` or `http://127.0.0.1:8765`.
 
 Use a browser **on the same machine**; from another device Kokoro and Piper are unreachable (see [KNOWN_ISSUES.md](KNOWN_ISSUES.md)).
 

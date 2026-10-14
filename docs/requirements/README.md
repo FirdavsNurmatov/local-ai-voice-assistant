@@ -9,6 +9,7 @@ installed or changed). One file per environment — they are **not interchangeab
 | [uzbek-tts-venv.freeze.txt](uzbek-tts-venv.freeze.txt) | `stt-tts-uz\.venv-tts` | `tts_onnx_server.py` |
 | [piper-venv.freeze.txt](piper-venv.freeze.txt) | `.venv-piper` | Piper CLI started by `piper_tts_server.py` |
 | [kokoro-venv.freeze.txt](kokoro-venv.freeze.txt) | `.venv-kokoro` | `kokoro_tts_server.py` |
+| [stt-venv.freeze.txt](stt-venv.freeze.txt) | `.venv-stt` (generated 2026-10-14) | `stt_server.py` |
 
 All four: CPython 3.12.10, 64-bit, Windows.
 

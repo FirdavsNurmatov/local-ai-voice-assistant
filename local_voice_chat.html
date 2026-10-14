@@ -20,7 +20,7 @@
 <section class="chat">
 <div class="chat-head"><strong>Chat</strong><span id="chatCount">0 ta xabar</span></div>
 <div id="messages" aria-live="polite"><div class="welcome" id="welcome"><div class="welcome-icon">🤖</div><h2>AI bilan suhbatni boshlang</h2><p>Matn yuboring. Server MADLAD va Qwen orqali javob beradi; ovozni brauzer yoki mahalliy Uzbek TTS yaratadi.</p></div></div>
-<form class="composer" id="chatForm"><textarea id="messageInput" placeholder="Savolingizni yozing..." aria-label="Savol matni" required></textarea><div class="composer-bottom"><span class="hint">Enter — yuborish · Shift+Enter — yangi qator</span><button class="primary" id="sendBtn" type="submit">▶ Yuborish</button></div><div id="notice" role="status"></div></form>
+<form class="composer" id="chatForm"><textarea id="messageInput" placeholder="Savolingizni yozing..." aria-label="Savol matni" required></textarea><div class="composer-bottom"><span class="hint">Enter — yuborish · Shift+Enter — yangi qator</span><span style="display:flex;gap:8px"><button class="secondary" id="micBtn" type="button" title="Ovoz bilan kiritish (STT)" style="width:auto;padding:0 14px">🎤 Gapirish</button><button class="primary" id="sendBtn" type="submit">▶ Yuborish</button></span></div><div id="notice" role="status"></div></form>
 </section>
 <aside class="settings">
 <h2>Til va ovoz</h2>
@@ -31,7 +31,7 @@
 <div class="field"><label for="pitch">Ovoz baland-pastligi</label><input id="pitch" type="range" min="0.7" max="1.3" step="0.05" value="1"><div class="range-row"><span>Past</span><span id="pitchValue">1.00</span><span>Yuqori</span></div></div>
 <div class="field"><label for="volume">Ovoz balandligi</label><input id="volume" type="range" min="0" max="1" step="0.05" value="1"><div class="range-row"><span>0%</span><span id="volumeValue">100%</span><span>100%</span></div></div>
 <div class="actions"><button class="secondary" id="testVoice" type="button">Test ovozi</button><button class="secondary" id="stopVoice" type="button">■ To‘xtatish</button></div>
-<div class="note">Mahalliy Uzbek TTS tanlansa, o‘zbekcha audio kompyuterda ONNX modeli bilan yaratiladi. Kokoro rejimida ruscha matn Masha, inglizcha matn Heart ovozida (port 8768) o‘qiladi; Kokoro ishlamasa Piper zaxira bo‘ladi. Boshqa rejimlarda ruscha va inglizcha matnlar brauzer ovoziga o‘tadi. STT hali qo‘shilmagan.</div>
+<div class="note">Mahalliy Uzbek TTS tanlansa, o‘zbekcha audio kompyuterda ONNX modeli bilan yaratiladi. Kokoro rejimida ruscha matn Masha, inglizcha matn Heart ovozida (port 8768) o‘qiladi; Kokoro ishlamasa xato ko‘rsatiladi (Piper faqat o‘z rejimida ishlaydi). Boshqa rejimlarda ruscha va inglizcha matnlar brauzer ovoziga o‘tadi. «🎤 Gapirish» tugmasi nutqni Faster-Whisper small (port 8769) orqali matnga aylantiradi; ruscha va inglizcha aniq, o‘zbekcha tanib olish hozircha sust.</div>
 </aside>
 </div></div>
 <script>
@@ -142,9 +142,12 @@
       } catch (e) {
         // Audio olingan bo'lsa, bu ijro xatosi: Piper'ga o'tish kerak emas.
         if (gotAudio) { showNotice(`Kokoro audio ijro etilmadi: ${e.message}`); return; }
-        // Kokoro serveri ishlamasa, pastdagi Piper blokiga (fallback) o'tamiz.
-        kokoroError = e.message === 'Failed to fetch' ? 'server ishlamayapti (8768)' : e.message;
+        // Kokoro rejimida Piper'ga avtomatik o'tilmaydi: haqiqiy xato ko'rsatiladi.
+        // (Piper kerak bo'lsa, "Ovoz tizimi"dan Piper rejimini tanlang.)
+        const reason = /Failed to fetch|NetworkError/i.test(e.message) ? 'server ishlamayapti (8768)' : e.message;
         stopAllAudio();
+        showNotice(`Kokoro (${voiceName}) TTS xatosi: ${reason}`);
+        return;
       }
     }
     if ((ttsModeSelect.value === 'piper' || kokoroError) && (lang === 'ru' || lang === 'en')) {
@@ -217,13 +220,20 @@
       const data = await r.json();
       status.textContent = data.translation_model + ' + ' + data.model + (data.local_tts ? ' + Uzbek TTS ✓' : ' · TTS ulanmagan');
       showNotice(data.local_tts ? 'AI server va mahalliy Uzbek TTS ulangan.' : 'AI server ulangan; mahalliy TTS serverini ham ishga tushiring.');
+      try {
+        const stt = await (await fetch('/api/stt/health')).json();
+        status.textContent += stt.ready ? ' + STT ✓' : ' · STT ' + (stt.loading ? 'yuklanmoqda' : 'ulanmagan');
+      } catch { status.textContent += ' · STT ulanmagan'; }
     } catch { status.textContent = 'Server bilan aloqa yo‘q'; showNotice('Serverga ulanish imkoni yo‘q. server.py ishga tushganini tekshiring.'); }
   }
   form.addEventListener('submit', async event => {
     event.preventDefault();
     const text = input.value.trim();
     if (!text || busy) return;
-    const lang = languageSelect.value;
+    // STT orqali kiritilgan matn uchun aniqlangan til yuboriladi; qo'lda yozilgan
+    // matn uchun 'auto' (server tilni matndan o'zi aniqlaydi, avvalgidek).
+    const lang = sttLang || 'auto';
+    sttLang = null;
     addMessage('user', text, lang);
     input.value = '';
     busy = true; sendBtn.disabled = true; sendBtn.textContent = '⏳ Javob kutilmoqda…';
@@ -248,6 +258,75 @@
     }
   });
   input.addEventListener('keydown', e => { if (e.key==='Enter' && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); } });
+
+  // --- STT: mikrofon -> /api/transcribe (server.py proxy -> 127.0.0.1:8769) -> matn maydoni ---
+  // Joriy origin orqali: lokal http://localhost:8765 da ham, HTTPS tunnel/iPhone'da ham ishlaydi.
+  const STT_URL = '/api/transcribe';
+  const micBtn = document.getElementById('micBtn');
+  let sttLang = null, recorder = null, micStream = null, chunks = [];
+  function setMic(state) {
+    micBtn.dataset.state = state;
+    micBtn.disabled = state === 'transcribing';
+    micBtn.textContent = ({idle:'🎤 Gapirish', recording:'⏹ To‘xtatish', transcribing:'⏳ Matnga aylantirilmoqda…'})[state];
+    micBtn.style.borderColor = state === 'recording' ? '#ff6b6b' : '';
+    micBtn.style.color = state === 'recording' ? '#ff9c9c' : '';
+  }
+  async function transcribeBlob(blob) {
+    setMic('transcribing');
+    showNotice('Nutq matnga aylantirilmoqda (Faster-Whisper small)…');
+    try {
+      if (!blob || blob.size === 0) throw new Error('audio yozilmadi (bo‘sh yozuv)');
+      let response;
+      try {
+        response = await fetch(STT_URL, {method:'POST', headers:{'Content-Type': blob.type || 'application/octet-stream'}, body: blob});
+      } catch { throw new Error('serverga ulanib bo‘lmadi (tarmoq xatosi). Internet yoki tunnelni tekshiring.'); }
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || !data.ok) throw new Error(data.error || `HTTP ${response.status}`);
+      const existing = input.value.trim();
+      input.value = existing ? existing + ' ' + data.text : data.text;
+      sttLang = data.language;
+      if ([...languageSelect.options].some(o => o.value === data.language)) languageSelect.value = data.language;
+      // O'zbekcha "ru/en emas" qoidasi bilan tanlanadi, shuning uchun unda foiz ko'rsatilmaydi.
+      const pct = data.language_probability >= 0.5 ? `, ishonch ${Math.round(data.language_probability * 100)}%` : ' (taxminiy — tilni «Suhbat tili»dan o‘zgartirish mumkin)';
+      showNotice(`Transkript tayyor · til: ${data.language}${pct} · ${data.duration}s audio, ${data.processing_time}s. Matnni tekshirib, «Yuborish»ni bosing.`);
+      input.focus();
+    } catch (e) {
+      showNotice(`STT xatosi: ${e.message}`);
+    } finally {
+      setMic('idle');
+    }
+  }
+  async function startRecording() {
+    if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) { showNotice('STT xatosi: bu brauzer mikrofon yozuvini qo‘llab-quvvatlamaydi.'); return; }
+    try {
+      micStream = await navigator.mediaDevices.getUserMedia({audio: true});
+    } catch (e) {
+      showNotice(`STT xatosi: mikrofonga ruxsat berilmadi yoki mikrofon topilmadi (${e.name}).`); return;
+    }
+    // iPhone Safari odatda faqat audio/mp4 (AAC) yozadi; STT uni ham o'qiydi.
+    const mime = ['audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/mp4'].find(t => MediaRecorder.isTypeSupported(t));
+    recorder = new MediaRecorder(micStream, mime ? {mimeType: mime} : undefined);
+    chunks = [];
+    recorder.ondataavailable = e => { if (e.data.size) chunks.push(e.data); };
+    recorder.onstop = () => {
+      micStream.getTracks().forEach(t => t.stop());
+      const blob = new Blob(chunks, {type: recorder.mimeType || mime || 'audio/webm'});
+      recorder = null; micStream = null;
+      transcribeBlob(blob);
+    };
+    stopAllAudio();
+    recorder.start();
+    setMic('recording');
+    showNotice('Yozilmoqda… Gapirib bo‘lgach, «To‘xtatish»ni bosing.');
+  }
+  micBtn.addEventListener('click', () => {
+    if (recorder && recorder.state === 'recording') recorder.stop();
+    else if (micBtn.dataset.state !== 'transcribing') startRecording();
+  });
+  // Matn to'liq o'chirilsa yoki til qo'lda o'zgartirilsa, STT tili unutiladi / yangilanadi.
+  input.addEventListener('input', () => { if (!input.value.trim()) sttLang = null; });
+  languageSelect.addEventListener('change', () => { if (sttLang) sttLang = languageSelect.value === 'auto' ? null : languageSelect.value; });
+  setMic('idle');
   document.getElementById('testVoice').addEventListener('click', () => {
     const lang = languageSelect.value === 'auto' ? 'en' : languageSelect.value;
     speak(({uz:'Assalomu alaykum! Xush kelibsiz. Sizga qanday yordam bera olaman?',ru:'Здравствуйте! Это тест голоса.',en:'Hello! This is a voice test.'})[lang], lang);

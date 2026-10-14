@@ -1,7 +1,7 @@
 # API reference
 
 - **Last verified:** 2026-10-13 · **Status:** routes and schemas `SOURCE-CODE CONFIRMED`; responses marked ✔ were also observed in tests on 2026-10-13 (`HISTORICAL TEST RESULT`)
-- **Related source:** `server.py`, `tts_onnx_server.py`, `piper_tts_server.py`, `kokoro_tts_server.py`
+- **Related source:** `server.py`, `tts_onnx_server.py`, `piper_tts_server.py`, `kokoro_tts_server.py`, `stt_server.py` (added 2026-10-14)
 - **Related:** [ARCHITECTURE.md](ARCHITECTURE.md), [TESTING.md](TESTING.md)
 
 Only routes that exist in the code are listed. None of the services uses authentication, TLS,
@@ -66,14 +66,14 @@ Request (`Content-Type: application/json`, body 1–100 000 bytes):
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `text` | string | yes | trimmed; 1–5000 characters |
-| `language` | string | no | default `"auto"`; **accepted but ignored** |
+| `language` | string | no | `"uz"`, `"ru"` or `"en"` forces that language for both translation directions and the reply (the page sends the STT-detected language here); any other value or omission (default `"auto"`) → detect from the text. Changed 2026-10-14; before that the field was ignored. ✔ |
 
 Response `200` ✔:
 
 | Field | Type | Notes |
 |---|---|---|
 | `ok` | bool | `true` |
-| `language` | string | detected: `"ru"`, `"uz"` or `"en"` |
+| `language` | string | language actually used: `"ru"`, `"uz"` or `"en"` (requested or detected) |
 | `input` | string | original text |
 | `english_input` | string | text sent to the LLM |
 | `answer_english` | string | raw LLM answer |
@@ -108,6 +108,18 @@ status and body passed through unchanged (e.g. `422`).
 ```powershell
 Send-Json http://127.0.0.1:8765/api/tts @{ text = 'Assalomu alaykum! Xush kelibsiz.' } -OutFile uz.wav
 ```
+
+### `POST /api/transcribe` (STT proxy, added 2026-10-14)
+
+Forwards the request body unchanged (raw audio or `multipart/form-data`, with its `Content-Type`)
+and the query string (`?language=…`) to `http://127.0.0.1:8769/api/transcribe`, and returns the STT
+server's status code and JSON unchanged (`text`, `language`, … — see [STT](#stt--stt_serverpy-port-8769)).
+This lets the page use voice input from any origin that reaches port 8765, including an HTTPS tunnel on a phone.
+Own errors: `400` empty body, `413` > 25 MB, `502` STT server unreachable (`STT serveriga ulanib bo'lmadi (8769): …`), timeout 300 s. ✔ (locally and through a Cloudflare tunnel)
+
+### `GET /api/stt/health` (added 2026-10-14)
+
+Returns `GET http://127.0.0.1:8769/api/health` unchanged (timeout 3 s), or `502 {"ok": false, "ready": false, "error": …}`. The page calls it once at load and appends `+ STT ✓` to the header. ✔
 
 ---
 
@@ -253,6 +265,88 @@ Send-Json http://127.0.0.1:8768/api/tts @{ text = 'Здравствуйте! М�
 ```
 
 The Russian call returns `503` whenever `ready.ru` is `false`.
+
+---
+
+## STT — `stt_server.py`, port 8769
+
+Bind `127.0.0.1`. CORS: `Access-Control-Allow-Origin: *`, methods `GET, POST, OPTIONS`, header `Content-Type`.
+All responses are JSON. Tested 2026-10-14 (✔). Background: [STT.md](STT.md).
+
+### `GET /api/health`
+
+Answers as soon as the port is bound, including while the model loads.
+
+```json
+{"ok": true, "service": "Local Faster-Whisper STT", "ready": true, "loading": false, "error": null,
+ "model": "small", "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+ "device": "cpu", "compute_type": "int8", "cpu_threads": 4,
+ "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+ "supported_languages": ["uz", "ru", "en"], "load_seconds": 1.46,
+ "memory_mb": {"rss": 380, "commit": 2587}, "free_commit_mb": 6141}
+```
+
+`ok` = `ready`. `error` holds the load failure (missing model, not enough memory, …); the server never substitutes another model.
+
+### `OPTIONS *`
+
+`204` with CORS headers (the browser's preflight for an `audio/webm` upload).
+
+### `POST /api/transcribe`
+
+Query: `language=auto` (default) | `uz` | `ru` | `en`. Forcing a language that does not match the speech makes Whisper translate; leave it on `auto` unless sure.
+
+Body — either:
+
+- raw audio bytes with any `Content-Type` (the page sends `audio/webm;codecs=opus`), or
+- `multipart/form-data` with one file part.
+
+Limits: 25 MB, 0.3–180 s of audio. Formats verified: WebM/Opus, WAV, OGG/Vorbis, MP3.
+
+Response `200`:
+
+| Field | Type | Meaning |
+|---|---|---|
+| `ok` | bool | `true` |
+| `text` | string | transcript in the spoken language (never translated) |
+| `language` | string | `uz`, `ru` or `en` — the language used for transcription and to pass to `/api/chat` |
+| `language_probability` | number | Whisper's probability for that language; near 0 when `uz` was chosen by the exclusion rule |
+| `language_forced` | bool | `true` if `?language=` was given |
+| `detected_language`, `detected_language_probability` | string, number | Whisper's raw best guess over all its languages (e.g. `hy`, `az` for Uzbek speech) |
+| `language_probabilities` | object | probabilities for `uz`, `ru`, `en` |
+| `duration` | number | seconds of audio |
+| `processing_time` | number | seconds spent decoding, detecting and transcribing |
+| `model` | string | `small` |
+
+Example (real response, Russian test clip):
+
+```json
+{"ok": true, "text": "Привет. Расскажи мне короткую интересную историю.", "language": "ru",
+ "language_probability": 0.9419, "language_forced": false, "detected_language": "ru",
+ "detected_language_probability": 0.9419, "language_probabilities": {"uz": 0.0, "ru": 0.9419, "en": 0.0089},
+ "duration": 5.14, "processing_time": 3.87, "model": "small"}
+```
+
+Errors — `{"ok": false, "error": "…"}` (all observed except `500`):
+
+| Status | When |
+|---|---|
+| `400` | empty body; bad `Content-Length`; `language` not one of `auto/uz/ru/en`; multipart without a file |
+| `413` | body > 25 MB or audio > 180 s |
+| `422` | undecodable file (`Audio faylni o'qib bo'lmadi (…)`); shorter than 0.3 s; digitally silent (`Audio jim`); no speech found (`Nutq aniqlanmadi`) |
+| `503` | model still loading or failed to load (reason included); or busy (1 running + 2 waiting) |
+| `500` | unexpected error (traceback in the server console) |
+| `404` | other path |
+
+```powershell
+Invoke-RestMethod http://127.0.0.1:8769/api/health
+Invoke-RestMethod http://127.0.0.1:8769/api/transcribe -Method Post -InFile .\recording.webm -ContentType 'audio/webm'
+curl.exe -s -X POST "http://127.0.0.1:8769/api/transcribe?language=ru" -H "Content-Type: audio/wav" --data-binary "@recording.wav"
+curl.exe -s -X POST http://127.0.0.1:8769/api/transcribe -F "file=@recording.webm;type=audio/webm"
+```
+
+These four command lines were not executed as written (the tests used a Python client and the browser); the raw-body and multipart upload paths they exercise were tested.
+In Windows PowerShell 5.1 the console may show Cyrillic text from `Invoke-RestMethod` incorrectly; the JSON itself is UTF-8.
 
 ---
 

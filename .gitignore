@@ -46,3 +46,7 @@ logs/
 Thumbs.db
 desktop.ini
 .claude/
+
+# --- STT model and test audio ---
+stt-models/
+stt-test-audio/

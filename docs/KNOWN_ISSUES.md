@@ -19,7 +19,7 @@
 
 | # | Issue | Tag |
 |---|---|---|
-| K7 | The `language` field sent by the page is ignored; the "Suhbat tili" selector does not control the pipeline. The `auto` option is therefore the only real behaviour. | CODE |
+| K7 | *Changed 2026-10-14:* the backend now honours `language` = `uz`/`ru`/`en`, but the page sends it only for transcribed speech; for typed text it sends `auto`, so the "Suhbat tili" selector still does not control typed chat. | CODE |
 | K8 | Any Cyrillic text is treated as Russian — including Uzbek, Kazakh, Tajik, Ukrainian… | CODE |
 | K9 | Uzbek (Latin) is recognized only via ≈ 45 keywords or `oʻ`/`gʻ`; otherwise the text is treated as English and sent to the LLM untranslated. | CODE |
 | K10 | Translation output is capped at 128 tokens and decoded greedily; long inputs/answers are truncated without warning. | CODE |
@@ -42,9 +42,23 @@
 | K22 | The volume slider does not affect Uzbek ONNX audio; rate affects only Kokoro and the browser voice; pitch only the browser voice. | CODE |
 | K23 | Russian homograph resolution is imperfect (upstream: 93.8 %); upstream also documents a darker timbre and fricative artifacts. | upstream claim, UNVERIFIED locally |
 | K24 | Voice quality/naturalness has never been measured (no listening test, no ASR round-trip). | — |
-| K25 | A playback failure after a successful Kokoro response intentionally does not fall back to Piper. | CODE (by design) |
+| K25 | *Superseded 2026-10-14:* Kokoro mode never falls back to Piper any more (see K51). K15 no longer applies: both browsers' network-error texts are now mapped to "server ishlamayapti (8768)". | CODE (by design) |
 | K26 | `ru_g2p.py` fails on non-UTF-8 Windows locales unless Python runs in UTF-8 mode (worked around in the server). | OBSERVED |
 | K27 | `tts_onnx_server.py` contains a stray `from email.mime import text` (harmless, shadowed on the next import). | CODE |
+
+## Speech-to-text (added 2026-10-14, details in [STT.md](STT.md))
+
+| # | Issue | Tag |
+|---|---|---|
+| K43 | Uzbek recognition with Whisper `small` is not usable: WER 0.56–1.00 on five synthetic clips; "Rahmat." was not recognised. Russian and English: WER 0.00 on the same kind of clips. | OBSERVED |
+| K44 | Whisper `small` does not identify Uzbek (labels it `hy`/`az`/`en`); the service assigns `uz` by exclusion, so any non-Russian/English or unclear speech becomes `uz`. | OBSERVED + CODE |
+| K45 | STT commits ≈ 2.6 GB (RSS ≈ 0.4 GB). Chat + STT + Kokoro cannot be loaded together on the reference machine. | OBSERVED |
+| K46 | `stt_server.py`'s load guard (`REQUIRED_FREE_MB = 1200`) is lower than the measured need (≈ 2.6 GB). | CODE vs OBSERVED |
+| K47 | STT was tested only with TTS-generated speech and a simulated microphone stream; no human recording, no real microphone. | VERIFIED (absence) |
+| K48 | ≈ 3.5 s minimum latency per utterance (language detection ≈ 1.7 s + decoding), even for one word. | OBSERVED |
+| K49 | `faster-whisper 1.2.1` breaks with PyAV ≥ 17; `.venv-stt` pins `av 16.1.0`. Two pip leftover folders (`~v`, `~v.libs`) remain in its `site-packages`. | OBSERVED |
+| K50 | STT, like Kokoro/Piper, is called at `127.0.0.1` from the page; microphone capture additionally requires a `localhost`/HTTPS origin. | CODE |
+| K51 | Since 2026-10-14 Kokoro mode has no fallback voice: when a Kokoro voice is not loaded (the usual case for Russian, and for English too when STT is running), answers in that language are shown but not spoken. | CODE + OBSERVED |
 
 ## Health, operations, security
 

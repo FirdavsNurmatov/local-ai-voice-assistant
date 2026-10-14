@@ -19,6 +19,15 @@ During the audit the four Python services were **not running** (the owner runs t
 were deliberately not started. Therefore all runtime behaviour of the services is either
 `SOURCE-CODE CONFIRMED` or `HISTORICAL TEST RESULT` from the integration session earlier the same day.
 
+> **Update 2026-10-14.** Three behaviours changed after the original audit: (1) voice input was
+> added ([STT.md](STT.md)); (2) `POST /api/chat` now honours `language` = `uz`/`ru`/`en`;
+> (3) Kokoro mode no longer falls back to Piper — the real error is shown instead.
+> [STT.md](STT.md), [ARCHITECTURE.md](ARCHITECTURE.md), [API_REFERENCE.md](API_REFERENCE.md),
+> [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK.md), [KNOWN_ISSUES.md](KNOWN_ISSUES.md) and the README reflect this.
+> [DATA_FLOW.md](DATA_FLOW.md), [TROUBLESHOOTING.md](TROUBLESHOOTING.md), [DECISIONS.md](DECISIONS.md),
+> [adr/0002](adr/0002-language-specific-tts-routing.md), [TESTING.md](TESTING.md) and
+> [CONFIGURATION.md](CONFIGURATION.md) still describe the 2026-10-13 state on these three points.
+
 ## Start here
 
 | If you want to… | Read |
@@ -42,7 +51,8 @@ were deliberately not started. Therefore all runtime behaviour of the services i
 | [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md) | Purpose, inventory of every top-level file and folder, what is active vs. legacy |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | System, component and sequence diagrams; port/process map; per-service design |
 | [DATA_FLOW.md](DATA_FLOW.md) | Step-by-step path from typed text to played audio |
-| [API_REFERENCE.md](API_REFERENCE.md) | Every HTTP route of the four services with examples |
+| [STT.md](STT.md) | Speech-to-text (Faster-Whisper `small`, port 8769): install, API, language handling, measured accuracy/speed/memory, limits. **Added 2026-10-14** |
+| [API_REFERENCE.md](API_REFERENCE.md) | Every HTTP route of the five services with examples |
 | [DEVELOPMENT_SETUP.md](DEVELOPMENT_SETUP.md) | Rebuilding environments and obtaining models |
 | [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK.md) | Operator manual: start, stop, health, logs, recovery, smoke test |
 | [CONFIGURATION.md](CONFIGURATION.md) | Every constant, environment variable and tunable, with file and line |

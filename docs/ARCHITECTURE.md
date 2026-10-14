@@ -1,6 +1,6 @@
 # Architecture
 
-- **Last verified:** 2026-10-13 · **Status:** `SOURCE-CODE CONFIRMED` (all diagrams traced from the current source); runtime behaviour `HISTORICAL TEST RESULT` (2026-10-13)
+- **Last verified:** 2026-10-14 (STT, language hand-over and the removal of the Piper fallback added and tested that day) · **Status:** `SOURCE-CODE CONFIRMED` (all diagrams traced from the current source); other runtime behaviour `HISTORICAL TEST RESULT` (2026-10-13)
 - **Related source:** `server.py`, `tts_onnx_server.py`, `piper_tts_server.py`, `kokoro_tts_server.py`, `local_voice_chat.html`
 - **Related:** [DATA_FLOW.md](DATA_FLOW.md), [API_REFERENCE.md](API_REFERENCE.md), [CONFIGURATION.md](CONFIGURATION.md)
 
@@ -37,7 +37,9 @@ flowchart TB
     O --- Q
     U --- UM
     UI -- "POST /api/tts (ru,en) — CORS" --> K
-    UI -. "fallback POST /api/tts (ru,en) — CORS" .-> P
+    UI -- "POST /api/transcribe (recorded audio) — CORS" --> W["stt_server.py<br/>127.0.0.1:8769"]
+    W --- WM[("Faster-Whisper small<br/>CTranslate2 int8")]
+    UI -. "Piper mode only: POST /api/tts (ru,en) — CORS" .-> P
     K --- KE
     K --- KR
     P --> PC --- PM
@@ -51,7 +53,10 @@ Key structural facts (`SOURCE-CODE CONFIRMED`):
 - Kokoro and Piper are called by the browser directly at hard-coded `http://127.0.0.1:8768` / `:8767`
   (cross-origin; both servers send `Access-Control-Allow-Origin: *`). The Uzbek service has no CORS
   headers and is reached only through the same-origin proxy `POST /api/tts` on 8765.
-- `server.py` knows nothing about Piper or Kokoro. Its `/api/health` reports only itself and the Uzbek TTS.
+- Voice input is also browser-driven: the page records audio, sends it to `stt_server.py` (8769),
+  puts the transcript into the message box and, when the user submits, passes the recognised
+  language to `/api/chat`. Details and measurements: [STT.md](STT.md).
+- `server.py` knows nothing about Piper, Kokoro or STT. Its `/api/health` reports only itself and the Uzbek TTS.
 - There is no shared state, queue, database or session between services. Each chat request is stateless.
 
 ## 2. Normal chat request
@@ -68,8 +73,8 @@ sequenceDiagram
 
     User->>UI: type message, Enter
     UI->>S: POST /api/chat {text, language}
-    Note over S: "language" from the page is read but NOT used
-    S->>S: detect_language(text) → ru | uz | en
+    Note over S: language is uz, ru or en only for transcribed speech, typed text sends auto
+    S->>S: use the given language, or detect_language(text) when it is auto
     alt detected language is not en
         S->>M: translate(text, "en") with MADLAD target tag 2en
         M-->>S: English text
@@ -120,15 +125,10 @@ sequenceDiagram
         UI->>K: POST /api/tts {text, language, speed}
         alt 200
             K-->>UI: audio/wav 24 kHz (masha | af_heart)
-            Note over UI: playback error → notice only, no fallback
-        else network error or non-200 (e.g. 503 Russian not loaded)
+            Note over UI: playback error → notice only
+        else network error or non-200 (e.g. 503 voice not loaded)
             K-->>UI: error
-            UI->>P: POST /api/tts {text, language}
-            alt 200
-                P-->>UI: audio/wav 22.05 kHz (irina | lessac)
-            else error
-                Note over UI: notice "Kokoro TTS xatosi… Piper ham ishlamadi…", stop
-            end
+            Note over UI: notice shows the real Kokoro error, then stop, no Piper request
         end
     else lang in (ru, en) and mode == piper
         UI->>P: POST /api/tts {text, language}
@@ -140,14 +140,15 @@ sequenceDiagram
 
 Routing table for the default `kokoro` mode:
 
-| `lang` | 1st choice | 2nd choice | 3rd choice |
-|---|---|---|---|
-| `uz` | Uzbek ONNX via 8765→8766 | — | — |
-| `ru` | Kokoro `masha` (8768) | Piper `irina` (8767) | — |
-| `en` | Kokoro `af_heart` (8768) | Piper `lessac` (8767) | — |
+| `lang` | Engine | On failure |
+|---|---|---|
+| `uz` | Uzbek ONNX via 8765→8766 | error notice |
+| `ru` | Kokoro `masha` (8768) | error notice with the real reason (e.g. the memory error) |
+| `en` | Kokoro `af_heart` (8768) | error notice with the real reason |
 
-The browser voice is **not** an automatic fallback in `kokoro`/`piper` modes; it is used only when
-selected, or in `local` mode for Russian/English.
+There is **no automatic fallback** between engines. Until 2026-10-14 Kokoro mode fell back to
+Piper; that was removed on the owner's request so that a missing voice is never masked by a
+different one. Piper speaks only in `piper` mode; the browser voice only in `browser` mode, or in `local` mode for Russian/English.
 
 ## 4. Component dependencies
 
@@ -180,6 +181,7 @@ Start-up dependencies (who must be up for whom):
 | `tts_onnx_server.py` | model + config + `stt-tts-uz/text` | nothing |
 | `piper_tts_server.py` | nothing (does not check models until a request) | `.venv-piper` Python, model + `.json` |
 | `kokoro_tts_server.py` | model files, voicepacks with matching SHA256, free commit per language | nothing |
+| `stt_server.py` | `stt-models\faster-whisper-small\`, free commit | nothing |
 | Ollama | — | `qwen3:1.7b` pulled |
 
 No service refuses to start because another service is down.
@@ -192,6 +194,7 @@ No service refuses to start because another service is down.
 | 8766 | `127.0.0.1` | `stt-tts-uz\.venv-tts\Scripts\python.exe .\tts_onnx_server.py` | loopback only |
 | 8767 | `127.0.0.1` | `.venv-piper\Scripts\python.exe .\piper_tts_server.py` | spawns `python -m piper` per request |
 | 8768 | `127.0.0.1` | `.venv-kokoro\Scripts\python.exe [-X utf8] .\kokoro_tts_server.py` | re-launches itself with `-X utf8` if needed |
+| 8769 | `127.0.0.1` | `.venv-stt\Scripts\python.exe .\stt_server.py` | Faster-Whisper `small`; ≈ 2.6 GB commit |
 | 11434 | `127.0.0.1` | `ollama.exe serve` (child of `ollama app.exe`) | `VERIFIED` listening 2026-10-13, Ollama 0.40.3 |
 
 **Each venv-launched service appears as two `python.exe` processes** (`VERIFIED` earlier on
@@ -212,7 +215,8 @@ started without `-X utf8`, because it re-launches itself via `subprocess`.
 - `translate(text, target)`: prompt `<2{target}> {text}`, greedy (`beam_size=1`),
   `max_decoding_length=128`, guarded by a global lock.
 - `run_chat`: detect → (translate to en) → Ollama → (translate back) → (Uzbek Cyrillic→Latin).
-  The `requested_language` argument is accepted and ignored.
+  `requested_language` is used when it is `uz`, `ru` or `en` (the page sends this only for
+  transcribed speech); any other value, including `auto`, means "detect from the text".
 - `uzbek_cyrillic_to_latin`: character map (including `ў қ ғ ҳ`) plus two word fixes
   (`kitobxona→kutubxona`, `qaerda→qayerda`). Applied only to Uzbek answers.
 - Timeouts: Ollama 180 s, Uzbek TTS proxy 120 s, TTS health probe 1.5 s.
@@ -249,6 +253,13 @@ started without `-X utf8`, because it re-launches itself via `subprocess`.
 - Inference is serialized by `INFER_LOCK`; at most 1 running + 4 waiting requests, further ones get `503`.
 - Details: [MODELS_AND_VOICES.md](MODELS_AND_VOICES.md), [MEMORY_AND_PERFORMANCE.md](MEMORY_AND_PERFORMANCE.md),
   [adr/0003-memory-aware-kokoro-loading.md](adr/0003-memory-aware-kokoro-loading.md).
+
+### 6.5 STT — `stt_server.py`
+
+- Binds the port, then loads `WhisperModel("stt-models/faster-whisper-small", device="cpu", compute_type="int8")` once in a background thread; `/api/health` answers during loading.
+- Per request: decode with PyAV → Whisper language detection → map to `uz`/`ru`/`en` (confident `ru`/`en`, otherwise `uz`) → transcribe with the VAD filter, never translate.
+- One transcription at a time (lock), at most 2 waiting; a free-commit check before loading, like Kokoro.
+- Full description, measurements and limitations: [STT.md](STT.md).
 
 ## 7. What must not be changed casually
 

@@ -1,0 +1,8 @@
+id,file,dataset,speech,lang,kind,seconds,sha256,ref_raw
+en_req_wav,C:\local-ai-translator\stt-test-audio\en_req.wav,ruen_formats,synthetic (Kokoro),en,wav,,,Hello! Please explain how artificial intelligence works.
+en_req_webm,C:\local-ai-translator\stt-test-audio\en_req.webm,ruen_formats,synthetic (Kokoro),en,webm,,,Hello! Please explain how artificial intelligence works.
+en_req_m4a,C:\local-ai-translator\stt-test-audio\en_req.m4a,ruen_formats,synthetic (Kokoro),en,m4a,,,Hello! Please explain how artificial intelligence works.
+en_req_ogg,C:\local-ai-translator\stt-test-audio\en_req.ogg,ruen_formats,synthetic (Kokoro),en,ogg,,,Hello! Please explain how artificial intelligence works.
+en_short_wav,C:\local-ai-translator\stt-test-audio\en_short.wav,ruen_formats,synthetic (Kokoro),en,wav,,,Thank you.
+en_long_wav,C:\local-ai-translator\stt-test-audio\en_long.wav,ruen_formats,synthetic (Kokoro),en,wav,,,"The weather is very nice today. I woke up early in the morning and went to work. After lunch I met my friends in the park. In the evening I want to read a book, because tomorrow I have an important exam."
+en_req_noise_wav,C:\local-ai-translator\stt-test-audio\en_req_noise.wav,ruen_formats,synthetic (Kokoro),en,wav,,,Hello! Please explain how artificial intelligence works.

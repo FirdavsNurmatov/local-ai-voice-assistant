@@ -1,0 +1,364 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\ruen_formats.csv",
+ "language_param": "none",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.44,
+  "memory_mb": {
+   "rss": 380,
+   "commit": 2604
+  },
+  "free_commit_mb": 7800
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.44,
+  "memory_mb": {
+   "rss": 429,
+   "commit": 2709
+  },
+  "free_commit_mb": 7406
+ },
+ "results": [
+  {
+   "id": "ru_req_wav",
+   "status": 200,
+   "latency": 4.149,
+   "response": {
+    "ok": true,
+    "text": "Привет. Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.9419,
+    "language_forced": false,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9419,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9419,
+     "en": 0.0089
+    },
+    "duration": 5.14,
+    "processing_time": 4.12,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_req_webm",
+   "status": 200,
+   "latency": 4.185,
+   "response": {
+    "ok": true,
+    "text": "Привет. Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.9563,
+    "language_forced": false,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9563,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9563,
+     "en": 0.0078
+    },
+    "duration": 5.14,
+    "processing_time": 4.16,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_req_m4a",
+   "status": 200,
+   "latency": 4.199,
+   "response": {
+    "ok": true,
+    "text": "Привет. Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.987,
+    "language_forced": false,
+    "detected_language": "ru",
+    "detected_language_probability": 0.987,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.987,
+     "en": 0.0019
+    },
+    "duration": 5.16,
+    "processing_time": 4.17,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_req_mp3",
+   "status": 200,
+   "latency": 4.776,
+   "response": {
+    "ok": true,
+    "text": "Привет. Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.9875,
+    "language_forced": false,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9875,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9875,
+     "en": 0.002
+    },
+    "duration": 5.14,
+    "processing_time": 4.76,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_short_wav",
+   "status": 200,
+   "latency": 4.118,
+   "response": {
+    "ok": true,
+    "text": "Спасибо!",
+    "language": "ru",
+    "language_probability": 0.9896,
+    "language_forced": false,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9896,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9896,
+     "en": 0.0029
+    },
+    "duration": 1.6,
+    "processing_time": 4.1,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_long_wav",
+   "status": 200,
+   "latency": 5.451,
+   "response": {
+    "ok": true,
+    "text": "Сегодня очень хорошая погода, утром я рано встал и пошел на работу. После обеда я встретился с друзьями в парке. А вечером хочу почитать книгу, потому что завтра у меня важный экзамен.",
+    "language": "ru",
+    "language_probability": 0.9791,
+    "language_forced": false,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9791,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9791,
+     "en": 0.0047
+    },
+    "duration": 15.91,
+    "processing_time": 5.43,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_req_noise_wav",
+   "status": 200,
+   "latency": 4.028,
+   "response": {
+    "ok": true,
+    "text": "Привет! Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.967,
+    "language_forced": false,
+    "detected_language": "ru",
+    "detected_language_probability": 0.967,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.967,
+     "en": 0.0041
+    },
+    "duration": 5.14,
+    "processing_time": 4.0,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_req_wav",
+   "status": 200,
+   "latency": 3.857,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.9964,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.9964,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9964
+    },
+    "duration": 3.75,
+    "processing_time": 3.84,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_req_webm",
+   "status": 200,
+   "latency": 3.726,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.996,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.996,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.996
+    },
+    "duration": 3.75,
+    "processing_time": 3.7,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_req_m4a",
+   "status": 200,
+   "latency": 3.839,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.9979,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.9979,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9979
+    },
+    "duration": 3.75,
+    "processing_time": 3.82,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_req_ogg",
+   "status": 200,
+   "latency": 3.86,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.9979,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.9979,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9979
+    },
+    "duration": 3.75,
+    "processing_time": 3.84,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_short_wav",
+   "status": 200,
+   "latency": 3.919,
+   "response": {
+    "ok": true,
+    "text": "Thank you.",
+    "language": "en",
+    "language_probability": 0.9903,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.9903,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9903
+    },
+    "duration": 1.43,
+    "processing_time": 3.89,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_long_wav",
+   "status": 200,
+   "latency": 8.833,
+   "response": {
+    "ok": true,
+    "text": "The weather is very nice today. I woke up early in the morning and went to work. After lunch, I met my friends in the park. In the evening I want to read a book, because tomorrow I have an important exam.",
+    "language": "en",
+    "language_probability": 0.9954,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.9954,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9954
+    },
+    "duration": 12.43,
+    "processing_time": 8.83,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_req_noise_wav",
+   "status": 200,
+   "latency": 5.104,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.9946,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.9946,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9946
+    },
+    "duration": 3.75,
+    "processing_time": 5.1,
+    "model": "small"
+   }
+  }
+ ]
+}

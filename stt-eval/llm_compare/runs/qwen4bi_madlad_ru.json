@@ -1,0 +1,595 @@
+{
+ "pipeline": "server",
+ "language": "ru",
+ "server_model": "qwen3:4b-instruct",
+ "results": [
+  {
+   "id": "r01",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей России?",
+   "keywords": [
+    "москв"
+   ],
+   "answer": "Столица России - Москва. Это крупнейший город в России и крупный политический, культурный и экономический центр.",
+   "answer_english": "The capital of Russia is Moscow. It is the largest city in Russia and a major political, cultural, and economic center.",
+   "english_input": "Which city is the capital of Russia?",
+   "timings": {
+    "input_translation": 1.13,
+    "qwen": 10.96,
+    "output_translation": 3.25,
+    "total": 15.35
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 26
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 15.36,
+   "first_call": true
+  },
+  {
+   "id": "r02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько дней в неделе?",
+   "keywords": [
+    "7",
+    "семь"
+   ],
+   "answer": "Я доступен каждый день недели. Как я могу помочь вам сегодня?",
+   "answer_english": "I'm available every day of the week. How can I assist you today?",
+   "english_input": "How many days a week?",
+   "timings": {
+    "input_translation": 0.9,
+    "qwen": 1.25,
+    "output_translation": 1.99,
+    "total": 4.15
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 45,
+    "output_tokens": 17
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 4.15,
+   "first_call": false
+  },
+  {
+   "id": "r03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько месяцев в году?",
+   "keywords": [
+    "12",
+    "двенадцат"
+   ],
+   "answer": "В году 12 месяцев: январь, февраль, март, апрель, май, июнь, июль, август, сентябрь, октябрь, ноябрь и декабрь.",
+   "answer_english": "There are 12 months in a year. They are January, February, March, April, May, June, July, August, September, October, November, and December.",
+   "english_input": "How many months in a year?",
+   "timings": {
+    "input_translation": 0.95,
+    "qwen": 2.19,
+    "output_translation": 3.57,
+    "total": 6.72
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 46,
+    "output_tokens": 38
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 6.72,
+   "first_call": false
+  },
+  {
+   "id": "r04",
+   "kind": "question",
+   "input": "clean",
+   "text": "При какой температуре кипит вода?",
+   "keywords": [
+    "100",
+    "сто"
+   ],
+   "answer": "Вода кипит при 100 градусах Цельсия (212 градусов по Фаренгейту) на уровне моря. Эта температура может меняться с изменениями высоты и атмосферного давления.",
+   "answer_english": "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level. This temperature can vary with changes in altitude and atmospheric pressure.",
+   "english_input": "At what temperature does water boil?",
+   "timings": {
+    "input_translation": 1.01,
+    "qwen": 2.2,
+    "output_translation": 5.4,
+    "total": 8.61
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 46,
+    "output_tokens": 33
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 8.63,
+   "first_call": false
+  },
+  {
+   "id": "r05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько будет два плюс три?",
+   "keywords": [
+    "5",
+    "пят"
+   ],
+   "answer": "Два плюс три равно пяти.",
+   "answer_english": "Two plus three is five.",
+   "english_input": "What's two plus three?",
+   "timings": {
+    "input_translation": 0.94,
+    "qwen": 0.78,
+    "output_translation": 1.19,
+    "total": 2.91
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 45,
+    "output_tokens": 7
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.91,
+   "first_call": false
+  },
+  {
+   "id": "r06",
+   "kind": "question",
+   "input": "clean",
+   "text": "С какой стороны восходит солнце?",
+   "keywords": [
+    "восток"
+   ],
+   "answer": "Солнце восходит на востоке.",
+   "answer_english": "The sun rises in the east.",
+   "english_input": "Where does the sun rise?",
+   "timings": {
+    "input_translation": 0.92,
+    "qwen": 0.73,
+    "output_translation": 1.1,
+    "total": 2.75
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 45,
+    "output_tokens": 8
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.77,
+   "first_call": false
+  },
+  {
+   "id": "r07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой самый большой океан на Земле?",
+   "keywords": [
+    "тих"
+   ],
+   "answer": "Самым большим океаном на Земле является Тихий океан. Он покрывает более 60 миллионов квадратных миль, почти половину поверхности Земли. Это также самый глубокий и самый обширный океан.",
+   "answer_english": "The largest ocean on Earth is the Pacific Ocean. It covers more than 60 million square miles, nearly half of the Earth's surface. It is also the deepest and most expansive ocean.",
+   "english_input": "What is the largest ocean on Earth?",
+   "timings": {
+    "input_translation": 1.01,
+    "qwen": 2.25,
+    "output_translation": 5.53,
+    "total": 8.8
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 40
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 8.81,
+   "first_call": false
+  },
+  {
+   "id": "r08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто написал роман «Война и мир»?",
+   "keywords": [
+    "толст"
+   ],
+   "answer": "Роман «Война и мир» был написан Львом Толстым. Он был опубликован в 1869 году и считается одним из величайших произведений литературы.",
+   "answer_english": "The novel \"War and Peace\" was written by Leo Tolstoy. It was published in 1869 and is considered one of the greatest works of literature.",
+   "english_input": "Who wrote the novel \"War and Peace\"?",
+   "timings": {
+    "input_translation": 1.21,
+    "qwen": 2.11,
+    "output_translation": 4.67,
+    "total": 7.99
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 36
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 8.0,
+   "first_call": false
+  },
+  {
+   "id": "r09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей Узбекистана?",
+   "keywords": [
+    "ташкент"
+   ],
+   "answer": "Столица Узбекистана - Ташкент. Это крупнейший город и политический, культурный и экономический центр страны.",
+   "answer_english": "The capital of Uzbekistan is Tashkent. It is the largest city and the political, cultural, and economic center of the country.",
+   "english_input": "Which city is the capital of Uzbekistan?",
+   "timings": {
+    "input_translation": 1.11,
+    "qwen": 1.85,
+    "output_translation": 3.13,
+    "total": 6.08
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 30
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 6.1,
+   "first_call": false
+  },
+  {
+   "id": "r10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое животное называют кораблём пустыни?",
+   "keywords": [
+    "верблюд"
+   ],
+   "answer": "Животное, называемое \"корабль пустыни\" - это верблюд-дроммер. Он известен своим горбом, длинными ногами и способностью выжить в суровых условиях пустыни. Прозвище происходит от его сильного, кораблеобразного внешнего вида и выносливости.",
+   "answer_english": "The animal called the \"desert ship\" is the dromedary camel. It's known for its hump, long legs, and ability to survive in harsh desert conditions. The nickname comes from its strong, ship-like appearance and endurance.",
+   "english_input": "Which animal is called the desert ship?",
+   "timings": {
+    "input_translation": 1.12,
+    "qwen": 2.86,
+    "output_translation": 8.28,
+    "total": 12.26
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 51
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 12.28,
+   "first_call": false
+  },
+  {
+   "id": "r11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько минут в одном часе?",
+   "keywords": [
+    "60",
+    "шестьдесят"
+   ],
+   "answer": "В часе 60 минут.",
+   "answer_english": "There are 60 minutes in an hour.",
+   "english_input": "How many minutes are in an hour?",
+   "timings": {
+    "input_translation": 1.05,
+    "qwen": 0.95,
+    "output_translation": 1.02,
+    "total": 3.02
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 11
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 3.02,
+   "first_call": false
+  },
+  {
+   "id": "r12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какого цвета снег?",
+   "keywords": [
+    "бел"
+   ],
+   "answer": "Снег обычно белый. Иногда он может быть немного синим или серым, особенно когда он свежий или при определенных условиях освещения.",
+   "answer_english": "Snow is typically white. Sometimes it can appear slightly blue or gray, especially when it's fresh or under certain lighting conditions.",
+   "english_input": "What color is the snow?",
+   "timings": {
+    "input_translation": 0.79,
+    "qwen": 1.64,
+    "output_translation": 3.8,
+    "total": 6.24
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 45,
+    "output_tokens": 26
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 6.25,
+   "first_call": false
+  },
+  {
+   "id": "r13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какая самая высокая гора в мире?",
+   "keywords": [
+    "эверест",
+    "джомолунгм"
+   ],
+   "answer": "Самая высокая гора в мире - это Эверест. Он стоит на высоте 8848,86 метров (29031,7 футов) над уровнем моря. Расположенный в Гималаях на границе Непала и Тибета, это самая высокая вершина на Земле.",
+   "answer_english": "The highest mountain in the world is Mount Everest. It stands at 8,848.86 meters (29,031.7 feet) above sea level. Located in the Himalayas on the border of Nepal and Tibet, it is the tallest peak on Earth.",
+   "english_input": "What is the highest mountain in the world?",
+   "timings": {
+    "input_translation": 1.21,
+    "qwen": 3.32,
+    "output_translation": 8.26,
+    "total": 12.79
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 60
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 12.81,
+   "first_call": false
+  },
+  {
+   "id": "r14",
+   "kind": "question",
+   "input": "clean",
+   "text": "На какой планете мы живём?",
+   "keywords": [
+    "земл"
+   ],
+   "answer": "Мы находимся на Земле. Это третья планета от Солнца и единственная известная планета, поддерживающая жизнь.",
+   "answer_english": "We are on Earth. It is the third planet from the Sun and the only known planet to support life.",
+   "english_input": "What planet are we on?",
+   "timings": {
+    "input_translation": 0.81,
+    "qwen": 1.54,
+    "output_translation": 3.1,
+    "total": 5.45
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 45,
+    "output_tokens": 23
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 5.47,
+   "first_call": false
+  },
+  {
+   "id": "r15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое насекомое делает мёд?",
+   "keywords": [
+    "пчел"
+   ],
+   "answer": "Пчёлы делают мед. В частности, медоносные пчелы собирают нектар с цветов и превращают его в мед с помощью ферментов и тепла.",
+   "answer_english": "Bees make honey. Specifically, honeybees collect nectar from flowers and convert it into honey through enzymes and heat.",
+   "english_input": "What insect makes honey?",
+   "timings": {
+    "input_translation": 0.73,
+    "qwen": 1.69,
+    "output_translation": 4.62,
+    "total": 7.05
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 44,
+    "output_tokens": 26
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 7.07,
+   "first_call": false
+  },
+  {
+   "id": "r16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько часов в сутках?",
+   "keywords": [
+    "24",
+    "двадцать четыре"
+   ],
+   "answer": "В день 24 часа.",
+   "answer_english": "There are 24 hours in a day.",
+   "english_input": "How many hours are there in a day?",
+   "timings": {
+    "input_translation": 1.11,
+    "qwen": 0.97,
+    "output_translation": 0.97,
+    "total": 3.05
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 11
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "r17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое время года наступает после зимы?",
+   "keywords": [
+    "весн"
+   ],
+   "answer": "Время года, которое приходит после зимы, это весна.",
+   "answer_english": "The time of year that comes after winter is spring.",
+   "english_input": "What time of year comes after winter?",
+   "timings": {
+    "input_translation": 1.03,
+    "qwen": 1.0,
+    "output_translation": 1.9,
+    "total": 3.93
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 12
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 3.94,
+   "first_call": false
+  },
+  {
+   "id": "r18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько углов у треугольника?",
+   "keywords": [
+    "3",
+    "=три"
+   ],
+   "answer": "Треугольник имеет три угла.",
+   "answer_english": "A triangle has three angles.",
+   "english_input": "How many angles does a triangle have?",
+   "timings": {
+    "input_translation": 1.12,
+    "qwen": 0.74,
+    "output_translation": 0.91,
+    "total": 2.77
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 7
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.8,
+   "first_call": false
+  },
+  {
+   "id": "r19",
+   "kind": "question",
+   "input": "clean",
+   "text": "Как по-английски будет слово «книга»?",
+   "keywords": [
+    "book"
+   ],
+   "answer": "\"Книга\" уже английское слово. Оно означает коллекцию страниц связанных вместе, часто содержащих письменную информацию или истории.",
+   "answer_english": "\"Book\" is already an English word. It means a collection of pages bound together, often containing written information or stories.",
+   "english_input": "How do you say “book” in English?",
+   "timings": {
+    "input_translation": 1.24,
+    "qwen": 1.59,
+    "output_translation": 4.15,
+    "total": 6.98
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 49,
+    "output_tokens": 26
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 6.99,
+   "first_call": false
+  },
+  {
+   "id": "r20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто был первым человеком в космосе?",
+   "keywords": [
+    "гагарин"
+   ],
+   "answer": "Первым человеком в космосе стал советский космонавт Юрий Гагарин. Он совершил полет на орбите Земли 12 апреля 1961 года, став первым человеком, совершившим полет в космос.",
+   "answer_english": "The first man in space was Yuri Gagarin, a Soviet cosmonaut. He orbited Earth on April 12, 1961, becoming the first human to travel into space.",
+   "english_input": "Who was the first man in space?",
+   "timings": {
+    "input_translation": 1.03,
+    "qwen": 2.47,
+    "output_translation": 6.02,
+    "total": 9.53
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 43
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 9.55,
+   "first_call": false
+  }
+ ]
+}

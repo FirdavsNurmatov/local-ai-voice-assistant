@@ -1,0 +1,820 @@
+{
+ "base": "http://127.0.0.1:8769",
+ "dataset": "stt-eval\\datasets\\fleurs_uz_holdout.csv",
+ "language_param": "uz",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 2.17,
+  "memory_mb": {
+   "rss": 760,
+   "commit": 5058
+  },
+  "free_commit_mb": 5585,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": true,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": 1.11,
+   "requests": 12,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 2.17,
+  "memory_mb": {
+   "rss": 760,
+   "commit": 5056
+  },
+  "free_commit_mb": 5602,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": true,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": 1.11,
+   "requests": 52,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "results": [
+  {
+   "id": "holdout_01",
+   "status": 200,
+   "latency": 2.607,
+   "response": {
+    "ok": true,
+    "text": "soat oʻn bir ming bir ming uta komada orasida xoldagi mahbuslar yongʻinni keltirib chiqardi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 5.94,
+    "processing_time": 2.6,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_02",
+   "status": 200,
+   "latency": 2.522,
+   "response": {
+    "ok": true,
+    "text": "virtual jamoalar odatiy jamoalarning bilan bir mukammal sanatlariga manfaat lekin sezilmas farqlar bor",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 6.24,
+    "processing_time": 2.5,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_03",
+   "status": 200,
+   "latency": 2.646,
+   "response": {
+    "ok": true,
+    "text": "oʻsimliklar oʻz ozuqalarini quyoshdan foydasingiz orqali hozir qiladilar ular soya ham beradilar",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 6.36,
+    "processing_time": 2.62,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_04",
+   "status": 200,
+   "latency": 2.732,
+   "response": {
+    "ok": true,
+    "text": "ikkala quruq kukunni bir biriga aralashtiring soʻngra tozan ham qoʻl bilan ularni toʻpga bosing",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 6.72,
+    "processing_time": 2.72,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_05",
+   "status": 200,
+   "latency": 3.129,
+   "response": {
+    "ok": true,
+    "text": "bu qutb yot u yogʻdularning koʻrishini yaxshi imkoniyat taklif etadi chunki osmon sutka davomida ozmi koʻpmi qorongʻu boʻladi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 6.84,
+    "processing_time": 3.11,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_06",
+   "status": 200,
+   "latency": 2.657,
+   "response": {
+    "ok": true,
+    "text": "oilali ikki nafar voyaga kelgan farzand bor dual voqeaga aloqador boʻlgan millarda katta taassurot qoldirmagan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 7.02,
+    "processing_time": 2.64,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_07",
+   "status": 200,
+   "latency": 2.394,
+   "response": {
+    "ok": true,
+    "text": "yaqin sharqning iliq iqlim sharoitida uy u qadar muhim boʻlmagan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 7.14,
+    "processing_time": 2.37,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_08",
+   "status": 200,
+   "latency": 2.136,
+   "response": {
+    "ok": true,
+    "text": "bir bomba general gubernatorning idorasida shikastlab portladi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 7.2,
+    "processing_time": 2.12,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_09",
+   "status": 200,
+   "latency": 2.933,
+   "response": {
+    "ok": true,
+    "text": "keskilik qancha past boʻlsa hayot kuchi shu darajada ijobiy boʻldi har bir inson toʻliq osoyishtalik va mamnuniyatga erishishi mumkin",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 8.1,
+    "processing_time": 2.92,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_10",
+   "status": 200,
+   "latency": 2.29,
+   "response": {
+    "ok": true,
+    "text": "ammo bu jihatdan shengen hududi goʻyo bitta davlat kabi ishlaydi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 8.46,
+    "processing_time": 2.27,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_11",
+   "status": 200,
+   "latency": 2.482,
+   "response": {
+    "ok": true,
+    "text": "bu springbooks uchun besh oʻyindan iborat magʻlubiyatlar seriyasiga yakun yasadi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 9.0,
+    "processing_time": 2.47,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_12",
+   "status": 200,
+   "latency": 3.368,
+   "response": {
+    "ok": true,
+    "text": "haqiqiy koʻrmas jamoaning borligi lars hamda lapas to bir ming toʻqqiz yuz esa toʻrt yuz toʻkqiz yuventiga virtual jamoaning oʻziga xos komponenti hamdir",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 9.18,
+    "processing_time": 3.34,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_13",
+   "status": 200,
+   "latency": 2.994,
+   "response": {
+    "ok": true,
+    "text": "mashhur sportchilar futbol basketbol vali boʻlsa polozi qilichbozlik regbi va sportchi geologiya xokkey hamda efir avtopoygalarni oʻz ichiga oladi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 9.36,
+    "processing_time": 2.97,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_14",
+   "status": 200,
+   "latency": 3.333,
+   "response": {
+    "ok": true,
+    "text": "koʻprik protsessiya bojxona nazorati punktlari qurish yakunlanishi kutilayotgan vaqtda kimlarga sentabr oyida toʻliq ishlashtirildi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 9.36,
+    "processing_time": 3.31,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_15",
+   "status": 200,
+   "latency": 2.865,
+   "response": {
+    "ok": true,
+    "text": "doim sayyohlar va savdogarlarning ovozini eshitishingiz odatiy hol ovoz va yorugʻlik hikoyasi xuddi asarga oʻxshaydi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 9.96,
+    "processing_time": 2.84,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_16",
+   "status": 200,
+   "latency": 2.85,
+   "response": {
+    "ok": true,
+    "text": "shuningdek u suvga tushgan har qanday narsaga hamna qilgan hattoki tirek kabi bahayba dinozavrlar ham unga bas kela olmagan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 10.08,
+    "processing_time": 2.84,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_17",
+   "status": 200,
+   "latency": 2.754,
+   "response": {
+    "ok": true,
+    "text": "yaqin joyda mariya koʻproq boʻlishi mumkin chunki qobiq yupqa lavaning yuzaga chiqishi osonroq bo�anlgan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 10.32,
+    "processing_time": 2.73,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_18",
+   "status": 200,
+   "latency": 3.607,
+   "response": {
+    "ok": true,
+    "text": "agar tayanch stansiyada qoʻsh radio boʻlsa bu uning sakkiz yuz ikki oʻn bir asak yuz ikkita oʻm bir boʻlsak yuz yakka oʻng bir g bilan orqaga qarab mos kelishiga imkon beradi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 10.56,
+    "processing_time": 3.59,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_19",
+   "status": 200,
+   "latency": 2.738,
+   "response": {
+    "ok": true,
+    "text": "makkaning shimolidagi togʻlardan birining ustida joylashgan mazkur gʻor dunyoning qolgan qismidan butunlay ajratilgan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 11.94,
+    "processing_time": 2.71,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_20",
+   "status": 200,
+   "latency": 2.74,
+   "response": {
+    "ok": true,
+    "text": "folklendning rasmiy valyutasi folklend sumka fkb boʻlib uning qiymati bir britaniya sumkiga jbp ten qilib belgilangan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 12.24,
+    "processing_time": 2.73,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_21",
+   "status": 200,
+   "latency": 2.651,
+   "response": {
+    "ok": true,
+    "text": "hamma otlar siz uchun siye soʻzi bilan bir qatordan doimo hatto gapning markazida ham katta harf bilan boshlanadi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 12.54,
+    "processing_time": 2.64,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_22",
+   "status": 200,
+   "latency": 3.313,
+   "response": {
+    "ok": true,
+    "text": "natijada toʻsiqning yengib oʻtishi uchun birgalikda ishlaydigan tashkilot jarayoni mijoz ehtiyojga xizmat qiluvchi yangi innovatsion jarayonlarni boshlab berishi mumkin",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 12.6,
+    "processing_time": 3.3,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_23",
+   "status": 200,
+   "latency": 2.95,
+   "response": {
+    "ok": true,
+    "text": "olimlar qora materiya boshqa qora materiyaga xuddi odatiy materiya taʻsir qilgani kabi taʻzir koʻrsatadi degan xulosaga kelishdi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 13.44,
+    "processing_time": 2.92,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_24",
+   "status": 200,
+   "latency": 3.075,
+   "response": {
+    "ok": true,
+    "text": "bajarilgan ishlarning aksariyati nazariy edi biroq dastur oʻqotar galaktikasidagi kuzatuvlarni simulyatsiya qilish uchun yozilgan edi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 13.62,
+    "processing_time": 3.06,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_25",
+   "status": 200,
+   "latency": 2.971,
+   "response": {
+    "ok": true,
+    "text": "sherlar toʻdasi bittadan uchtagacha boʻlgan voyaga yetgan erkak sher oʻttizdan ortiq urgʻochisi sher va sher bolalaridan iborat boʻlladi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 13.68,
+    "processing_time": 2.96,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_26",
+   "status": 200,
+   "latency": 4.2,
+   "response": {
+    "ok": true,
+    "text": "uni kim yozganini hech kim aniq bilmasa da oʻz hayotining boshida katta pergament hujjati uning oʻlcham yigirma toʻqqiz turdan uch duymga yigir ma toʻrt ikkidan bir duym saqlash uchun oʻrab qoʻyilgan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 13.8,
+    "processing_time": 4.18,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_27",
+   "status": 200,
+   "latency": 3.084,
+   "response": {
+    "ok": true,
+    "text": "bir ming toʻqqiz yil yigirma yil davomida koʻpchilik fuqarolar va millatlardagi hukmron kayfiyat pasipfizm va yakkalanish edi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 13.92,
+    "processing_time": 3.08,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_28",
+   "status": 200,
+   "latency": 3.541,
+   "response": {
+    "ok": true,
+    "text": "biz uylarimiz va kiyim kechaklarimizni oʻsimliklardan qilamiz biz isteʻmol qiladigan oziq ovqatlarning aksariyati oʻimliklardir oʻsmliklarsiz mavjudotlar omon qololmaydi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 14.16,
+    "processing_time": 3.52,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_29",
+   "status": 200,
+   "latency": 3.623,
+   "response": {
+    "ok": true,
+    "text": "xuddi shuningdek shengen vizasiga ega boʻlsangiz shengenga aʻzo davlatining har biriga viza uchun alohida ariza berishingiz shart emas shu tarzda vaqt pul va hujjat vosit ishidan tejashingiz mumkin",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 14.16,
+    "processing_time": 3.6,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_30",
+   "status": 200,
+   "latency": 4.359,
+   "response": {
+    "ok": true,
+    "text": "bu yerda hanuzgacha oʻzlarining davrida omon qolgan yahudiylar ham yahudiy boʻlmaganlar ham birdek boʻldigan koʻplab erkak va ayollar bor va yaqinlari boʻladigan yana koʻplatishlar u yerda oʻldirilgan yoki oʻlguliga qadar ishlatilgan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 14.64,
+    "processing_time": 4.34,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_31",
+   "status": 200,
+   "latency": 3.699,
+   "response": {
+    "ok": true,
+    "text": "shuningdek u koʻp davlatlar uchun kupyuralar yaratish bilan shugʻullangan kanadaning yangi besh va yuz dollarlik kupyuralari old tomondagi bosh vazir suratlari uning soʻnggi ishlaridan namunalar sirasiga kiradi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 15.0,
+    "processing_time": 3.68,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_32",
+   "status": 200,
+   "latency": 3.32,
+   "response": {
+    "ok": true,
+    "text": "u biroq ulardan imkoniyatlari javobgarligi rivojlanish bosqichidan tashqari boʻlgan majburiyatlarni zimmasiga olish soʻralmasligi kerak deya qoʻshimcha qildi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 15.0,
+    "processing_time": 3.3,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_33",
+   "status": 200,
+   "latency": 3.018,
+   "response": {
+    "ok": true,
+    "text": "oʻrta zvino betsmallari sachin ten dukar va raxul david yaxshi oʻyin koʻrsatdi va birgalikda yuz ran toʻplagan sheriklarga aylandi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 15.9,
+    "processing_time": 3.0,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_34",
+   "status": 200,
+   "latency": 3.583,
+   "response": {
+    "ok": true,
+    "text": "hoʻl liboslarni dazmollash ularning qurishiga yordam beradi koʻp mehmonxonalarda dazmol hamda dazmollar taxtasi ijaraga beriladi hattoki xonada ulardan bittasi yoʻq boʻlsa ham",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 16.08,
+    "processing_time": 3.57,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_35",
+   "status": 200,
+   "latency": 3.551,
+   "response": {
+    "ok": true,
+    "text": "koʻplab pechda pishirilgan nemis mahsulotlarida bodom funtuk va boshqa yongʻoqli mevalar ham bor mashhur pishiriqlar koʻpincha bir finjon kuchli qahva bilan ayniqsa yaxshi ketadi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 18.36,
+    "processing_time": 3.52,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_36",
+   "status": 200,
+   "latency": 5.607,
+   "response": {
+    "ok": true,
+    "text": "ularning issiqlik harakati koʻpincha muayyan haroratni doimiy saqlab turuvchi yerdagi gʻorlarga oʻxshab barqaror emas lekin yerdagi chuqur tuynuklar bilan mos keldi dedi aqshga ekologik tadqiqotlar qoʻmitasi astrologiya jamoasi va arizonaning flagslav shahri joylashgan shimoliy arizona universiteti vakili bilan koʻrishing",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 19.44,
+    "processing_time": 5.59,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_37",
+   "status": 200,
+   "latency": 4.069,
+   "response": {
+    "ok": true,
+    "text": "bu odatda alpinizm uslubidagi togʻ changʻisi yoki alpinizim bilan bogʻliq lekin ularni oʻz ichiga olmaydi ular tik sahnalarda amalga oshiriladi va qattiq changʻi yoki alpinizm bilan bogqliq lekim ularni uz ichiga olmaydimi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 20.52,
+    "processing_time": 4.04,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_38",
+   "status": 200,
+   "latency": 4.022,
+   "response": {
+    "ok": true,
+    "text": "bularning barchasi tabiiy shaklda tabiatda topilishi mumkinligi va joʻn asboblar bilan qazib olish nisbatan oson boʻlganligi sababli odamlar qadim zamonlardan beri oltin kumush va mis kabi asosiy kimyoviy elementlar haqida bilishgan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 21.3,
+    "processing_time": 3.99,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_39",
+   "status": 200,
+   "latency": 3.9,
+   "response": {
+    "ok": true,
+    "text": "cherkovning markaziy hokimiyati ming yildan beri rimda boʻlib kelmoqda qudrat va mablagʻning bunday jamlanishi koʻpchilikni bu qoidaning bajarilayotgan yoki bajarolmayotganligini savol ostiga qoʻyishga olib keldi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 21.6,
+    "processing_time": 3.88,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "holdout_40",
+   "status": 200,
+   "latency": 3.747,
+   "response": {
+    "ok": true,
+    "text": "ayollarning startda qoʻyilgan guruhidan toʻrtta changʻichi oʻz masofasini tugata olmadilar va katta slalomʻdagi jami prezidentda changʻichidan qirq beshtasi poydaga oʻrin ola olmadi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 22.32,
+    "processing_time": 3.72,
+    "model": "navai-whisper-small-uzbek"
+   }
+  }
+ ]
+}

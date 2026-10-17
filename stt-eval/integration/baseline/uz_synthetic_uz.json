@@ -1,0 +1,307 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\synthetic_uz.csv",
+ "language_param": "uz",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.36,
+  "memory_mb": {
+   "rss": 416,
+   "commit": 2708
+  },
+  "free_commit_mb": 10214
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.36,
+  "memory_mb": {
+   "rss": 417,
+   "commit": 2709
+  },
+  "free_commit_mb": 10252
+ },
+ "results": [
+  {
+   "id": "synth_01",
+   "status": 200,
+   "latency": 3.994,
+   "response": {
+    "ok": true,
+    "text": "Menge bugun gapiryapman, menga yordam bering.",
+    "language": "uz",
+    "language_probability": 0.0009,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.3998,
+    "language_probabilities": {
+     "uz": 0.0009,
+     "ru": 0.0465,
+     "en": 0.025
+    },
+    "duration": 3.16,
+    "processing_time": 3.97,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_02",
+   "status": 422,
+   "latency": 1.714,
+   "response": {
+    "ok": false,
+    "error": "Nutq aniqlanmadi (faqat sukunat yoki shovqin)"
+   }
+  },
+  {
+   "id": "synth_03",
+   "status": 200,
+   "latency": 4.091,
+   "response": {
+    "ok": true,
+    "text": "Bugun ob-havo yaxshi. Sair ge-chqamizma.",
+    "language": "uz",
+    "language_probability": 0.0084,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.3248,
+    "language_probabilities": {
+     "uz": 0.0084,
+     "ru": 0.0113,
+     "en": 0.0177
+    },
+    "duration": 2.81,
+    "processing_time": 4.06,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_04",
+   "status": 200,
+   "latency": 21.285,
+   "response": {
+    "ok": true,
+    "text": "Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭi Ṭ",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.9782,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0001,
+     "en": 0.0002
+    },
+    "duration": 2.3,
+    "processing_time": 21.26,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_05",
+   "status": 200,
+   "latency": 3.923,
+   "response": {
+    "ok": true,
+    "text": "Tumos mengi in yakun dorghanane kursad.",
+    "language": "uz",
+    "language_probability": 0.0074,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.304,
+    "language_probabilities": {
+     "uz": 0.0074,
+     "ru": 0.0194,
+     "en": 0.0182
+    },
+    "duration": 2.66,
+    "processing_time": 3.9,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_06",
+   "status": 200,
+   "latency": 4.071,
+   "response": {
+    "ok": true,
+    "text": "Taoshgentan samarkand keche bayizda kanche vakti ke tady.",
+    "language": "uz",
+    "language_probability": 0.0135,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.349,
+    "language_probabilities": {
+     "uz": 0.0135,
+     "ru": 0.0048,
+     "en": 0.0059
+    },
+    "duration": 3.04,
+    "processing_time": 4.05,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_07",
+   "status": 200,
+   "latency": 4.341,
+   "response": {
+    "ok": true,
+    "text": "Bar lik yaw u'ch do'u bishal d'ya gapta y'serkes to'u qas'an.",
+    "language": "uz",
+    "language_probability": 0.0001,
+    "language_forced": true,
+    "detected_language": "lt",
+    "detected_language_probability": 0.1678,
+    "language_probabilities": {
+     "uz": 0.0001,
+     "ru": 0.0081,
+     "en": 0.0491
+    },
+    "duration": 3.16,
+    "processing_time": 4.34,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_08",
+   "status": 200,
+   "latency": 15.319,
+   "response": {
+    "ok": true,
+    "text": "Khādat al-bāt.",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": true,
+    "detected_language": "ar",
+    "detected_language_probability": 0.5916,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0028,
+     "en": 0.0402
+    },
+    "duration": 1.58,
+    "processing_time": 15.29,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_09",
+   "status": 200,
+   "latency": 3.848,
+   "response": {
+    "ok": true,
+    "text": "yordam bering. Bugun de yemas.",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": true,
+    "detected_language": "ja",
+    "detected_language_probability": 0.3997,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.011,
+     "en": 0.0464
+    },
+    "duration": 1.4,
+    "processing_time": 3.82,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_10",
+   "status": 200,
+   "latency": 3.907,
+   "response": {
+    "ok": true,
+    "text": "nananan delmi man dekin xarek yab quleman.",
+    "language": "uz",
+    "language_probability": 0.0047,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.3109,
+    "language_probabilities": {
+     "uz": 0.0047,
+     "ru": 0.0036,
+     "en": 0.0152
+    },
+    "duration": 2.1,
+    "processing_time": 3.89,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_11",
+   "status": 200,
+   "latency": 5.46,
+   "response": {
+    "ok": true,
+    "text": "El talab saad sakizda unirisitge barisim kerekim. Doslar milan uchiashaman takish koronesi uyge kaytip, onamge o'qatayur laxde yordam bering.",
+    "language": "uz",
+    "language_probability": 0.0064,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2593,
+    "language_probabilities": {
+     "uz": 0.0064,
+     "ru": 0.0367,
+     "en": 0.0389
+    },
+    "duration": 8.49,
+    "processing_time": 5.43,
+    "model": "small"
+   }
+  },
+  {
+   "id": "synth_12",
+   "status": 200,
+   "latency": 4.334,
+   "response": {
+    "ok": true,
+    "text": "Assalomu alaykum kuskerypsiz. Sizi gapiryapman, menga yordam bering.",
+    "language": "uz",
+    "language_probability": 0.0017,
+    "language_forced": true,
+    "detected_language": "az",
+    "detected_language_probability": 0.413,
+    "language_probabilities": {
+     "uz": 0.0017,
+     "ru": 0.0385,
+     "en": 0.0407
+    },
+    "duration": 3.77,
+    "processing_time": 4.31,
+    "model": "small"
+   }
+  }
+ ]
+}

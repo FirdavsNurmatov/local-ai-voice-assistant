@@ -1,0 +1,435 @@
+{
+ "pipeline": "direct:qwen3:1.7b",
+ "language": "en",
+ "server_model": null,
+ "results": [
+  {
+   "id": "e01",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the capital city of Uzbekistan?",
+   "keywords": [
+    "tashkent"
+   ],
+   "answer": "Tashkent.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 56,
+    "output_tokens": 6,
+    "thinking_chars": 0,
+    "generation_s": 0.07
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.21,
+   "first_call": true
+  },
+  {
+   "id": "e02",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many days are there in a week?",
+   "keywords": [
+    "7",
+    "seven"
+   ],
+   "answer": "There are 7 days in a week.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 56,
+    "output_tokens": 10,
+    "thinking_chars": 0,
+    "generation_s": 0.12
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.22,
+   "first_call": false
+  },
+  {
+   "id": "e03",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many months are there in a year?",
+   "keywords": [
+    "12",
+    "twelve"
+   ],
+   "answer": "There are 12 months in a year.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 56,
+    "output_tokens": 11,
+    "thinking_chars": 0,
+    "generation_s": 0.13
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.25,
+   "first_call": false
+  },
+  {
+   "id": "e04",
+   "kind": "question",
+   "input": "clean",
+   "text": "At what temperature does water boil at sea level in Celsius?",
+   "keywords": [
+    "100",
+    "hundred"
+   ],
+   "answer": "100°C.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 59,
+    "output_tokens": 6,
+    "thinking_chars": 0,
+    "generation_s": 0.07
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.19,
+   "first_call": false
+  },
+  {
+   "id": "e05",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is two plus three?",
+   "keywords": [
+    "5",
+    "five"
+   ],
+   "answer": "Five.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 53,
+    "output_tokens": 3,
+    "thinking_chars": 0,
+    "generation_s": 0.03
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.15,
+   "first_call": false
+  },
+  {
+   "id": "e06",
+   "kind": "question",
+   "input": "clean",
+   "text": "In which direction does the sun rise?",
+   "keywords": [
+    "east"
+   ],
+   "answer": "The sun rises in the east.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 55,
+    "output_tokens": 8,
+    "thinking_chars": 0,
+    "generation_s": 0.09
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.21,
+   "first_call": false
+  },
+  {
+   "id": "e07",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the largest ocean on Earth?",
+   "keywords": [
+    "pacific"
+   ],
+   "answer": "The largest ocean on Earth is the Pacific Ocean.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 55,
+    "output_tokens": 11,
+    "thinking_chars": 0,
+    "generation_s": 0.13
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.25,
+   "first_call": false
+  },
+  {
+   "id": "e08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Who wrote the novel War and Peace?",
+   "keywords": [
+    "tolstoy"
+   ],
+   "answer": "Leo Tolstoy.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 55,
+    "output_tokens": 6,
+    "thinking_chars": 0,
+    "generation_s": 0.07
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.19,
+   "first_call": false
+  },
+  {
+   "id": "e09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which animal is called the ship of the desert?",
+   "keywords": [
+    "camel"
+   ],
+   "answer": "The ship of the desert is the camel.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 57,
+    "output_tokens": 10,
+    "thinking_chars": 0,
+    "generation_s": 0.12
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.21,
+   "first_call": false
+  },
+  {
+   "id": "e10",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many minutes are there in one hour?",
+   "keywords": [
+    "60",
+    "sixty"
+   ],
+   "answer": "60 minutes.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 56,
+    "output_tokens": 5,
+    "thinking_chars": 0,
+    "generation_s": 0.06
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.17,
+   "first_call": false
+  },
+  {
+   "id": "e11",
+   "kind": "question",
+   "input": "clean",
+   "text": "What color is snow?",
+   "keywords": [
+    "white"
+   ],
+   "answer": "Snow is white.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 52,
+    "output_tokens": 5,
+    "thinking_chars": 0,
+    "generation_s": 0.05
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.16,
+   "first_call": false
+  },
+  {
+   "id": "e12",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the highest mountain in the world?",
+   "keywords": [
+    "everest"
+   ],
+   "answer": "Mount Everest.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 56,
+    "output_tokens": 4,
+    "thinking_chars": 0,
+    "generation_s": 0.04
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.15,
+   "first_call": false
+  },
+  {
+   "id": "e13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which planet do we live on?",
+   "keywords": [
+    "earth"
+   ],
+   "answer": "We live on Earth.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 54,
+    "output_tokens": 6,
+    "thinking_chars": 0,
+    "generation_s": 0.07
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.18,
+   "first_call": false
+  },
+  {
+   "id": "e14",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which insect makes honey?",
+   "keywords": [
+    "bee"
+   ],
+   "answer": "Bees.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 52,
+    "output_tokens": 4,
+    "thinking_chars": 0,
+    "generation_s": 0.04
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.15,
+   "first_call": false
+  },
+  {
+   "id": "e15",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many hours are there in a day?",
+   "keywords": [
+    "24",
+    "twenty-four",
+    "twenty four"
+   ],
+   "answer": "24 hours.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 56,
+    "output_tokens": 5,
+    "thinking_chars": 0,
+    "generation_s": 0.05
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.17,
+   "first_call": false
+  },
+  {
+   "id": "e16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which season comes after winter?",
+   "keywords": [
+    "spring"
+   ],
+   "answer": "Spring.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 53,
+    "output_tokens": 3,
+    "thinking_chars": 0,
+    "generation_s": 0.03
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.15,
+   "first_call": false
+  },
+  {
+   "id": "e17",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many sides does a triangle have?",
+   "keywords": [
+    "3",
+    "=three"
+   ],
+   "answer": "A triangle has three sides.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 55,
+    "output_tokens": 7,
+    "thinking_chars": 0,
+    "generation_s": 0.08
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.19,
+   "first_call": false
+  },
+  {
+   "id": "e18",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the Uzbek word for book?",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "kitab",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 55,
+    "output_tokens": 3,
+    "thinking_chars": 0,
+    "generation_s": 0.03
+   },
+   "correct": false,
+   "answer_language": "other",
+   "latency": 0.15,
+   "first_call": false
+  },
+  {
+   "id": "e19",
+   "kind": "question",
+   "input": "clean",
+   "text": "Who was the first human in space?",
+   "keywords": [
+    "gagarin"
+   ],
+   "answer": "Yuri Gagarin.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 55,
+    "output_tokens": 7,
+    "thinking_chars": 0,
+    "generation_s": 0.08
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.19,
+   "first_call": false
+  },
+  {
+   "id": "e20",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the famous square in Samarkand called?",
+   "keywords": [
+    "registan"
+   ],
+   "answer": "The famous square in Samarkand is known as the \"Samarqand Square\" or \"Samarkand Square.\"",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 58,
+    "output_tokens": 26,
+    "thinking_chars": 0,
+    "generation_s": 0.33
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 0.43,
+   "first_call": false
+  }
+ ]
+}

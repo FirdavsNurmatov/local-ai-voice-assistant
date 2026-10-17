@@ -1,0 +1,1433 @@
+{
+ "pipeline": "server_dual",
+ "server_model": "qwen3:1.7b",
+ "results": [
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning poytaxti qaysi shahar?",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": "Oʻzbekistonning poytaxti qaysi shahar?",
+   "answer_english": "What city is the capital of Uzbekistan?",
+   "english_input": "What is the capital of Uzbekistan?",
+   "timings": {
+    "input_translation": 0.89,
+    "qwen": 0.45,
+    "output_translation": 0.97,
+    "total": 2.3
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.32,
+   "first_call": true
+  },
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning poytaxti qaysi shahar",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": "Oʻzbekistonning poytaxti qaysi shahar?",
+   "answer_english": "Which city is the capital of Uzbekistan?",
+   "english_input": "oʻzbekistonning poytaxti qaysi shahar",
+   "timings": {
+    "input_translation": 1.17,
+    "qwen": 0.63,
+    "output_translation": 0.97,
+    "total": 2.77
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.78,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir haftada necha kun bor?",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": "Haftada qancha kun bor?",
+   "answer_english": "How many days are there in a week?",
+   "english_input": "How many days are there in a week?",
+   "timings": {
+    "input_translation": 1.04,
+    "qwen": 0.55,
+    "output_translation": 0.99,
+    "total": 2.57
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.59,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir haftada necha kun bor",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": "Haftada qancha kun bor",
+   "answer_english": "How many days are in a week",
+   "english_input": "how many days are in a week",
+   "timings": {
+    "input_translation": 0.86,
+    "qwen": 0.5,
+    "output_translation": 0.9,
+    "total": 2.26
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.28,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir yilda necha oy bor?",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "Bir yilda qancha oylar bor?",
+   "answer_english": "How many months are there in a year?",
+   "english_input": "How many months are there in a year?",
+   "timings": {
+    "input_translation": 1.04,
+    "qwen": 0.51,
+    "output_translation": 0.99,
+    "total": 2.55
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.57,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir yilda necha oy bor",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "Qancha oy bor?",
+   "answer_english": "How many months are there in a year",
+   "english_input": "How many months are there in a year",
+   "timings": {
+    "input_translation": 0.94,
+    "qwen": 0.57,
+    "output_translation": 0.7,
+    "total": 2.21
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.23,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "clean",
+   "text": "Suv necha darajada qaynaydi?",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "Qancha qaynaydi?",
+   "answer_english": "How many degrees does water boil?",
+   "english_input": "How much will the boiling water be?",
+   "timings": {
+    "input_translation": 1.05,
+    "qwen": 0.48,
+    "output_translation": 0.8,
+    "total": 2.34
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.35,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "stt",
+   "text": "suvlicha darajada qaynaydi",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "Bu qaynoq suvdir.",
+   "answer_english": "The water is boiling.",
+   "english_input": "like the boiling of water.",
+   "timings": {
+    "input_translation": 0.87,
+    "qwen": 0.46,
+    "output_translation": 0.87,
+    "total": 2.2
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.22,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ikki qo'shuv uch necha bo'ladi?",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "Ikkiga uchni qoʻshish qandoq boʻladi?",
+   "answer_english": "What is the addition of two to three?",
+   "english_input": "What is the addition of two to three?",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 0.53,
+    "output_translation": 1.27,
+    "total": 2.87
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.87,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "stt",
+   "text": "ikki qoʻshi uch necha boʻladi",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "Ulardan ikki juftlari uchtadan koʻproqdir.",
+   "answer_english": "Two pairs of three are many.",
+   "english_input": "two pairs of three are many",
+   "timings": {
+    "input_translation": 0.88,
+    "qwen": 0.56,
+    "output_translation": 1.45,
+    "total": 2.9
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.9,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "clean",
+   "text": "Quyosh qaysi tomondan chiqadi?",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "Quyosh qaerdan chiqadi?",
+   "answer_english": "Where does the sun rise?",
+   "english_input": "Where does the sun rise?",
+   "timings": {
+    "input_translation": 0.89,
+    "qwen": 0.51,
+    "output_translation": 0.98,
+    "total": 2.38
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.4,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "stt",
+   "text": "bu yosh qaysi tomondan chiqadi",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "U qaerdan chiqmoqda?",
+   "answer_english": "Which way does this star come out?",
+   "english_input": "Which way this star comes out",
+   "timings": {
+    "input_translation": 0.88,
+    "qwen": 0.52,
+    "output_translation": 0.87,
+    "total": 2.28
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.29,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng katta okean qaysi?",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Dunyodagi eng katta okean Tinch okeanidir.",
+   "answer_english": "The largest ocean in the world is the Pacific Ocean.",
+   "english_input": "What is the largest ocean in the world?",
+   "timings": {
+    "input_translation": 1.08,
+    "qwen": 0.53,
+    "output_translation": 1.29,
+    "total": 2.9
+   },
+   "dual_input": true,
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.9,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng katta okean qaysi",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Bu dunyodagi eng katta okeandir.",
+   "answer_english": "Which is the largest ocean in the world.",
+   "english_input": "which is the largest ocean in the world",
+   "timings": {
+    "input_translation": 0.99,
+    "qwen": 0.49,
+    "output_translation": 1.01,
+    "total": 2.5
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.51,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Navro'z bayrami qaysi oyda nishonlanadi?",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Qaysi oyda?",
+   "answer_english": "Navro'z festivali qanday oyda nishonlanadi?",
+   "english_input": "What month is the Navro'z festival?",
+   "timings": {
+    "input_translation": 1.23,
+    "qwen": 0.69,
+    "output_translation": 0.82,
+    "total": 2.75
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.77,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "stt",
+   "text": "navroʻz bayrami qaysi oyda nishonlanadi",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Navroʻz bayrami mart oyida nishonlanadi.",
+   "answer_english": "Navruz festival is celebrated in March.",
+   "english_input": "navroʻz festival in which month is celebrated",
+   "timings": {
+    "input_translation": 1.29,
+    "qwen": 0.56,
+    "output_translation": 1.28,
+    "total": 3.13
+   },
+   "dual_input": true,
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.15,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Amir Temur qaysi shaharda tug'ilgan?",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "Amir Temur Samarqandda tugʻilgan.",
+   "answer_english": "Amir Temur was born in Samarkand.",
+   "english_input": "In which city was Amir Temur born?",
+   "timings": {
+    "input_translation": 1.09,
+    "qwen": 0.61,
+    "output_translation": 1.01,
+    "total": 2.7
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.71,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "stt",
+   "text": "anir temur qaysi shaharda tugʻilgan",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "Anir Temur qaysi shaharda tugʻilgan?",
+   "answer_english": "Anir Temur was born in which city?",
+   "english_input": "anir temur in which city was born",
+   "timings": {
+    "input_translation": 1.11,
+    "qwen": 0.6,
+    "output_translation": 1.29,
+    "total": 3.0
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 3.01,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Alisher Navoiy kim bo'lgan?",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "Alisher Navoiy 13-asrda yashagan shoir va yozuvchi.",
+   "answer_english": "Alisher Navoiy was a 13th-century Persian poet and writer.",
+   "english_input": "Who was Alisher Navoiy?",
+   "timings": {
+    "input_translation": 1.01,
+    "qwen": 0.66,
+    "output_translation": 2.18,
+    "total": 3.85
+   },
+   "dual_input": true,
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.87,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "stt",
+   "text": "rashir navoiy kim boʻlgan",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "Navoiy.",
+   "answer_english": "Rashid Navoiy.",
+   "english_input": "Rashid Navoiy",
+   "timings": {
+    "input_translation": 0.62,
+    "qwen": 0.47,
+    "output_translation": 0.59,
+    "total": 1.68
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 1.7,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi hayvon cho'l kemasi deb ataladi?",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": "Qaysi hayvonni biyobon kemasi deyishadi?",
+   "answer_english": "Which animal is called a desert ship?",
+   "english_input": "Which animal is called a desert ship?",
+   "timings": {
+    "input_translation": 1.1,
+    "qwen": 0.49,
+    "output_translation": 1.56,
+    "total": 3.16
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 3.18,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi hayvon choʻl kemasi deb ataladi",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": "Qaysi hayvonni biyobon kemasi deb atashadi?",
+   "answer_english": "Which animal is called a desert ship",
+   "english_input": "Which animal is called a desert ship",
+   "timings": {
+    "input_translation": 1.03,
+    "qwen": 0.56,
+    "output_translation": 1.84,
+    "total": 3.44
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 3.45,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir soatda necha daqiqa bor?",
+   "keywords": [
+    "60",
+    "oltmish"
+   ],
+   "answer": "Bir soatda necha daqiqa bor?",
+   "answer_english": "How many minutes are there in an hour?",
+   "english_input": "How many minutes are there in an hour?",
+   "timings": {
+    "input_translation": 1.08,
+    "qwen": 0.54,
+    "output_translation": 0.92,
+    "total": 2.55
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.55,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir soatda necha daqiqa bor",
+   "keywords": [
+    "60",
+    "oltmish"
+   ],
+   "answer": "Bir soatda qancha daqiqa bor",
+   "answer_english": "How many minutes are in an hour",
+   "english_input": "how many minutes are in an hour",
+   "timings": {
+    "input_translation": 0.99,
+    "qwen": 0.45,
+    "output_translation": 0.91,
+    "total": 2.35
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.35,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qor qanday rangda bo'ladi?",
+   "keywords": [
+    "oq"
+   ],
+   "answer": "Qish qanday rangda?",
+   "answer_english": "What color is snow?",
+   "english_input": "What color is snow?",
+   "timings": {
+    "input_translation": 0.7,
+    "qwen": 0.26,
+    "output_translation": 0.8,
+    "total": 1.76
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 1.77,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "stt",
+   "text": "qor qanday rangda boʻladi",
+   "keywords": [
+    "oq"
+   ],
+   "answer": "Qish qanday rangda?",
+   "answer_english": "What color is snow?",
+   "english_input": "what color is snow",
+   "timings": {
+    "input_translation": 0.61,
+    "qwen": 0.27,
+    "output_translation": 0.77,
+    "total": 1.65
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 1.65,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning davlat tili qaysi?",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": "Oʻzbekistonning rasmiy tili nima?",
+   "answer_english": "What is the official language of Uzbekistan?",
+   "english_input": "What is the official language of Uzbekistan?",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 0.43,
+    "output_translation": 0.81,
+    "total": 2.23
+   },
+   "dual_input": true,
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.24,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning davlat tili qaysi",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": "Oʻzbekistonning rasmiy tili qaysi til?",
+   "answer_english": "Which language is the official language of Uzbekistan?",
+   "english_input": "oʻzbekistonning davlat tili qaysi",
+   "timings": {
+    "input_translation": 1.0,
+    "qwen": 0.53,
+    "output_translation": 1.01,
+    "total": 2.54
+   },
+   "dual_input": true,
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.56,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Samarqanddagi mashhur maydonning nomi nima?",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "Samarkanddagi mashhur maydonning nomi nima?",
+   "answer_english": "What is the name of the famous square in Samarkand?",
+   "english_input": "What is the name of the famous square in Samarkand?",
+   "timings": {
+    "input_translation": 1.49,
+    "qwen": 0.59,
+    "output_translation": 1.33,
+    "total": 3.41
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 3.41,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "stt",
+   "text": "samarqanddagi mashhur maydonning nominiman",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "Samarkanddagi mashhur maydonning nomi.",
+   "answer_english": "The name of the famous square in Samarkand.",
+   "english_input": "The name of the famous square in Samarkand",
+   "timings": {
+    "input_translation": 1.17,
+    "qwen": 0.61,
+    "output_translation": 1.2,
+    "total": 2.98
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.98,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng baland tog' qaysi?",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": "Er yuzidagi eng baland togʻ qaysi?",
+   "answer_english": "What is the highest mountain on earth?",
+   "english_input": "What is the highest mountain on earth?",
+   "timings": {
+    "input_translation": 1.09,
+    "qwen": 0.49,
+    "output_translation": 1.09,
+    "total": 2.67
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.68,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng baland togʻ qaysi",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": "Er yuzidagi eng baland togʻ qaysi?",
+   "answer_english": "Which mountain is the highest in the world?",
+   "english_input": "Which is the highest mountain in the world?",
+   "timings": {
+    "input_translation": 1.28,
+    "qwen": 0.6,
+    "output_translation": 1.12,
+    "total": 3.0
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 3.0,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Kutubxonada nima qilish mumkin?",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "kutubxonada nima qila olaman?",
+   "answer_english": "What can I do in the library?",
+   "english_input": "What can I do in the library?",
+   "timings": {
+    "input_translation": 1.06,
+    "qwen": 0.56,
+    "output_translation": 1.09,
+    "total": 2.7
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.74,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "stt",
+   "text": "tutqonida nima qilish mumkin",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "Qoʻlda nima qilish mumkin?",
+   "answer_english": "What can be done on the handle?",
+   "english_input": "what to do on handle",
+   "timings": {
+    "input_translation": 0.7,
+    "qwen": 0.48,
+    "output_translation": 0.92,
+    "total": 2.1
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.1,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir kunda necha soat bor?",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": "Kun davomida necha soat bor?",
+   "answer_english": "How many hours are there in a day?",
+   "english_input": "How many hours are there in a day?",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 0.57,
+    "output_translation": 0.82,
+    "total": 2.46
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.48,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir kundan necha soat bor",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": "Kun davomida necha soat bor?",
+   "answer_english": "How many hours are there in a day?",
+   "english_input": "hours of a day",
+   "timings": {
+    "input_translation": 0.6,
+    "qwen": 0.33,
+    "output_translation": 0.81,
+    "total": 1.73
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 1.76,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekiston qaysi qit'ada joylashgan?",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": "Oʻzbekiston qaysi togʻda joylashgan?",
+   "answer_english": "Which mountain does Uzbekistan lie on?",
+   "english_input": "What is the meaning of the word \"Uzbekistan\"?",
+   "timings": {
+    "input_translation": 1.72,
+    "qwen": 0.54,
+    "output_translation": 0.97,
+    "total": 3.23
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 3.26,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekiston qaysi qitada joylashgan",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": "Oʻzbekiston qaysi qitada joylashgan?",
+   "answer_english": "What continent is Uzbekistan located on?",
+   "english_input": "oʻzbekiston on which continent is located",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 0.55,
+    "output_translation": 1.06,
+    "total": 2.59
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.61,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ingliz tilida kitob so'zi qanday aytiladi?",
+   "keywords": [
+    "book"
+   ],
+   "answer": "(Ushbu oyatda zikr qilingan narsalar faqat Alloh taoloning Oʻziga xos sifatlaridir.)",
+   "answer_english": "In English, the word for \"book\" is \"book.\"",
+   "english_input": "How do you say book in English?",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 0.66,
+    "output_translation": 2.57,
+    "total": 4.21
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 4.24,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "stt",
+   "text": "inliz tilida kitob soʻzi qanday aytiladi",
+   "keywords": [
+    "book"
+   ],
+   "answer": "Oʻzbek tilida \"kitob\" soʻzi ingliz tilida \"kitob\" degan manoni bildiradi.",
+   "answer_english": "In Uzbek, \"kitob\" is said as \"book\" in English.",
+   "english_input": "how to say book in english",
+   "timings": {
+    "input_translation": 0.92,
+    "qwen": 0.59,
+    "output_translation": 2.69,
+    "total": 4.2
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 4.22,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "clean",
+   "text": "Uchburchakning nechta burchagi bor?",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": "Uchburchakning burchaklari qancha?",
+   "answer_english": "How many angles does a triangle have?",
+   "english_input": "How many angles does a triangle have?",
+   "timings": {
+    "input_translation": 1.08,
+    "qwen": 0.54,
+    "output_translation": 1.17,
+    "total": 2.79
+   },
+   "dual_input": true,
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.81,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "stt",
+   "text": "gul gulchakni meyishda gulchaga bor",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": "Gullar gulga olib kelinmoqda.",
+   "answer_english": "Flowers are being brought to the flower.",
+   "english_input": "Flowers are meying the flower",
+   "timings": {
+    "input_translation": 0.88,
+    "qwen": 0.52,
+    "output_translation": 1.02,
+    "total": 2.43
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.45,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi sayyorada biz yashaymiz?",
+   "keywords": [
+    "yer"
+   ],
+   "answer": "Biz qayerda yashaymiz?",
+   "answer_english": "Where do we live?",
+   "english_input": "What planet are we on?",
+   "timings": {
+    "input_translation": 0.82,
+    "qwen": 0.39,
+    "output_translation": 0.89,
+    "total": 2.1
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.1,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi sayyorada biz yashaymiz",
+   "keywords": [
+    "yer"
+   ],
+   "answer": "Biz qaysi sayyorada yashaymiz?",
+   "answer_english": "Which planet do we live on?",
+   "english_input": "What planet do we live on?",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 0.47,
+    "output_translation": 1.09,
+    "total": 2.54
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.56,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "clean",
+   "text": "Asal qaysi hasharot tomonidan tayyorlanadi?",
+   "keywords": [
+    "ari"
+   ],
+   "answer": "Bu nima degani?",
+   "answer_english": "What is the meaning of the name?",
+   "english_input": "What is the meaning of the name?",
+   "timings": {
+    "input_translation": 1.0,
+    "qwen": 0.51,
+    "output_translation": 0.71,
+    "total": 2.22
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.24,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "stt",
+   "text": "saqaysi hasharot tomonidan tayyorlanadi",
+   "keywords": [
+    "ari"
+   ],
+   "answer": "Ularni erga quyganingizda esa, ular sizga oʻxshab er yuzida suzib yuraveradilar.",
+   "answer_english": "The dust is produced by the insects.",
+   "english_input": "The dust is produced by the insects",
+   "timings": {
+    "input_translation": 1.08,
+    "qwen": 0.49,
+    "output_translation": 2.89,
+    "total": 4.47
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 4.47,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'n besh ayiruv besh necha bo'ladi?",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "Oʻn beshni beshga boʻlish qancha?",
+   "answer_english": "What is fifteen divided by five?",
+   "english_input": "What is fifteen divided by five?",
+   "timings": {
+    "input_translation": 1.11,
+    "qwen": 0.55,
+    "output_translation": 1.17,
+    "total": 2.83
+   },
+   "dual_input": true,
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.83,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻn besh ayilru besh necha boʻladi",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "Oʻn besh yil va besh yil.",
+   "answer_english": "Fifteen years and five years.",
+   "english_input": "fifteen years and five years",
+   "timings": {
+    "input_translation": 0.8,
+    "qwen": 0.53,
+    "output_translation": 0.97,
+    "total": 2.31
+   },
+   "dual_input": true,
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.31,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qishdan keyin qaysi fasl keladi?",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": "Qishdan keyin bahor keladir.",
+   "answer_english": "After winter comes spring.",
+   "english_input": "What season comes after winter?",
+   "timings": {
+    "input_translation": 0.81,
+    "qwen": 0.46,
+    "output_translation": 1.04,
+    "total": 2.3
+   },
+   "dual_input": true,
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.32,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "stt",
+   "text": "qishdan keyin qaysi fasl keladi",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": "Qishdan keyin qaysi mavsum keladi?",
+   "answer_english": "Which season comes after winter",
+   "english_input": "Which season comes after winter",
+   "timings": {
+    "input_translation": 1.08,
+    "qwen": 0.49,
+    "output_translation": 1.16,
+    "total": 2.72
+   },
+   "dual_input": true,
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.73,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "clean",
+   "text": "To'xta.",
+   "english_input": "Stop.",
+   "restated": "To'xta.",
+   "understood": false,
+   "latency": 3.08,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "stt",
+   "text": "boʻp",
+   "english_input": "boʻp",
+   "restated": "boʻp",
+   "understood": false,
+   "latency": 8.55,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "clean",
+   "text": "Chapga buril.",
+   "english_input": "You're a fool.",
+   "restated": "Chapga buril.",
+   "understood": false,
+   "latency": 2.46,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "stt",
+   "text": "kam kam",
+   "english_input": "kam kam",
+   "restated": "kam kam",
+   "understood": false,
+   "latency": 7.18,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "clean",
+   "text": "O'ngga buril.",
+   "english_input": "Turn away from him.",
+   "restated": "Turn away from him.",
+   "understood": false,
+   "latency": 2.21,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "stt",
+   "text": "oʻngga boʻlin",
+   "english_input": "split right",
+   "restated": "Original message in Uzbek: oʻngga boʻlin",
+   "understood": false,
+   "latency": 1.77,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "clean",
+   "text": "Oldinga yur.",
+   "english_input": "Go ahead.",
+   "restated": "Oldinga yur.",
+   "understood": false,
+   "latency": 1.86,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "stt",
+   "text": "dangga yur",
+   "english_input": "dangga yur",
+   "restated": "dangga yur",
+   "understood": false,
+   "latency": 6.69,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "clean",
+   "text": "Orqaga yur.",
+   "english_input": "Back off.",
+   "restated": "Orqaga yur.",
+   "understood": false,
+   "latency": 3.17,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "stt",
+   "text": "xalqaga",
+   "english_input": "xalqaga",
+   "restated": "xalqaga",
+   "understood": false,
+   "latency": 6.23,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "clean",
+   "text": "Sekinroq yur.",
+   "english_input": "Slow down.",
+   "restated": "Sekinroq yur.",
+   "understood": false,
+   "latency": 4.86,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "stt",
+   "text": "debkin bu oq kuyov",
+   "english_input": "Did this white groom say",
+   "restated": "Debkin bu oq kuyov",
+   "understood": false,
+   "latency": 3.11,
+   "first_call": false
+  },
+  {
+   "id": "cmd_07",
+   "kind": "command",
+   "input": "clean",
+   "text": "Tezroq yur.",
+   "english_input": "Go faster.",
+   "restated": "Tezroq yur.",
+   "understood": false,
+   "latency": 1.84,
+   "first_call": false
+  },
+  {
+   "id": "cmd_07",
+   "kind": "command",
+   "input": "stt",
+   "text": "dedi so",
+   "english_input": "said so",
+   "restated": "Original message: \"dedi so\"",
+   "understood": false,
+   "latency": 1.42,
+   "first_call": false
+  },
+  {
+   "id": "cmd_08",
+   "kind": "command",
+   "input": "clean",
+   "text": "Kutubxonaga olib bor.",
+   "english_input": "Take it to the library.",
+   "restated": "Take it to the library.",
+   "understood": true,
+   "latency": 2.47,
+   "first_call": false
+  },
+  {
+   "id": "cmd_08",
+   "kind": "command",
+   "input": "stt",
+   "text": "kutubxonaga bolib bor",
+   "english_input": "go to library",
+   "restated": "Go to library.",
+   "understood": true,
+   "latency": 2.82,
+   "first_call": false
+  },
+  {
+   "id": "cmd_09",
+   "kind": "command",
+   "input": "clean",
+   "text": "Eshikni och.",
+   "english_input": "Open the door.",
+   "restated": "Open the door.",
+   "understood": true,
+   "latency": 1.83,
+   "first_call": false
+  },
+  {
+   "id": "cmd_09",
+   "kind": "command",
+   "input": "stt",
+   "text": "eshikni u",
+   "english_input": "The door is closed.",
+   "restated": "The door is closed.",
+   "understood": false,
+   "latency": 1.8,
+   "first_call": false
+  },
+  {
+   "id": "cmd_10",
+   "kind": "command",
+   "input": "clean",
+   "text": "Ha.",
+   "english_input": "Ha.",
+   "restated": "Original message in Uzbek: Ha. Machine translation into English: Ha. If the translation and the original disagree, trust the meaning of the original.",
+   "understood": false,
+   "latency": 2.82,
+   "first_call": false
+  },
+  {
+   "id": "cmd_11",
+   "kind": "command",
+   "input": "clean",
+   "text": "Yo'q.",
+   "english_input": "No, no.",
+   "restated": "Original message: Yo'q. Machine translation: No, no.",
+   "understood": true,
+   "latency": 8.04,
+   "first_call": false
+  },
+  {
+   "id": "cmd_11",
+   "kind": "command",
+   "input": "stt",
+   "text": "yoʻgʻ e",
+   "english_input": "no",
+   "restated": "Original message in Uzbek: yoʻgʻ e",
+   "understood": false,
+   "latency": 1.51,
+   "first_call": false
+  },
+  {
+   "id": "cmd_12",
+   "kind": "command",
+   "input": "clean",
+   "text": "To'xta, to'xta, to'xta!",
+   "english_input": "Stop, stop, stop!",
+   "restated": "Original message: To'xta, to'xta, to'xta! Machine translation: Stop, stop, stop!",
+   "understood": true,
+   "latency": 4.93,
+   "first_call": false
+  },
+  {
+   "id": "cmd_12",
+   "kind": "command",
+   "input": "stt",
+   "text": "doʻxta toʻxtam",
+   "english_input": "doʻxta toʻxtam",
+   "restated": "Doʻxta toʻxtam",
+   "understood": false,
+   "latency": 7.61,
+   "first_call": false
+  }
+ ]
+}

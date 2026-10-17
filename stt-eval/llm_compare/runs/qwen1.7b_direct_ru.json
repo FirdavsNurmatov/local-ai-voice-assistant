@@ -1,0 +1,435 @@
+{
+ "pipeline": "direct:qwen3:1.7b",
+ "language": "ru",
+ "server_model": null,
+ "results": [
+  {
+   "id": "r01",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей России?",
+   "keywords": [
+    "москв"
+   ],
+   "answer": "Столица России — Москва.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 71,
+    "output_tokens": 9,
+    "thinking_chars": 0,
+    "generation_s": 0.11
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.59,
+   "first_call": true
+  },
+  {
+   "id": "r02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько дней в неделе?",
+   "keywords": [
+    "7",
+    "семь"
+   ],
+   "answer": "Дня в недели 7.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 69,
+    "output_tokens": 9,
+    "thinking_chars": 0,
+    "generation_s": 0.11
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.21,
+   "first_call": false
+  },
+  {
+   "id": "r03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько месяцев в году?",
+   "keywords": [
+    "12",
+    "двенадцат"
+   ],
+   "answer": "Год має 12 місяців.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 68,
+    "output_tokens": 15,
+    "thinking_chars": 0,
+    "generation_s": 0.19
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.3,
+   "first_call": false
+  },
+  {
+   "id": "r04",
+   "kind": "question",
+   "input": "clean",
+   "text": "При какой температуре кипит вода?",
+   "keywords": [
+    "100",
+    "сто"
+   ],
+   "answer": "Вода кипит при 100°С.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 74,
+    "output_tokens": 14,
+    "thinking_chars": 0,
+    "generation_s": 0.17
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.28,
+   "first_call": false
+  },
+  {
+   "id": "r05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько будет два плюс три?",
+   "keywords": [
+    "5",
+    "пят"
+   ],
+   "answer": "Два плюс три равно пять.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 71,
+    "output_tokens": 11,
+    "thinking_chars": 0,
+    "generation_s": 0.14
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.25,
+   "first_call": false
+  },
+  {
+   "id": "r06",
+   "kind": "question",
+   "input": "clean",
+   "text": "С какой стороны восходит солнце?",
+   "keywords": [
+    "восток"
+   ],
+   "answer": "С севера.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 70,
+    "output_tokens": 6,
+    "thinking_chars": 0,
+    "generation_s": 0.07
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 0.16,
+   "first_call": false
+  },
+  {
+   "id": "r07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой самый большой океан на Земле?",
+   "keywords": [
+    "тих"
+   ],
+   "answer": "Океан, самый большой на Земле, называется Океаном Пасати.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 73,
+    "output_tokens": 23,
+    "thinking_chars": 0,
+    "generation_s": 0.3
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 0.43,
+   "first_call": false
+  },
+  {
+   "id": "r08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто написал роман «Война и мир»?",
+   "keywords": [
+    "толст"
+   ],
+   "answer": "Лев Толстой.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 75,
+    "output_tokens": 7,
+    "thinking_chars": 0,
+    "generation_s": 0.08
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.21,
+   "first_call": false
+  },
+  {
+   "id": "r09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей Узбекистана?",
+   "keywords": [
+    "ташкент"
+   ],
+   "answer": "Столицей Узбекистана является Ташкент.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 76,
+    "output_tokens": 18,
+    "thinking_chars": 0,
+    "generation_s": 0.23
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.35,
+   "first_call": false
+  },
+  {
+   "id": "r10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое животное называют кораблём пустыни?",
+   "keywords": [
+    "верблюд"
+   ],
+   "answer": "Кораблём пустыни называют лев.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 76,
+    "output_tokens": 15,
+    "thinking_chars": 0,
+    "generation_s": 0.19
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 0.32,
+   "first_call": false
+  },
+  {
+   "id": "r11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько минут в одном часе?",
+   "keywords": [
+    "60",
+    "шестьдесят"
+   ],
+   "answer": "Півтора хвилини.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 70,
+    "output_tokens": 11,
+    "thinking_chars": 0,
+    "generation_s": 0.13
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 0.24,
+   "first_call": false
+  },
+  {
+   "id": "r12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какого цвета снег?",
+   "keywords": [
+    "бел"
+   ],
+   "answer": "Снег белый.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 69,
+    "output_tokens": 7,
+    "thinking_chars": 0,
+    "generation_s": 0.08
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.18,
+   "first_call": false
+  },
+  {
+   "id": "r13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какая самая высокая гора в мире?",
+   "keywords": [
+    "эверест",
+    "джомолунгм"
+   ],
+   "answer": "Горą в мире - Килимбаро.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 73,
+    "output_tokens": 14,
+    "thinking_chars": 0,
+    "generation_s": 0.17
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 0.27,
+   "first_call": false
+  },
+  {
+   "id": "r14",
+   "kind": "question",
+   "input": "clean",
+   "text": "На какой планете мы живём?",
+   "keywords": [
+    "земл"
+   ],
+   "answer": "Мы живём на Земле.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 69,
+    "output_tokens": 10,
+    "thinking_chars": 0,
+    "generation_s": 0.12
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.24,
+   "first_call": false
+  },
+  {
+   "id": "r15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое насекомое делает мёд?",
+   "keywords": [
+    "пчел"
+   ],
+   "answer": "Любит мёд.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 73,
+    "output_tokens": 8,
+    "thinking_chars": 0,
+    "generation_s": 0.09
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 0.21,
+   "first_call": false
+  },
+  {
+   "id": "r16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько часов в сутках?",
+   "keywords": [
+    "24",
+    "двадцать четыре"
+   ],
+   "answer": "В сутках 24 часа.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 70,
+    "output_tokens": 10,
+    "thinking_chars": 0,
+    "generation_s": 0.12
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.23,
+   "first_call": false
+  },
+  {
+   "id": "r17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое время года наступает после зимы?",
+   "keywords": [
+    "весн"
+   ],
+   "answer": "Весна.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 72,
+    "output_tokens": 5,
+    "thinking_chars": 0,
+    "generation_s": 0.05
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.17,
+   "first_call": false
+  },
+  {
+   "id": "r18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько углов у треугольника?",
+   "keywords": [
+    "3",
+    "=три"
+   ],
+   "answer": "Треугольник имеет три угла.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 72,
+    "output_tokens": 11,
+    "thinking_chars": 0,
+    "generation_s": 0.13
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.25,
+   "first_call": false
+  },
+  {
+   "id": "r19",
+   "kind": "question",
+   "input": "clean",
+   "text": "Как по-английски будет слово «книга»?",
+   "keywords": [
+    "book"
+   ],
+   "answer": "book.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 77,
+    "output_tokens": 3,
+    "thinking_chars": 0,
+    "generation_s": 0.03
+   },
+   "correct": true,
+   "answer_language": "mixed/latin",
+   "latency": 0.16,
+   "first_call": false
+  },
+  {
+   "id": "r20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто был первым человеком в космосе?",
+   "keywords": [
+    "гагарин"
+   ],
+   "answer": "Первым человеком в космосе был Юрий Гагарин.",
+   "llm": {
+    "model": "qwen3:1.7b",
+    "prompt_tokens": 75,
+    "output_tokens": 21,
+    "thinking_chars": 0,
+    "generation_s": 0.27
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.39,
+   "first_call": false
+  }
+ ]
+}

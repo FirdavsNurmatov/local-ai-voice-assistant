@@ -1,0 +1,595 @@
+{
+ "pipeline": "server",
+ "language": "en",
+ "server_model": "qwen3:4b-instruct",
+ "results": [
+  {
+   "id": "e01",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the capital city of Uzbekistan?",
+   "keywords": [
+    "tashkent"
+   ],
+   "answer": "The capital city of Uzbekistan is Tashkent. It is the largest and most populous city in the country. Tashkent has been the capital since 1924.",
+   "answer_english": "The capital city of Uzbekistan is Tashkent. It is the largest and most populous city in the country. Tashkent has been the capital since 1924.",
+   "english_input": "What is the capital city of Uzbekistan?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 9.54,
+    "output_translation": 0.0,
+    "total": 9.54
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 40
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 9.55,
+   "first_call": true
+  },
+  {
+   "id": "e02",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many days are there in a week?",
+   "keywords": [
+    "7",
+    "seven"
+   ],
+   "answer": "There are 7 days in a week. They are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.",
+   "answer_english": "There are 7 days in a week. They are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.",
+   "english_input": "How many days are there in a week?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 1.52,
+    "output_translation": 0.0,
+    "total": 1.52
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 27
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.52,
+   "first_call": false
+  },
+  {
+   "id": "e03",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many months are there in a year?",
+   "keywords": [
+    "12",
+    "twelve"
+   ],
+   "answer": "There are 12 months in a year. They are January, February, March, April, May, June, July, August, September, October, November, and December.",
+   "answer_english": "There are 12 months in a year. They are January, February, March, April, May, June, July, August, September, October, November, and December.",
+   "english_input": "How many months are there in a year?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 2.04,
+    "output_translation": 0.0,
+    "total": 2.04
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 38
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 2.07,
+   "first_call": false
+  },
+  {
+   "id": "e04",
+   "kind": "question",
+   "input": "clean",
+   "text": "At what temperature does water boil at sea level in Celsius?",
+   "keywords": [
+    "100",
+    "hundred"
+   ],
+   "answer": "Water boils at 100 degrees Celsius at sea level.",
+   "answer_english": "Water boils at 100 degrees Celsius at sea level.",
+   "english_input": "At what temperature does water boil at sea level in Celsius?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 0.96,
+    "output_translation": 0.0,
+    "total": 0.96
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 51,
+    "output_tokens": 14
+   },
+   "correct": true,
+   "answer_language": "other",
+   "latency": 0.96,
+   "first_call": false
+  },
+  {
+   "id": "e05",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is two plus three?",
+   "keywords": [
+    "5",
+    "five"
+   ],
+   "answer": "Two plus three is five.",
+   "answer_english": "Two plus three is five.",
+   "english_input": "What is two plus three?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 0.5,
+    "output_translation": 0.0,
+    "total": 0.5
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 45,
+    "output_tokens": 7
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.52,
+   "first_call": false
+  },
+  {
+   "id": "e06",
+   "kind": "question",
+   "input": "clean",
+   "text": "In which direction does the sun rise?",
+   "keywords": [
+    "east"
+   ],
+   "answer": "The sun rises in the east.",
+   "answer_english": "The sun rises in the east.",
+   "english_input": "In which direction does the sun rise?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 0.56,
+    "output_translation": 0.0,
+    "total": 0.56
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 8
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.58,
+   "first_call": false
+  },
+  {
+   "id": "e07",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the largest ocean on Earth?",
+   "keywords": [
+    "pacific"
+   ],
+   "answer": "The largest ocean on Earth is the Pacific Ocean. It covers more than 60 million square miles, nearly half of the Earth's surface. It is also the deepest and most extensive ocean.",
+   "answer_english": "The largest ocean on Earth is the Pacific Ocean. It covers more than 60 million square miles, nearly half of the Earth's surface. It is also the deepest and most extensive ocean.",
+   "english_input": "What is the largest ocean on Earth?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 2.14,
+    "output_translation": 0.0,
+    "total": 2.14
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 40
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 2.15,
+   "first_call": false
+  },
+  {
+   "id": "e08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Who wrote the novel War and Peace?",
+   "keywords": [
+    "tolstoy"
+   ],
+   "answer": "The novel *War and Peace* was written by Leo Tolstoy. It is one of the greatest works of world literature, published in 1869.",
+   "answer_english": "The novel *War and Peace* was written by Leo Tolstoy. It is one of the greatest works of world literature, published in 1869.",
+   "english_input": "Who wrote the novel War and Peace?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 1.92,
+    "output_translation": 0.0,
+    "total": 1.92
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 35
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.94,
+   "first_call": false
+  },
+  {
+   "id": "e09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which animal is called the ship of the desert?",
+   "keywords": [
+    "camel"
+   ],
+   "answer": "The animal called the ship of the desert is the camel. It is known for its ability to travel long distances across desert landscapes with great endurance and efficiency.",
+   "answer_english": "The animal called the ship of the desert is the camel. It is known for its ability to travel long distances across desert landscapes with great endurance and efficiency.",
+   "english_input": "Which animal is called the ship of the desert?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 1.73,
+    "output_translation": 0.0,
+    "total": 1.73
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 49,
+    "output_tokens": 32
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.74,
+   "first_call": false
+  },
+  {
+   "id": "e10",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many minutes are there in one hour?",
+   "keywords": [
+    "60",
+    "sixty"
+   ],
+   "answer": "There are 60 minutes in one hour.",
+   "answer_english": "There are 60 minutes in one hour.",
+   "english_input": "How many minutes are there in one hour?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 0.71,
+    "output_translation": 0.0,
+    "total": 0.71
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 11
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.71,
+   "first_call": false
+  },
+  {
+   "id": "e11",
+   "kind": "question",
+   "input": "clean",
+   "text": "What color is snow?",
+   "keywords": [
+    "white"
+   ],
+   "answer": "Snow is typically white. It appears white because it scatters all wavelengths of visible light equally.",
+   "answer_english": "Snow is typically white. It appears white because it scatters all wavelengths of visible light equally.",
+   "english_input": "What color is snow?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 1.13,
+    "output_translation": 0.0,
+    "total": 1.13
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 44,
+    "output_tokens": 20
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.13,
+   "first_call": false
+  },
+  {
+   "id": "e12",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the highest mountain in the world?",
+   "keywords": [
+    "everest"
+   ],
+   "answer": "The highest mountain in the world is Mount Everest. It stands at 8,848.86 meters (29,031.7 feet) above sea level. Located in the Himalayas on the border of Nepal and Tibet, it is the tallest peak on Earth.",
+   "answer_english": "The highest mountain in the world is Mount Everest. It stands at 8,848.86 meters (29,031.7 feet) above sea level. Located in the Himalayas on the border of Nepal and Tibet, it is the tallest peak on Earth.",
+   "english_input": "What is the highest mountain in the world?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 3.35,
+    "output_translation": 0.0,
+    "total": 3.35
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 60
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 3.35,
+   "first_call": false
+  },
+  {
+   "id": "e13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which planet do we live on?",
+   "keywords": [
+    "earth"
+   ],
+   "answer": "We live on Earth. It is the third planet from the Sun and the only known planet to support life.",
+   "answer_english": "We live on Earth. It is the third planet from the Sun and the only known planet to support life.",
+   "english_input": "Which planet do we live on?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 1.28,
+    "output_translation": 0.0,
+    "total": 1.28
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 46,
+    "output_tokens": 23
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.28,
+   "first_call": false
+  },
+  {
+   "id": "e14",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which insect makes honey?",
+   "keywords": [
+    "bee"
+   ],
+   "answer": "Bees make honey. They collect nectar from flowers and convert it into honey through enzymes and heat. Honeybees are the only insects known to produce honey.",
+   "answer_english": "Bees make honey. They collect nectar from flowers and convert it into honey through enzymes and heat. Honeybees are the only insects known to produce honey.",
+   "english_input": "Which insect makes honey?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 1.82,
+    "output_translation": 0.0,
+    "total": 1.82
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 44,
+    "output_tokens": 34
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.83,
+   "first_call": false
+  },
+  {
+   "id": "e15",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many hours are there in a day?",
+   "keywords": [
+    "24",
+    "twenty-four",
+    "twenty four"
+   ],
+   "answer": "There are 24 hours in a day.",
+   "answer_english": "There are 24 hours in a day.",
+   "english_input": "How many hours are there in a day?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 0.71,
+    "output_translation": 0.0,
+    "total": 0.71
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 48,
+    "output_tokens": 11
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.71,
+   "first_call": false
+  },
+  {
+   "id": "e16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which season comes after winter?",
+   "keywords": [
+    "spring"
+   ],
+   "answer": "The season that comes after winter is spring.",
+   "answer_english": "The season that comes after winter is spring.",
+   "english_input": "Which season comes after winter?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 0.64,
+    "output_translation": 0.0,
+    "total": 0.64
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 45,
+    "output_tokens": 10
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.66,
+   "first_call": false
+  },
+  {
+   "id": "e17",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many sides does a triangle have?",
+   "keywords": [
+    "3",
+    "=three"
+   ],
+   "answer": "A triangle has three sides.",
+   "answer_english": "A triangle has three sides.",
+   "english_input": "How many sides does a triangle have?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 0.5,
+    "output_translation": 0.0,
+    "total": 0.5
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 7
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.52,
+   "first_call": false
+  },
+  {
+   "id": "e18",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the Uzbek word for book?",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "The Uzbek word for book is \"kitob\".",
+   "answer_english": "The Uzbek word for book is \"kitob\".",
+   "english_input": "What is the Uzbek word for book?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 0.78,
+    "output_translation": 0.0,
+    "total": 0.78
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 11
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 0.79,
+   "first_call": false
+  },
+  {
+   "id": "e19",
+   "kind": "question",
+   "input": "clean",
+   "text": "Who was the first human in space?",
+   "keywords": [
+    "gagarin"
+   ],
+   "answer": "The first human in space was Yuri Gagarin, a Soviet cosmonaut. He orbited Earth on April 12, 1961, becoming the first person to journey into outer space.",
+   "answer_english": "The first human in space was Yuri Gagarin, a Soviet cosmonaut. He orbited Earth on April 12, 1961, becoming the first person to journey into outer space.",
+   "english_input": "Who was the first human in space?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 2.54,
+    "output_translation": 0.0,
+    "total": 2.54
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 47,
+    "output_tokens": 44
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 2.56,
+   "first_call": false
+  },
+  {
+   "id": "e20",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the famous square in Samarkand called?",
+   "keywords": [
+    "registan"
+   ],
+   "answer": "The famous square in Samarkand is called the Registan Square. It is renowned for its three majestic madrasas and is a symbol of the city's rich historical and cultural heritage.",
+   "answer_english": "The famous square in Samarkand is called the Registan Square. It is renowned for its three majestic madrasas and is a symbol of the city's rich historical and cultural heritage.",
+   "english_input": "What is the famous square in Samarkand called?",
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 2.1,
+    "output_translation": 0.0,
+    "total": 2.1
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 50,
+    "output_tokens": 39
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 2.1,
+   "first_call": false
+  }
+ ]
+}

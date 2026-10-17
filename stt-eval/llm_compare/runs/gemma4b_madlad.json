@@ -1,0 +1,1740 @@
+{
+ "pipeline": "server",
+ "language": "uz",
+ "server_model": "gemma3:4b",
+ "results": [
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning poytaxti qaysi shahar?",
+   "keywords": [
+    "toshkent",
+    "tashkent"
+   ],
+   "answer": "Oʻzbekiston poytaxti Toshkent shahridir. U mamlakatning shimolida joylashgan va asosiy madaniyat va iqtisodiy markazdir. Toshkent haqida koʻproq bilish istagi bormi?",
+   "answer_english": "The capital of Uzbekistan is Tashkent. It is located in the north of the country and is a major cultural and economic center. Would you like to know more about Tashkent?",
+   "english_input": "What is the capital of Uzbekistan?",
+   "timings": {
+    "input_translation": 1.45,
+    "qwen": 33.42,
+    "output_translation": 3.8,
+    "total": 38.73
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 37
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 38.73,
+   "first_call": true
+  },
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning poytaxti qaysi shahar",
+   "keywords": [
+    "toshkent",
+    "tashkent"
+   ],
+   "answer": "(Alloh taolo Oʻzining ulugʻ nemati–Quroni Karimda insonni goʻzal axloqli, solih bandalardan ekanini bayon qilib bergan.",
+   "answer_english": "Oʻzbekistonning poytaxti Toshkent shahri. Bu mamlakatning markazida joylashgan va eng katta shaharlardan biri. Toshkentda koʻplab tarixiy va madaniy mervarlar mavjud.",
+   "english_input": "oʻzbekistonning poytaxti qaysi shahar",
+   "timings": {
+    "input_translation": 1.15,
+    "qwen": 5.19,
+    "output_translation": 4.19,
+    "total": 10.54
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 58,
+    "output_tokens": 54
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 10.56,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir haftada necha kun bor?",
+   "keywords": [
+    "7",
+    "yetti",
+    "etti"
+   ],
+   "answer": "Haftada etti kun bor. Bu koʻpgina madaniyatlarda qoʻllaniladigan standart oʻlchashdir. Bu bizning vaqtimizni tashkil etishning qulay yoʻlidir!",
+   "answer_english": "There are seven days in a week. This is a standard measurement used in many cultures. It’s a convenient way to organize our time!",
+   "english_input": "How many days are there in a week?",
+   "timings": {
+    "input_translation": 1.04,
+    "qwen": 3.0,
+    "output_translation": 3.62,
+    "total": 7.67
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 30
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 7.69,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir haftada necha kun bor",
+   "keywords": [
+    "7",
+    "yetti",
+    "etti"
+   ],
+   "answer": "Haftada etti kun bor. Bu jumadan yakshanbaga qadarni oʻz ichiga oladi. Bu rejalashtirish va taqvimlash uchun standart oʻlchashdir!",
+   "answer_english": "There are seven days in a week. This includes Monday through Sunday. It’s a standard measurement for planning and scheduling!",
+   "english_input": "how many days are in a week",
+   "timings": {
+    "input_translation": 0.86,
+    "qwen": 2.79,
+    "output_translation": 3.66,
+    "total": 7.31
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 26
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 7.33,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir yilda necha oy bor?",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "Bir yilda oʻn ikki oy bor. Bu vaqtni standart oʻlchashdir. Bu keng tarqalgan va keng tan olingan haqiqatdir!",
+   "answer_english": "There are twelve months in a year. This is the standard measurement for time. It’s a common and widely recognized fact!",
+   "english_input": "How many months are there in a year?",
+   "timings": {
+    "input_translation": 1.04,
+    "qwen": 2.8,
+    "output_translation": 3.02,
+    "total": 6.87
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 27
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 6.87,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir yilda necha oy bor",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "Bir yilda oʻn ikki oy bor. Bu vaqtni kuzatish uchun qoʻllaniladigan standart oʻlchashdir. Bu bizning taqvim tizimimizning asosiy qismidir!",
+   "answer_english": "There are twelve months in a year. This is the standard measurement used to track time. It’s a fundamental part of our calendar system!",
+   "english_input": "How many months are there in a year",
+   "timings": {
+    "input_translation": 0.93,
+    "qwen": 3.06,
+    "output_translation": 3.69,
+    "total": 7.69
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 30
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 7.71,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "clean",
+   "text": "Suv necha darajada qaynaydi?",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "Qizil suvning narxi aniq koʻrsatilmaydi. Uning narxi joyingiz va energiya manbaiga bogʻliq. Iltimos, aniq narx uchun mahalliy xizmatlar narxlarini tekshiring.",
+   "answer_english": "I cannot provide a specific price for boiling water. The cost depends on your location and energy source. Please check your local utility rates for accurate pricing.",
+   "english_input": "How much will the boiling water be?",
+   "timings": {
+    "input_translation": 1.04,
+    "qwen": 3.2,
+    "output_translation": 4.12,
+    "total": 8.37
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 31
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 8.39,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "stt",
+   "text": "suvlicha darajada qaynaydi",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "Bu juda chiroyli surat! Siz oddiy, xotirjam jarayondan zavq olayotgandek koʻrinasiz. Bu haqda menga koʻproq gapirib bersangiz?",
+   "answer_english": "That's a lovely image! It sounds like you're enjoying a simple, comforting process. Would you like to tell me more about it?",
+   "english_input": "like the boiling of water.",
+   "timings": {
+    "input_translation": 0.86,
+    "qwen": 3.19,
+    "output_translation": 4.12,
+    "total": 8.18
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 31
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 8.18,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ikki qo'shuv uch necha bo'ladi?",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "Ikki va uchning qoʻshimchasi 5 ga teng.  Bu 2 va 3 sonlarni qoʻshish natijasi.  Boshqa matematik masalani sinab koʻrishni xohlaysizmi?",
+   "answer_english": "The addition of two and three is five.  It’s the result of combining the numbers 2 and 3.  Do you want to try another math problem?",
+   "english_input": "What is the addition of two to three?",
+   "timings": {
+    "input_translation": 1.13,
+    "qwen": 3.67,
+    "output_translation": 4.36,
+    "total": 9.16
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 36
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 9.16,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "stt",
+   "text": "ikki qoʻshi uch necha boʻladi",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "Ha! Ikki juft uch 6 ga teng. Bu oddiy koʻpaytirish masalasi.",
+   "answer_english": "That’s correct! Two pairs of three equals six. It’s a simple multiplication problem.",
+   "english_input": "two pairs of three are many",
+   "timings": {
+    "input_translation": 0.87,
+    "qwen": 2.3,
+    "output_translation": 2.18,
+    "total": 5.35
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 21
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.37,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "clean",
+   "text": "Quyosh qaysi tomondan chiqadi?",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "Quyoshning chiqishi mashriqdan, uning chiqishi esa erning magʻrib tomonga aylanishidan koʻrinadi.",
+   "answer_english": "The sun rises in the east. It appears to rise because the Earth rotates westwards.",
+   "english_input": "Where does the sun rise?",
+   "timings": {
+    "input_translation": 0.9,
+    "qwen": 2.13,
+    "output_translation": 2.71,
+    "total": 5.75
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 19
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.76,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "stt",
+   "text": "bu yosh qaysi tomondan chiqadi",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "Ular gaz va changdan tugʻilgan, shuning uchun ular hech narsadan \"chiqmaydilar\". Ular doimiy ravishda yadroviy sintez tufayli yoritib turadi.",
+   "answer_english": "Stars are born from gas and dust, so they don't \"come out\" of anything. They are constantly shining due to nuclear fusion.",
+   "english_input": "Which way this star comes out",
+   "timings": {
+    "input_translation": 0.88,
+    "qwen": 3.08,
+    "output_translation": 3.92,
+    "total": 7.88
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 30
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 7.9,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng katta okean qaysi?",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Tinch okeani dunyodagi eng katta okeandir. U Er yuzasining 30% dan koʻprogʻini qoplaydi. U oʻzining kattaligi va turli xil dengiz jonzotlari bilan mashhur.",
+   "answer_english": "The Pacific Ocean is the largest ocean in the world. It covers more than 30% of Earth’s surface. It’s known for its vast size and diverse marine life.",
+   "english_input": "What is the largest ocean in the world?",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 3.83,
+    "output_translation": 4.72,
+    "total": 9.62
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 39
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 9.64,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng katta okean qaysi",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Tinch okeani dunyodagi eng katta okeandir. U Er yuzasining 30% dan koʻprogʻini qoplaydi. U oʻzining kattaligi va turli xil dengiz jonzotlari bilan mashhur.",
+   "answer_english": "The Pacific Ocean is the largest ocean in the world. It covers more than 30% of Earth’s surface. It’s known for its vast size and diverse marine life.",
+   "english_input": "which is the largest ocean in the world",
+   "timings": {
+    "input_translation": 0.96,
+    "qwen": 3.89,
+    "output_translation": 4.69,
+    "total": 9.54
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 39
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 9.56,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Navro'z bayrami qaysi oyda nishonlanadi?",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Navroʻz mart oyida nishonlanadi. U odatda 20 mart va 21 mart oraligʻida boʻladi. Bu Eron Yangi yilining boshlanishini anglatadi!",
+   "answer_english": "Navro’z is celebrated in the month of March. It typically falls between March 20th and March 21st. This marks the beginning of the Persian New Year!",
+   "english_input": "What month is the Navro'z festival?",
+   "timings": {
+    "input_translation": 1.19,
+    "qwen": 3.77,
+    "output_translation": 3.92,
+    "total": 8.89
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 52,
+    "output_tokens": 39
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 8.91,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "stt",
+   "text": "navroʻz bayrami qaysi oyda nishonlanadi",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Navroʻz bayrami mart oyida nishonlanadi. Bu bayram Eronda yangi yilning boshlanishini nishonlaydi va xursandchilik bayrami hisoblanadi.",
+   "answer_english": "Nowruz is celebrated in March. It marks the beginning of the Persian New Year and is a joyous occasion.",
+   "english_input": "navroʻz festival in which month is celebrated",
+   "timings": {
+    "input_translation": 1.25,
+    "qwen": 2.48,
+    "output_translation": 3.12,
+    "total": 6.86
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 52,
+    "output_tokens": 23
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 6.88,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Amir Temur qaysi shaharda tug'ilgan?",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "Amir Temur hozirgi Oʻzbekiston hududidagi Shaxrisabz shahrida tugʻilgan. Uning hukmronligi davrida bu shahar Chagatay xonligi poytaxti boʻlgan.",
+   "answer_english": "Amir Temur was born in Shakhrisabz, which is now Uzbekistan. It was the capital of the Chagatai Khanate during his reign.",
+   "english_input": "In which city was Amir Temur born?",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 3.25,
+    "output_translation": 3.73,
+    "total": 8.06
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 33
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 8.06,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "stt",
+   "text": "anir temur qaysi shaharda tugʻilgan",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "Anir Temur Toshkentda tugʻilgan. U hayotining koʻp qismini shu shaharda oʻtkazgan. Shu erda u oʻzining mashhur Temuriylar sulolasini tashkil etgan.",
+   "answer_english": "Anir Temur was born in Tashkent, Uzbekistan. He spent much of his life in the city. It is where he established his famous Temurids dynasty.",
+   "english_input": "anir temur in which city was born",
+   "timings": {
+    "input_translation": 1.06,
+    "qwen": 3.6,
+    "output_translation": 3.77,
+    "total": 8.44
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 35
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 8.45,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Alisher Navoiy kim bo'lgan?",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "Alisher Navoiy XV asrda yashagan, oʻzbek tilining buyuk shoiri, faylasufi va olimlaridan biri boʻlib, u Markaziy Osiyoda oʻzbek tilining taraqqiyotiga katta hissa qoʻshgan. Uning asarlarida sufiylik, monoteizm va ijtimoiy adolat mavzulari yoritilgan.",
+   "answer_english": "Alisher Navoiy was a 15th-century Persian poet, philosopher, and scholar. He is considered the greatest poet in the Uzbek language and a key figure in the revival of Persian culture in Central Asia. His works explored themes of Sufism, monotheism, and social justice.",
+   "english_input": "Who was Alisher Navoiy?",
+   "timings": {
+    "input_translation": 0.97,
+    "qwen": 5.85,
+    "output_translation": 7.22,
+    "total": 14.06
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 62
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 14.08,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "stt",
+   "text": "rashir navoiy kim boʻlgan",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "Rashid ad-Din Muhammad ibn Xamad al-Navoiy 15-asrdagi fors olim va shoiri. U eng koʻp mashhur boʻlgan asari \"Divan\" boʻlib, u klassik fors sheriyatining yirik toʻplamidir. Uning asarlari fors tili va adabiyot ananalarining rivojlanishiga katta hissa qoʻshgan.",
+   "answer_english": "Rashid ad-Din Muhammad ibn Hamad al-Navoiy was a 15th-century Persian scholar and poet. He is best known for compiling the *Divan*, a massive collection of classical Persian poetry. His work significantly contributed to the development of the Persian language and literary tradition.",
+   "english_input": "Rashid Navoiy",
+   "timings": {
+    "input_translation": 0.64,
+    "qwen": 5.93,
+    "output_translation": 8.35,
+    "total": 14.93
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 62
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 14.93,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi hayvon cho'l kemasi deb ataladi?",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": "Qizil dengizda kemalar tuya deb ataladi. Ular issiq va quruq muhitda uzoq masofalarga sayohat qilish qobiliyati bilan mashhur. Tuyalarning quruqlikda yashash uchun ajoyib moslashuvi mavjud.",
+   "answer_english": "A desert ship is called a camel. They are known for their ability to travel long distances in hot, dry environments. Camels have evolved unique adaptations to survive in the desert.",
+   "english_input": "Which animal is called a desert ship?",
+   "timings": {
+    "input_translation": 1.1,
+    "qwen": 3.58,
+    "output_translation": 5.81,
+    "total": 10.51
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 37
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 10.53,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi hayvon choʻl kemasi deb ataladi",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": "Qizilqum kemasi tuya deb ataladi. U issiq, quruq muhitda uzoq masofalarga sayohat qilish qobiliyati bilan mashhur. Tuyalarning sahro hayotiga moslashishi benazir!",
+   "answer_english": "The desert ship is called a camel. It’s known for its ability to travel long distances in hot, dry environments. Camels are uniquely adapted to desert life!",
+   "english_input": "Which animal is called a desert ship",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 3.44,
+    "output_translation": 5.42,
+    "total": 9.85
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 35
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 9.86,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir soatda necha daqiqa bor?",
+   "keywords": [
+    "60",
+    "oltmish",
+    "oltmush"
+   ],
+   "answer": "Bir soatda 60 daqiqa bor. Bu vaqtni hisoblashda qoʻllaniladigan standart oʻlchashdir. Bu oddiy va keng tarqalgan hisoblash usulidir!",
+   "answer_english": "There are 60 minutes in an hour. This is a standard measurement used in timekeeping. It’s a simple and common calculation!",
+   "english_input": "How many minutes are there in an hour?",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 3.09,
+    "output_translation": 3.88,
+    "total": 8.04
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 30
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 8.06,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir soatda necha daqiqa bor",
+   "keywords": [
+    "60",
+    "oltmish",
+    "oltmush"
+   ],
+   "answer": "Bir soatda 60 daqiqa bor. Bu standart oʻlchash!",
+   "answer_english": "There are 60 minutes in an hour. It’s a standard measurement!",
+   "english_input": "how many minutes are in an hour",
+   "timings": {
+    "input_translation": 0.87,
+    "qwen": 2.08,
+    "output_translation": 1.66,
+    "total": 4.61
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 18
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.63,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qor qanday rangda bo'ladi?",
+   "keywords": [
+    "oq"
+   ],
+   "answer": "Buzoq oq. Buzoq oq koʻrinadi, chunki u barcha yorugʻlik ranglarini aks ettiradi. Bu esa uni tashkil qiluvchi koʻplab kichik muz kristallari tufayli.",
+   "answer_english": "Snow is white. It appears white because it reflects all colors of light. This is due to the many tiny ice crystals composing the snow.",
+   "english_input": "What color is snow?",
+   "timings": {
+    "input_translation": 0.69,
+    "qwen": 2.9,
+    "output_translation": 4.5,
+    "total": 8.1
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 29
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 8.12,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "stt",
+   "text": "qor qanday rangda boʻladi",
+   "keywords": [
+    "oq"
+   ],
+   "answer": "Qara bulutlar oq! U oq koʻrinadi, chunki u barcha rangli nurlarni aks ettiradigan kichik bulut kristallaridan iborat. Bu aks etish biz koʻrayotgan yorqin, oq koʻrinishlarni yaratadi.",
+   "answer_english": "Snow is white! It appears white because it’s made of tiny ice crystals that reflect all colors of light. This reflection creates the bright, white appearance we see.",
+   "english_input": "what color is snow",
+   "timings": {
+    "input_translation": 0.59,
+    "qwen": 3.46,
+    "output_translation": 5.27,
+    "total": 9.32
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 46,
+    "output_tokens": 35
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 9.32,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning davlat tili qaysi?",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": "Oʻzbekiston Respublikasining rasmiy tili oʻzbek tilidir. Bu turk tillaridan boʻlib, u turk tillari oilasiga mansub. Rus tili ham koʻpchilik tomonidan tushuniladi va gapiriladi.",
+   "answer_english": "The official language of Uzbekistan is Uzbek. It is a Turkic language with Persian influences. Russian is also spoken and understood by many people.",
+   "english_input": "What is the official language of Uzbekistan?",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 3.04,
+    "output_translation": 3.84,
+    "total": 7.87
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 29
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 7.87,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning davlat tili qaysi",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": "Alloh sizlarni Oʻz fazlidan boy qilib qoʻydi. Albatta, Alloh oʻta magʻfiratli va oʻta rahmlidir.",
+   "answer_english": "Oʻzbekistonning davlat tili oʻzbek tili. Oʻzbek tili oʻzbek xalqining milliy tili va madaniyatining asosidir. U hukumatiy tillardan biri hamdir.",
+   "english_input": "oʻzbekistonning davlat tili qaysi",
+   "timings": {
+    "input_translation": 0.95,
+    "qwen": 5.2,
+    "output_translation": 3.14,
+    "total": 9.3
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 55,
+    "output_tokens": 53
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 9.32,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Samarqanddagi mashhur maydonning nomi nima?",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "Samarkandning mashhur maydoni Registon maydonidir. U YuNESKOning jahon merosi roʻyxatiga kiritilgan va oʻzining goʻzal madrasalari bilan mashhur. Uni shaharning markazida topishingiz mumkin!",
+   "answer_english": "The famous square in Samarkand is Registan Square. It’s a UNESCO World Heritage site known for its stunning madrasahs. You’ll find it in the heart of the city!",
+   "english_input": "What is the name of the famous square in Samarkand?",
+   "timings": {
+    "input_translation": 1.45,
+    "qwen": 4.15,
+    "output_translation": 5.25,
+    "total": 10.86
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 55,
+    "output_tokens": 41
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 10.86,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "stt",
+   "text": "samarqanddagi mashhur maydonning nominiman",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "Registon maydoni – Samarqandning eng mashhur maydoni. U YuNESKOning jahon merosi roʻyxatiga kiritilgan va oʻziga xos madrasalari bilan mashhur.",
+   "answer_english": "The Registan Square is the most famous square in Samarkand. It’s a UNESCO World Heritage site known for its stunning madrasahs. Visitors often describe it as a breathtaking architectural masterpiece.",
+   "english_input": "The name of the famous square in Samarkand",
+   "timings": {
+    "input_translation": 1.17,
+    "qwen": 3.95,
+    "output_translation": 4.03,
+    "total": 9.16
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 52,
+    "output_tokens": 41
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 9.16,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng baland tog' qaysi?",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": "Er yuzidagi eng baland togʻ Everest togʻidir. U Gimalaylar togʻlarida, Nepal va Xitoy chegarasida joylashgan. Uning choʻqqisi 8,848.86 metr (29,031.7 oyoq) balandlikka ega.",
+   "answer_english": "The highest mountain on Earth is Mount Everest. It’s located in the Himalayas, on the border between Nepal and China. Its peak reaches an elevation of 8,848.86 meters (29,031.7 feet).",
+   "english_input": "What is the highest mountain on earth?",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 4.96,
+    "output_translation": 6.52,
+    "total": 12.56
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 53
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 12.58,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng baland togʻ qaysi",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": "Everest togʻi dunyodagi eng baland togʻdir. U Gimalaylar togʻlarida, Nepal va Xitoy chegarasida joylashgan. Uning balandligi 8,848.86 metr (29,031.7 oyoq) ni tashkil qiladi.",
+   "answer_english": "Mount Everest is the highest mountain in the world. It’s located in the Himalayas, on the border between Nepal and China. Its peak reaches an elevation of 8,848.86 meters (29,031.7 feet).",
+   "english_input": "Which is the highest mountain in the world?",
+   "timings": {
+    "input_translation": 1.23,
+    "qwen": 5.16,
+    "output_translation": 6.31,
+    "total": 12.71
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 54
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 12.72,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Kutubxonada nima qilish mumkin?",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "Siz kitoblarni varaqlaysiz, kompyuterdan foydalanasiz va onlayn resurslarga kirishingiz mumkin. Koʻpgina kutubxonalar oʻqish guruhlari va seminarlar kabi tadbirlarni ham taklif qiladi. Oʻqish xonalari bor-yoʻqligini tekshirib koʻrishni unutmang!",
+   "answer_english": "You can browse books, use computers, and access online resources. Many libraries also offer events like reading groups and workshops. Don't forget to check if they have study rooms available!",
+   "english_input": "What can I do in the library?",
+   "timings": {
+    "input_translation": 1.05,
+    "qwen": 3.81,
+    "output_translation": 5.85,
+    "total": 10.71
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 38
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 10.73,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "stt",
+   "text": "tutqonida nima qilish mumkin",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "**",
+   "answer_english": "Here are some ideas for what to do on a handle:\n\n*   Hold a small object like a pen or paintbrush.\n*   Use it to prop up a small item.\n*   Decorate it with paint, beads, or other embellishments.",
+   "english_input": "what to do on handle",
+   "timings": {
+    "input_translation": 0.67,
+    "qwen": 5.13,
+    "output_translation": 13.55,
+    "total": 19.37
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 54
+   },
+   "correct": false,
+   "answer_language": "empty",
+   "latency": 19.39,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir kunda necha soat bor?",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": "Bir kunda 24 soat bor. Bu Erning aylanishiga asoslangan. Bu vaqt uchun standart oʻlchashdir!",
+   "answer_english": "There are 24 hours in a day. This is based on the Earth's rotation. It’s a standard measurement for time!",
+   "english_input": "How many hours are there in a day?",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 3.13,
+    "output_translation": 2.7,
+    "total": 6.91
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 30
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 6.91,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir kundan necha soat bor",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": "Bir kunda 24 soat bor. Bu soatlar odatda 24 soat va 12 soat formatlariga boʻlinadi.  Bu vaqtning standart oʻlchovi!",
+   "answer_english": "There are 24 hours in a day. These hours are typically divided into 24-hour and 12-hour formats.  It’s a standard measurement of time!",
+   "english_input": "hours of a day",
+   "timings": {
+    "input_translation": 0.59,
+    "qwen": 3.9,
+    "output_translation": 3.92,
+    "total": 8.41
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 46,
+    "output_tokens": 40
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 8.43,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekiston qaysi qit'ada joylashgan?",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": "Oʻzbekiston “Oʻzbeklar eri” degan manoni anglatadi. Bu nom mamlakatda asosan yashab kelayotgan turk xalqi nomidan olingan boʻlib, mamlakatning tarixiy va madaniy oʻziga xosligini aks ettiradi.",
+   "answer_english": "Uzbekistan means “Land of the Uzbeks.” It’s derived from the name of the Turkic people who primarily inhabit the country. The name reflects the country’s historical and cultural identity.",
+   "english_input": "What is the meaning of the word \"Uzbekistan\"?",
+   "timings": {
+    "input_translation": 1.44,
+    "qwen": 4.16,
+    "output_translation": 4.8,
+    "total": 10.4
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 54,
+    "output_tokens": 42
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 10.4,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekiston qaysi qitada joylashgan",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": "Oʻzbekiston Osiyoda joylashgan. Ayniqsa, Markaziy Osiyoda. U eng katta qitaning bir qismidir.",
+   "answer_english": "Uzbekistan is located in Asia. Specifically, it’s in Central Asia. It’s part of the largest continent.",
+   "english_input": "oʻzbekiston on which continent is located",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 2.87,
+    "output_translation": 2.74,
+    "total": 6.6
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 52,
+    "output_tokens": 27
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 6.61,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ingliz tilida kitob so'zi qanday aytiladi?",
+   "keywords": [
+    "book"
+   ],
+   "answer": "Ingliz tilida \"kitob\" deysiz. Bu yozilgan yoki bosilgan ishlarga ishora qiluvchi oddiy ismdir. Kitoblar haqida koʻproq bilish istagi bormi?",
+   "answer_english": "You say \"book\" in English. It’s a common noun referring to a written or printed work. Would you like to learn more about books?",
+   "english_input": "How do you say book in English?",
+   "timings": {
+    "input_translation": 0.99,
+    "qwen": 3.28,
+    "output_translation": 4.56,
+    "total": 8.84
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 32
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 8.84,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "stt",
+   "text": "inliz tilida kitob soʻzi qanday aytiladi",
+   "keywords": [
+    "book"
+   ],
+   "answer": "Ingliz tilida \"kitob\" soʻzi \"book\" deb ataladi. Bu yozilgan yoki bosilgan ishlarga ishora qiluvchi umumiy ismdir. Buni har qanday kitobga ishora qilish uchun ishlatishingiz mumkin!",
+   "answer_english": "The word for \"book\" in English is \"book.\" It’s a common noun referring to a written or printed work. You can use it to refer to any kind of book!",
+   "english_input": "how to say book in english",
+   "timings": {
+    "input_translation": 0.8,
+    "qwen": 3.93,
+    "output_translation": 5.18,
+    "total": 9.92
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 39
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 9.93,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "clean",
+   "text": "Uchburchakning nechta burchagi bor?",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": "Uchburchak uch burchakdan iborat. Bu burchaklarning umumiy miqdori doimo 180 darajaga teng.",
+   "answer_english": "A triangle has three angles. These angles always add up to 180 degrees.",
+   "english_input": "How many angles does a triangle have?",
+   "timings": {
+    "input_translation": 1.1,
+    "qwen": 2.23,
+    "output_translation": 2.61,
+    "total": 5.95
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 19
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 5.96,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "stt",
+   "text": "gul gulchakni meyishda gulchaga bor",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": "Siz gullar gullashini nazarda tutayotganingizni tushundim! Ularni toʻliq gullagan holda koʻrish ajoyib. Siz turli xil gullar haqida koʻproq bilish istagi bormi?",
+   "answer_english": "I understand you’re referring to flowers blooming! It’s wonderful to see them in full bloom. Would you like to learn more about different types of flowers?",
+   "english_input": "Flowers are meying the flower",
+   "timings": {
+    "input_translation": 0.89,
+    "qwen": 3.3,
+    "output_translation": 4.43,
+    "total": 8.63
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 34
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 8.65,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi sayyorada biz yashaymiz?",
+   "keywords": [
+    "yer"
+   ],
+   "answer": "Siz hozirda Er sayyorasidasiz. U quyosh tizimimizdagi quyoshdan keyingi uchinchi sayyoradir!",
+   "answer_english": "You are currently on the planet Earth. It's the third planet from the Sun in our solar system!",
+   "english_input": "What planet are we on?",
+   "timings": {
+    "input_translation": 0.8,
+    "qwen": 2.58,
+    "output_translation": 2.73,
+    "total": 6.11
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 24
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 6.13,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi sayyorada biz yashaymiz",
+   "keywords": [
+    "yer"
+   ],
+   "answer": "Biz Er sayyorasida yashaymiz. U quyosh tizimidagi quyoshdan keyingi uchinchi sayyoradir. U goʻzal, jonli dunyodir!",
+   "answer_english": "We live on planet Earth. It’s the third planet from the Sun in our solar system. It’s a beautiful, vibrant world!",
+   "english_input": "What planet do we live on?",
+   "timings": {
+    "input_translation": 0.96,
+    "qwen": 2.99,
+    "output_translation": 3.53,
+    "total": 7.49
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 30
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 7.5,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "clean",
+   "text": "Asal qaysi hasharot tomonidan tayyorlanadi?",
+   "keywords": [
+    "ari"
+   ],
+   "answer": "Iltimos, soʻrayotgan ismingizni ayting! Men uning manosini tushuntirish uchun ismingizni bilishim kerak.",
+   "answer_english": "Please tell me the name you're asking about! I need to know the name to explain its meaning.",
+   "english_input": "What is the meaning of the name?",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 2.51,
+    "output_translation": 2.83,
+    "total": 6.32
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 23
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 6.33,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "stt",
+   "text": "saqaysi hasharot tomonidan tayyorlanadi",
+   "keywords": [
+    "ari"
+   ],
+   "answer": "Bu haqda boshqa savollaringiz bormi?",
+   "answer_english": "Okay, I understand. The dust is created by insects. Do you have any other questions about this?",
+   "english_input": "The dust is produced by the insects",
+   "timings": {
+    "input_translation": 1.06,
+    "qwen": 2.4,
+    "output_translation": 1.25,
+    "total": 4.72
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 22
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 4.74,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'n besh ayiruv besh necha bo'ladi?",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "Oʻn beshni beshga boʻlib, uch boʻladi.",
+   "answer_english": "Fifteen divided by five is three. That equals 3.",
+   "english_input": "What is fifteen divided by five?",
+   "timings": {
+    "input_translation": 1.08,
+    "qwen": 1.8,
+    "output_translation": 1.29,
+    "total": 4.18
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 14
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.2,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻn besh ayilru besh necha boʻladi",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "Oʻn besh yil besh yildan koʻp emas, bu oʻn yillik farqdir.",
+   "answer_english": "Fifteen years is longer than five years. That’s a difference of ten years!",
+   "english_input": "fifteen years and five years",
+   "timings": {
+    "input_translation": 0.81,
+    "qwen": 2.12,
+    "output_translation": 2.04,
+    "total": 4.97
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 19
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.99,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qishdan keyin qaysi fasl keladi?",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": "Qishdan keyin bahor keladi. Bu yangi oʻsish va issiqlik vaqti.",
+   "answer_english": "Spring comes after winter. It’s a time of new growth and warmer temperatures.",
+   "english_input": "What season comes after winter?",
+   "timings": {
+    "input_translation": 0.8,
+    "qwen": 2.1,
+    "output_translation": 2.05,
+    "total": 4.95
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 18
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.95,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "stt",
+   "text": "qishdan keyin qaysi fasl keladi",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": "Qishdan keyin bahor keladi. Bu yangi oʻsish va issiqlik mavsumi.",
+   "answer_english": "Spring comes after winter. It’s the season of new growth and warmer temperatures.",
+   "english_input": "Which season comes after winter",
+   "timings": {
+    "input_translation": 0.78,
+    "qwen": 2.0,
+    "output_translation": 2.23,
+    "total": 5.0
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 18
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 5.02,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "clean",
+   "text": "To'xta.",
+   "english_input": "Stop.",
+   "restated": "Stop.",
+   "understood": true,
+   "latency": 3.77,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "stt",
+   "text": "boʻp",
+   "english_input": "boʻp",
+   "restated": "Please provide the question you were asking.",
+   "understood": false,
+   "latency": 6.5,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "clean",
+   "text": "Chapga buril.",
+   "english_input": "You're a fool.",
+   "restated": "You're calling me a fool.",
+   "understood": false,
+   "latency": 11.1,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "stt",
+   "text": "kam kam",
+   "english_input": "kam kam",
+   "restated": "Please provide more context or clarify your request.",
+   "understood": false,
+   "latency": 6.03,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "clean",
+   "text": "O'ngga buril.",
+   "english_input": "Turn away from him.",
+   "restated": "Please turn away from him.",
+   "understood": false,
+   "latency": 4.99,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "stt",
+   "text": "oʻngga boʻlin",
+   "english_input": "split right",
+   "restated": "Please split it.",
+   "understood": false,
+   "latency": 12.09,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "clean",
+   "text": "Oldinga yur.",
+   "english_input": "Go ahead.",
+   "restated": "Please provide the original text you want me to restate.",
+   "understood": false,
+   "latency": 9.85,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "stt",
+   "text": "dangga yur",
+   "english_input": "dangga yur",
+   "restated": "Please restate your question.",
+   "understood": false,
+   "latency": 6.32,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "clean",
+   "text": "Orqaga yur.",
+   "english_input": "Back off.",
+   "restated": "Please stop.",
+   "understood": false,
+   "latency": 8.65,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "stt",
+   "text": "xalqaga",
+   "english_input": "xalqaga",
+   "restated": "Please provide more context or clarify your request.",
+   "understood": false,
+   "latency": 6.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "clean",
+   "text": "Sekinroq yur.",
+   "english_input": "Slow down.",
+   "restated": "Please slow down.",
+   "understood": true,
+   "latency": 4.02,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "stt",
+   "text": "debkin bu oq kuyov",
+   "english_input": "Did this white groom say",
+   "restated": "What did the white groom say?",
+   "understood": false,
+   "latency": 7.92,
+   "first_call": false
+  },
+  {
+   "id": "cmd_07",
+   "kind": "command",
+   "input": "clean",
+   "text": "Tezroq yur.",
+   "english_input": "Go faster.",
+   "restated": "Please increase the speed.",
+   "understood": true,
+   "latency": 6.03,
+   "first_call": false
+  },
+  {
+   "id": "cmd_07",
+   "kind": "command",
+   "input": "stt",
+   "text": "dedi so",
+   "english_input": "said so",
+   "restated": "Please provide the original statement or question.",
+   "understood": false,
+   "latency": 4.66,
+   "first_call": false
+  },
+  {
+   "id": "cmd_08",
+   "kind": "command",
+   "input": "clean",
+   "text": "Kutubxonaga olib bor.",
+   "english_input": "Take it to the library.",
+   "restated": "Please take it to the library.",
+   "understood": true,
+   "latency": 7.78,
+   "first_call": false
+  },
+  {
+   "id": "cmd_08",
+   "kind": "command",
+   "input": "stt",
+   "text": "kutubxonaga bolib bor",
+   "english_input": "go to library",
+   "restated": "Please go to the library.",
+   "understood": true,
+   "latency": 7.71,
+   "first_call": false
+  },
+  {
+   "id": "cmd_09",
+   "kind": "command",
+   "input": "clean",
+   "text": "Eshikni och.",
+   "english_input": "Open the door.",
+   "restated": "Please open the door.",
+   "understood": true,
+   "latency": 6.18,
+   "first_call": false
+  },
+  {
+   "id": "cmd_09",
+   "kind": "command",
+   "input": "stt",
+   "text": "eshikni u",
+   "english_input": "The door is closed.",
+   "restated": "The user stated that the door is closed.",
+   "understood": false,
+   "latency": 5.52,
+   "first_call": false
+  },
+  {
+   "id": "cmd_10",
+   "kind": "command",
+   "input": "clean",
+   "text": "Ha.",
+   "english_input": "Ha.",
+   "restated": "User said \"Ha.\"",
+   "understood": false,
+   "latency": 6.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_11",
+   "kind": "command",
+   "input": "clean",
+   "text": "Yo'q.",
+   "english_input": "No, no.",
+   "restated": "The user responded with a negative affirmation.",
+   "understood": false,
+   "latency": 4.37,
+   "first_call": false
+  },
+  {
+   "id": "cmd_11",
+   "kind": "command",
+   "input": "stt",
+   "text": "yoʻgʻ e",
+   "english_input": "no",
+   "restated": "The user said \"no.\"",
+   "understood": true,
+   "latency": 3.89,
+   "first_call": false
+  },
+  {
+   "id": "cmd_12",
+   "kind": "command",
+   "input": "clean",
+   "text": "To'xta, to'xta, to'xta!",
+   "english_input": "Stop, stop, stop!",
+   "restated": "Please stop.",
+   "understood": true,
+   "latency": 4.45,
+   "first_call": false
+  },
+  {
+   "id": "cmd_12",
+   "kind": "command",
+   "input": "stt",
+   "text": "doʻxta toʻxtam",
+   "english_input": "doʻxta toʻxtam",
+   "restated": "Please restate your question.",
+   "understood": false,
+   "latency": 7.91,
+   "first_call": false
+  }
+ ]
+}

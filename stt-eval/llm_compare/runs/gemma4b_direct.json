@@ -1,0 +1,1261 @@
+{
+ "pipeline": "direct:gemma3:4b",
+ "language": "uz",
+ "server_model": null,
+ "results": [
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning poytaxti qaysi shahar?",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": "Toshkent. Bu O'zbekistonning markaziy shahri va poytaxtidir. Uning tarixi juda qadastr.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 83,
+    "output_tokens": 32,
+    "generation_s": 2.52
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 27.79,
+   "first_call": true
+  },
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning poytaxti qaysi shahar",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": "Тошкент Ўзбекистонning poytaxtidir. Бу сизга yordam beradi!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 24,
+    "generation_s": 1.85
+   },
+   "correct": false,
+   "answer_language": "cyrillic",
+   "latency": 2.6,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir haftada necha kun bor?",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": "Ochiq bo‘ldi, bir haftada beshta kun bor. Bu hafta kuni sanovida: yakshanba, dushanba, seshcha, yshtaxon va jum’a.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 74,
+    "output_tokens": 43,
+    "generation_s": 3.52
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 4.26,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir haftada necha kun bor",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": "Oʻzbek tilidagi soʻrovlaringizni tushunib oldik. Bir haftada beshta kun bor. Bu haftaning kunlari quyidagicha: yakshanba, dushanba, shensaxon, juma, shanbek.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 73,
+    "output_tokens": 57,
+    "generation_s": 4.74
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.5,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir yilda necha oy bor?",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "O‘zbekistonda o‘tмиnchidan oltitmchiga qadar yuzta oy bor. Yilning har bir oy o‘ziga xosdir va turli sanab o‘tiladi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 74,
+    "output_tokens": 49,
+    "generation_s": 4.0
+   },
+   "correct": false,
+   "answer_language": "cyrillic",
+   "latency": 4.77,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir yilda necha oy bor",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "O'nta oy bor. Ulardan oltita fursat, tova va aprel va iyul.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 73,
+    "output_tokens": 24,
+    "generation_s": 1.85
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.63,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "clean",
+   "text": "Suv necha darajada qaynaydi?",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "Bul so'rovni tushunmadim. Suv 100 gradus Santigrade qaynaydi. Agar sizni qanday yordam berishim mumkinligini bilishni istasangiz, uni aytishingiz mumkin.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 55,
+    "generation_s": 4.54
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 5.25,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "stt",
+   "text": "suvlicha darajada qaynaydi",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "Bu savol uchun, suvning qaynash harorati 100 gradus Santgrads hisoblanadi. Bu haroratda suv bulishi boshlanadi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 38,
+    "generation_s": 3.03
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.81,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ikki qo'shuv uch necha bo'ladi?",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "Ikki qo'shuv uch natijasida beshta keladi. Bu hisoblashning oddiy tamildi. Yaxshi ish!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 31,
+    "generation_s": 2.45
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.18,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "stt",
+   "text": "ikki qoʻshi uch necha boʻladi",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "Ikki qoʻshiq uchga teng boʻlmaydi. Jumlada, javob ikki va uchning qoʻshigʻi beshta boʻladi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 38,
+    "generation_s": 3.05
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.77,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "clean",
+   "text": "Quyosh qaysi tomondan chiqadi?",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "Quyosh sharqdan chiqadi. Bu quyoshning odatiy harakati hissabiga. Men sizga yordam berishdan joyshaman!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 36,
+    "generation_s": 2.89
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.65,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "stt",
+   "text": "bu yosh qaysi tomondan chiqadi",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "Bu, \"bu yosh qaysi tomondan chiqadi\" degan ma'noga mos keladi. Men sizga yordam berishga taygandim. Yoki, \"Bu savolning javobi yo'q.\"",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 53,
+    "generation_s": 4.39
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.13,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng katta okean qaysi?",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Okeanning nomi Pasifik okeani. U dunyodagi eng katta okeanning nomi. U juda katta!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 24,
+    "generation_s": 1.86
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.64,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng katta okean qaysi",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Okeanning eng kattasi Pasifik okeaniдир. Uning hajmi boshqa okeanlardan juda katta. Bu dunyodagi eng buyrak okeanдир.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 36,
+    "generation_s": 2.86
+   },
+   "correct": false,
+   "answer_language": "cyrillic",
+   "latency": 3.57,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Navro'z bayrami qaysi oyda nishonlanadi?",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Navro'z bayrami bahorda, e'tiboringizni qarsangiz, fevral oyida nishonlanadi. Bu bayram o'tgan yildan o'tgan bayramga o'tar. Xayrli Navro'z bayramingiz!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 83,
+    "output_tokens": 66,
+    "generation_s": 5.6
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 6.33,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "stt",
+   "text": "navroʻz bayrami qaysi oyda nishonlanadi",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Navroʻz bayrami bahorda, fevral oyi boshida nishonlanadi. Bu bayram oʻtish oyi bilan bogʻliq. Qabul qilingan Navroʻz bayramingiz bilan!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 52,
+    "generation_s": 4.28
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.12,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Amir Temur qaysi shaharda tug'ilgan?",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "Amir Temur Samarqand shahrida tug‘ilgan. Bu shahar uning o‘zbek nomining ham birinchi boburidir. Uning tug‘ilgan joyi bugungi kunda qatori ham muzue sifatida e’tiladi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 55,
+    "generation_s": 4.56
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.32,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "stt",
+   "text": "anir temur qaysi shaharda tugʻilgan",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "Temur Qo‘qon shahrida tug‘ilgan. Bu haqda tarixiy manbalarda ma’lum bo‘lib, bu shahar uning tug‘ilgan joyi sifatida tanilgan.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 43,
+    "generation_s": 3.49
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 4.29,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Alisher Navoiy kim bo'lgan?",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "Alisher Navoiy - buyuk sho'r va asirlikdan qutqaruvoldi. U O'zbekistonning eng muhimi sho'ri va madaniyat arbobi bo'lgan. Uning asarlari bugun ham o'qiladi va hurmat bilan qarashadi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 65,
+    "generation_s": 5.55
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 6.29,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "stt",
+   "text": "rashir navoiy kim boʻlgan",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "Navoiy – buyuk shoʻmiri. U Oʻzbekistonning eng muhimi va eng mashhur ijodkorlaridan biri bo‘lgan. Uning asarlari bugun ham oʻqiladi va hurmat bilan qarashlanadi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 75,
+    "output_tokens": 56,
+    "generation_s": 4.65
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.46,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi hayvon cho'l kemasi deb ataladi?",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": "Bu savol uchun javob \"quribolang\"dir. Quribolang cho'l kemasi deb ataladi. Uning bu shunday nom berilgan sababi, u cho'l ichida yashaydi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 81,
+    "output_tokens": 51,
+    "generation_s": 4.38
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.22,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi hayvon choʻl kemasi deb ataladi",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": "Bu savol uchun javob \"toʻquma\" deb yoziladi. Toʻquma choʻl sharoitida yashovchi hayvonlar uchun xususiyatlangan kemadir. Uning asosiy vazifasi choʻl zonasida hayol qilishni osonlashtirishdir.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 66,
+    "generation_s": 5.6
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 6.39,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir soatda necha daqiqa bor?",
+   "keywords": [
+    "60",
+    "oltmish"
+   ],
+   "answer": "Olti daqiqa bor. Bir soatning 60 daqiqa ekanligidan. Bu taxminan shu echimidir.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 33,
+    "generation_s": 2.66
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.49,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir soatda necha daqiqa bor",
+   "keywords": [
+    "60",
+    "oltmish"
+   ],
+   "answer": "Bu savolga javob berish qiyinchilik bilan juda oddiy. Bir soatda 60 daqiqa bor.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 31,
+    "generation_s": 2.44
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.2,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qor qanday rangda bo'ladi?",
+   "keywords": [
+    "oq"
+   ],
+   "answer": "Qor oq rangda bo'ladi. Uning rangini ta'kidlash uchun boshqa ranglar kutilmaydi. Bu tabiiy materialning asosiy xususiyati.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 40,
+    "generation_s": 3.25
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.0,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "stt",
+   "text": "qor qanday rangda boʻladi",
+   "keywords": [
+    "oq"
+   ],
+   "answer": "Qor oq rangda boʻladi. Baʼhida u kulrang yoki jigarrang boʻlishi mumkin. Bu qorning zichligiga va nam boʻlishiga bogliq.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 75,
+    "output_tokens": 44,
+    "generation_s": 3.59
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.33,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning davlat tili qaysi?",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": "O'zbekistonning davlat tili o'zbek tili. Uning asosiy til bo'lish sababi, bu mamlakatning milliy tilidir. Bu tillarning asosida har bir inson o'ylaydi va suzadi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 59,
+    "generation_s": 4.94
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 5.7,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning davlat tili qaysi",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": "Oʻzbekistonning davlat tilini oʻzbek tili deyiladi. Uning maʼnavatga boy boʻlishi hamda xalqimizning hayotiy tilidir. Sizga yordam berishdan joyshaman.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 58,
+    "generation_s": 4.87
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 5.67,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Samarqanddagi mashhur maydonning nomi nima?",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "Samarqandda Oqtepa maydoni mashhur. U juda katta va gozalgarch joy. Bu maydonni qulay topishingiz mumkin.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 36,
+    "generation_s": 2.87
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 3.67,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "stt",
+   "text": "samarqanddagi mashhur maydonning nominiman",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "O'zbekistonda eng mashhur maydon Samarqand maydoni hisoblanadi. Uning nomiga Samarqand maydoni deganini aniqlaymiz. Bu maydon tarix va madaniyat markazi bo'lib xizmat qiladi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 61,
+    "generation_s": 5.14
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.87,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng baland tog' qaysi?",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": "Mount Everest. U Shimoliy Amerikada joylashgan. U dunyodagi eng baland tog'dir.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 27,
+    "generation_s": 2.1
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.88,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng baland togʻ qaysi",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": "Mount Everest. U Shimoliy Amerikada joylashgan. U dunyodagi eng baland togʻdir.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 27,
+    "generation_s": 2.1
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.81,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Kutubxonada nima qilish mumkin?",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "Kutubxona da kitob o'qi bishingiz mumkin. Shuning pacha yuzida, kutubxonada o'quvchi qismi ham yo'xzad.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 43,
+    "generation_s": 3.47
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.18,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "stt",
+   "text": "tutqonida nima qilish mumkin",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "Tutqoningizda qanday muammona borligini aniqlash qiyinchilik tugʻdiradi. Sizning vaziyatingizni batafsilroq tasvirlab, yordam berish imkoni bor.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 74,
+    "output_tokens": 55,
+    "generation_s": 4.54
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.28,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir kunda necha soat bor?",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": "Kunning, savolingiz uchun raxmat! Bir kunda 24 soat bor. Bu, kunning o'ziga xos o'lchami hisoblanadi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 75,
+    "output_tokens": 42,
+    "generation_s": 3.39
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.16,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir kundan necha soat bor",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": "Bu savolga javob berish qiyinchilik tugʻdiradi. Bir kunda 24 soat bor.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 74,
+    "output_tokens": 28,
+    "generation_s": 2.17
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.95,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekiston qaysi qit'ada joylashgan?",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": "O'zbekiston Markaziy Osiyoda joylashgan. Bu qit'a Evropa va Osiyo kesish joyidir. Bu katta va qadimiy hudud!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 40,
+    "generation_s": 3.21
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.92,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekiston qaysi qitada joylashgan",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": "Oʻzbekiston Markaziy Osiyoda joylashgan. U Oʻrta Osiyo mintaqasida joylashgan buyuk davlat. Mamlakatning hududi kengayib borib, oʻsib boradi.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 51,
+    "generation_s": 4.19
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.94,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ingliz tilida kitob so'zi qanday aytiladi?",
+   "keywords": [
+    "book"
+   ],
+   "answer": "Kitob so'zi \"kitob\" degan holda aytiladi. Bu so'zni takrorlab bosing va uni to'g'ri ayting. Sizni yordam berishdan joyshantam!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 81,
+    "output_tokens": 50,
+    "generation_s": 4.1
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 4.88,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "stt",
+   "text": "inliz tilida kitob soʻzi qanday aytiladi",
+   "keywords": [
+    "book"
+   ],
+   "answer": "\"Kitob\" soʻzi \"book\" deganidiraning shaxsiy shaklidir. Bu soʻzni inliz tilida \"kitob\" degan holda ayta olasiz. Uning tarjumasi \"kitob\" ekanidir.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 57,
+    "generation_s": 4.75
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 5.53,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "clean",
+   "text": "Uchburchakning nechta burchagi bor?",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": "Uchburchakning har dohiyiga uch burchagi bor. Bu geometrik figuraning asosiy xususiyatidir. Agar sizni bu savol bilan qiziqsangiz, men yordam berishdan jo'shadim.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 55,
+    "generation_s": 4.54
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 5.35,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "stt",
+   "text": "gul gulchakni meyishda gulchaga bor",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": "Xayrli kun! Men sizga quloq asabman. Siz gulgulchani meyishda gulchaga borish deganizni tushradim. O'zbek tilida yozishingiz uchun qiziqaman.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 55,
+    "generation_s": 4.56
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 5.35,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi sayyorada biz yashaymiz?",
+   "keywords": [
+    "yer"
+   ],
+   "answer": "Biz Yerda yashaymiz. Yer – Oyning eng katta shahzolari. Uning hayot uchun muhim bo'lganining har bir narsasi bor.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 38,
+    "generation_s": 3.04
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.82,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi sayyorada biz yashaymiz",
+   "keywords": [
+    "yer"
+   ],
+   "answer": "Biz Yerda yashaymiz. Bu Yer Planetasi. Uning turli qismlari mavjud.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 26,
+    "generation_s": 2.01
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 2.77,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "clean",
+   "text": "Asal qaysi hasharot tomonidan tayyorlanadi?",
+   "keywords": [
+    "ari"
+   ],
+   "answer": "Asal, oq yelpi kukun va suvdan tayyorlanadi. Bu, yelpi tomonidan ishlab chiqarilgan bir nechtadan tayyorlanadi. Asalning ishlab chiqarishidan yelpi juda bo‘lganini bilasiz.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 56,
+    "generation_s": 4.64
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 5.36,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "stt",
+   "text": "saqaysi hasharot tomonidan tayyorlanadi",
+   "keywords": [
+    "ari"
+   ],
+   "answer": "Bu savolni tushunmadim. Sizni qanday yordam bera olaman?",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 22,
+    "generation_s": 1.68
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 2.49,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'n besh ayiruv besh necha bo'ladi?",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "O'n besh ayiruv besh, shuni hisoblashda besh necha bo'ladi, ya'ni bir necha marra. Jumlada, javob 5 ta.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 45,
+    "generation_s": 3.67
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.39,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻn besh ayilru besh necha boʻladi",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "Oʻn besh yuzlaman besh boʻlishsa, etti kutiladi. Bu hisoblashning oddiy qoididir. Yaxshi ishlatganingizni kutaman!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 81,
+    "output_tokens": 45,
+    "generation_s": 3.67
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 4.45,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qishdan keyin qaysi fasl keladi?",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": "Bahorda! Bahor juda kayfiy va chiroyli.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 15,
+    "generation_s": 1.16
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 1.92,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "stt",
+   "text": "qishdan keyin qaysi fasl keladi",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": "Bahorda! Bahor juda kayfiy va chayshayiq bo‘lib o‘tadi. Sizga yaxshi baho tilaksiz bo‘lsin!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 37,
+    "generation_s": 2.95
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 3.59,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "clean",
+   "text": "To'xta.",
+   "restated": "Please restate the question.",
+   "understood": false,
+   "latency": 1.1,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "stt",
+   "text": "boʻp",
+   "restated": "Please provide the question you were asking.",
+   "understood": false,
+   "latency": 1.09,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "clean",
+   "text": "Chapga buril.",
+   "restated": "Please restate your request.",
+   "understood": false,
+   "latency": 0.96,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "stt",
+   "text": "kam kam",
+   "restated": "Please provide more context or clarify your request.",
+   "understood": false,
+   "latency": 1.17,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "clean",
+   "text": "O'ngga buril.",
+   "restated": "Please translate \"O'ngga buril.\"",
+   "understood": false,
+   "latency": 1.28,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "stt",
+   "text": "oʻngga boʻlin",
+   "restated": "Please restate the question in English.",
+   "understood": false,
+   "latency": 1.13,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "clean",
+   "text": "Oldinga yur.",
+   "restated": "Please restate your question.",
+   "understood": false,
+   "latency": 0.97,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "stt",
+   "text": "dangga yur",
+   "restated": "Please restate your question.",
+   "understood": false,
+   "latency": 0.94,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "clean",
+   "text": "Orqaga yur.",
+   "restated": "Please return.",
+   "understood": false,
+   "latency": 0.73,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "stt",
+   "text": "xalqaga",
+   "restated": "Please provide more context or clarify your request.",
+   "understood": false,
+   "latency": 1.17,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "clean",
+   "text": "Sekinroq yur.",
+   "restated": "Please restate your question.",
+   "understood": false,
+   "latency": 0.97,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "stt",
+   "text": "debkin bu oq kuyov",
+   "restated": "Please provide the original question or statement.",
+   "understood": false,
+   "latency": 1.12,
+   "first_call": false
+  },
+  {
+   "id": "cmd_07",
+   "kind": "command",
+   "input": "clean",
+   "text": "Tezroq yur.",
+   "restated": "Please restate your question.",
+   "understood": false,
+   "latency": 0.97,
+   "first_call": false
+  },
+  {
+   "id": "cmd_07",
+   "kind": "command",
+   "input": "stt",
+   "text": "dedi so",
+   "restated": "Please clarify what you mean by \"dedi so.\"",
+   "understood": false,
+   "latency": 1.32,
+   "first_call": false
+  },
+  {
+   "id": "cmd_08",
+   "kind": "command",
+   "input": "clean",
+   "text": "Kutubxonaga olib bor.",
+   "restated": "Take the book to the library.",
+   "understood": true,
+   "latency": 1.05,
+   "first_call": false
+  },
+  {
+   "id": "cmd_08",
+   "kind": "command",
+   "input": "stt",
+   "text": "kutubxonaga bolib bor",
+   "restated": "Please deliver the books.",
+   "understood": false,
+   "latency": 0.88,
+   "first_call": false
+  },
+  {
+   "id": "cmd_09",
+   "kind": "command",
+   "input": "clean",
+   "text": "Eshikni och.",
+   "restated": "Please restate your request.",
+   "understood": false,
+   "latency": 0.96,
+   "first_call": false
+  },
+  {
+   "id": "cmd_09",
+   "kind": "command",
+   "input": "stt",
+   "text": "eshikni u",
+   "restated": "Please restate your question.",
+   "understood": false,
+   "latency": 0.98,
+   "first_call": false
+  },
+  {
+   "id": "cmd_10",
+   "kind": "command",
+   "input": "clean",
+   "text": "Ha.",
+   "restated": "User said \"Ha.\"",
+   "understood": false,
+   "latency": 0.85,
+   "first_call": false
+  },
+  {
+   "id": "cmd_11",
+   "kind": "command",
+   "input": "clean",
+   "text": "Yo'q.",
+   "restated": "No.",
+   "understood": true,
+   "latency": 0.65,
+   "first_call": false
+  },
+  {
+   "id": "cmd_11",
+   "kind": "command",
+   "input": "stt",
+   "text": "yoʻgʻ e",
+   "restated": "Please restate your request in a complete sentence.",
+   "understood": false,
+   "latency": 1.28,
+   "first_call": false
+  },
+  {
+   "id": "cmd_12",
+   "kind": "command",
+   "input": "clean",
+   "text": "To'xta, to'xta, to'xta!",
+   "restated": "The user exclaimed \"to'xta, to'xta, to'xta!\"",
+   "understood": false,
+   "latency": 2.28,
+   "first_call": false
+  },
+  {
+   "id": "cmd_12",
+   "kind": "command",
+   "input": "stt",
+   "text": "doʻxta toʻxtam",
+   "restated": "Please restate your question.",
+   "understood": false,
+   "latency": 0.97,
+   "first_call": false
+  }
+ ]
+}

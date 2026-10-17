@@ -1,0 +1,936 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\fleurs_uz_holdout.csv",
+ "language_param": "none",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.36,
+  "memory_mb": {
+   "rss": 380,
+   "commit": 2603
+  },
+  "free_commit_mb": 10247
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.36,
+  "memory_mb": {
+   "rss": 418,
+   "commit": 2709
+  },
+  "free_commit_mb": 10230
+ },
+ "results": [
+  {
+   "id": "holdout_01",
+   "status": 200,
+   "latency": 18.596,
+   "response": {
+    "ok": true,
+    "text": "Sa'at o'nun'un'nol, onb'r'n'u'n'ut'k' medet' ar'as'a halgde'y mehqusdary'ank'un k'etir p'ch'x'h'ert.",
+    "language": "uz",
+    "language_probability": 0.0004,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2507,
+    "language_probabilities": {
+     "uz": 0.0004,
+     "ru": 0.0054,
+     "en": 0.0154
+    },
+    "duration": 5.94,
+    "processing_time": 18.57,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_02",
+   "status": 200,
+   "latency": 5.701,
+   "response": {
+    "ok": true,
+    "text": "Uir tuwa jamane, al-tati jamane, nipinambar, khmukyaman niksana targama, fadilekin sezir masfarkhlar bor.",
+    "language": "uz",
+    "language_probability": 0.0043,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.598,
+    "language_probabilities": {
+     "uz": 0.0043,
+     "ru": 0.0118,
+     "en": 0.0082
+    },
+    "duration": 6.24,
+    "processing_time": 5.68,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_03",
+   "status": 200,
+   "latency": 22.6,
+   "response": {
+    "ok": true,
+    "text": "Osuniklar o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z o'z",
+    "language": "uz",
+    "language_probability": 0.0009,
+    "language_forced": false,
+    "detected_language": "fa",
+    "detected_language_probability": 0.5038,
+    "language_probabilities": {
+     "uz": 0.0009,
+     "ru": 0.006,
+     "en": 0.0076
+    },
+    "duration": 6.36,
+    "processing_time": 22.54,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_04",
+   "status": 200,
+   "latency": 4.627,
+   "response": {
+    "ok": true,
+    "text": "Ikele kuruk kukun na barabarege aralash tering sumura tazen han kurug na ularna tub kebawsin.",
+    "language": "uz",
+    "language_probability": 0.0374,
+    "language_forced": false,
+    "detected_language": "mn",
+    "detected_language_probability": 0.523,
+    "language_probabilities": {
+     "uz": 0.0374,
+     "ru": 0.0009,
+     "en": 0.0049
+    },
+    "duration": 6.72,
+    "processing_time": 4.62,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_05",
+   "status": 200,
+   "latency": 5.245,
+   "response": {
+    "ok": true,
+    "text": "Bugun ob-havo yaxshi. Men o'zbek tilida gapiryapman, menga yordam bering. Men o'zbek tilida gapiryapman, menga yordam bering.",
+    "language": "uz",
+    "language_probability": 0.0002,
+    "language_forced": false,
+    "detected_language": "fa",
+    "detected_language_probability": 0.8003,
+    "language_probabilities": {
+     "uz": 0.0002,
+     "ru": 0.003,
+     "en": 0.0056
+    },
+    "duration": 6.84,
+    "processing_time": 5.22,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_06",
+   "status": 200,
+   "latency": 17.257,
+   "response": {
+    "ok": true,
+    "text": "ʻāilāle ʻikinaf ar wāgit qen pārza ʻanipār duval waqa ʻiga waqa dar burge mill ʻrta ʻikata tāsura ʻadqaltir magen.",
+    "language": "uz",
+    "language_probability": 0.0467,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2132,
+    "language_probabilities": {
+     "uz": 0.0467,
+     "ru": 0.0189,
+     "en": 0.0114
+    },
+    "duration": 7.02,
+    "processing_time": 17.21,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_07",
+   "status": 200,
+   "latency": 4.644,
+   "response": {
+    "ok": true,
+    "text": "Yaxn sharkhning, ilak ʃiklim ʃaraydida, o'y o qadar mukhumbun magan.",
+    "language": "uz",
+    "language_probability": 0.0523,
+    "language_forced": false,
+    "detected_language": "ar",
+    "detected_language_probability": 0.1746,
+    "language_probabilities": {
+     "uz": 0.0523,
+     "ru": 0.0506,
+     "en": 0.0152
+    },
+    "duration": 7.14,
+    "processing_time": 4.64,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_08",
+   "status": 200,
+   "latency": 4.16,
+   "response": {
+    "ok": true,
+    "text": "B'rbomba general gubernatorni ida rastashkar sta parvlada.",
+    "language": "uz",
+    "language_probability": 0.0001,
+    "language_forced": false,
+    "detected_language": "lt",
+    "detected_language_probability": 0.5401,
+    "language_probabilities": {
+     "uz": 0.0001,
+     "ru": 0.027,
+     "en": 0.015
+    },
+    "duration": 7.2,
+    "processing_time": 4.15,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_09",
+   "status": 200,
+   "latency": 5.608,
+   "response": {
+    "ok": true,
+    "text": "Kez kele kanche pasponsa, hayat kuchu shodara che dejjabi pula da harblu insan to loqa zawishtbele gwa mamno nyat geri shimungin.",
+    "language": "uz",
+    "language_probability": 0.0025,
+    "language_forced": false,
+    "detected_language": "ka",
+    "detected_language_probability": 0.2856,
+    "language_probabilities": {
+     "uz": 0.0025,
+     "ru": 0.055,
+     "en": 0.0299
+    },
+    "duration": 8.1,
+    "processing_time": 5.59,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_10",
+   "status": 200,
+   "latency": 4.368,
+   "response": {
+    "ok": true,
+    "text": "Ammo buvci hatdan shingin hududu guya butta davlat ka be ishlaida.",
+    "language": "uz",
+    "language_probability": 0.0763,
+    "language_forced": false,
+    "detected_language": "mn",
+    "detected_language_probability": 0.1946,
+    "language_probabilities": {
+     "uz": 0.0763,
+     "ru": 0.0073,
+     "en": 0.0119
+    },
+    "duration": 8.46,
+    "processing_time": 4.35,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_11",
+   "status": 200,
+   "latency": 4.64,
+   "response": {
+    "ok": true,
+    "text": "Bu, spring-box uchun, biş uyendan borat, maghlobyatlar sereasige yakun yasada.",
+    "language": "uz",
+    "language_probability": 0.0329,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.3005,
+    "language_probabilities": {
+     "uz": 0.0329,
+     "ru": 0.0547,
+     "en": 0.0001
+    },
+    "duration": 9.0,
+    "processing_time": 4.63,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_12",
+   "status": 200,
+   "latency": 6.494,
+   "response": {
+    "ok": true,
+    "text": "Haqaqay kur mo'z qe mo'an ibar nige, larz m'khandar la'faas, to b'rmito qe sesin doxs bri stokz m'chi beti yurtuar qe mo'n o'zgokhaas kampanien t'khandar.",
+    "language": "uz",
+    "language_probability": 0.001,
+    "language_forced": false,
+    "detected_language": "ka",
+    "detected_language_probability": 0.8308,
+    "language_probabilities": {
+     "uz": 0.001,
+     "ru": 0.0007,
+     "en": 0.0017
+    },
+    "duration": 9.18,
+    "processing_time": 6.47,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_13",
+   "status": 200,
+   "latency": 5.604,
+   "response": {
+    "ok": true,
+    "text": "Mashkhor sportu nara futbol basket bolvali, ponzum ponz zakhla chiba zeg reikni bela sport hak yi roluk li hak yi hamne ekh parafta poli galan maug uchi galan.",
+    "language": "uz",
+    "language_probability": 0.0019,
+    "language_forced": false,
+    "detected_language": "ka",
+    "detected_language_probability": 0.5031,
+    "language_probabilities": {
+     "uz": 0.0019,
+     "ru": 0.0125,
+     "en": 0.0083
+    },
+    "duration": 9.36,
+    "processing_time": 5.57,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_14",
+   "status": 200,
+   "latency": 6.019,
+   "response": {
+    "ok": true,
+    "text": "Ko prik bura tsve bach kona nazarad pungu tarak bura shia konan ish kutirwye vken vakh tekinu ya tekinis ntsia proydovo, o'zka tsirgni shia jina ish tarak.",
+    "language": "uz",
+    "language_probability": 0.0003,
+    "language_forced": false,
+    "detected_language": "ka",
+    "detected_language_probability": 0.2953,
+    "language_probabilities": {
+     "uz": 0.0003,
+     "ru": 0.0303,
+     "en": 0.0172
+    },
+    "duration": 9.36,
+    "processing_time": 6.01,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_15",
+   "status": 200,
+   "latency": 5.653,
+   "response": {
+    "ok": true,
+    "text": "Da'im sa'i yaxlar wa sa'v da'gerlarni a'vazni esti shingiz adate khal. A'vaz wa ya'radhe kaya sa'hud da'asaryokh shayde.",
+    "language": "uz",
+    "language_probability": 0.0037,
+    "language_forced": false,
+    "detected_language": "fa",
+    "detected_language_probability": 0.3922,
+    "language_probabilities": {
+     "uz": 0.0037,
+     "ru": 0.0309,
+     "en": 0.0441
+    },
+    "duration": 9.96,
+    "processing_time": 5.64,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_16",
+   "status": 200,
+   "latency": 20.683,
+   "response": {
+    "ok": true,
+    "text": "ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningdeg ʃuningd",
+    "language": "uz",
+    "language_probability": 0.0605,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2405,
+    "language_probabilities": {
+     "uz": 0.0605,
+     "ru": 0.0118,
+     "en": 0.0113
+    },
+    "duration": 10.08,
+    "processing_time": 20.67,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_17",
+   "status": 200,
+   "latency": 5.093,
+   "response": {
+    "ok": true,
+    "text": "Yakun jayda mariye kuprak bolish mongon, chunki khaabuk yubka. Lawanin yuzege chikshi o'zorak bol yen.",
+    "language": "uz",
+    "language_probability": 0.0272,
+    "language_forced": false,
+    "detected_language": "mn",
+    "detected_language_probability": 0.4229,
+    "language_probabilities": {
+     "uz": 0.0272,
+     "ru": 0.0306,
+     "en": 0.005
+    },
+    "duration": 10.32,
+    "processing_time": 5.06,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_18",
+   "status": 200,
+   "latency": 5.886,
+   "response": {
+    "ok": true,
+    "text": "Aikarta yem tsansyada kosh radyo bul sabu uninsak yuzik yombar, asak yuzik yombar, basak yuzik yombar, gabla, aqa yekarad monskelysige in kon birady.",
+    "language": "uz",
+    "language_probability": 0.0361,
+    "language_forced": false,
+    "detected_language": "ar",
+    "detected_language_probability": 0.165,
+    "language_probabilities": {
+     "uz": 0.0361,
+     "ru": 0.0255,
+     "en": 0.0294
+    },
+    "duration": 10.56,
+    "processing_time": 5.88,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_19",
+   "status": 200,
+   "latency": 5.178,
+   "response": {
+    "ok": true,
+    "text": "Makkani ishmuali dagi taqler den bering, ussude jailexgen maskuro har, dunyani qorgen qismiden butullay ajarat ilgen.",
+    "language": "uz",
+    "language_probability": 0.0757,
+    "language_forced": false,
+    "detected_language": "az",
+    "detected_language_probability": 0.3808,
+    "language_probabilities": {
+     "uz": 0.0757,
+     "ru": 0.0325,
+     "en": 0.0111
+    },
+    "duration": 11.94,
+    "processing_time": 5.16,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_20",
+   "status": 200,
+   "latency": 5.323,
+   "response": {
+    "ok": true,
+    "text": "Folkwent n'in ra'smia wariuda za folkwent sumpte, fakaba bulet uneka imata barbritanya sumpte ke GBP din ala bilenge.",
+    "language": "uz",
+    "language_probability": 0.0005,
+    "language_forced": false,
+    "detected_language": "lt",
+    "detected_language_probability": 0.1701,
+    "language_probabilities": {
+     "uz": 0.0005,
+     "ru": 0.0776,
+     "en": 0.0618
+    },
+    "duration": 12.24,
+    "processing_time": 5.31,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_21",
+   "status": 200,
+   "latency": 5.085,
+   "response": {
+    "ok": true,
+    "text": "Hamma atlar sizi uchun sii suzi bilambir qatortam, dao yema hatta gapri margazda ham, katta harf bilambar shlanaad.",
+    "language": "uz",
+    "language_probability": 0.011,
+    "language_forced": false,
+    "detected_language": "fa",
+    "detected_language_probability": 0.6758,
+    "language_probabilities": {
+     "uz": 0.011,
+     "ru": 0.0086,
+     "en": 0.0095
+    },
+    "duration": 12.54,
+    "processing_time": 5.06,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_22",
+   "status": 200,
+   "latency": 6.391,
+   "response": {
+    "ok": true,
+    "text": "Natige tad o'zuk mingi burdush cumbur gengide ishled yenda shikil o'jareyana. Mijawz ekhti o'jaksimat o'jengi inovasyon jareyolana. Başla bir ishi mungun.",
+    "language": "uz",
+    "language_probability": 0.042,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.3528,
+    "language_probabilities": {
+     "uz": 0.042,
+     "ru": 0.0058,
+     "en": 0.0059
+    },
+    "duration": 12.6,
+    "processing_time": 6.36,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_23",
+   "status": 200,
+   "latency": 5.311,
+   "response": {
+    "ok": true,
+    "text": "Alumlar, qaramatiriya. Basha qaramatiriya ege, khut adati matiriya tasir qilgene kabbe tasir kursetadi. Digan khulasa gekilishti.",
+    "language": "uz",
+    "language_probability": 0.0448,
+    "language_forced": false,
+    "detected_language": "fa",
+    "detected_language_probability": 0.6039,
+    "language_probabilities": {
+     "uz": 0.0448,
+     "ru": 0.0085,
+     "en": 0.0079
+    },
+    "duration": 13.44,
+    "processing_time": 5.3,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_24",
+   "status": 200,
+   "latency": 5.466,
+   "response": {
+    "ok": true,
+    "text": "Bajaril gen ishlarni aksaryata nazaryida. Braq dasdur o'katar galakt gazdaige guza-tuhlarna simulyat zaqilish uchun yazil gen ida.",
+    "language": "uz",
+    "language_probability": 0.0562,
+    "language_forced": false,
+    "detected_language": "az",
+    "detected_language_probability": 0.3147,
+    "language_probabilities": {
+     "uz": 0.0562,
+     "ru": 0.0464,
+     "en": 0.0033
+    },
+    "duration": 13.62,
+    "processing_time": 5.43,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_25",
+   "status": 200,
+   "latency": 5.884,
+   "response": {
+    "ok": true,
+    "text": "Shirlar tu da'zem. Bittadam uchda gece bulgen, vayge yitken irli kek shir, uttizdan a'rtaq ruhaçsi, shir ve shir balela'rden ba'rad boladi.",
+    "language": "uz",
+    "language_probability": 0.025,
+    "language_forced": false,
+    "detected_language": "az",
+    "detected_language_probability": 0.4019,
+    "language_probabilities": {
+     "uz": 0.025,
+     "ru": 0.0116,
+     "en": 0.0022
+    },
+    "duration": 13.68,
+    "processing_time": 5.86,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_26",
+   "status": 200,
+   "latency": 7.059,
+   "response": {
+    "ok": true,
+    "text": "O'n ekim yozgana nakhe chikim anek ban masada o'z khayadan imi başta. Khetta per gamen d'khojad, onim o'cham yikrma doks dorda uch dyun. Ge yikrma dore kirambar dyun. Saklaştun o'rapko yilgen.",
+    "language": "uz",
+    "language_probability": 0.0129,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2843,
+    "language_probabilities": {
+     "uz": 0.0129,
+     "ru": 0.0284,
+     "en": 0.0328
+    },
+    "duration": 13.8,
+    "processing_time": 7.05,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_27",
+   "status": 200,
+   "latency": 5.294,
+   "response": {
+    "ok": true,
+    "text": "Burmitu qozu yigirmanchi yirlar davamida kupjilik fukar alar wa milletlerdagi hukumran keifiad, pasifizm wa yekelanis ida.",
+    "language": "uz",
+    "language_probability": 0.0208,
+    "language_forced": false,
+    "detected_language": "fa",
+    "detected_language_probability": 0.286,
+    "language_probabilities": {
+     "uz": 0.0208,
+     "ru": 0.0096,
+     "en": 0.0169
+    },
+    "duration": 13.92,
+    "processing_time": 5.28,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_28",
+   "status": 200,
+   "latency": 23.981,
+   "response": {
+    "ok": true,
+    "text": "Biz ʻʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻiʻi",
+    "language": "uz",
+    "language_probability": 0.0043,
+    "language_forced": false,
+    "detected_language": "az",
+    "detected_language_probability": 0.8718,
+    "language_probabilities": {
+     "uz": 0.0043,
+     "ru": 0.0035,
+     "en": 0.0008
+    },
+    "duration": 14.16,
+    "processing_time": 23.97,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_29",
+   "status": 200,
+   "latency": 6.939,
+   "response": {
+    "ok": true,
+    "text": "Khud dushuning dei shengin vizas gege bolsangit, shengin ge aza davatani. Khara bore ga vizu uchun alak da ardeze bir shengiz shat yem as. Shu tarza waqt, pul vaqt, hujjat bwaze ishtanteja shengiz mumkin.",
+    "language": "uz",
+    "language_probability": 0.0083,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.402,
+    "language_probabilities": {
+     "uz": 0.0083,
+     "ru": 0.0334,
+     "en": 0.0113
+    },
+    "duration": 14.16,
+    "processing_time": 6.9,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_30",
+   "status": 200,
+   "latency": 7.897,
+   "response": {
+    "ok": true,
+    "text": "Bu yorda khanu zwecha ozladni dabrida aman konyani yaxhudi narkhan, yaxhudi bul magallar khan barde gulhyen kubrab, irlkayd wa ayonlar bar. Wai aqallara bulhyen yana kubrab kishle u yorda o daril geni ya ke wulgolike qadar ishladil yan.",
+    "language": "uz",
+    "language_probability": 0.002,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2407,
+    "language_probabilities": {
+     "uz": 0.002,
+     "ru": 0.0304,
+     "en": 0.0446
+    },
+    "duration": 14.64,
+    "processing_time": 7.87,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_31",
+   "status": 200,
+   "latency": 6.779,
+   "response": {
+    "ok": true,
+    "text": "Shini dek ukop dablatlar uchun kupi urolar yarat shiban shokul nengen. Kanadanin yengir beishwa yuz dolarli kupi urolara, alt tamandagi bash wazir suratlara unin suongi ishlara dan namunalar sresge kradi.",
+    "language": "uz",
+    "language_probability": 0.0242,
+    "language_forced": false,
+    "detected_language": "az",
+    "detected_language_probability": 0.6018,
+    "language_probabilities": {
+     "uz": 0.0242,
+     "ru": 0.0164,
+     "en": 0.0021
+    },
+    "duration": 15.0,
+    "processing_time": 6.74,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_32",
+   "status": 200,
+   "latency": 6.035,
+   "response": {
+    "ok": true,
+    "text": "O' braq yordan imkonyatlara, jawab gerlegi, rvojgan ishbaskichidan tashkari burgen, majboryatlarne zemmasge alish, suran maslegi kirak, diya koshumca kildi.",
+    "language": "uz",
+    "language_probability": 0.0723,
+    "language_forced": false,
+    "detected_language": "az",
+    "detected_language_probability": 0.5658,
+    "language_probabilities": {
+     "uz": 0.0723,
+     "ru": 0.0056,
+     "en": 0.0021
+    },
+    "duration": 15.0,
+    "processing_time": 6.01,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_33",
+   "status": 200,
+   "latency": 5.497,
+   "response": {
+    "ok": true,
+    "text": "Orgda zivina betzmel lara, saachen ten dulkar wa rahul dravet, yaxshi o'in kursadda, wa bregalikta yuz ran tuplagat shiriklarga ailanda.",
+    "language": "uz",
+    "language_probability": 0.0309,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.5652,
+    "language_probabilities": {
+     "uz": 0.0309,
+     "ru": 0.0252,
+     "en": 0.0139
+    },
+    "duration": 15.9,
+    "processing_time": 5.47,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_34",
+   "status": 200,
+   "latency": 6.054,
+   "response": {
+    "ok": true,
+    "text": "Hull bas larni dazmalash ularni yordam bering. Kop mehma hana larni dazmal, handa dazmalash takhtas jarege bering. Hatta ki hana dazmalas ularni dazmal.",
+    "language": "uz",
+    "language_probability": 0.003,
+    "language_forced": false,
+    "detected_language": "fa",
+    "detected_language_probability": 0.8984,
+    "language_probabilities": {
+     "uz": 0.003,
+     "ru": 0.0028,
+     "en": 0.0031
+    },
+    "duration": 16.08,
+    "processing_time": 6.03,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_35",
+   "status": 200,
+   "latency": 6.538,
+   "response": {
+    "ok": true,
+    "text": "Kub lab, pechda pishiril gen, nemz maxulotlar da, badam, funduk, wabashqa yan gaqli mevalar ham bar. Maxhur pishiriklar, kupunca, byrfunjan, kchulqaqvablen, ayn aqsa yaxshi ketady.",
+    "language": "uz",
+    "language_probability": 0.1174,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2489,
+    "language_probabilities": {
+     "uz": 0.1174,
+     "ru": 0.0343,
+     "en": 0.0082
+    },
+    "duration": 18.36,
+    "processing_time": 6.5,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_36",
+   "status": 200,
+   "latency": 8.503,
+   "response": {
+    "ok": true,
+    "text": "Udani izz klik, hariket kopun qe mo'iyen, harorat ndaini izzakla turu qe yerdegi o'ardaryok shabar korole mas. Lekin yerdegi izz kur tu ndiklar vlamas ke da dedaksh ke gawag ek tatkikotlar komidas astraloge jamasa. Wa Arizona niflaxtav shakla qe shmaru Arizona University wakilik kursi.",
+    "language": "uz",
+    "language_probability": 0.0003,
+    "language_forced": false,
+    "detected_language": "ka",
+    "detected_language_probability": 0.2631,
+    "language_probabilities": {
+     "uz": 0.0003,
+     "ru": 0.0191,
+     "en": 0.0402
+    },
+    "duration": 19.44,
+    "processing_time": 8.49,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_37",
+   "status": 200,
+   "latency": 7.388,
+   "response": {
+    "ok": true,
+    "text": "Bu oda't da alpinizim uslubidagi tokh canghisi, yoki alpinizim bilen baqlok, lik'en ularna uza'chiga olme'idim. Ular tik sa'hanlar da amalga o'xiriladi, wa qat dhokh canghi, yok va itiklarna talapkiladi.",
+    "language": "uz",
+    "language_probability": 0.0786,
+    "language_forced": false,
+    "detected_language": "az",
+    "detected_language_probability": 0.4779,
+    "language_probabilities": {
+     "uz": 0.0786,
+     "ru": 0.0107,
+     "en": 0.0137
+    },
+    "duration": 20.52,
+    "processing_time": 7.36,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_38",
+   "status": 200,
+   "latency": 7.667,
+   "response": {
+    "ok": true,
+    "text": "Bularni parchasi tabi yi shakildak, tabiyet da topilişi mumkunnigi, wa jun asboblar blan kazib alish nispe tan o'zam bulgalligi sababli, odamlar qadim zamallardan bire, altan, kümurj, wa miske wa asohtik kimyaovi ilimidlar haqda bilishgen.",
+    "language": "uz",
+    "language_probability": 0.0129,
+    "language_forced": false,
+    "detected_language": "az",
+    "detected_language_probability": 0.4875,
+    "language_probabilities": {
+     "uz": 0.0129,
+     "ru": 0.034,
+     "en": 0.0125
+    },
+    "duration": 21.3,
+    "processing_time": 7.65,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_39",
+   "status": 200,
+   "latency": 7.13,
+   "response": {
+    "ok": true,
+    "text": "Cherkovnii marka zi khakimiyati, mengildam bering da bulup kel moqta. Qudrad wa mablahnii bunda yi jamnan ishe, kup qirikin bu qaida ni bacar leyodikyan, ya ki bacar almeyodikyan ligin saval ostige kuyishke alup kelde.",
+    "language": "uz",
+    "language_probability": 0.0402,
+    "language_forced": false,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2701,
+    "language_probabilities": {
+     "uz": 0.0402,
+     "ru": 0.0141,
+     "en": 0.019
+    },
+    "duration": 21.6,
+    "processing_time": 7.1,
+    "model": "small"
+   }
+  },
+  {
+   "id": "holdout_40",
+   "status": 200,
+   "latency": 7.358,
+   "response": {
+    "ok": true,
+    "text": "Aya lardning, start da qoyilgay gurukhoda tort detan cangha cheb, uz maza faasam tu geta almadler, va kettas lalaam dagi jamma, bruzoni eti te cangha cheb den, 45 desi paig, paig, paig dagi orun ala almadler.",
+    "language": "uz",
+    "language_probability": 0.0473,
+    "language_forced": false,
+    "detected_language": "fa",
+    "detected_language_probability": 0.3493,
+    "language_probabilities": {
+     "uz": 0.0473,
+     "ru": 0.003,
+     "en": 0.0189
+    },
+    "duration": 22.32,
+    "processing_time": 7.34,
+    "model": "small"
+   }
+  }
+ ]
+}

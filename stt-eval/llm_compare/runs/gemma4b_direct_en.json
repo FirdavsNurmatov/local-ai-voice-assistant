@@ -1,0 +1,435 @@
+{
+ "pipeline": "direct:gemma3:4b",
+ "language": "en",
+ "server_model": null,
+ "results": [
+  {
+   "id": "e01",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the capital city of Uzbekistan?",
+   "keywords": [
+    "tashkent"
+   ],
+   "answer": "The capital city of Uzbekistan is Tashkent. It’s a vibrant metropolis located in the north of the country. Tashkent is a key cultural and economic center.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 34,
+    "thinking_chars": 0,
+    "generation_s": 2.67
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 3.32,
+   "first_call": true
+  },
+  {
+   "id": "e02",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many days are there in a week?",
+   "keywords": [
+    "7",
+    "seven"
+   ],
+   "answer": "There are seven days in a week. This is a standard measurement used in many cultures. It’s a common and easily recognizable unit of time.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 31,
+    "thinking_chars": 0,
+    "generation_s": 2.51
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 3.12,
+   "first_call": false
+  },
+  {
+   "id": "e03",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many months are there in a year?",
+   "keywords": [
+    "12",
+    "twelve"
+   ],
+   "answer": "There are twelve months in a year. This is the standard measurement used for tracking time. It’s a fundamental part of our calendar system!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 30,
+    "thinking_chars": 0,
+    "generation_s": 2.35
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 2.91,
+   "first_call": false
+  },
+  {
+   "id": "e04",
+   "kind": "question",
+   "input": "clean",
+   "text": "At what temperature does water boil at sea level in Celsius?",
+   "keywords": [
+    "100",
+    "hundred"
+   ],
+   "answer": "Water boils at 100 degrees Celsius at sea level. This is the temperature at which water changes into steam. It’s a fundamental property of water!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 54,
+    "output_tokens": 34,
+    "thinking_chars": 0,
+    "generation_s": 2.99
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 3.25,
+   "first_call": false
+  },
+  {
+   "id": "e05",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is two plus three?",
+   "keywords": [
+    "5",
+    "five"
+   ],
+   "answer": "Two plus three equals five. It’s a simple addition problem!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 15,
+    "thinking_chars": 0,
+    "generation_s": 1.12
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.79,
+   "first_call": false
+  },
+  {
+   "id": "e06",
+   "kind": "question",
+   "input": "clean",
+   "text": "In which direction does the sun rise?",
+   "keywords": [
+    "east"
+   ],
+   "answer": "The sun rises in the east. It sets in the west.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 14,
+    "thinking_chars": 0,
+    "generation_s": 1.04
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.52,
+   "first_call": false
+  },
+  {
+   "id": "e07",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the largest ocean on Earth?",
+   "keywords": [
+    "pacific"
+   ],
+   "answer": "The Pacific Ocean is the largest ocean on Earth. It covers more than 30% of the Earth’s surface. It’s known for its vast size and diverse marine life.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 39,
+    "thinking_chars": 0,
+    "generation_s": 3.53
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 4.04,
+   "first_call": false
+  },
+  {
+   "id": "e08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Who wrote the novel War and Peace?",
+   "keywords": [
+    "tolstoy"
+   ],
+   "answer": "Leo Tolstoy wrote the novel *War and Peace*. It is considered one of his most famous and influential works. The novel was first published in 1869.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 35,
+    "thinking_chars": 0,
+    "generation_s": 2.92
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 3.5,
+   "first_call": false
+  },
+  {
+   "id": "e09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which animal is called the ship of the desert?",
+   "keywords": [
+    "camel"
+   ],
+   "answer": "The camel is known as the ship of the desert. This nickname reflects its ability to travel long distances across arid landscapes. Camels are well-adapted to desert life, carrying goods and people for centuries.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 52,
+    "output_tokens": 42,
+    "thinking_chars": 0,
+    "generation_s": 3.59
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 4.21,
+   "first_call": false
+  },
+  {
+   "id": "e10",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many minutes are there in one hour?",
+   "keywords": [
+    "60",
+    "sixty"
+   ],
+   "answer": "There are 60 minutes in one hour. It’s a standard measurement!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 18,
+    "thinking_chars": 0,
+    "generation_s": 1.36
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.99,
+   "first_call": false
+  },
+  {
+   "id": "e11",
+   "kind": "question",
+   "input": "clean",
+   "text": "What color is snow?",
+   "keywords": [
+    "white"
+   ],
+   "answer": "Snow is white. It appears white because it’s made of tiny ice crystals that reflect all colors of light. This reflection is what gives snow its characteristic color.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 34,
+    "thinking_chars": 0,
+    "generation_s": 2.94
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 3.43,
+   "first_call": false
+  },
+  {
+   "id": "e12",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the highest mountain in the world?",
+   "keywords": [
+    "everest"
+   ],
+   "answer": "The highest mountain in the world is Mount Everest. It’s located in the Himalayas, on the border between Nepal and China. Its peak reaches an elevation of 8,848.86 meters (29,031.7 feet).",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 54,
+    "thinking_chars": 0,
+    "generation_s": 5.05
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 5.29,
+   "first_call": false
+  },
+  {
+   "id": "e13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which planet do we live on?",
+   "keywords": [
+    "earth"
+   ],
+   "answer": "We live on the planet Earth. It’s the third planet from the Sun in our solar system. It’s a beautiful, blue and green world!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 33,
+    "thinking_chars": 0,
+    "generation_s": 2.59
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 3.24,
+   "first_call": false
+  },
+  {
+   "id": "e14",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which insect makes honey?",
+   "keywords": [
+    "bee"
+   ],
+   "answer": "Bees make honey. Specifically, honeybees produce the most common type of honey. It’s a sweet and delicious treat!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 27,
+    "thinking_chars": 0,
+    "generation_s": 2.1
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 2.66,
+   "first_call": false
+  },
+  {
+   "id": "e15",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many hours are there in a day?",
+   "keywords": [
+    "24",
+    "twenty-four",
+    "twenty four"
+   ],
+   "answer": "There are 24 hours in a day. This is based on a 24-hour clock system. It’s a standard measurement for time!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 33,
+    "thinking_chars": 0,
+    "generation_s": 2.59
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 3.16,
+   "first_call": false
+  },
+  {
+   "id": "e16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Which season comes after winter?",
+   "keywords": [
+    "spring"
+   ],
+   "answer": "Spring comes after winter. It’s the season of new growth and warmer temperatures.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 18,
+    "thinking_chars": 0,
+    "generation_s": 1.36
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.92,
+   "first_call": false
+  },
+  {
+   "id": "e17",
+   "kind": "question",
+   "input": "clean",
+   "text": "How many sides does a triangle have?",
+   "keywords": [
+    "3",
+    "=three"
+   ],
+   "answer": "A triangle has three sides. It’s a basic geometric shape!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 15,
+    "thinking_chars": 0,
+    "generation_s": 1.12
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 1.63,
+   "first_call": false
+  },
+  {
+   "id": "e18",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the Uzbek word for book?",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "The Uzbek word for book is kitob. It's pronounced \"kit-ob.\" You can also find it written as китоб.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 30,
+    "thinking_chars": 0,
+    "generation_s": 2.34
+   },
+   "correct": true,
+   "answer_language": "cyrillic",
+   "latency": 2.85,
+   "first_call": false
+  },
+  {
+   "id": "e19",
+   "kind": "question",
+   "input": "clean",
+   "text": "Who was the first human in space?",
+   "keywords": [
+    "gagarin"
+   ],
+   "answer": "Yuri Gagarin was the first human in space. He made a single orbit around Earth on April 12, 1961, aboard the Vostok 1 spacecraft. This historic flight marked a pivotal moment in space exploration.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 50,
+    "thinking_chars": 0,
+    "generation_s": 4.53
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 4.79,
+   "first_call": false
+  },
+  {
+   "id": "e20",
+   "kind": "question",
+   "input": "clean",
+   "text": "What is the famous square in Samarkand called?",
+   "keywords": [
+    "registan"
+   ],
+   "answer": "The famous square in Samarkand is called Registan Square. It’s renowned for its stunning madrasahs – Ulugh Beg Madrasah, Sher-Dor Madrasah, and Tilya-Kori Madrasah – that surround it. Registan Square is a UNESCO World Heritage site and a major tourist attraction.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 53,
+    "output_tokens": 65,
+    "thinking_chars": 0,
+    "generation_s": 6.73
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 7.0,
+   "first_call": false
+  }
+ ]
+}

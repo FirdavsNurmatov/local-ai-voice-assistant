@@ -1,0 +1,595 @@
+{
+ "pipeline": "server",
+ "language": "ru",
+ "server_model": "gemma3:4b",
+ "results": [
+  {
+   "id": "r01",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей России?",
+   "keywords": [
+    "москв"
+   ],
+   "answer": "Столица России – Москва. Это большой, исторический город, расположенный на реке Москва. Москва служит политическим, экономическим и культурным центром страны.",
+   "answer_english": "The capital of Russia is Moscow. It’s a large, historic city located on the Moskva River. Moscow serves as the political, economic, and cultural center of the country.",
+   "english_input": "Which city is the capital of Russia?",
+   "timings": {
+    "input_translation": 1.62,
+    "qwen": 15.74,
+    "output_translation": 4.14,
+    "total": 21.55
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 38
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 21.56,
+   "first_call": true
+  },
+  {
+   "id": "r02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько дней в неделе?",
+   "keywords": [
+    "7",
+    "семь"
+   ],
+   "answer": "В неделю входит семь дней, с понедельника по воскресенье. Хотите узнать больше о днях недели?",
+   "answer_english": "There are seven days a week. This includes Monday through Sunday. Would you like to know more about days of the week?",
+   "english_input": "How many days a week?",
+   "timings": {
+    "input_translation": 0.79,
+    "qwen": 2.69,
+    "output_translation": 3.05,
+    "total": 6.55
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 26
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 6.55,
+   "first_call": false
+  },
+  {
+   "id": "r03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько месяцев в году?",
+   "keywords": [
+    "12",
+    "двенадцат"
+   ],
+   "answer": "Есть двенадцать месяцев в году. Это стандартное измерение времени. Это общий и широко признанный факт!",
+   "answer_english": "There are twelve months in a year. This is the standard measurement for time. It’s a common and widely recognized fact!",
+   "english_input": "How many months in a year?",
+   "timings": {
+    "input_translation": 0.88,
+    "qwen": 2.75,
+    "output_translation": 3.13,
+    "total": 6.77
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 27
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 6.77,
+   "first_call": false
+  },
+  {
+   "id": "r04",
+   "kind": "question",
+   "input": "clean",
+   "text": "При какой температуре кипит вода?",
+   "keywords": [
+    "100",
+    "сто"
+   ],
+   "answer": "Вода кипит при 212 ° по Фаренгейту (100 ° по Цельсию). Это происходит, когда давление паров воды равняется окружающему атмосферному давлению.",
+   "answer_english": "Water boils at 212° Fahrenheit (100° Celsius). This occurs when the vapor pressure of the water equals the surrounding atmospheric pressure.",
+   "english_input": "At what temperature does water boil?",
+   "timings": {
+    "input_translation": 0.99,
+    "qwen": 3.31,
+    "output_translation": 5.11,
+    "total": 9.41
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 32
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 9.42,
+   "first_call": false
+  },
+  {
+   "id": "r05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько будет два плюс три?",
+   "keywords": [
+    "5",
+    "пят"
+   ],
+   "answer": "Два плюс три равно пять. Это простая задача сложения!",
+   "answer_english": "Two plus three equals five. It’s a simple addition problem!",
+   "english_input": "What's two plus three?",
+   "timings": {
+    "input_translation": 0.89,
+    "qwen": 1.85,
+    "output_translation": 1.86,
+    "total": 4.61
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 15
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 4.61,
+   "first_call": false
+  },
+  {
+   "id": "r06",
+   "kind": "question",
+   "input": "clean",
+   "text": "С какой стороны восходит солнце?",
+   "keywords": [
+    "восток"
+   ],
+   "answer": "Солнце восходит на востоке. Кажется, что оно восходит, потому что Земля вращается на запад.",
+   "answer_english": "The sun rises in the east. It appears to rise because the Earth rotates westwards.",
+   "english_input": "Where does the sun rise?",
+   "timings": {
+    "input_translation": 0.9,
+    "qwen": 2.14,
+    "output_translation": 2.93,
+    "total": 5.98
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 19
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 5.98,
+   "first_call": false
+  },
+  {
+   "id": "r07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой самый большой океан на Земле?",
+   "keywords": [
+    "тих"
+   ],
+   "answer": "Тихий океан является самым большим океаном на Земле. Он покрывает более 30% поверхности Земли. Он известен своими огромными размерами и разнообразием морской жизни.",
+   "answer_english": "The Pacific Ocean is the largest ocean on Earth. It covers more than 30% of the Earth's surface. It’s known for its vast size and diverse marine life.",
+   "english_input": "What is the largest ocean on Earth?",
+   "timings": {
+    "input_translation": 0.99,
+    "qwen": 3.75,
+    "output_translation": 4.79,
+    "total": 9.54
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 39
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 9.54,
+   "first_call": false
+  },
+  {
+   "id": "r08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто написал роман «Война и мир»?",
+   "keywords": [
+    "толст"
+   ],
+   "answer": "Лев Толстой написал роман «Война и мир». Он считается одним из его самых известных и влиятельных произведений. Роман был впервые опубликован в 1869 году.",
+   "answer_english": "Leo Tolstoy wrote the novel \"War and Peace.\" It is considered one of his most famous and influential works. The novel was first published in 1869.",
+   "english_input": "Who wrote the novel \"War and Peace\"?",
+   "timings": {
+    "input_translation": 1.19,
+    "qwen": 3.52,
+    "output_translation": 4.86,
+    "total": 9.58
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 35
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 9.58,
+   "first_call": false
+  },
+  {
+   "id": "r09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей Узбекистана?",
+   "keywords": [
+    "ташкент"
+   ],
+   "answer": "Столица Узбекистана – Ташкент. Это оживленный город, расположенный на севере страны. Ташкент – крупнейший город Узбекистана и крупный культурный центр.",
+   "answer_english": "The capital of Uzbekistan is Tashkent. It’s a vibrant city located in the north of the country. Tashkent is Uzbekistan’s largest city and a major cultural hub.",
+   "english_input": "Which city is the capital of Uzbekistan?",
+   "timings": {
+    "input_translation": 1.08,
+    "qwen": 3.66,
+    "output_translation": 4.58,
+    "total": 9.31
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 37
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 9.33,
+   "first_call": false
+  },
+  {
+   "id": "r10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое животное называют кораблём пустыни?",
+   "keywords": [
+    "верблюд"
+   ],
+   "answer": "Пустынный корабль называется fennec лисицы. У него есть большие уши, которые помогают ему рассеивать тепло в пустынной среде. Эти лисицы прекрасно приспособлены к выживанию в жарком, засушливом климате.",
+   "answer_english": "The desert ship is called the fennec fox. It has large ears that help it dissipate heat in the desert environment. These foxes are perfectly adapted to survive in hot, arid climates.",
+   "english_input": "Which animal is called the desert ship?",
+   "timings": {
+    "input_translation": 1.1,
+    "qwen": 3.88,
+    "output_translation": 6.6,
+    "total": 11.59
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 39
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 11.59,
+   "first_call": false
+  },
+  {
+   "id": "r11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько минут в одном часе?",
+   "keywords": [
+    "60",
+    "шестьдесят"
+   ],
+   "answer": "В часе 60 минут. Это стандартное измерение. Это очень распространенный расчет!",
+   "answer_english": "There are 60 minutes in an hour. This is a standard measurement. It’s a very common calculation!",
+   "english_input": "How many minutes are in an hour?",
+   "timings": {
+    "input_translation": 0.97,
+    "qwen": 2.69,
+    "output_translation": 2.49,
+    "total": 6.16
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 25
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 6.18,
+   "first_call": false
+  },
+  {
+   "id": "r12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какого цвета снег?",
+   "keywords": [
+    "бел"
+   ],
+   "answer": "Снег белый. Он отражает все цвета света. Это создает яркий, белый вид, который мы видим.",
+   "answer_english": "Snow is white. It reflects all colors of light. This creates the bright, white appearance we see.",
+   "english_input": "What color is the snow?",
+   "timings": {
+    "input_translation": 0.78,
+    "qwen": 2.44,
+    "output_translation": 2.96,
+    "total": 6.18
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 22
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 6.19,
+   "first_call": false
+  },
+  {
+   "id": "r13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какая самая высокая гора в мире?",
+   "keywords": [
+    "эверест",
+    "джомолунгм"
+   ],
+   "answer": "Самая высокая гора в мире – это Эверест. Он расположен в Гималаях, на границе Непала и Китая. Его вершина достигает высоты 8848,86 метров (29031,7 футов).",
+   "answer_english": "The highest mountain in the world is Mount Everest. It’s located in the Himalayas, on the border between Nepal and China. Its peak reaches an elevation of 8,848.86 meters (29,031.7 feet).",
+   "english_input": "What is the highest mountain in the world?",
+   "timings": {
+    "input_translation": 1.18,
+    "qwen": 5.19,
+    "output_translation": 6.5,
+    "total": 12.88
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 54
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 12.9,
+   "first_call": false
+  },
+  {
+   "id": "r14",
+   "kind": "question",
+   "input": "clean",
+   "text": "На какой планете мы живём?",
+   "keywords": [
+    "земл"
+   ],
+   "answer": "В настоящее время вы находитесь на планете Земля. Это третья планета от Солнца в нашей солнечной системе!",
+   "answer_english": "You are currently on the planet Earth. It’s the third planet from the Sun in our solar system!",
+   "english_input": "What planet are we on?",
+   "timings": {
+    "input_translation": 0.8,
+    "qwen": 2.59,
+    "output_translation": 3.02,
+    "total": 6.41
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 24
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 6.44,
+   "first_call": false
+  },
+  {
+   "id": "r15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое насекомое делает мёд?",
+   "keywords": [
+    "пчел"
+   ],
+   "answer": "Пчёлы делают мед! В частности, медоносные пчелы создают мед из собираемого ими нектара. Это сладкий и вкусный продукт!",
+   "answer_english": "Bees make honey! Specifically, honeybees create honey from nectar they collect. It’s a sweet and delicious product!",
+   "english_input": "What insect makes honey?",
+   "timings": {
+    "input_translation": 0.72,
+    "qwen": 2.62,
+    "output_translation": 4.25,
+    "total": 7.59
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 26
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 7.6,
+   "first_call": false
+  },
+  {
+   "id": "r16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько часов в сутках?",
+   "keywords": [
+    "24",
+    "двадцать четыре"
+   ],
+   "answer": "В день 24 часа. Это основано на стандартной системе 24-часовых часов. Это фундаментальное измерение времени!",
+   "answer_english": "There are 24 hours in a day. This is based on the standard 24-hour clock system. It’s a fundamental measurement of time!",
+   "english_input": "How many hours are there in a day?",
+   "timings": {
+    "input_translation": 1.06,
+    "qwen": 3.39,
+    "output_translation": 3.3,
+    "total": 7.75
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 34
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 7.76,
+   "first_call": false
+  },
+  {
+   "id": "r17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое время года наступает после зимы?",
+   "keywords": [
+    "весн"
+   ],
+   "answer": "Весна приходит после зимы. Это сезон, известный по более теплым температурам и цветущим цветам.",
+   "answer_english": "Spring comes after winter. It’s a season known for warmer temperatures and blooming flowers.",
+   "english_input": "What time of year comes after winter?",
+   "timings": {
+    "input_translation": 0.99,
+    "qwen": 2.11,
+    "output_translation": 2.73,
+    "total": 5.83
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 19
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 5.83,
+   "first_call": false
+  },
+  {
+   "id": "r18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько углов у треугольника?",
+   "keywords": [
+    "3",
+    "=три"
+   ],
+   "answer": "Треугольник имеет три угла. Каждый угол в треугольнике измеряется 60 градусов.",
+   "answer_english": "A triangle has three angles. Each angle in a triangle measures 60 degrees.",
+   "english_input": "How many angles does a triangle have?",
+   "timings": {
+    "input_translation": 1.09,
+    "qwen": 2.09,
+    "output_translation": 2.66,
+    "total": 5.84
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 18
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 5.85,
+   "first_call": false
+  },
+  {
+   "id": "r19",
+   "kind": "question",
+   "input": "clean",
+   "text": "Как по-английски будет слово «книга»?",
+   "keywords": [
+    "book"
+   ],
+   "answer": ". Book is a book. 2. Book is a book. 3. Book is a book. 4. Book is a book. 5. Book is a bookWhereWhereWhereWhereWhereWhereWhereWhereWhereWhereWhereWhereWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+   "answer_english": "You say “book” the same way! It’s a common English word for a written or printed work. \n\nWould you like to know more about books?",
+   "english_input": "How do you say “book” in English?",
+   "timings": {
+    "input_translation": 1.2,
+    "qwen": 3.5,
+    "output_translation": 13.37,
+    "total": 18.08
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 52,
+    "output_tokens": 35
+   },
+   "correct": true,
+   "answer_language": "mixed/latin",
+   "latency": 18.09,
+   "first_call": false
+  },
+  {
+   "id": "r20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто был первым человеком в космосе?",
+   "keywords": [
+    "гагарин"
+   ],
+   "answer": "Юрий Гагарин стал первым человеком в космосе. Он совершил один оборот вокруг Земли 12 апреля 1961 года на борту космического корабля «Восток-1». Этот исторический полет остается ключевым моментом в исследовании космоса.",
+   "answer_english": "Yuri Gagarin was the first man in space. He made a single orbit around Earth on April 12, 1961, aboard the Vostok 1 spacecraft. This historic flight remains a pivotal moment in space exploration.",
+   "english_input": "Who was the first man in space?",
+   "timings": {
+    "input_translation": 1.01,
+    "qwen": 4.81,
+    "output_translation": 7.63,
+    "total": 13.46
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 50
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 13.46,
+   "first_call": false
+  }
+ ]
+}

@@ -1,0 +1,496 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\fleurs_parity.csv",
+ "language_param": "uz",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.36,
+  "memory_mb": {
+   "rss": 418,
+   "commit": 2710
+  },
+  "free_commit_mb": 10261
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.36,
+  "memory_mb": {
+   "rss": 418,
+   "commit": 2709
+  },
+  "free_commit_mb": 10237
+ },
+ "results": [
+  {
+   "id": "fleurs_003",
+   "status": 200,
+   "latency": 4.311,
+   "response": {
+    "ok": true,
+    "text": "Khankas b'kurashchilar khamulun ek ek humad bacao geldirishti.",
+    "language": "uz",
+    "language_probability": 0.0061,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2253,
+    "language_probabilities": {
+     "uz": 0.0061,
+     "ru": 0.0433,
+     "en": 0.0158
+    },
+    "duration": 5.4,
+    "processing_time": 4.29,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_009",
+   "status": 200,
+   "latency": 22.857,
+   "response": {
+    "ok": true,
+    "text": "Ma'zaza'wla, no'zda'wla, ndasha'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'wla, nda'",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": true,
+    "detected_language": "pl",
+    "detected_language_probability": 0.5426,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0182,
+     "en": 0.0629
+    },
+    "duration": 6.54,
+    "processing_time": 22.82,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_015",
+   "status": 200,
+   "latency": 5.323,
+   "response": {
+    "ok": true,
+    "text": "Neticjade ich rojjlar saknade kan nabis o'ra manan jekishti vadyaterni, o'z tamanshe bi'il lagna koşlişka ondat.",
+    "language": "uz",
+    "language_probability": 0.0081,
+    "language_forced": true,
+    "detected_language": "az",
+    "detected_language_probability": 0.446,
+    "language_probabilities": {
+     "uz": 0.0081,
+     "ru": 0.0082,
+     "en": 0.007
+    },
+    "duration": 7.14,
+    "processing_time": 5.31,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_021",
+   "status": 200,
+   "latency": 5.06,
+   "response": {
+    "ok": true,
+    "text": "Rost biswana kan cale kicik bolsa yorduzn magni dik o'z garyashtar gina se batan fao lege. Shun ce past bolada.",
+    "language": "uz",
+    "language_probability": 0.0313,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.5007,
+    "language_probabilities": {
+     "uz": 0.0313,
+     "ru": 0.0136,
+     "en": 0.0074
+    },
+    "duration": 7.62,
+    "processing_time": 5.03,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_027",
+   "status": 200,
+   "latency": 19.149,
+   "response": {
+    "ok": true,
+    "text": "Watarut ʻiʻu ʻu ʻu ʻu ʻu ʻu ʻu ʻu ʻu ʻu ʻu ʻu ʻu ʻu ʻu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu ʰu",
+    "language": "uz",
+    "language_probability": 0.0002,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.1622,
+    "language_probabilities": {
+     "uz": 0.0002,
+     "ru": 0.0056,
+     "en": 0.0391
+    },
+    "duration": 8.04,
+    "processing_time": 19.13,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_033",
+   "status": 200,
+   "latency": 5.701,
+   "response": {
+    "ok": true,
+    "text": "Filman di aqa yiqtas uzishke baru xun, en yaxshi manzali minko mum ekat minko yorda da vaq raqde arkhye pedak yorda ha mink na parallar par.",
+    "language": "uz",
+    "language_probability": 0.0004,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.3236,
+    "language_probabilities": {
+     "uz": 0.0004,
+     "ru": 0.0064,
+     "en": 0.0174
+    },
+    "duration": 9.18,
+    "processing_time": 5.69,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_039",
+   "status": 200,
+   "latency": 18.251,
+   "response": {
+    "ok": true,
+    "text": "Koşunlar ya dyb kelyshtan apal gai yi tita bremiz aklyzun chi yiilerdan biyan maskur kya sallit biyan ba'u luk mu anba'u larku zahtalim a gen.",
+    "language": "uz",
+    "language_probability": 0.008,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2588,
+    "language_probabilities": {
+     "uz": 0.008,
+     "ru": 0.014,
+     "en": 0.0287
+    },
+    "duration": 9.6,
+    "processing_time": 18.23,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_045",
+   "status": 200,
+   "latency": 5.684,
+   "response": {
+    "ok": true,
+    "text": "Utken hafta mieti apel kampanyat jiddi, ima zdibata gen hatta nartu kizu kechipen baput srdtokurim, cehalet orsda hapar bir gen elan kolde.",
+    "language": "uz",
+    "language_probability": 0.0022,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.1825,
+    "language_probabilities": {
+     "uz": 0.0022,
+     "ru": 0.0374,
+     "en": 0.1111
+    },
+    "duration": 10.26,
+    "processing_time": 5.66,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_051",
+   "status": 200,
+   "latency": 4.776,
+   "response": {
+    "ok": true,
+    "text": "Pyramidha tovishi, wa churaqlar shousi, bolalar uchun huduttagi in qizikarli narsalartan bire.",
+    "language": "uz",
+    "language_probability": 0.1299,
+    "language_forced": true,
+    "detected_language": "az",
+    "detected_language_probability": 0.4392,
+    "language_probabilities": {
+     "uz": 0.1299,
+     "ru": 0.013,
+     "en": 0.0007
+    },
+    "duration": 10.5,
+    "processing_time": 4.76,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_057",
+   "status": 200,
+   "latency": 25.189,
+   "response": {
+    "ok": true,
+    "text": "Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ Ṭ",
+    "language": "uz",
+    "language_probability": 0.0014,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.3725,
+    "language_probabilities": {
+     "uz": 0.0014,
+     "ru": 0.0429,
+     "en": 0.063
+    },
+    "duration": 10.8,
+    "processing_time": 25.16,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_063",
+   "status": 200,
+   "latency": 4.457,
+   "response": {
+    "ok": true,
+    "text": "Internet dan rush muxtukursa deb izlax, haina hai mahalley kampania manzilan chikar berada.",
+    "language": "uz",
+    "language_probability": 0.0645,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.473,
+    "language_probabilities": {
+     "uz": 0.0645,
+     "ru": 0.0014,
+     "en": 0.0022
+    },
+    "duration": 11.34,
+    "processing_time": 4.45,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_069",
+   "status": 200,
+   "latency": 5.439,
+   "response": {
+    "ok": true,
+    "text": "Kondalini yoga banan kondalina kuvat, marfat kuvat e Yoga bozalar nafaz mashklara man travar. Hamda vizualizacialar yordam da yugat lad.",
+    "language": "uz",
+    "language_probability": 0.0019,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.3225,
+    "language_probabilities": {
+     "uz": 0.0019,
+     "ru": 0.0176,
+     "en": 0.03
+    },
+    "duration": 11.88,
+    "processing_time": 5.42,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_075",
+   "status": 200,
+   "latency": 5.879,
+   "response": {
+    "ok": true,
+    "text": "Oro, kamayat rishlar bo'u jabro'ar rakam ne kiel termadi, o'larni, khta'i ob-sadiato nadijalara asas da amalg'a o'şi rilişin aidaidim.",
+    "language": "uz",
+    "language_probability": 0.0548,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.3687,
+    "language_probabilities": {
+     "uz": 0.0548,
+     "ru": 0.002,
+     "en": 0.0046
+    },
+    "duration": 12.48,
+    "processing_time": 5.86,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_081",
+   "status": 200,
+   "latency": 5.57,
+   "response": {
+    "ok": true,
+    "text": "Yigir manchi asir dagi tatqa qotlar genitik uzgarşni ikki havzasi. Yashirun wa aqyuk fodalingen havzalara mawgutli geni kursa atti.",
+    "language": "uz",
+    "language_probability": 0.1517,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.2165,
+    "language_probabilities": {
+     "uz": 0.1517,
+     "ru": 0.0032,
+     "en": 0.002
+    },
+    "duration": 13.26,
+    "processing_time": 5.56,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_087",
+   "status": 200,
+   "latency": 26.202,
+   "response": {
+    "ok": true,
+    "text": "Uningit mesak Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa Ṣa �",
+    "language": "uz",
+    "language_probability": 0.0083,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.3559,
+    "language_probabilities": {
+     "uz": 0.0083,
+     "ru": 0.0183,
+     "en": 0.0503
+    },
+    "duration": 13.74,
+    "processing_time": 26.19,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_093",
+   "status": 200,
+   "latency": 6.071,
+   "response": {
+    "ok": true,
+    "text": "Shunu yorda tutunki, gerche asasie sakhna dagi muzeqa tugegen bolzaqan, fizt valin yarum tungece muzeqa jrasa davam itiladigen bolimlara bolushim umkon.",
+    "language": "uz",
+    "language_probability": 0.0637,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.3245,
+    "language_probabilities": {
+     "uz": 0.0637,
+     "ru": 0.0101,
+     "en": 0.0016
+    },
+    "duration": 14.76,
+    "processing_time": 6.05,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_099",
+   "status": 200,
+   "latency": 6.177,
+   "response": {
+    "ok": true,
+    "text": "Burak sardor vikitene yukad kyaneden ki yin khandistan izzat malarna, yakun lax uchun yitita vikit yukad ishler bilant fakat kyan e utduzalti da ranna amalga aşirda.",
+    "language": "uz",
+    "language_probability": 0.0953,
+    "language_forced": true,
+    "detected_language": "hy",
+    "detected_language_probability": 0.3129,
+    "language_probabilities": {
+     "uz": 0.0953,
+     "ru": 0.0167,
+     "en": 0.0043
+    },
+    "duration": 16.32,
+    "processing_time": 6.16,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_105",
+   "status": 200,
+   "latency": 7.766,
+   "response": {
+    "ok": true,
+    "text": "Arslan doda lara, khoda borlar yag itlar doda lara yag okhshab kharekat qalad, khayval lar. Lekin boshgha ketta mushklar mas, khayrat lanandli, daraj edesher lar ga khetta kharekat. Vashun idik ojcelar ojun, havaketli ikallikib lan okhshashtir.",
+    "language": "uz",
+    "language_probability": 0.0076,
+    "language_forced": true,
+    "detected_language": "az",
+    "detected_language_probability": 0.2757,
+    "language_probabilities": {
+     "uz": 0.0076,
+     "ru": 0.0158,
+     "en": 0.011
+    },
+    "duration": 19.14,
+    "processing_time": 7.74,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_111",
+   "status": 200,
+   "latency": 7.222,
+   "response": {
+    "ok": true,
+    "text": "Bosh wazir bila uchrashu paitida, light on conservator larni atrof mukhut haqadagi kanun laya hazin batafsil wa tul qaita yaze shinun. Conservator larni part yasini atrof mukhut haqadagi kanun laya hazin o'zgartrishlar kirti shinun.",
+    "language": "uz",
+    "language_probability": 0.0161,
+    "language_forced": true,
+    "detected_language": "fa",
+    "detected_language_probability": 0.4426,
+    "language_probabilities": {
+     "uz": 0.0161,
+     "ru": 0.0015,
+     "en": 0.0102
+    },
+    "duration": 21.18,
+    "processing_time": 7.2,
+    "model": "small"
+   }
+  },
+  {
+   "id": "fleurs_117",
+   "status": 200,
+   "latency": 7.117,
+   "response": {
+    "ok": true,
+    "text": "Anana vi roq çirkyo'lar des des masihni qaitatirilişi'n nishonlashini buzushikun, yarimtun da jamuat bren paskhani'ng dem oluşi'nlara davamde senbe okshomde paskhax yorli'gini utgyezadirlar.",
+    "language": "uz",
+    "language_probability": 0.0212,
+    "language_forced": true,
+    "detected_language": "az",
+    "detected_language_probability": 0.3936,
+    "language_probabilities": {
+     "uz": 0.0212,
+     "ru": 0.0273,
+     "en": 0.0172
+    },
+    "duration": 22.62,
+    "processing_time": 7.09,
+    "model": "small"
+   }
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 # Speech-to-text (STT)
 
-- **Last verified:** 2026-10-14 (tests run on the night of 2026-10-13/14; Uzbek model evaluation added later on 2026-10-14)
+- **Last verified:** 2026-10-16 (NavAI Uzbek routing integrated and tested; earlier sections from 2026-10-13/14 describe the base model and remain valid for Russian/English)
 - **Status:** implementation `SOURCE-CODE CONFIRMED`; every number below is a measurement from this machine (`VERIFIED` at that time) unless marked otherwise
 - **Related source:** `stt_server.py`, `start_stt.ps1`, `local_voice_chat.html` (microphone button), `server.py` (`run_chat` language handling)
 - **Related:** [ARCHITECTURE.md](ARCHITECTURE.md), [API_REFERENCE.md](API_REFERENCE.md#stt--stt_serverpy-port-8769), [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK.md), [MEMORY_AND_PERFORMANCE.md](MEMORY_AND_PERFORMANCE.md)
@@ -9,10 +9,10 @@
 
 | Question | Answer |
 |---|---|
-| Does it work? | **Russian and English: yes**, accurately. **Uzbek: technically yes, practically no** — the `small` model's Uzbek output is mostly wrong words. |
-| Model | Faster-Whisper `small` (CTranslate2), CPU, `int8`, loaded once at start |
+| Does it work? | **Russian and English: yes**, accurately (unchanged base model). **Uzbek: much better since 2026-10-16** (NavAI model, see [Uzbek routing](#uzbek-routing-navai--integrated-2026-10-16)); short robot commands are still unreliable. |
+| Models | Base: Faster-Whisper `small` (CTranslate2, CPU int8) for Russian, English and language detection. Uzbek: `navai-whisper-small-uzbek` (CT2 int8), loaded on the first Uzbek request |
 | Port | `127.0.0.1:8769` |
-| Memory | ≈ 2.6 GB commit, ≈ 0.4 GB RSS |
+| Memory | base only ≈ 2.7 GB commit / 0.4 GB RSS; with NavAI ≈ 5.1 GB commit / 0.76 GB RSS, or ≈ 3.1 GB peak with the swap policy |
 | Speed | ≈ 3.5–5 s for utterances of 1–16 s |
 | Fits next to chat **and** Kokoro on this machine? | **No.** Pick two of {chat, STT, Kokoro} — see [Memory](#memory) |
 | Tested with real human speech / a real microphone? | **No.** Only synthetic (TTS-generated) speech and a simulated microphone stream. See [What was not tested](#what-was-not-tested) |
@@ -348,9 +348,112 @@ their own browser, allow the microphone, and say each of the three sentences onc
 7. The page calls `http://127.0.0.1:8769` directly: STT works only in a browser on the same machine (same as Kokoro). Browsers allow microphone capture only on `localhost`/HTTPS origins, so opening the page via a LAN IP will also block the microphone.
 8. The load-time memory guard (1200 MB) is too low for the measured need.
 
-## Uzbek model evaluation (2026-10-14) and proposed improvement
+## Uzbek routing (NavAI) — integrated 2026-10-16
 
-> **Status: evaluated, NOT implemented.** Production still runs Faster-Whisper `small` exactly as described above.
+### Which model handles what
+
+| Request | Language detection | Model | Decoding |
+|---|---|---|---|
+| `?language=uz` | **none** (saves ≈ 1.7 s) | NavAI | `beam_size=5`, VAD, `without_timestamps=True`, `no_repeat_ngram_size=4`, **no prompt** |
+| `?language=ru` / `?language=en` | base model (unchanged) | base `small` | unchanged production settings |
+| auto, detected `ru`/`en` (p ≥ 0.5) | base model (unchanged) | base `small` | unchanged |
+| auto, `uz` and **both** p(ru) and p(en) < 0.2 | base model | NavAI | as for `?language=uz` |
+| auto, `uz` but p(ru) or p(en) between 0.2 and 0.5 | base model | base `small` (previous Uzbek path) | unchanged; this protects Russian/English speech from NavAI |
+| NavAI unavailable (disabled, file/checksum error, not enough memory, load error) | as before | base `small` | previous behaviour; reason in `/api/health` → `uz_model.error`; no retry for 60 s |
+
+NavAI is never used for Russian or English (it cannot transcribe them; see [STT_EVALUATION.md §6.5](STT_EVALUATION.md#65-russian--english-regression-kokoro-tts-clips-4--4)).
+The response format is unchanged; `model` now says `navai-whisper-small-uzbek` when NavAI produced the text.
+For `?language=uz` responses the detection fields are empty (`language_probability`, `detected_language`, `detected_language_probability` = `null`, `language_probabilities` = `{}`) because no detection runs.
+
+The page has a new selector next to the microphone button: **Avto** (default — exactly the previous behaviour plus the auto rule above), **O‘zbekcha** (`?language=uz`, NavAI), **Русский**, **English**.
+
+### Model files and memory policy
+
+- `stt-models\navai-whisper-small-uzbek-ct2-int8\` — the converted model from the evaluation; `model.bin` SHA256 `99e30c6d…5d23` is checked once before loading (all five files match `stt-eval/manifest_sha256.csv`).
+- Loaded on the first Uzbek request (≈ 0.4–1.1 s), or at start with `STT_UZ_PRELOAD=1`.
+
+| `STT_UZ_MEMORY` | Behaviour |
+|---|---|
+| `auto` (default) | keep both models if ≥ 3000 MB commit is free when NavAI is needed; otherwise unload the base model, load NavAI, and reload the base model when Russian/English/auto comes next ("swap") |
+| `swap` | always hold only one model |
+| `both` | always keep both |
+
+Measured 2026-10-16 (CPU int8, one process, models loaded one after another):
+
+| State | RSS | Commit (process) |
+|---|---|---|
+| base model only | 0.38–0.43 GB | 2.60–2.71 GB |
+| base + NavAI | 0.75 GB | 5.05 GB (peak 5.25–5.63 GB during inference) |
+| NavAI unloaded again | 0.43 GB | 2.76 GB (memory returned) |
+| swap policy, 9 alternating ru/uz/en requests | ≤ 0.73 GB | peak 3.15 GB; grows ≈ 35 MB per swap (2.71 → 2.99 GB after 8 swaps) |
+
+Swapping adds ≈ 0.5–1.2 s to the request that triggers it.
+
+### Environment variables
+
+| Variable | Default | Meaning |
+|---|---|---|
+| `STT_UZ_MODEL` | `navai` | `off` = previous behaviour exactly (base model for everything) |
+| `STT_UZ_MEMORY` | `auto` | `auto` / `swap` / `both` (table above) |
+| `STT_UZ_PRELOAD` | unset | `1` = load NavAI at start instead of on first use |
+| `STT_UZ_AUTO_MAX_RUEN` | `0.2` | auto mode uses NavAI only if p(ru) and p(en) are both below this |
+| `STT_UZ_REQUIRED_FREE_MB` | `3000` | free commit needed before NavAI is loaded |
+
+### Integration test results (2026-10-16) — new, separate from the benchmark
+
+Method: the exact pre-integration code (`stt_server.py.before_navai.bak`) and the new code were each run as a
+separate test process on port 8779 against the same requests; the new code was then also started as the real
+service on port 8769. Only Ollama (no model loaded) was running. Raw data: `stt-eval/integration/`.
+
+| Test set | Requests | Before (base model only) | After (with NavAI) |
+|---|---|---|---|
+| Russian/English, auto (WAV, WebM, M4A, MP3, OGG, short, long, noise) | 14 (+14 multipart) | WER 0.007, 13/14 exact | **identical text for 28/28** |
+| Russian / English, forced | 7 + 7 | WER 0.016 / 0.000 | **identical 14/14** |
+| Edge cases (silence, noise only, 0.1 s, invalid file, empty body) | 5 + 5 | 422 ×4, 400 ×1 | **identical** |
+| **New** FLEURS Uzbek recordings (40, sentences not used in the benchmark), `?language=uz` | 40 | WER 1.164, CER 0.435, 0 exact, 3 repetitions, median 6.3 s | **WER 0.223, CER 0.093, 7 exact, 0 repetitions, median 3.1 s** |
+| same 40, auto | 40 | WER 1.185, median 6.0 s | WER 0.223 (all 40 routed to NavAI), median 4.8 s |
+| Benchmark reference clips (20 of the 120 — **not** independent) | 20 | WER 1.497 | WER 0.258 |
+| Robot commands (12, **synthetic** TTS), `?language=uz` | 12 | WER 3.70, 4 repetition loops | WER 0.91, 0 repetitions, median 1.9 s |
+| same, auto | 12 | WER 4.17 | WER 1.87 — 3 commands detected as English, 3 in the 0.2–0.5 zone stay on the base model, 5 reach NavAI |
+| Synthetic Uzbek sentences (12), `?language=uz` | 12 | WER 1.575 | WER 0.299 |
+| Real service on 8769 (5 of the sets above) | 111 | — | identical to the test process (111/111) |
+| NavAI forced unavailable (`STT_UZ_REQUIRED_FREE_MB=999999`) | 9 | — | all answered by the base model, health shows the reason, no extra latency after the fix |
+
+Robot-command examples with NavAI (`?language=uz`): "Chapga buril." → `kam kam`, "O'ngga buril." → `oʻngga boʻlin`,
+"Oldinga yur." → `dangga yur`, "To'xta." → `boʻp`, "Kutubxonaga olib bor." → `kutubxonaga bolib bor`, "Ha." → no text.
+**Do not drive a robot from these transcripts without a command grammar or confirmation step.**
+
+### Memory with the rest of the system (8 GB reference PC)
+
+Measured 2026-10-16: start 12.3 GB free commit → after Uzbek TTS 11.9 GB → after the chat backend (MADLAD)
+**3.2 GB** → after the first chat request Ollama loaded `qwen3:1.7b` (57 s, under memory pressure) → **0.75 GB**.
+STT was therefore **not** started next to the chat backend (it needs ≈ 2.7 GB even without NavAI); the chat and
+Uzbek TTS processes were stopped again. On this machine the full voice stack (chat + Ollama + STT) is at the
+limit with or without NavAI. Options: larger fixed pagefile, STT on the GPU (≈ 1.7–1.9 GB commit instead of
+2.7–2.9 GB, needs CUDA libraries in `.venv-stt`), or the 64 GB Ubuntu server.
+
+### Not tested
+
+| Item | Status |
+|---|---|
+| Real iPhone Safari recording through the HTTPS tunnel | **not run** — needs the owner's phone; the proxy path is unchanged and returns the STT JSON unchanged (verified earlier) |
+| Male Uzbek voices | **not run** — FLEURS Uzbek test has only female speakers; no other openly downloadable male recordings found (USC is a 9.5 GB archive, not downloaded) |
+| STT next to chat + Ollama | **not run** — not enough memory (above) |
+| GPU in production | not run; the production environment has no CUDA libraries |
+
+### Rollback
+
+```powershell
+# quick: previous behaviour without touching files (restart the STT service with this set)
+$env:STT_UZ_MODEL = 'off'; .\.venv-stt\Scripts\python.exe .\stt_server.py
+# full: restore the files from before the integration
+Copy-Item stt_server.py.before_navai.bak stt_server.py -Force
+Copy-Item local_voice_chat.html.before_navai.bak local_voice_chat.html -Force
+```
+
+## Uzbek model evaluation (2026-10-14)
+
+> **Status: evaluated; integrated on 2026-10-16** (section above).
 > Full report: [STT_EVALUATION.md](STT_EVALUATION.md) · reproduction: [STT_EVALUATION_REPRODUCE.md](STT_EVALUATION_REPRODUCE.md).
 
 Measured on 120 **real human** Uzbek recordings (FLEURS test, female speakers, read speech), CPU int8, language forced to `uz`:

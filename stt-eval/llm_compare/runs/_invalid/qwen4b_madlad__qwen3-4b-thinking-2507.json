@@ -1,0 +1,1624 @@
+{
+ "pipeline": "server",
+ "language": "uz",
+ "server_model": "qwen3:4b",
+ "results": [
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning poytaxti qaysi shahar?",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": ". The user is asking about the capital of Uzbekistan. This is a straightforward geography question that I can answer directly. This is a straightforward geography question that I can answer directly. This is a straightforward geography question that I can answer directly. This is a straightforward geography question that I can answer directly. This is a straightforward geography question that I can answer directly. This is a straightforward geography question that I can answer directly. This is a straightforward geography question that I can answer directly. 2.I thinkIIIIII",
+   "answer_english": "Hmm, the user is asking about the capital of Uzbekistan. This is a straightforward geography question that I can answer directly. \n\nI recall that Tashkent is the capital city of Uzbekistan. It's a well-known fact that's been consistent for quite some time. \n\nThe user wants a concise response in 1-3 sentences without any extra reasoning, so I'll just state the capital clearly and move on. No need to add context or explanations since they specifically asked for brev",
+   "english_input": "What is the capital of Uzbekistan?",
+   "timings": {
+    "input_translation": 1.77,
+    "qwen": 12.83,
+    "output_translation": 13.99,
+    "total": 28.67
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 28.68,
+   "first_call": true
+  },
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning poytaxti qaysi shahar",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": "Ha, foydalanuvchi Oʻzbekiston poytaxtini soʻramoqda. Men oʻylab koʻray. Men Oʻzbekiston poytaxti Toshkent ekanini eslayman. Qoʻying, ammo buni aniq bilish uchun yana tekshirib koʻray. Bazan odamlar buni boshqa shaharlar bilan chalkashtirib yuborishadi, masalan, Samarqand yoki Buxoro bilan, lekin bu toʻgʻri emas, Toshkent poytaxtdir. Ha, albatta Toshkent. Shunday qilib, javob Toshkent. Men buni koʻrsatmalarga muvofiq bir jumlada ifodalashim kerak.",
+   "answer_english": "Okay, the user is asking for the capital city of Uzbekistan. Let me think. I remember that the capital of Uzbekistan is Tashkent. Wait, but I should double-check to be sure. Sometimes people confuse it with other cities like Samarkand or Bukhara, but no, Tashkent is the correct capital. Yeah, definitely Tashkent. So the answer is Tashkent. I need to phrase it in one sentence as per the instructions",
+   "english_input": "oʻzbekistonning poytaxti qaysi shahar",
+   "timings": {
+    "input_translation": 1.16,
+    "qwen": 5.38,
+    "output_translation": 11.49,
+    "total": 18.05
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 56,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 18.07,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir haftada necha kun bor?",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": "019-01-11T10:00:00+00:00 2019-01-11T10:00:00+00:00 2019-01-11T10:00:00+00:00 2019-01-11T10:00:00+00:00 <think>There are seven days in a week.</think> <think><think><",
+   "answer_english": "Hmm, the user is asking how many days are in a week. This is a basic factual question about time measurement. \n\nI recall that there are exactly seven days in a week - Monday through Sunday. This is standard in most calendar systems including the Gregorian calendar used worldwide.\n\nThe user wants a concise answer in 1-3 sentences without any reasoning. I'll just state the fact clearly and directly since they seem to want quick information rather than explanation.\n</think>\n\nThere are seven days in a",
+   "english_input": "How many days are there in a week?",
+   "timings": {
+    "input_translation": 1.09,
+    "qwen": 5.31,
+    "output_translation": 13.87,
+    "total": 20.28
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 20.3,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir haftada necha kun bor",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": ". I'll ask the user how many days are in a week. The user will be asked to specify the number of days in a week. I'll ask the user to specify the number of days in a week. The user will be asked to specify the number of days in a week. I'll ask the user to specify the number of days in a week. The user will be asked to specify the number of days in a week. I'll ask the user to specify the number of days in a week. The user will be asked to specify the number of days in a",
+   "answer_english": "Hmm, the user is asking how many days are in a week. This is a straightforward question about basic time measurement. \n\nI recall that there are exactly seven days in a week - Sunday through Saturday. The user wants a concise answer in 1-3 sentences without any extra explanation.\n\nSince they specified to be friendly and helpful, I'll keep it simple and positive. No need to overcomplicate this basic fact. \n\nThe answer should be direct: seven days. I'll phrase it as",
+   "english_input": "how many days are in a week",
+   "timings": {
+    "input_translation": 0.87,
+    "qwen": 5.29,
+    "output_translation": 13.8,
+    "total": 19.97
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.99,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir yilda necha oy bor?",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "012 is the 12th month of the year. It's the 12th month of the year in the Gregorian calendar. It's the 12th month of the year in the Gregorian calendar. It's the 12th month of the year in the Gregorian calendar. It's the 12th month of the year in the Gregorian calendar. It's the 12th month of the year in the Gregorian calendar. It's the 12th month of the year in the Gregorian calendar.I thinkIIII",
+   "answer_english": "Hmm, the user is asking how many months are in a year. This is a straightforward question about basic time units. \n\nI recall that a standard calendar year has 12 months. That's consistent across most calendar systems like the Gregorian calendar which is widely used. \n\nThe user wants a concise answer in 1-3 sentences without any extra reasoning, so I'll just state the fact clearly. They seem to be looking for quick factual information rather than deeper explanation about calendars or exceptions.",
+   "english_input": "How many months are there in a year?",
+   "timings": {
+    "input_translation": 1.04,
+    "qwen": 5.2,
+    "output_translation": 13.74,
+    "total": 19.98
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 20.0,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir yilda necha oy bor",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": ". I'm not sure how to answer this question. I'm not sure how to answer this question. 2. I'm not sure how to answer this question. I'm not sure how to answer this question. 3. I'm not sure how to answer this question. 4. I'm not sure how to answer this question. 5. I'm not sure how to answer this question. 6. I'm not sure how to answer this question. 7. I'm not sure how to answer this question. 8.IIIIIII",
+   "answer_english": "Hmm, the user is asking how many months are in a year. This is a straightforward question about basic calendar knowledge. \n\nI recall that the Gregorian calendar, which is the most widely used calendar system, has exactly 12 months. This is standard knowledge that doesn't require any complex calculation or context. \n\nThe user wants a concise answer in 1-3 sentences without any reasoning, so I'll just state the fact clearly. They seem to be looking for quick factual information, probably",
+   "english_input": "How many months are there in a year",
+   "timings": {
+    "input_translation": 0.93,
+    "qwen": 5.09,
+    "output_translation": 13.7,
+    "total": 19.76
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.77,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "clean",
+   "text": "Suv necha darajada qaynaydi?",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "00°C is the temperature at which water boils. 100°C is the temperature at which water is boiling. 100°C is the temperature at which water is boiling. 100°C is the temperature at which water is boiling. 100°C is the temperature at which water is boiling. 100°C is the temperature at which water is boiling. 100°C is the temperature at which water is boiling. 100°C is the temperature at which water is boiling. 10",
+   "answer_english": "Okay, the user is asking \"How much will the boiling water be?\" Hmm, that phrasing is a bit unclear. \n\nFirst thought: They might be mixing up terms. \"Boiling water\" isn't a quantity - it's a state of water. Maybe they meant \"how much water boils\" or \"how much water is needed to boil\"? \n\nLooking at common confusion points: People often ask about boiling point (100°C at sea level) or volume of water that boils",
+   "english_input": "How much will the boiling water be?",
+   "timings": {
+    "input_translation": 1.06,
+    "qwen": 5.3,
+    "output_translation": 13.76,
+    "total": 20.14
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 20.16,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "stt",
+   "text": "suvlicha darajada qaynaydi",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": ". I'm not sure if they're looking for a similarity. I'm not sure if they're looking for a similarity. I'm not sure if they're looking for a similarity. I'm not sure if they're looking for a similarity. I'm not sure if they're looking for a similarity. I'm not sure if they're looking for a similarity. I'm not sure if they're looking for a similarity. I'm not sure if they're looking for a similarity. I'm not sure.I",
+   "answer_english": "Okay, the user mentioned \"like the boiling of water.\" Hmm, they want a concise response in 1-3 sentences, no reasoning. Maybe they're comparing something to boiling water? Like a process that gets intense or rapid? \n\nI should keep it simple and friendly. Since they said \"like,\" they might be looking for an analogy. Boiling water is when liquid turns to gas quickly at 100°C. \n\nI'll say something about how boiling water is a common example",
+   "english_input": "like the boiling of water.",
+   "timings": {
+    "input_translation": 0.87,
+    "qwen": 5.22,
+    "output_translation": 13.96,
+    "total": 20.06
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.07,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ikki qo'shuv uch necha bo'ladi?",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "+ 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22 + 23 + 24 + 25 + 26 + 27 + 28 + 29 + 30 + 31 + 32First,I should consider whatI should considerWhat should I",
+   "answer_english": "Okay, the user asked \"What is the addition of two to three?\" Hmm, that phrasing is a bit odd. Let me unpack this carefully.\n\nFirst, \"addition of two to three\" sounds like they might be mixing up math terms. In standard math, we say \"add two to three\" meaning 3 + 2. But the phrasing \"addition of two to three\" is unusual - it's not how we'd normally express it. \n\nI should consider what",
+   "english_input": "What is the addition of two to three?",
+   "timings": {
+    "input_translation": 1.09,
+    "qwen": 5.34,
+    "output_translation": 13.89,
+    "total": 20.33
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 20.35,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "stt",
+   "text": "ikki qoʻshi uch necha boʻladi",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "'s a pair of three. They're two pairs of three. They're two sets of three. They're two sets of three. They're two sets of three. They're two sets of three. They're two sets of three. They're two sets of three. They're two sets of three. They're two sets of three. They're two sets of three. They're two sets of three. They're two sets of three. They're two sets of three. First, first.First, first, first, first, first, first,",
+   "answer_english": "Okay, the user asked \"two pairs of three are many\". Hmm, I need to figure out what they mean here. Let me break it down.\n\nFirst, \"two pairs of three\" – that sounds like a math problem. A pair is two, so two pairs would be four. But they said \"three\" in there. Wait, maybe they mean two groups of three? Like, two sets where each set has three items. So that's 2 times 3, which equals",
+   "english_input": "two pairs of three are many",
+   "timings": {
+    "input_translation": 0.89,
+    "qwen": 5.26,
+    "output_translation": 13.55,
+    "total": 19.71
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 19.71,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "clean",
+   "text": "Quyosh qaysi tomondan chiqadi?",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": ". The sun rises in the east. I'm not sure where the sun rises in the east. I'm not sure where the sun rises in the west. I'm not sure where the sun rises in the west. I'm not sure where the sun rises in the east. I'm not sure where the sun rises in the west. I'm not sure where the sun rises in the east. I'm not sure where the sun rises in the west. I'm not sure where the sun rises in the east. I'm not sure. \"",
+   "answer_english": "Hmm, the user is asking where the sun rises. This seems like a simple astronomy question, but I should be careful. \n\nThe sun rises in the east - that's basic celestial mechanics. But I wonder if they're asking for a specific location? Like on Earth versus other planets? Given the context, they probably mean Earth since they didn't specify. \n\nI recall that the exact point changes slightly due to Earth's axial tilt and orbit, but for practical purposes it's always east. Better",
+   "english_input": "Where does the sun rise?",
+   "timings": {
+    "input_translation": 0.89,
+    "qwen": 5.17,
+    "output_translation": 13.69,
+    "total": 19.77
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.8,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "stt",
+   "text": "bu yosh qaysi tomondan chiqadi",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": ". \"This star comes out\" is a very common phrase in the English language. It's a very common phrase in the English language. It's a very common phrase in the English language. It's a very common phrase in the English language. It's a very common phrase in the English language. It's a very common phrase in the English language. It's a very common phrase in the English language. It's a very common phrase in the English language. It's a very common phrase.First,First,First,First,First,",
+   "answer_english": "Hmm, the user is asking \"Which way this star comes out\". That's a bit unclear. I need to figure out what they mean. \n\nFirst, \"this star\" – they might be referring to a specific star they saw or are thinking about. But without context, it's hard to tell. \n\nAlso, \"comes out\" could mean different things: maybe they mean how a star appears in the sky, or the direction it's visible from Earth, or something else entirely.",
+   "english_input": "Which way this star comes out",
+   "timings": {
+    "input_translation": 0.88,
+    "qwen": 5.26,
+    "output_translation": 13.65,
+    "total": 19.8
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.81,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng katta okean qaysi?",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": ". The largest ocean in the world is the Pacific Ocean. It is the largest ocean in the world. It covers about 165.25 million square kilometers. 2. The largest ocean in the world is the Indian Ocean. It covers about 165.25 million square kilometers. 3. The largest ocean in the world is the Indian Ocean. It covers about 165.25 million square kilometers. 4. The largest ocean in the world is the Pacific Ocean. It covers about 165 million square kilometers.IIIIIIII",
+   "answer_english": "Hmm, the user is asking about the largest ocean in the world. This is a straightforward geography question that I can answer directly. \n\nI recall that the Pacific Ocean is the largest ocean by both surface area and volume. It covers about 165.25 million square kilometers. \n\nThe user wants a concise answer in 1-3 sentences without any extra reasoning, so I'll just state the fact clearly. They seem to be looking for quick information, probably for school or general knowledge",
+   "english_input": "What is the largest ocean in the world?",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 5.28,
+    "output_translation": 14.61,
+    "total": 20.98
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.98,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng katta okean qaysi",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": ". The Pacific Ocean is the largest ocean in the world. It covers about 165.25 million square kilometers. 2. The Pacific Ocean is the largest ocean in the world. It covers about 165.25 million square kilometers. 3. The Pacific Ocean is the largest ocean in the world. It covers about 165.25 million square kilometers. 4. The Pacific Ocean is the largest ocean in the world. It covers about 165.25 million square kilometers. 5...IIIIIII",
+   "answer_english": "Hmm, the user is asking about the largest ocean in the world. This is a straightforward geography question that I can answer directly. \n\nI recall that the Pacific Ocean is the largest ocean by both area and volume. It covers about 165.25 million square kilometers. \n\nThe user wants a concise answer in 1-3 sentences without any reasoning, so I'll just state the fact clearly. They seem to be looking for quick information, probably for educational purposes or casual knowledge.",
+   "english_input": "which is the largest ocean in the world",
+   "timings": {
+    "input_translation": 1.21,
+    "qwen": 5.39,
+    "output_translation": 14.02,
+    "total": 20.63
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.63,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Navro'z bayrami qaysi oyda nishonlanadi?",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "019-03-22 10:00:00. 2019-03-22 10:00:00. 2019-03-22 10:00:00. 2019-03-22 10:00:00. 2019-03-22 10:00:00. 2019-03-22.IIIIIIIIIIII",
+   "answer_english": "Hmm, the user is asking about the Navro'z festival and specifically wants to know which month it falls in. \n\nI recall that Navro'z is a significant festival in Central Asia and the Caucasus region, particularly celebrated by Uzbek people and others. It's the new year in the solar calendar for those cultures. \n\nThe key point here is that Navro'z always falls on March 22nd according to the Gregorian calendar, which means it's in the month of",
+   "english_input": "What month is the Navro'z festival?",
+   "timings": {
+    "input_translation": 1.26,
+    "qwen": 5.37,
+    "output_translation": 13.79,
+    "total": 20.43
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 20.43,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "stt",
+   "text": "navroʻz bayrami qaysi oyda nishonlanadi",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "is celebrated in the month of Navro'z. The month is the first month of the year in the Islamic calendar. The month is the first month of the year in the Gregorian calendar. The month is the second month in the Islamic calendar. The month is the second month in the traditional context. The month is the second month in the Islamic calendar. The month is the third month in the traditional context. The month is the third month in the traditional context. The month is the fourth month in the traditional context. I thinkIIIIIIIIMMmm, the user is asking about the",
+   "answer_english": "Hmm, the user is asking about the Navro'z festival and which month it's celebrated in. I need to recall that Navro'z is a significant festival in Uzbekistan and other Central Asian countries. It's the new year in the solar calendar, marking the start of spring.\n\nI remember that Navro'z falls on March 22nd according to the Gregorian calendar. But the user is asking about the month in the traditional context. In the Islamic calendar, months are",
+   "english_input": "navroʻz festival in which month is celebrated",
+   "timings": {
+    "input_translation": 1.27,
+    "qwen": 5.34,
+    "output_translation": 13.57,
+    "total": 20.19
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.2,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Amir Temur qaysi shaharda tug'ilgan?",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": ". I remember that Amir Temur was born in the city of Samarkand. That's a key detail in Mongol history. 2. I remember that Amir Temur was born in the city of Samarkand. That's a key detail in Mongol history. 3. I remember that Amir Temur was born in the city of Samarkand. That's a key detail in Mongol history. 4. I remember that Amir Temur was born in the city of Samarkand. That's a key detail in Mongol history. 5.ILet me double-check this.ILe",
+   "answer_english": "Hmm, the user is asking about the birthplace of Amir Temur. I recall that Amir Temur was a historical figure, specifically a Mongol ruler from the Timurid dynasty. \n\nLet me think carefully about this. I remember that Amir Temur was born in the city of Samarkand. That's a key detail in Mongol history. \n\nI should double-check this to be absolutely sure. Yes, historical records consistently place his birth in Samarkand, which was part of",
+   "english_input": "In which city was Amir Temur born?",
+   "timings": {
+    "input_translation": 1.08,
+    "qwen": 5.34,
+    "output_translation": 13.61,
+    "total": 20.05
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.07,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "stt",
+   "text": "anir temur qaysi shaharda tugʻilgan",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "019-10-18 · Anir Temur was born in Karakorum, the capital of the Mongol Empire during his time. He was the son of the Mongol emperor Temür Khan and his wife, the princess of the Karakorum, who was the daughter of the Mongol emperor Temür Khan. He was born in Karakorum, the capital of the Mongol Empire during his time. He was the son of the Mongol emperor Temür Khan and his wife, the princess of the Karakorum..IIIIIIIIIIIIII",
+   "answer_english": "Hmm, the user is asking about Anir Temur's birth city. I recall that Anir Temur is likely a misspelling of An Jir Temur, which refers to Temür Khan, a historical figure from the Yuan Dynasty. \n\nI should verify the correct historical name and birthplace. Temür Khan was born in Karakorum, which was the capital of the Mongol Empire during his time. \n\nThe user might be confused about the name spelling, so I'll provide",
+   "english_input": "anir temur in which city was born",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 5.31,
+    "output_translation": 13.65,
+    "total": 20.04
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.06,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Alisher Navoiy kim bo'lgan?",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "'s a great poet, writer, and philosopher. He was born in Samarkand in 1859. He was a prominent poet and scholar who lived in the 19th century. He was known for his contributions to literature and culture in Central Asia. He was a prominent poet, writer, and philosopher. He was born in Samarkand in 1859. He was a prominent poet, writer, and philosopher. He was a prominent poet.The userThe user wants a concise answer in 1",
+   "answer_english": "Hmm, the user is asking about Alisher Navoiy. I need to recall who this person is. From my knowledge, Alisher Navoiy was a prominent Uzbek scholar and poet who lived in the 19th century. He's known for his contributions to literature and culture in Central Asia.\n\nThe user wants a concise answer in 1-3 sentences, in English, without any reasoning. I should focus on the key points: his nationality, time period, and main",
+   "english_input": "Who was Alisher Navoiy?",
+   "timings": {
+    "input_translation": 1.0,
+    "qwen": 5.21,
+    "output_translation": 13.58,
+    "total": 19.81
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.82,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "stt",
+   "text": "rashir navoiy kim boʻlgan",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "019-03-11 10:00:00 - 2019-03-11 10:00:00 - 2019-03-11 10:00:00 - 2019-03-11 10:00:00 - 2019-03-11 10:00:00 - 2019-03-11 10:00:00IIIII",
+   "answer_english": "Hmm, the user just mentioned \"Rashid Navoiy\" - that's a name I recognize as a historical figure. \n\nI recall Rashid Navoiy was a prominent 15th-century Uzbek scholar and poet from the Navoi region. He's famous for his contributions to literature and science during the Timurid era. \n\nThe user seems to want quick factual information without extra details. Since they specified concise English response, I'll focus on his key identity as a scholar-po",
+   "english_input": "Rashid Navoiy",
+   "timings": {
+    "input_translation": 0.6,
+    "qwen": 5.2,
+    "output_translation": 13.76,
+    "total": 19.56
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 19.58,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi hayvon cho'l kemasi deb ataladi?",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": ". \"desert ship\" is a term used to describe a large animal that travels in the desert. It's not a standard animal name. 2. \"desert ship\" is a term used to describe a large animal that travels in the desert. It's not a standard animal name. 3. \"desert ship\" is a term used to describe a large animal that travels in the desert. It's not a standard animal name. It's a term used to describe a large animal that travels in the desert. It's not a standard animal name.The user might ask",
+   "answer_english": "Hmm, the user is asking about an animal called a \"desert ship.\" That's an interesting term—I've never heard that before. Let me think... In biology, there's no animal officially named that. Maybe they're mixing up terms? I recall that the camel is often called the \"ship of the desert\" because it's essential for travel in deserts, like a ship navigating the dry terrain. But \"desert ship\" isn't a standard animal name. \n\nThe user might",
+   "english_input": "Which animal is called a desert ship?",
+   "timings": {
+    "input_translation": 1.1,
+    "qwen": 5.17,
+    "output_translation": 13.74,
+    "total": 20.02
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.04,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi hayvon choʻl kemasi deb ataladi",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": ". The camel is a large, long-tailed animal that is known for its ability to travel in the desert. It is a very powerful animal, and it is known for its ability to carry a large number of people on its back. It is also known as the \"ship of the desert\" because it is the only animal that can carry people on its back. It is also known as the \"ship of the desert\" because it is the only animal that can carry people on its back. It is also known as the \"ship of the desert\" because it is the only animal that can.",
+   "answer_english": "Hmm, the user is asking about which animal is called a \"desert ship.\" I need to recall if there's a common animal nickname that fits this description. \n\nI remember that in desert environments, the camel is often referred to as the \"ship of the desert\" in many cultures and historical contexts. That's a well-known phrase, especially in Arabic and English literature. \n\nThe user wants a concise answer in 1-3 sentences, so I'll stick to the camel as the answer",
+   "english_input": "Which animal is called a desert ship",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 5.23,
+    "output_translation": 13.67,
+    "total": 19.9
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.9,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir soatda necha daqiqa bor?",
+   "keywords": [
+    "60",
+    "oltmish"
+   ],
+   "answer": "0 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes is 60 minutes. 60 minutes.HmmHmmH",
+   "answer_english": "Okay, the user is asking how many minutes are in an hour. This is a straightforward question about time units. \n\nI recall that by definition, one hour equals 60 minutes. That's a standard conversion used in daily life and measurements. \n\nThe user wants a concise answer in 1-3 sentences without any extra reasoning. So I'll just state the fact clearly and directly. \n\nHmm, I should make sure not to add any fluff since they specified brevity. The",
+   "english_input": "How many minutes are there in an hour?",
+   "timings": {
+    "input_translation": 1.06,
+    "qwen": 5.34,
+    "output_translation": 13.66,
+    "total": 20.07
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 20.07,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir soatda necha daqiqa bor",
+   "keywords": [
+    "60",
+    "oltmish"
+   ],
+   "answer": "0 minutes is 1 hour. 1 hour is 60 minutes. 60 minutes is 1 hour. 1 hour is 60 minutes. 1 hour is 60 minutes. 1 hour is 60 minutes. 1 hour is 60 minutes. 1 hour is 60 minutes. 1 hour is 60 minutes. 1 hour is 60 minutes. 1 hour is 60 minutes. 1 hour is 60 minutes. 1 hour is 60 minutes. 1 hour is 60 minutesIIIII",
+   "answer_english": "Hmm, the user is asking how many minutes are in an hour. This is a basic time conversion question. \n\nI recall that by definition, there are 60 minutes in one hour. That's a standard unit conversion everyone learns early on. \n\nThe user wants a concise answer in 1-3 sentences without any extra reasoning. So I'll just state the fact clearly and directly. \n\nI should make sure not to add any unnecessary information since they specified brevity. The answer is",
+   "english_input": "how many minutes are in an hour",
+   "timings": {
+    "input_translation": 0.88,
+    "qwen": 5.3,
+    "output_translation": 13.65,
+    "total": 19.84
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 19.84,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qor qanday rangda bo'ladi?",
+   "keywords": [
+    "oq"
+   ],
+   "answer": "019-10-21 · The user is asking what color snow is. This seems simple, but I should think carefully. Snow is typically white because of how light scatters off all the tiny ice crystals. But in reality, it can look different depending on the conditions—like when it's fresh and bright, or when it's dirty from pollution. 2019-10-21 · Hmm, the user is asking what color snow is. This seems simple, but I should think carefully. Snow is typically whiteThe",
+   "answer_english": "Hmm, the user is asking what color snow is. This seems like a simple question, but I should think carefully. Snow is typically white because of how light scatters off all the tiny ice crystals. But in reality, it can look different depending on the conditions—like when it's fresh and bright, or when it's dirty from pollution. \n\nThe user wants a concise answer in 1-3 sentences without any extra reasoning. They specified to be friendly and helpful, so I'll keep",
+   "english_input": "What color is snow?",
+   "timings": {
+    "input_translation": 0.7,
+    "qwen": 5.29,
+    "output_translation": 13.7,
+    "total": 19.7
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 46,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.72,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "stt",
+   "text": "qor qanday rangda boʻladi",
+   "keywords": [
+    "oq"
+   ],
+   "answer": ". The user wants to know what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure what color snow is. I'm not sure.",
+   "answer_english": "Hmm, the user is asking what color snow is. That seems straightforward but I should be precise. Snow is typically white because of how light scatters through ice crystals. \n\nI recall that in reality, fresh snow appears white due to its crystalline structure reflecting all wavelengths of light equally. But sometimes people might think of snow under certain conditions - like when it's melting or has impurities - but the standard answer is white.\n\nThe user wants a concise response in 1-3 sentences without any",
+   "english_input": "what color is snow",
+   "timings": {
+    "input_translation": 0.59,
+    "qwen": 5.31,
+    "output_translation": 13.67,
+    "total": 19.57
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 45,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.59,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning davlat tili qaysi?",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": ". The user wants to know what the official language of Uzbekistan is. I'm not sure if the user is interested in the official language of Uzbekistan. 2. The user wants to know what the official language of Uzbekistan is. I'm not sure if the user is interested in the official language of Uzbekistan. 3. The user wants to know what the official language of Uzbekistan is. I'm not sure if the user is interested in the official language of Uzbekistan. 4. The user wants to know what the official language of Uzbekistan is.IIIIIIIIIII",
+   "answer_english": "Hmm, the user is asking about the official language of Uzbekistan. This seems like a straightforward factual question. \n\nI recall that Uzbekistan's official language is Uzbek, which is a Turkic language. The country has a history of linguistic shifts, but currently Uzbek is the official language. \n\nThe user wants a concise answer in 1-3 sentences without any extra reasoning. I'll keep it simple and direct: state that Uzbek is the official language, mention it's a Turkic language,",
+   "english_input": "What is the official language of Uzbekistan?",
+   "timings": {
+    "input_translation": 0.96,
+    "qwen": 5.23,
+    "output_translation": 13.54,
+    "total": 19.74
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.76,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning davlat tili qaysi",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": "'s not the official language of Uzbekistan. I'm not sure what the official language is. I'm not sure what the official language is. I'm not sure what the official language is. I'm not sure what the official language is. I'm not sure what the official language is. I'm not sure what the official language is. I'm not sure what the official language is. I'm not sure what the official language is. I'm not sure what the official language is.Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,",
+   "answer_english": "Okay, the user is asking about the official language of Uzbekistan. Let me think.\n\nFirst, I know that Uzbekistan is a country in Central Asia. The official language there is Uzbek, right? But wait, sometimes countries have multiple official languages. Let me confirm.\n\nI recall that Uzbek is the primary language, but there's also a historical context with Turkic languages. Wait, no, Uzbek is the official language. Let me check my knowledge base.\n\nYes, Uzbekistan's state language",
+   "english_input": "oʻzbekistonning davlat tili qaysi",
+   "timings": {
+    "input_translation": 0.95,
+    "qwen": 5.32,
+    "output_translation": 13.47,
+    "total": 19.76
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 53,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.78,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Samarqanddagi mashhur maydonning nomi nima?",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "is also the home of the famous Samarkand University. The Registan Square is the largest square in Samarkand, and it is also the home of the Registan University. The Registan Square is the largest square in Samarkand, and it is also the home of the Registan University. The Registan Square is the largest square in Samarkand, and it is the home of the Registan University. The Registan Square is the largest square in Samarkand, and it is the home of the Registan University. I am not sure what to say.II should be sure of my answerI should",
+   "answer_english": "Hmm, the user is asking about the famous square in Samarkand. I recall that Samarkand is a city in Uzbekistan with rich historical significance, especially in terms of ancient trade routes. The most well-known square there is the Registan Square, which is part of the Registan complex. It's a stunning architectural site from the Timurid era, featuring intricate tile work and serving as a center for learning and trade.\n\nI should make sure my answer is accurate and concise. The",
+   "english_input": "What is the name of the famous square in Samarkand?",
+   "timings": {
+    "input_translation": 1.44,
+    "qwen": 5.36,
+    "output_translation": 13.98,
+    "total": 20.79
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 54,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.79,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "stt",
+   "text": "samarqanddagi mashhur maydonning nominiman",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "Xmm, foydalanuvchi Samarkanddagi mashhur maydon haqida soʻramoqda. Men toʻgʻri nomni eslashga majburman. Samarkand Oʻzbekistonning tarixiy ahamiyatga ega, ayniqsa, qadimiy savdo yoʻllari bilan bogʻliq boʻlgan shahardir. U erda eng mashhur maydon Registon maydoni boʻlib, u Registon majmuasining bir qismidir. U oʻzining murakkab plitka ishlash uslubi bilan mashhur va YuNESKOning jahon merosi obektlaridan biridir. Men uni boshqa maydonlar bilan chalkashtirmasligimga ishonchim komil boʻlishi kerak, masalan, Qadimgi shahar",
+   "answer_english": "Hmm, the user is asking about the famous square in Samarkand. I need to recall the correct name. Samarkand is a city in Uzbekistan with a lot of historical significance, especially in terms of ancient trade routes. The most well-known square there is the Registan Square, which is part of the Registan complex. It's famous for its intricate tile work and is a UNESCO World Heritage site. I should make sure I'm not confusing it with other squares—like the Old",
+   "english_input": "The name of the famous square in Samarkand",
+   "timings": {
+    "input_translation": 1.17,
+    "qwen": 5.29,
+    "output_translation": 13.61,
+    "total": 20.08
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 51,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 20.1,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng baland tog' qaysi?",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": ". The user wants a concise answer in 1-2 sentences. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct.I",
+   "answer_english": "Hmm, the user is asking about the highest mountain on earth. This is a straightforward geography question that I can answer directly. \n\nI recall that Mount Everest is generally considered the highest mountain above sea level, standing at about 8,848 meters. But I should be precise - there's also Mauna Kea which is taller when measured from base to peak, but that's underground so it's not the highest above sea level. \n\nThe user wants a concise answer in 1-",
+   "english_input": "What is the highest mountain on earth?",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 5.29,
+    "output_translation": 13.72,
+    "total": 20.09
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 20.09,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng baland togʻ qaysi",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": ". The answer should be clear and precise. <think>The answer should be clear and precise to meet the user's request for brevity while being helpful. I'll keep it simple and factual. <think>The answer should be concise and precise. <think>The answer should be clear and precise to meet the user's request for brevity while being helpful. <think>The answer should be concise and precise to meet the user's request for brevity while being helpful. <think>The answer should be concise and precis",
+   "answer_english": "Hmm, the user is asking about the highest mountain in the world. This is a straightforward geography question that I can answer directly. \n\nI recall that Mount Everest is widely recognized as the highest mountain above sea level. The user wants a concise response in 1-3 sentences without any extra reasoning, so I'll keep it simple and factual.\n\nThe answer should be clear and precise to meet their request for brevity while being helpful. I'll state it directly without any fluff.\n</think>",
+   "english_input": "Which is the highest mountain in the world?",
+   "timings": {
+    "input_translation": 1.23,
+    "qwen": 5.29,
+    "output_translation": 13.61,
+    "total": 20.14
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.15,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Kutubxonada nima qilish mumkin?",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": ". I'll list three key activities that the user can do in the library. I'll list three key activities that the user can do in the library. I'll list three key activities that the user can do in the library. I'll list three key activities that the user can do in the library. I'll list three key activities that the user can do in the library. I'll list three key activities that the user can do in the library. I'll list three key activities that the user can do in the library. I'll list three key activities.",
+   "answer_english": "Hmm, the user is asking what they can do in the library. I need to keep my response concise - just 1-3 sentences in English, no extra reasoning. \n\nLibrary activities are pretty standard: reading, studying, researching, using computers, borrowing books. I should pick the most universal options that cover different needs. \n\nThe user might be a student or someone new to libraries, so I'll focus on practical, accessible activities without assuming their knowledge level. \n\nI'll list three key",
+   "english_input": "What can I do in the library?",
+   "timings": {
+    "input_translation": 1.05,
+    "qwen": 5.33,
+    "output_translation": 13.63,
+    "total": 20.03
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.04,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "stt",
+   "text": "tutqonida nima qilish mumkin",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": ". \"Handle\" is a username. It's a username that you can use to access a tool or process. It's a username that you can use to access a tool or process. It's a username that you can use to access a user. It's a username that you can use to access a tool or process. It's a username that you can use to access a tool or process. It's a username that you can use to access a tool or process. It's a username that you can use.Wait,Wait,Wa",
+   "answer_english": "Okay, the user asked \"what to do on handle\". Hmm, that's a bit unclear. Let me think... \"Handle\" could mean different things here. Maybe they meant \"handle\" as in a tool or a process? Or perhaps it's a typo for \"hand\" or something else? \n\nWait, in tech contexts, \"handle\" sometimes refers to a user handle or username. But the phrasing \"what to do on handle\" doesn't make much sense. Could they be",
+   "english_input": "what to do on handle",
+   "timings": {
+    "input_translation": 0.69,
+    "qwen": 5.31,
+    "output_translation": 13.68,
+    "total": 19.67
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 46,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.69,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir kunda necha soat bor?",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": ". I'm not sure if I'm correct. 2. I'm not sure if I'm correct. 3. I'm not sure if I'm correct. 4. I'm not sure if I'm correct. 5. I'm not sure if I'm correct. 6. I'm not sure if I'm correct. 7. I'm not sure if I'm correct. 8. I'm not sure if I'm correct. 9. I'm not correct. 10. I'm correct.",
+   "answer_english": "Okay, the user is asking how many hours are in a day. That's a straightforward question. \n\nHmm, I know that a standard day has 24 hours. But wait—should I consider if they mean a solar day or sidereal day? No, for most practical purposes like timekeeping, it's 24 hours. \n\nThe user wants a concise answer in 1-3 sentences without extra reasoning. So I'll just state it clearly. \n\nAlso, they specified English",
+   "english_input": "How many hours are there in a day?",
+   "timings": {
+    "input_translation": 1.05,
+    "qwen": 5.31,
+    "output_translation": 13.68,
+    "total": 20.04
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 20.04,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir kundan necha soat bor",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": "4 hours is the number of hours in a day. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct. I'm not sure if I'm correct.First,I'mFirst,",
+   "answer_english": "Okay, the user asked about \"hours of a day\". Hmm, this seems like a very basic time-related question. \n\nFirst, I should confirm what they mean - are they asking how many hours are in a day? That's straightforward (24 hours). But maybe they're confused about time zones or something? Though the phrasing is simple.\n\nI recall standard answer is 24 hours per day. Better keep it precise since they want concise response. No need to overcomplicate -",
+   "english_input": "hours of a day",
+   "timings": {
+    "input_translation": 0.59,
+    "qwen": 5.35,
+    "output_translation": 13.65,
+    "total": 19.59
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 45,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 19.62,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekiston qaysi qit'ada joylashgan?",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": ". \"Uzbekistan\" is a word with a dictionary meaning. It's a proper noun for a country. 2. \"Uzbekistan\" is a word with a dictionary meaning. It's a word with a dictionary meaning. It's a proper noun for a country. It's a word with a dictionary meaning. It's a word with a dictionary meaning. It's a word with a dictionary meaning. It's a word with a dictionary meaning. 3. \"Uzbekistan\"IIII",
+   "answer_english": "Hmm, the user is asking about the meaning of the word \"Uzbekistan\". That's interesting because \"Uzbekistan\" isn't a single word—it's a proper noun for a country. \n\nI should clarify that it's the name of a country in Central Asia, not a word with a dictionary meaning. The user might be confused since it sounds like it could be broken down into parts. \n\nI'll keep it simple and friendly: state it's the name of a country, mention",
+   "english_input": "What is the meaning of the word \"Uzbekistan\"?",
+   "timings": {
+    "input_translation": 1.45,
+    "qwen": 5.33,
+    "output_translation": 13.94,
+    "total": 20.73
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 53,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.75,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekiston qaysi qitada joylashgan",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": "is the continent of the world. So, Uzbekistan is in Asia. So, Uzbekistan is in the continent of the world. So, Uzbekistan is in the continent of the world. So, Uzbekistan is in the continent of the world. So, Uzbekistan is in the continent of the world. So, Uzbekistan is in the continent of the world. So, Uzbekistan is in the continent of the world. So, Uzbekistan is in the continent of the world. So, Uzbekistan is in the continent of the world. So, Uzbekistan is in the continent of the world.FirstFirstFirstFirstFirstFirstFirstFirstFirstFirstFirstFirstFirstFirstFirst",
+   "answer_english": "Okay, the user is asking \"oʻzbekiston on which continent is located\" which translates to \"Uzbekistan on which continent is located\" in English. I need to figure out the continent for Uzbekistan.\n\nFirst, I know that Uzbekistan is a country in Central Asia. Central Asia is part of Asia continent. So Uzbekistan is in Asia.\n\nWait, sometimes people might confuse Central Asia with other regions, but geographically, it's definitely part of Asia. The continents are usually",
+   "english_input": "oʻzbekiston on which continent is located",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 5.3,
+    "output_translation": 13.47,
+    "total": 19.75
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 50,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.77,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ingliz tilida kitob so'zi qanday aytiladi?",
+   "keywords": [
+    "book"
+   ],
+   "answer": ". I'm not sure what the word \"book\" means in English. I'm not sure what the word \"book\" means in Spanish. I'm not sure what the word \"book\" means in English. I'm not sure what the word \"book\" means in Spanish. I'm not sure what the word \"book\" means in English. I'm not sure what the word \"book\" means in Spanish. I'm not sure what the word \"book\" means in English. I'm not sure what the word means in Spanish.FirstFirst,The word is simply \"book\"",
+   "answer_english": "Okay, the user is asking how to say \"book\" in English. Hmm, that seems straightforward but let me think carefully. \n\nFirst, I should confirm what they mean by \"book\" - like the physical object or the verb form? But since they said \"in English\" and the context is probably the noun, I'll focus on that. \n\nThe word is simply \"book\" in English. Wait, but maybe they're confused because in some languages it's different? Like in Spanish",
+   "english_input": "How do you say book in English?",
+   "timings": {
+    "input_translation": 1.0,
+    "qwen": 5.2,
+    "output_translation": 13.53,
+    "total": 19.73
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 19.76,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "stt",
+   "text": "inliz tilida kitob soʻzi qanday aytiladi",
+   "keywords": [
+    "book"
+   ],
+   "answer": ". I'm not sure if the word \"book\" is a common English term. I'm not sure if it's a common English term. 2. I'm not sure if the word \"book\" is a common English term. 3. I'm not sure if the word \"book\" is a common English term. 4. I'm not sure if the word \"book\" is a common English term. 5. I'm not sure if the word \"book\" is a common English term. 6. 1.FirstFirst,The word is simply \"book\".",
+   "answer_english": "Okay, the user is asking how to say \"book\" in English. Hmm, that seems straightforward but let me think carefully. \n\nFirst, I should confirm what they mean - are they asking for the English word for the concept of \"book\" (like a physical object) or something else? Given the context, they probably mean the common English term. \n\nThe word is simply \"book\". I recall that in English, we don't have different words for \"book\" depending on context -",
+   "english_input": "how to say book in english",
+   "timings": {
+    "input_translation": 0.8,
+    "qwen": 5.29,
+    "output_translation": 13.52,
+    "total": 19.6
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 19.63,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "clean",
+   "text": "Uchburchakning nechta burchagi bor?",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": ". A triangle has three angles. 2. A triangle has three sides. 3. A triangle has three angles. 4. A triangle has three sides. 5. A triangle has three angles. 6. A triangle has three angles. 7. A triangle has three angles. 8. A triangle has three angles. 9. A triangle has three angles. 10. A triangle has three angles. 11. A triangle has three angles. 12. A triangle has three angles. 13. \"",
+   "answer_english": "Hmm, the user is asking how many angles a triangle has. This seems like a basic geometry question that I should answer straightforwardly. \n\nI recall that by definition, a triangle is a polygon with three sides and three angles. The user wants a concise answer in 1-3 sentences without any reasoning, so I'll keep it simple.\n\nThe answer is three angles - that's fundamental to triangle geometry. I'll phrase it as \"A triangle has three angles.\" to be precise and meet their",
+   "english_input": "How many angles does a triangle have?",
+   "timings": {
+    "input_translation": 1.1,
+    "qwen": 5.23,
+    "output_translation": 13.64,
+    "total": 19.97
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 19.98,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "stt",
+   "text": "gul gulchakni meyishda gulchaga bor",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": ". \"Flowers are meying the flower\" is a misspelling of \"growing\" or \"meeting\". The user might be trying to say \"Flowers are meying the flower\". That seems like a typo or misspelling. I think they meant \"Flowers are meeting the flower\" but that doesn't make much sense either. Wait, maybe it's supposed to be \"Flowers are growing\" or something else? 2. \"Flowers are meying the flower\" is a misspelling.Looking at itLooking at itLooking at itLook",
+   "answer_english": "Hmm, the user wrote \"Flowers are meying the flower\". That seems like a typo or misspelling. I think they meant \"Flowers are meeting the flower\" but that doesn't make much sense either. Wait, maybe it's supposed to be \"Flowers are growing\" or something else? \n\nLooking at it again, \"meying\" is probably a misspelling of \"growing\" or \"meeting\". The user might be trying to say \"Flowers are growing",
+   "english_input": "Flowers are meying the flower",
+   "timings": {
+    "input_translation": 0.89,
+    "qwen": 5.28,
+    "output_translation": 13.56,
+    "total": 19.74
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.77,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi sayyorada biz yashaymiz?",
+   "keywords": [
+    "yer"
+   ],
+   "answer": ". I'm not sure what the user wants to know. I'm not sure what the user wants to know. I'm not sure what the user wants to know. I'm not sure what the user wants to know. I'm not sure what the user wants to know. I'm not sure what the user wants to know. I'm not sure what the user wants to know. I'm not sure what the user wants to know. I'm not sure what the user wants to know. <think>I'm not sure.",
+   "answer_english": "Hmm, the user is asking \"What planet are we on?\" That's a straightforward question. \n\nI know we're on Earth - that's the third planet from the Sun in our solar system. \n\nThe user wants a concise answer in 1-3 sentences without any extra reasoning. I'll just state it clearly and friendly. \n\nOkay, response ready: \"We're on Earth, the third planet from the Sun.\" That's one sentence, perfect.\n</think>\n\nWe're on Earth,",
+   "english_input": "What planet are we on?",
+   "timings": {
+    "input_translation": 0.8,
+    "qwen": 5.26,
+    "output_translation": 13.69,
+    "total": 19.75
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.78,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi sayyorada biz yashaymiz",
+   "keywords": [
+    "yer"
+   ],
+   "answer": ". I'm not sure what the user is asking. I'm not sure what the user is asking. 2. I'm not sure what the user is asking. 3. I'm not sure what the user is asking. 4. I'm not sure what the user is asking. 5. I'm not sure what the user is asking. 6. I'm not sure what the user is asking. 7. I'm not sure what the user is asking. 8. I'm not sure what the user is.",
+   "answer_english": "Hmm, the user is asking what planet we live on. That's a straightforward question about our location in the solar system. \n\nI know the answer is Earth - that's the third rock from the sun and where humans exist. \n\nThe user wants a concise response in 1-3 sentences without any extra explanation. I'll just state it clearly and directly since they seem to want quick information. \n\nBetter keep it simple: \"We live on Earth.\" covers it perfectly in one sentence. No",
+   "english_input": "What planet do we live on?",
+   "timings": {
+    "input_translation": 0.96,
+    "qwen": 5.19,
+    "output_translation": 14.12,
+    "total": 20.28
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.29,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "clean",
+   "text": "Asal qaysi hasharot tomonidan tayyorlanadi?",
+   "keywords": [
+    "ari"
+   ],
+   "answer": ". I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means. I'm not sure what the name means.I thinkI shouldI shouldI",
+   "answer_english": "Okay, the user asked \"What is the meaning of the name?\" Hmm, that's pretty vague. They didn't specify which name they're referring to. \n\nI should check if they meant a particular name like a person's name, a place, or something else. Since they didn't give context, I can't guess. \n\nMy response needs to be helpful but also clear that I need more info. I'll keep it friendly and concise as per their instructions - just 1-3",
+   "english_input": "What is the meaning of the name?",
+   "timings": {
+    "input_translation": 0.98,
+    "qwen": 5.29,
+    "output_translation": 13.64,
+    "total": 19.92
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 49,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.92,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "stt",
+   "text": "saqaysi hasharot tomonidan tayyorlanadi",
+   "keywords": [
+    "ari"
+   ],
+   "answer": "is produced by the insects. I'm not sure if the user is correct. I'm not sure if the user is correct. I'm not sure if the user is correct. I'm not sure if the user is correct. I'm not sure if the user is correct. I'm not sure if the user is correct. I'm not sure if the user is correct. I'm not sure if the user is correct. I'm not sure if the user is correct. I'm not sure if the user is correct. I'm not sure if the user is correct.",
+   "answer_english": "Hmm, the user stated \"The dust is produced by the insects\". This seems like a statement about dust origin. I recall that in reality, dust isn't typically produced by insects - that's more of a misconception. Insects might contribute to dust through their activities, but the primary source of dust is usually environmental factors like wind, soil, or human activities. \n\nThe user might be confused or testing me. Since they want a concise answer in 1-3 sentences without reasoning, I should",
+   "english_input": "The dust is produced by the insects",
+   "timings": {
+    "input_translation": 1.07,
+    "qwen": 5.17,
+    "output_translation": 13.65,
+    "total": 19.9
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.91,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'n besh ayiruv besh necha bo'ladi?",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "5 divided by 5 equals 15. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure what the answer is. I'm not sure",
+   "answer_english": "Okay, the user is asking what fifteen divided by five is. Let me think... fifteen divided by five is a basic math problem. I know that 5 times 3 equals 15, so 15 divided by 5 should be 3. \n\nI need to make sure I'm answering correctly. Yeah, that's right. The answer is 3. The user wants a concise response in English, so I'll just state it clearly without any extra fluff.\n\nI'll",
+   "english_input": "What is fifteen divided by five?",
+   "timings": {
+    "input_translation": 1.13,
+    "qwen": 5.22,
+    "output_translation": 13.55,
+    "total": 19.92
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.93,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻn besh ayilru besh necha boʻladi",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "years is equal to fifteen years. 20 years is equal to fifteen years. 20 years is equal to fifteen years. 20 years is equal to fifteen years. 20 years is equal to fifteen years. 20 years is equal to fifteen years. 20 years is equal to fifteen years. 20 years is equal to fifteen years. 20 years is equal to fifteen years. 20 years is equal to fifteen years.Wait, the user said \"fifteen years",
+   "answer_english": "Okay, the user mentioned \"fifteen years and five years\". Hmm, they might be asking about the sum or the difference between these two time periods. Let me think... If it's a simple addition, fifteen years plus five years equals twenty years. But maybe they want to know how much time is between them? Like the difference? Wait, the phrasing is a bit unclear. \n\nWait, the user said \"fifteen years and five years\" without any verb. In English",
+   "english_input": "fifteen years and five years",
+   "timings": {
+    "input_translation": 0.82,
+    "qwen": 5.24,
+    "output_translation": 13.56,
+    "total": 19.64
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 48,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.66,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qishdan keyin qaysi fasl keladi?",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": ". I'm not sure what the user wants to know about the seasons. I'm not sure what the user wants to know about the seasons. I'm not sure what the user wants to know about the seasons. I'm not sure what the user wants to know about the seasons. I'm not sure what the user wants to know about the seasons. I'm not sure what the user wants to know about the seasons. I'm not sure what the user wants to know about the seasons.I thinkI should keep it simpleI",
+   "answer_english": "Hmm, the user is asking what season comes after winter. This is a straightforward question about the seasons. I know that in the Northern Hemisphere, the seasons go winter → spring → summer → autumn → winter. So after winter would be spring. \n\nThe user wants a concise answer in 1-3 sentences in English, no reasoning. They seem to be a student or someone curious about basic knowledge - maybe a kid learning geography or just someone refreshing their memory. \n\nI should keep it simple and",
+   "english_input": "What season comes after winter?",
+   "timings": {
+    "input_translation": 0.8,
+    "qwen": 5.25,
+    "output_translation": 13.59,
+    "total": 19.64
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 47,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.67,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "stt",
+   "text": "qishdan keyin qaysi fasl keladi",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": ". I'm not sure if the user is a student or someone learning basic geography. I should keep my response concise as requested - just 1-3 sentences in English. No need of extra explanation since the user wants it simple. 2. I'm not sure if the user is a student or someone learning basic geography. I probably just are curious or just want to know more about the subject. 3. I'm not sure if the user is a student or someone learning basic geography. I'm not sure if the user is a student or someone learning more",
+   "answer_english": "Hmm, the user is asking which season comes after winter. This is a straightforward question about the seasons. I know that in the Northern Hemisphere, the seasons go winter → spring → summer → autumn → winter. So after winter would be spring. \n\nI should keep my response concise as requested - just 1-3 sentences in English. No need for extra explanation since the user wants it simple. \n\nThe user seems to be a student or someone learning basic geography. They're probably just curious or",
+   "english_input": "Which season comes after winter",
+   "timings": {
+    "input_translation": 0.79,
+    "qwen": 5.24,
+    "output_translation": 13.63,
+    "total": 19.68
+   },
+   "dual_input": false,
+   "direct_input": false,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 46,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.68,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "clean",
+   "text": "To'xta.",
+   "english_input": "Stop.",
+   "restated": "Hmm, the user just said \"Stop.\" That's very short and direct. I need to restate their exact words in one short English sentence without adding anything. \n\nThe instruction says to output only that sentence - no explanations, no answers. Just the user's input as it is. \n\nLooking",
+   "understood": true,
+   "latency": 22.72,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "stt",
+   "text": "boʻp",
+   "english_input": "boʻp",
+   "restated": "Okay, let's see. The user wrote \"boʻp\". Hmm, that's in Uzbek, right? The 'boʻ' part with the apostrophe is a common way to write the soft sign in Uzbek. So \"boʻp\" translates to \"bo'p\" in Uzbek",
+   "understood": false,
+   "latency": 22.46,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "clean",
+   "text": "Chapga buril.",
+   "english_input": "You're a fool.",
+   "restated": "Hmm, the user just said \"You're a fool.\" That's a pretty harsh statement. \n\nOkay, first I need to restate what they said in one short English sentence. The instruction is clear: output only that sentence, no answers. \n\nLet me check the phrasing... They used",
+   "understood": false,
+   "latency": 22.86,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "stt",
+   "text": "kam kam",
+   "english_input": "kam kam",
+   "restated": "Hmm, the user wrote \"kam kam\". That looks like it might be a typo or shorthand. In some contexts, \"kam\" could be short for \"kam\" as in the word \"kam\" in English, but that doesn't make much sense. Wait, in Thai",
+   "understood": false,
+   "latency": 22.26,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "clean",
+   "text": "O'ngga buril.",
+   "english_input": "Turn away from him.",
+   "restated": "Hmm, the user wants me to restate their query in one short English sentence. They specifically said \"Turn away from him.\" \n\nI need to be careful here - they're asking for a restatement, not an answer. The instruction says \"output only that sentence\" with no extra text.",
+   "understood": false,
+   "latency": 22.85,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "stt",
+   "text": "oʻngga boʻlin",
+   "english_input": "split right",
+   "restated": "Hmm, the user wrote \"split right\". I need to restate what they said in one short English sentence. The key is to be precise and only output that sentence without adding anything else.\n\nFirst, I'll think about what \"split right\" could mean. In computing or programming contexts, \"",
+   "understood": true,
+   "latency": 22.43,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "clean",
+   "text": "Oldinga yur.",
+   "english_input": "Go ahead.",
+   "restated": "Hmm, the user just said \"Go ahead.\" That's a very short phrase. I need to restate it in one short English sentence as per the instructions. \n\nThe key here is to be precise and only output the restated sentence without adding anything. The user's message is already a complete",
+   "understood": true,
+   "latency": 22.67,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "stt",
+   "text": "dangga yur",
+   "english_input": "dangga yur",
+   "restated": "Hmm, the user wrote \"dangga yur\". That looks like it might be a typo or shorthand. I recall that in some contexts, especially online, people use abbreviations. \"Dangga\" could be a misspelling of \"dang\" which is short for \"d",
+   "understood": false,
+   "latency": 22.5,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "clean",
+   "text": "Orqaga yur.",
+   "english_input": "Back off.",
+   "restated": "Hmm, the user just said \"Back off.\" That's very short and direct. I need to restate it in one short English sentence without adding anything. \n\nThe instruction says to output only that sentence, no explanations. So I should keep it exactly as the user phrased it but in",
+   "understood": true,
+   "latency": 23.28,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "stt",
+   "text": "xalqaga",
+   "english_input": "xalqaga",
+   "restated": "Hmm, the user wrote \"xalqaga\". That looks like it's in Uzbek language. Let me think... \"Xalq\" means \"people\" in Uzbek, and the suffix \"-aga\" is a locative case marker. So \"xalqaga\" would translate to \"",
+   "understood": false,
+   "latency": 22.56,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "clean",
+   "text": "Sekinroq yur.",
+   "english_input": "Slow down.",
+   "restated": "Hmm, the user just said \"Slow down.\" That's a very short phrase. I need to restate it in one short English sentence without adding anything. \n\nThe instruction says to output only that sentence - no explanations, no answers. Just the restated version. \n\nOkay, so \"Slow",
+   "understood": true,
+   "latency": 23.8,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "stt",
+   "text": "debkin bu oq kuyov",
+   "english_input": "Did this white groom say",
+   "restated": "Hmm, the user wants me to restate their query in one short English sentence. They specifically said \"Did this white groom say\" and want me to output only that sentence without answering anything.\n\nLooking at their input, it seems like they're asking about whether a white groom made some statement. But",
+   "understood": false,
+   "latency": 23.68,
+   "first_call": false
+  },
+  {
+   "id": "cmd_07",
+   "kind": "command",
+   "input": "clean",
+   "text": "Tezroq yur.",
+   "english_input": "Go faster.",
+   "restated": "Hmm, the user just said \"Go faster.\" That's a very short instruction. \n\nI need to restate it in one short English sentence without adding anything. The key is to capture exactly what they said - no interpretation, no extra words. \n\nThe phrase \"Go faster\" is already a",
+   "understood": true,
+   "latency": 23.56,
+   "first_call": false
+  }
+ ]
+}

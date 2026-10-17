@@ -1,0 +1,1260 @@
+{
+ "pipeline": "direct:qwen3:4b",
+ "server_model": null,
+ "results": [
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning poytaxti qaysi shahar?",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"O'zbekistonning poytaxti qaysi shahar?\" which translates to \"What city is the capital of Uzbekistan?\" I need to answer in Uzbek using the Latin alphabet, 1-3 sentences, no reasoning.\n\nFirst, I know that the capital of Uzbekistan is Tashkent. So the answer should be Tashkent. Let me check if there are any possible recognition errors in the user's question. The user wrote \"poytaxti\" which is correct for \"capital\". The question seems straightforward.\n\nI should write the answer in Uzbek, Latin script. So the response would be: \"O'zbekistonning poytaxti Tashkent shahar.\" But maybe they",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 81,
+    "output_tokens": 160,
+    "generation_s": 7.81
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 32.13,
+   "first_call": true
+  },
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning poytaxti qaysi shahar",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"oʻzbekistonning poytaxti qaysi shahar\". Let me translate that. \"Oʻzbekistonning poytaxti\" means \"the capital of Uzbekistan\", and \"qaysi shahar\" is \"which city\". So the question is \"What city is the capital of Uzbekistan?\"\n\nI need to answer in Uzbek using Latin alphabet, 1-3 sentences. The capital of Uzbekistan is Tashkent. So the answer should be \"Oʻzbekistonning poytaxti Tashkent shahar.\"\n\nWait, but the user said the text may have recognition errors. Let me check if there's any possible confusion. The capital is definitely Tashkent.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 160,
+    "generation_s": 7.81
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.12,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir haftada necha kun bor?",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": "Okay, the user is asking \"Bir haftada necha kun bor?\" which translates to \"How many days are in a week?\" in Uzbek.\n\nFirst, I need to confirm the correct answer. In most languages, including Uzbek, a week has 7 days. Let me think if there's any exception here. No, standard is 7 days.\n\nThe user mentioned that the text might have recognition errors from speech. But the question seems straightforward. The answer should be 7 kun.\n\nI should respond in Uzbek using Latin alphabet, 1-3 sentences. So the answer is \"Bir haftada 7 kun bor.\" But let me check if the user wants a more detailed answer. Wait, the question is \"necha kun bor?\" which is \"how many",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 75,
+    "output_tokens": 160,
+    "generation_s": 7.8
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.1,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir haftada necha kun bor",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"bir haftada necha kun bor\". Let me translate that first. \"Bir haftada\" means \"in a week\", \"necha kun bor\" translates to \"how many days\". So the question is \"How many days are in a week?\".\n\nIn Uzbek, the answer should be straightforward. A week has 7 days. But I need to make sure about the Uzbek term for days. In Uzbek, \"kun\" is day, so \"7 kun\" would be \"7 days\".\n\nWait, the user said the text may have recognition errors, but the question seems clear. Let me check if there's any possible confusion. For example, sometimes in some contexts, but in standard Uzbek, a week is",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 73,
+    "output_tokens": 160,
+    "generation_s": 7.81
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.03,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir yilda necha oy bor?",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Bir yilda necha oy bor?\" which translates to \"How many months are in a year?\" I need to answer in Uzbek using the Latin alphabet, 1-3 sentences, no reasoning.\n\nFirst, confirm the answer. In a standard calendar year, there are 12 months. So the answer should be \"12 oy\". Wait, but in Uzbek, the word for month is \"oy\", so \"12 oy\" is correct.\n\nWait, the user might have a typo in their question, but the question is clear. Let me check if there's any cultural or regional variation. In most countries, including Uzbekistan, a year has 12 months. So the answer is 12.\n\nThe user said",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 74,
+    "output_tokens": 160,
+    "generation_s": 7.85
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.07,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir yilda necha oy bor",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "Okay, the user asked \"bir yilda necha oy bor\" which translates to \"How many months are in a year?\" in Uzbek.\n\nFirst, I need to make sure I understand the question correctly. In Uzbek, \"bir yilda\" means \"in a year\", \"necha\" is \"how many\", \"oy\" is \"month\", and \"bor\" is \"are\". So the question is straightforward.\n\nThe answer in English is 12 months. But the user wants the answer in Uzbek using the Latin alphabet. Wait, Uzbek uses Cyrillic sometimes, but the instruction says to use Latin alphabet. So I should write the answer in Uzbek Latin script.\n\nWait, the user specified \"Answer ONLY in Uzbek using the Latin alphabet\". So I need to write the answer in",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 72,
+    "output_tokens": 160,
+    "generation_s": 8.12
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.35,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "clean",
+   "text": "Suv necha darajada qaynaydi?",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Suv necha darajada qaynaydi?\" which translates to \"At what temperature does water boil?\" I need to answer in Uzbek using the Latin alphabet, 1-3 sentences, concise.\n\nFirst, I should recall that water boils at 100 degrees Celsius at standard atmospheric pressure. But in Uzbek, the term for temperature here might be \"grada\" or \"dərəjə\"? Wait, in Uzbek, temperature is usually \"daraja\" for Celsius. Wait, no, in some contexts, \"daraja\" can mean degree, but in Uzbek, the standard term for temperature in Celsius is \"grada\" (from Russian \"gradus\")? Hmm, maybe I'm confused.\n\nWait",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 160,
+    "generation_s": 7.82
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.14,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "stt",
+   "text": "suvlicha darajada qaynaydi",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "Okay, the user wrote \"suvlicha darajada qaynaydi\" in Uzbek. Let me check if that's correct. Wait, \"suvlicha\" might be a typo. In Uzbek, \"suv\" means water, so \"suvlicha\" could be a misspelling of \"suv\" (water) or maybe \"suvli\" (but that's not a word). Wait, \"qaynaydi\" means \"boils\" or \"is boiling\". So the sentence is \"suvlicha darajada qaynaydi\". Hmm, \"darajada\" means \"in degree\" or \"at a level\". Wait, maybe the user meant \"suv darajada qaynay",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 160,
+    "generation_s": 8.04
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.35,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ikki qo'shuv uch necha bo'ladi?",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "Okay, the user is asking \"Ikki qo'shuv uch necha bo'ladi?\" which translates to \"How many is two addition?\" Hmm, maybe they meant \"Ikki qo'shuv uchun necha bo'ladi?\" but the original question has a typo. Wait, in Uzbek, \"qo'shuv\" means addition, so \"Ikki qo'shuv\" would be \"two addition\". But the question is a bit unclear.\n\nWait, maybe they're trying to ask \"Ikki qo'shuv uchun necha?\" which would be \"How many for two addition?\" But that doesn't make much sense. Alternatively, maybe it's a misphrase of \"Ikki sonni qo'shish",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 160,
+    "generation_s": 7.98
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.29,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "stt",
+   "text": "ikki qoʻshi uch necha boʻladi",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "Okay, let's see. The user wrote in Uzbek: \"ikki qoʻshi uch necha boʻladi\". Hmm, first I need to check if this is a correct Uzbek sentence. Wait, \"qoʻshi\" might be a typo. In Uzbek, \"qoʻshish\" means \"addition\", so maybe they meant \"ikki qoʻshish uch necha boʻladi\". But \"uch\" is \"three\" in Uzbek. Wait, the user is asking \"ikki qoʻshi uch necha boʻladi\". Let me translate this.\n\nWait, the user might have meant \"ikki qoʻshish uchun necha boʻladi\" but there's a typo. Alternatively, \"",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 160,
+    "generation_s": 7.82
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 8.13,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "clean",
+   "text": "Quyosh qaysi tomondan chiqadi?",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Quyosh qaysi tomondan chiqadi?\" which translates to \"From which side does the sun rise?\" Wait, no, in Uzbek, \"quyosh\" is sun, \"qaysi tomondan\" means \"from which side\", \"chiqadi\" is \"comes out\". So the question is \"From which side does the sun rise?\" But wait, in English, we say \"the sun rises in the east\", so the answer should be \"sharqdan\" (east). But the user might have meant \"where does the sun rise\" but the question is phrased as \"qaysi tomondan chiqadi\" which is \"from which side does it come out\".",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 160,
+    "generation_s": 7.84
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.15,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "stt",
+   "text": "bu yosh qaysi tomondan chiqadi",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "Okay, let's tackle this query. The user wrote in Uzbek: \"bu yosh qaysi tomondan chiqadi\". First, I need to understand what they're asking. The phrase translates to \"which side does this age come from?\" But that sounds a bit odd. Maybe it's a translation error from speech recognition.\n\nWait, \"yosh\" means \"age\" or \"year\" in Uzbek. \"Qaysi tomondan chiqadi\" translates to \"from which side does it come\". So the user is asking \"from which side does this age come?\" But that doesn't make much sense. Maybe they meant \"which side does this [something] come from?\" Like, maybe they're referring to a specific context, like a game or a term",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 160,
+    "generation_s": 7.93
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.24,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng katta okean qaysi?",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Dunyodagi eng katta okean qaysi?\" which translates to \"Which is the largest ocean in the world?\" \n\nFirst, I need to recall the names of the oceans. There are five major oceans: Pacific, Atlantic, Indian, Southern, and Arctic. The Pacific Ocean is the largest by area.\n\nWait, but sometimes people might confuse the Southern Ocean as part of the Indian Ocean or not. But according to current classification, the Pacific is the largest. Let me double-check. Yes, the Pacific Ocean is the largest, covering about 165 million square kilometers.\n\nThe user mentioned that the text might have recognition errors from speech, so I should make sure the answer is accurate. The answer should be in",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 160,
+    "generation_s": 8.07
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.38,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng katta okean qaysi",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"dunyodagi eng katta okean qaysi\". Let me translate that. \"Dunyodagi eng katta okean\" means \"the largest ocean in the world\", and \"qaysi\" is \"which\". So the question is \"Which is the largest ocean in the world?\"\n\nI need to answer in Uzbek using Latin alphabet, 1-3 sentences. The largest ocean is the Pacific Ocean. Let me check if there's any possible confusion. The oceans are Pacific, Atlantic, Indian, Southern, Arctic. Pacific is the largest by area.\n\nWait, the user might have recognition errors. The original text is in Uzbek, but maybe the speech recognition made a mistake. But the question seems straightforward",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 160,
+    "generation_s": 8.16
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.49,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Navro'z bayrami qaysi oyda nishonlanadi?",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Navro'z bayrami qaysi oyda nishonlanadi?\" which translates to \"In which month is Navro'z holiday celebrated?\" \n\nFirst, I need to recall that Navro'z is the Persian New Year, also known as Nowruz. In Uzbekistan, which follows the Gregorian calendar, Nowruz is celebrated on March 21st. But the question is about the month it's \"nishonlanadi\" which means \"announced\" or \"celebrated\". Wait, \"nishonlanadi\" here might be a bit tricky. In Uzbek, \"nishon\" means \"sign\" or \"mark\", so \"nishonlanadi\" could be \"is marked\" or",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 83,
+    "output_tokens": 160,
+    "generation_s": 7.94
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.29,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "stt",
+   "text": "navroʻz bayrami qaysi oyda nishonlanadi",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"navroʻz bayrami qaysi oyda nishonlanadi\". Let me break this down.\n\nFirst, \"navroʻz bayrami\" translates to \"Nowruz holiday\" or \"Nowruz festival\". \"Qaysi oyda nishonlanadi\" means \"in which month is it celebrated\". \n\nNow, Nowruz is the Persian New Year, celebrated on March 21st. But the user is asking about the month in which it's celebrated. In the Gregorian calendar, March is the month, but in Uzbekistan, they might use the Islamic calendar or just the Gregorian. Wait, Nowruz is a solar festival, so it's based on the solar year, not lunar",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 160,
+    "generation_s": 8.39
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.73,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Amir Temur qaysi shaharda tug'ilgan?",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Amir Temur qaysi shaharda tug'ilgan?\" which translates to \"In which city was Amir Temur born?\"\n\nFirst, I need to recall who Amir Temur is. Amir Temur, also known as Timur, was a famous Mongol ruler. Wait, but there's a common confusion here. The user might be referring to Timur (Tamerlane), who was a Central Asian conqueror. However, the name \"Amir Temur\" is a bit different. Let me check.\n\nWait, in Uzbek history, Amir Temur is a different person. Wait, no, actually, in some contexts, \"Amir Temur\" refers to the 15th-century ruler, but I think there",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 160,
+    "generation_s": 8.31
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.62,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "stt",
+   "text": "anir temur qaysi shaharda tugʻilgan",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "Okay, let's see. The user is asking in Uzbek: \"anir temur qaysi shaharda tugʻilgan\". First, I need to understand what they're asking. The name \"Anir Temur\" might be a person's name, but I'm not sure. Wait, in Uzbek, \"tugʻilgan\" means \"born\", so the question is \"In which city was Anir Temur born?\"\n\nBut I should check if \"Anir Temur\" is a known person. Maybe it's a transliteration of a name. Sometimes names can be transliterated differently. For example, \"Temur\" is a common Turkic name, like Timur (Tamerlane). \"Anir\" might be a first name.\n\nWait,",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 160,
+    "generation_s": 8.81
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 9.13,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Alisher Navoiy kim bo'lgan?",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "Okay, the user is asking \"Alisher Navoiy kim bo'lgan?\" which translates to \"Who was Alisher Navoiy?\" in Uzbek. I need to answer in Uzbek using the Latin alphabet, 1-3 sentences, no reasoning.\n\nFirst, I should recall who Alisher Navoiy is. He's a famous Uzbek poet and statesman from the 15th century. His full name is Alisher Navoi, but sometimes spelled as Alisher Navoiy. He's known for his poetry and contributions to literature.\n\nWait, the user might have a typo here. The correct name is Alisher Navoi (Navoiy is the surname). But in Uzbek, it's common to have the surname with 'y'",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 160,
+    "generation_s": 8.12
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.45,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "kind": "question",
+   "input": "stt",
+   "text": "rashir navoiy kim boʻlgan",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "answer": "Okay, the user is asking \"rashir navoiy kim boʻlgan\" in Uzbek. Let me break this down.\n\nFirst, \"rashir\" might be a misspelling. In Uzbek, \"rashid\" is a name, but \"rashir\" could be a recognition error. Maybe they meant \"Rashid\" or \"Rashid Nava'i\"? Wait, \"Navoiy\" is a common transliteration for \"Nava'i\" which refers to the famous Uzbek poet Abdurakhmanov Nava'i. But the user wrote \"Navoiy\" here.\n\nWait, the user wrote \"rashir navoiy kim boʻlgan\". So \"rashir\" might be \"Rashid\" but",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 160,
+    "generation_s": 7.86
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.16,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi hayvon cho'l kemasi deb ataladi?",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Qaysi hayvon cho'l kemasi deb ataladi?\" which translates to \"Which animal is called 'cho'l kemasi'?\" \n\nFirst, I need to figure out what \"cho'l kemasi\" refers to. In Uzbek, \"cho'l\" means \"field\" or \"steppe,\" and \"kemasi\" might be a transliteration of \"kemasi\" which could be related to \"kem\" (to move) or maybe a specific term.\n\nWait, in some contexts, \"cho'l kemasi\" might be a mistranslation or mishearing of a term. Let me think. In Uzbek, there's a term \"cho'l kemasi\" which is sometimes used for \"camel\"",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 160,
+    "generation_s": 7.8
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.11,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi hayvon choʻl kemasi deb ataladi",
+   "keywords": [
+    "tuya"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"qaysi hayvon choʻl kemasi deb ataladi\". Let me try to figure out what they mean here.\n\nFirst, \"choʻl kemasi\" translates to \"cave\" or \"cavern\" in Uzbek. Wait, \"choʻl\" means \"cave\" in some contexts? Wait, no, maybe \"choʻl\" is a different word. Let me check.\n\nWait, \"choʻl\" in Uzbek is \"cave\" (from the word \"choʻl\" which is a cave). But \"kemasi\" might be a typo. The user might have meant \"kemasi\" as \"kemasi\" (from \"kema\" meaning \"to go\"",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 160,
+    "generation_s": 7.82
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.14,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir soatda necha daqiqa bor?",
+   "keywords": [
+    "60",
+    "oltmish"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Bir soatda necha daqiqa bor?\" which translates to \"How many minutes are in an hour?\" I need to answer in Uzbek using the Latin alphabet, 1-3 sentences, no reasoning.\n\nFirst, I know that 1 hour equals 60 minutes. So the answer is 60. Let me check if there's any chance of confusion with other time units, but no, in standard time, it's 60 minutes per hour.\n\nThe user mentioned the text might have recognition errors, but the question seems clear. So the answer should be straightforward.\n\nIn Uzbek, the answer would be \"Bir soatda 60 daqiqa bor.\" But I need to make sure the sentence structure",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 160,
+    "generation_s": 7.89
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.22,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir soatda necha daqiqa bor",
+   "keywords": [
+    "60",
+    "oltmish"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"bir soatda necha daqiqa bor\". Let me translate that first. \"Bir soat\" means \"one hour\", \"necha daqiqa\" is \"how many minutes\", \"bor\" means \"is there\". So the question is \"How many minutes are in one hour?\".\n\nI need to answer in Uzbek using Latin alphabet, 1-3 sentences. The answer is 60 minutes. But wait, the user mentioned that the text may have recognition errors from speech. Let me check if the question is correctly understood.\n\nIn Uzbek, the standard phrase for \"how many minutes in an hour\" would be \"Bir soatda necha daqiqa bor?\" which translates to \"How many minutes",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 75,
+    "output_tokens": 160,
+    "generation_s": 8.01
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.24,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qor qanday rangda bo'ladi?",
+   "keywords": [
+    "oq"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Qor qanday rangda bo'ladi?\" which translates to \"What color is snow?\" Hmm, but wait, \"qor\" means snow, right? Wait, no, in Uzbek \"qor\" is actually \"snow\" but maybe there's a confusion here. Wait, no, \"qor\" is \"snow\" in Uzbek. Wait, but the user wrote \"Qor qanday rangda bo'ladi?\" which is \"What color is snow?\" But the answer is that snow is white. But wait, sometimes people might confuse it with other things. Wait, but in some contexts, maybe they meant \"qor\" as in \"cotton\" or something else? Wait, no, \"qor",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 160,
+    "generation_s": 7.81
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.14,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "kind": "question",
+   "input": "stt",
+   "text": "qor qanday rangda boʻladi",
+   "keywords": [
+    "oq"
+   ],
+   "answer": "Okay, the user is asking \"qor qanday rangda boʻladi\" which translates to \"What color is snow?\" in Uzbek. I need to answer in Uzbek using Latin alphabet, 1-3 sentences, no reasoning.\n\nFirst, confirm the correct color of snow. Snow is typically white, but sometimes can have other colors depending on conditions. However, the standard answer is white.\n\nCheck for possible recognition errors in the query. The user wrote \"qor\" which is correct for snow in Uzbek. The question is straightforward.\n\nSo the answer should be \"Qor yashil rangda emas, lekin yashil emas, shuning uchun qor yashil emas. Qor ko'p vaqt oralig'ida y",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 76,
+    "output_tokens": 160,
+    "generation_s": 7.83
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.15,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning davlat tili qaysi?",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"O'zbekistonning davlat tili qaysi?\" which translates to \"What is the state language of Uzbekistan?\" \n\nFirst, I need to confirm the correct answer. The state language of Uzbekistan is Uzbek. But I should check if there's any nuance here. Sometimes countries have multiple official languages, but Uzbekistan's official language is Uzbek. Also, the user mentioned that the text might have recognition errors, so I need to be careful.\n\nWait, the user wrote \"O'zbekistonning davlat tili qaysi?\" which is correct. The answer is Uzbek. But in Uzbek, the language name is \"O'zbek tili\" or just \"O'zbek\". Wait, no. The state",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 160,
+    "generation_s": 8.01
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.24,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning davlat tili qaysi",
+   "keywords": [
+    "o'zbek"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"oʻzbekistonning davlat tili qaysi\". Let me translate that first. \"Oʻzbekistonning\" is \"Uzbekistan's\", \"davlat tili\" means \"state language\", \"qaysi\" is \"which\". So the question is \"What is Uzbekistan's state language?\"\n\nWait, but the user mentioned that the text may come from speech recognition and have errors. So I need to be careful. The answer should be in Uzbek using Latin alphabet, 1-3 sentences, concise.\n\nUzbekistan's official language is Uzbek. But in Uzbek, the state language is \"Oʻzbek tili\". Wait, the user might be confused between Uzbek and Russian, but Uzbekistan's",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 160,
+    "generation_s": 8.08
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.31,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Samarqanddagi mashhur maydonning nomi nima?",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "Okay, the user is asking in Uzbek about the name of a famous square in Samarkand. Let me think.\n\nFirst, I need to recall the major squares in Samarkand. The most well-known one is probably the Registan Square, but wait, Registan is a complex, not a square. Wait, there's also the Sog'墩 Square, but maybe that's not right.\n\nWait, in Samark, the main historical square is called \"Samarqand\" but no. Wait, the famous square in Samarkand is the \"Buxoraviy\" square? No, maybe it's \"Shahristan\" square? Hmm.\n\nWait, I remember that the most famous square in Samarkand is the \"Registan\" square, but",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 160,
+    "generation_s": 8.08
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.41,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "kind": "question",
+   "input": "stt",
+   "text": "samarqanddagi mashhur maydonning nominiman",
+   "keywords": [
+    "registon"
+   ],
+   "answer": "Okay, let's see. The user wrote in Uzbek: \"samarqanddagi mashhur maydonning nominiman\". Hmm, first I need to understand what they're asking.\n\n\"Samarqanddagi\" means \"in Samarkand\". \"mashhur maydonning\" translates to \"famous field's\" but \"maydon\" is \"field\" or \"area\" in Uzbek. Wait, \"mashhur\" is \"famous\", \"maydon\" is \"field\" (like a field in the sense of a place), \"ning\" is the genitive case. So \"samarqanddagi mashhur maydonning\" is \"the famous field in Samarkand's\".\n\nThen \"nominiman\"",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 160,
+    "generation_s": 7.99
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.3,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng baland tog' qaysi?",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Dunyodagi eng baland tog' qaysi?\" which translates to \"Which is the highest mountain in the world?\" \n\nFirst, I need to recall the correct answer. The highest mountain is Mount Everest, which is in the Himalayas. But I should check if there's any recognition error in the user's question. The user mentioned the text may come from speech recognition with errors, so maybe they meant something else, but the question seems straightforward.\n\nWait, in Uzbek, \"tog'\" means mountain. The highest mountain is Everest. Sometimes people confuse it with other peaks, but Everest is definitely the highest. Let me confirm: Everest's height is about 8,848 meters above sea level. \n\nI should answer",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 160,
+    "generation_s": 7.97
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.2,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng baland togʻ qaysi",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"dunyodagi eng baland togʻ qaysi\". Let me translate that. \"Dunyodagi eng baland togʻ\" means \"the highest mountain in the world\". The question is \"qaysi\" which is \"which\" in Uzbek.\n\nWait, the user mentioned that the text may have recognition errors because it's from speech recognition. So I need to check if \"togʻ\" is correctly recognized. In Uzbek, \"togʻ\" is \"mountain\", so \"dunyodagi eng baland togʻ\" is \"the highest mountain in the world\".\n\nThe answer should be the name of the highest mountain. The highest mountain is Mount Everest, which is in the Himalayas. But in",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 160,
+    "generation_s": 8.05
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.27,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Kutubxonada nima qilish mumkin?",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Kutubxonada nima qilish mumkin?\" which translates to \"What can you do in the library?\" \n\nFirst, I need to make sure I understand the question correctly. They want to know the possible activities one can do in a library.\n\nSince the user mentioned that the text might have recognition errors from speech, I should check if there's any possible misinterpretation. But the phrase seems straightforward.\n\nI should respond in Uzbek using the Latin alphabet, 1-3 sentences, concise.\n\nPossible activities in a library: read books, study, use computers, borrow books, etc.\n\nSo the answer should list a few common activities. Let me think of the most common ones.\n\nIn Uzbek, the verbs would be like \"",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 160,
+    "generation_s": 7.96
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.27,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "kind": "question",
+   "input": "stt",
+   "text": "tutqonida nima qilish mumkin",
+   "keywords": [
+    "kitob"
+   ],
+   "answer": "Okay, the user asked \"tutqonida nima qilish mumkin\" which translates to \"What can you do with a needle?\" in Uzbek. Wait, but \"tutqon\" might be a typo. In Uzbek, \"tutqon\" isn't a standard word. Maybe they meant \"tutqon\" as in \"tutqon\" (needle) but in Uzbek, the word for needle is \"tutqon\" or \"tutqon\" (wait, no, maybe it's \"tutqon\" is a misspelling of \"tutqon\" which is actually \"tutqon\" in Uzbek? Hmm, maybe they meant \"tutq\" as in \"tutqon",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 160,
+    "generation_s": 8.23
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.55,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir kunda necha soat bor?",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": "Okay, the user is asking \"Bir kunda necha soat bor?\" which translates to \"How many hours are there in a day?\" in Uzbek.\n\nFirst, I need to check if there are any recognition errors here. The phrase \"Bir kunda\" means \"In a day\" and \"necha soat bor?\" is \"how many hours are there?\" So the question is correctly formed.\n\nThe answer is 24 hours in a day. But I need to make sure that the user is asking about a standard day, not a different context like a 24-hour clock or something else. But generally, the answer is 24.\n\nSince the user wants the answer in Uzbek using the Latin alphabet, concise 1-3 sentences. So I should write",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 75,
+    "output_tokens": 160,
+    "generation_s": 8.19
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.43,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir kundan necha soat bor",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "answer": "Okay, the user asked \"bir kundan necha soat bor\" which translates to \"How many hours are left until tomorrow?\" in Uzbek. Wait, but the question is a bit tricky. Let me think.\n\nIn Uzbek, \"bir kundan\" means \"from one day\", and \"necha soat bor\" is \"how many hours are left\". But the phrasing here might be a bit off. Normally, if someone asks \"bir kundan necha soat bor\", it might be a bit confused. Wait, maybe they meant \"necha soatdan soat\" or something else. Wait, no.\n\nWait, the user might have intended to ask \"Bir kundan necha soat bor?\" which literally translates to \"How many",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 74,
+    "output_tokens": 160,
+    "generation_s": 7.99
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.21,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekiston qaysi qit'ada joylashgan?",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"O'zbekiston qaysi qit'ada joylashgan?\" which translates to \"In which continent is Uzbekistan located?\" \n\nFirst, I need to recall that Uzbekistan is a country in Central Asia. The continents are a bit tricky here because sometimes people might confuse it with Asia or Europe. But geographically, Uzbekistan is part of Asia. Wait, but there's a thing about the continents—like some classifications consider Central Asia as part of Asia, others might have different divisions. \n\nWait, the user is probably expecting the answer \"Asiya\" (Asia) since Uzbekistan is in Central Asia, which is part of Asia. Let me double-check. Yes, Uzbekistan is located in Central Asia, which is a",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 160,
+    "generation_s": 8.0
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.37,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekiston qaysi qitada joylashgan",
+   "keywords": [
+    "osiyo"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"oʻzbekiston qaysi qitada joylashgan\". Let me translate that. \"Oʻzbekiston\" is Uzbekistan, \"qaysi qitada\" means \"which continent\", and \"joylashgan\" is \"is located\". So the question is \"In which continent is Uzbekistan located?\"\n\nWait, but the user mentioned that the text may have recognition errors because it's from speech recognition. So I need to be careful. Let me check the correct answer. Uzbekistan is in Asia, specifically in Central Asia. But sometimes people might confuse it with Europe because of the geographical position. However, the standard answer is that Uzbekistan is in Asia.\n\nWait, the user wants the answer in Uzbek using Latin alphabet",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 160,
+    "generation_s": 8.03
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.26,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ingliz tilida kitob so'zi qanday aytiladi?",
+   "keywords": [
+    "book"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Ingliz tilida kitob so'zi qanday aytiladi?\" which translates to \"How is the word 'book' said in English?\" Wait, no, hold on. Wait, the user is asking for the English word for \"kitob\" which is \"book\" in Uzbek. Wait, no, maybe I need to be careful here.\n\nWait, the user is saying: \"Ingliz tilida kitob so'zi qanday aytiladi?\" So \"kitob\" is Uzbek for \"book\". The question is \"How is the word 'kitob' said in English?\" Wait, no, that's a bit confusing. Wait, in Uzbek, \"kitob\" means \"book\". So",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 160,
+    "generation_s": 8.1
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.43,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "kind": "question",
+   "input": "stt",
+   "text": "inliz tilida kitob soʻzi qanday aytiladi",
+   "keywords": [
+    "book"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"inliz tilida kitob soʻzi qanday aytiladi\". Let me break this down.\n\nFirst, they want to know how to say \"book\" in English. The phrase translates to \"In English, how is the word 'book' said?\" But wait, the user might be confused because they wrote \"inliz\" instead of \"ingliz\" (English). Also, \"kitob\" is Uzbek for \"book\".\n\nSo, the user is probably asking for the English word for \"book\". In English, it's \"book\". But they might have meant \"in English, how do you say 'book'?\" So the answer is \"book\".\n\nWait, the user wrote \"inliz til",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 81,
+    "output_tokens": 160,
+    "generation_s": 8.0
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.31,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "clean",
+   "text": "Uchburchakning nechta burchagi bor?",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Uchburchakning nechta burchagi bor?\" which translates to \"How many angles does a triangle have?\" \n\nFirst, I need to confirm that the question is about a triangle. In Uzbek, \"uchburchak\" means triangle. The question is straightforward.\n\nIn geometry, a triangle has three angles. So the answer should be three.\n\nWait, but the user mentioned that the text may have recognition errors from speech. Let me double-check. The phrase \"nechta burchagi bor\" translates to \"how many angles are there\". So the answer is three.\n\nI should respond in Uzbek using Latin alphabet, concise 1-3 sentences. The answer is \"Uchburchakda 3 b",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 160,
+    "generation_s": 7.83
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.14,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "kind": "question",
+   "input": "stt",
+   "text": "gul gulchakni meyishda gulchaga bor",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "answer": "Okay, let me try to figure out what the user is asking here. They wrote in Uzbek: \"gul gulchakni meyishda gulchaga bor\". Hmm, first I need to check if there are any recognition errors because it's from speech recognition.\n\nBreaking down the sentence: \"gul\" is probably \"gul\" (flower), \"gulchakni\" might be \"gulchak\" (a type of plant or maybe a name?) but \"gulchakni\" with the -ni suffix is the genitive case. Then \"meyishda\" is \"meyish\" (to eat) in the locative case? Wait, \"meyish\" is \"eating\", so \"meyishda\" would",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 160,
+    "generation_s": 7.8
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.11,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qaysi sayyorada biz yashaymiz?",
+   "keywords": [
+    "yer"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Qaysi sayyorada biz yashaymiz?\" which translates to \"In which country do we live?\" But wait, they might have meant \"qaysi shahar\" (which city) but wrote \"sayyorada\". Wait, \"sayyor\" is a recognition error. In Uzbek, \"shahar\" is city, \"mamlakat\" is country. The user probably meant \"qaysi mamlakatda\" (in which country) but the speech recognition messed up the word.\n\nWait, the user wrote \"sayyorada\". Let me check the Uzbek language. The correct word for country is \"mamlakat\", and \"shahar\" is city. The word \"",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 160,
+    "generation_s": 7.93
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.25,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "kind": "question",
+   "input": "stt",
+   "text": "qaysi sayyorada biz yashaymiz",
+   "keywords": [
+    "yer"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"qaysi sayyorada biz yashaymiz\". Let me check the translation. \"Qaysi\" means \"which\", \"sayyorada\" is probably a misspelling of \"sahifada\" or \"sayyorda\"? Wait, in Uzbek, \"sahif\" is page, but \"say\" can mean \"way\" or \"path\". Wait, maybe they meant \"qaysi shahar\" (which city) but wrote \"sayyorada\". Wait, \"sayyor\" might be a mishearing of \"shahar\" (city) from speech recognition. Because in Uzbek, \"shahar\" is city, and \"sayyor\" is not a standard word.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 160,
+    "generation_s": 7.99
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.22,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "clean",
+   "text": "Asal qaysi hasharot tomonidan tayyorlanadi?",
+   "keywords": [
+    "ari"
+   ],
+   "answer": "Okay, let's see. The user is asking in Uzbek: \"Asal qaysi hasharot tomonidan tayyorlanadi?\" I need to answer in Uzbek using Latin alphabet, 1-3 sentences.\n\nFirst, I should translate the question to understand. \"Asal\" might be a typo. In Uzbek, \"asal\" usually means \"prime\" (like prime number), but here it's probably supposed to be \"Asal\" as a name or maybe \"Asal\" is a place? Wait, maybe it's a misspelling of \"Asal\" as in \"Asal\" (a name) or \"Asal\" could be \"Asal\" in another context.\n\nWait, the question is \"qaysi hasharot to",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 160,
+    "generation_s": 7.9
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.21,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "kind": "question",
+   "input": "stt",
+   "text": "saqaysi hasharot tomonidan tayyorlanadi",
+   "keywords": [
+    "ari"
+   ],
+   "answer": "Okay, the user wrote \"saqaysi hasharot tomonidan tayyorlanadi\" in Uzbek, but it's probably from speech recognition with errors. Let me try to understand what they mean.\n\nFirst, \"saqaysi\" might be a misspelling. In Uzbek, \"saq\" could be \"sahif\" (page) or \"sag\" (back), but \"saqaysi\" isn't standard. Maybe they meant \"sahifasi\" (its page) or \"sag'asi\" (its back). Wait, \"hasharot\" is \"hashar\" which is \"war\" in Uzbek, so \"hasharot tomonidan\" would be \"by the war side\" or \"war side",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 160,
+    "generation_s": 7.78
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 8.1,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'n besh ayiruv besh necha bo'ladi?",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "Okay, let's see. The user wrote in Uzbek: \"O'n besh ayiruv besh necha bo'ladi?\" Hmm, first I need to understand what they're asking. \"O'n besh\" translates to \"10\" in Uzbek, right? Wait, no. Wait, in Uzbek, numbers are similar to other languages. \"O'n\" is \"ten\" (10), \"besh\" is \"five\" (5). So \"O'n besh\" would be \"10 five\"? Wait, no, maybe it's a number. Wait, maybe they mean \"105\"? Because in some contexts, \"o'n besh\" can be a number. Let me think.\n\nWait, in Uzbek, numbers are structured like in",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 160,
+    "generation_s": 7.77
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.08,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻn besh ayilru besh necha boʻladi",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "answer": "Okay, let's see. The user wrote \"oʻn besh ayilru besh necha boʻladi\". Hmm, first I need to understand what they're asking. It looks like Uzbek, but there might be some recognition errors.\n\n\"Oʻn besh\" is \"ten\" or \"10\" in Uzbek. Wait, \"oʻn\" is 10, \"besh\" is 5. So \"oʻn besh\" would be \"10 five\"? That doesn't make sense. Maybe it's a typo. Maybe they meant \"oʻn besh\" as \"15\" because \"oʻn\" is 10 and \"besh\" is 5, so 10+5=1",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 81,
+    "output_tokens": 160,
+    "generation_s": 7.77
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.09,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "clean",
+   "text": "Qishdan keyin qaysi fasl keladi?",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"Qishdan keyin qaysi fasl keladi?\" which translates to \"What season comes after winter?\" \n\nFirst, I need to recall the seasons in Uzbek. The seasons are spring, summer, autumn, winter. In Uzbek, the order is: Yoz (summer), Kish (winter), but wait, no. Wait, let me think. Wait, in Uzbek, the seasons are:\n\n- Yoz (summer)\n- Kish (winter)\n- But wait, maybe I'm mixing up the terms. Wait, no. Let me check.\n\nWait, in Uzbek, the seasons are:\n\n- Yoz (summer)\n- Shoh (spring) – no, maybe not. Wait, perhaps the user is referring to",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 160,
+    "generation_s": 7.77
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 8.08,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "kind": "question",
+   "input": "stt",
+   "text": "qishdan keyin qaysi fasl keladi",
+   "keywords": [
+    "bahor"
+   ],
+   "answer": "Okay, the user is asking in Uzbek: \"qishdan keyin qaysi fasl keladi\". Let me translate that first. \"Qishdan keyin\" means \"after winter\", and \"qaysi fasl keladi\" is \"which season comes\". So they want to know which season comes after winter.\n\nIn Uzbek, the seasons are: yoz (summer), bahor (spring), qish (winter), ko'chir (autumn). Wait, no, maybe the order is different. Let me think. In most countries, the seasons go: winter, spring, summer, autumn. But in some regions, especially in Uzbekistan, which is in Central Asia, the seasons might follow the same pattern as the Northern Hemisphere.\n\nSo after winter comes",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 160,
+    "generation_s": 7.77
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 8.09,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "clean",
+   "text": "To'xta.",
+   "restated": "Hmm, the user wrote \"To'xta.\" That's in Uzbek language. Let me think... \"To'xta\" means \"stop\" in Uzbek. So they're probably asking to stop something.\n\nThe instruction says to restate what the user said in one short English sentence. I",
+   "understood": true,
+   "latency": 3.23,
+   "first_call": false
+  },
+  {
+   "id": "cmd_01",
+   "kind": "command",
+   "input": "stt",
+   "text": "boʻp",
+   "restated": "Okay, let's see. The user wrote \"boʻp\". Hmm, that's in Uzbek, right? The 'boʻ' part with the apostrophe is a common way to write the soft sign in Uzbek. So \"boʻp\" translates to \"bo'p\" in Uzbek",
+   "understood": false,
+   "latency": 3.07,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "clean",
+   "text": "Chapga buril.",
+   "restated": "Hmm, the user wrote \"Chapga buril.\" That looks like it might be a typo or shorthand. I recall that in some contexts, especially in Indian English, \"chapga\" could be a misspelling of \"chappal\" or something else. Wait, no—actually",
+   "understood": false,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_02",
+   "kind": "command",
+   "input": "stt",
+   "text": "kam kam",
+   "restated": "Hmm, the user wrote \"kam kam\". That looks like it might be a typo or shorthand. In some contexts, \"kam\" could be short for \"kam\" as in the word \"kam\" in English, but that doesn't make much sense. Wait, in Thai",
+   "understood": false,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "clean",
+   "text": "O'ngga buril.",
+   "restated": "Hmm, the user wrote \"O'ngga buril.\" That's in Uzbek. Let me think about what that means. \"O'ngga\" translates to \"to the right\" or \"right side\" in Uzbek, and \"buril\" might be a verb. Wait, in",
+   "understood": true,
+   "latency": 3.07,
+   "first_call": false
+  },
+  {
+   "id": "cmd_03",
+   "kind": "command",
+   "input": "stt",
+   "text": "oʻngga boʻlin",
+   "restated": "Okay, let's see. The user wrote \"oʻngga boʻlin\". Hmm, I need to restate this in one short English sentence.\n\nFirst, I should figure out what this Uzbek phrase means. \"Oʻngga\" is the word for \"right\" in Uzbek,",
+   "understood": true,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "clean",
+   "text": "Oldinga yur.",
+   "restated": "Hmm, the user wrote \"Oldinga yur.\" That looks like it might be a typo or shorthand. I recall that in some contexts, especially in informal texting, people use abbreviations. \"Oldinga\" could be a misspelling of \"oldinga\" which isn't standard",
+   "understood": false,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_04",
+   "kind": "command",
+   "input": "stt",
+   "text": "dangga yur",
+   "restated": "Hmm, the user wrote \"dangga yur\". That looks like it might be a typo or shorthand. I recall that in some contexts, especially online, people use abbreviations. \"Dangga\" could be a misspelling of \"dang\" which is short for \"d",
+   "understood": false,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "clean",
+   "text": "Orqaga yur.",
+   "restated": "Okay, let's see. The user wrote \"Orqaga yur.\" Hmm, I need to restate that in one short English sentence.\n\nFirst, \"Orqaga\" is a word in Uzbek, right? Like \"back\" or \"reverse\". And \"yur\" is probably",
+   "understood": true,
+   "latency": 3.08,
+   "first_call": false
+  },
+  {
+   "id": "cmd_05",
+   "kind": "command",
+   "input": "stt",
+   "text": "xalqaga",
+   "restated": "Hmm, the user wrote \"xalqaga\". That looks like it's in Uzbek language. Let me think... \"Xalq\" means \"people\" in Uzbek, and the suffix \"-aga\" is a locative case marker. So \"xalqaga\" would translate to \"",
+   "understood": false,
+   "latency": 3.08,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "clean",
+   "text": "Sekinroq yur.",
+   "restated": "Okay, let's see. The user wrote \"Sekinroq yur.\" Hmm, I need to restate that in one short English sentence.\n\nFirst, I should figure out what \"Sekinroq yur.\" means. Maybe it's a transliteration of a language.",
+   "understood": false,
+   "latency": 3.25,
+   "first_call": false
+  },
+  {
+   "id": "cmd_06",
+   "kind": "command",
+   "input": "stt",
+   "text": "debkin bu oq kuyov",
+   "restated": "Hmm, the user wrote \"debkin bu oq kuyov\". Let me try to figure out what that means. First, I should check if this is in a specific language. The words look like they might be in Turkic languages, maybe Turkish or a related language.\n\n\"debkin",
+   "understood": false,
+   "latency": 3.19,
+   "first_call": false
+  },
+  {
+   "id": "cmd_07",
+   "kind": "command",
+   "input": "clean",
+   "text": "Tezroq yur.",
+   "restated": "Hmm, the user wrote \"Tezroq yur.\" That's in Turkish. Let me break it down. \"Tezroq\" might be a misspelling or a specific term. Wait, in Turkish, \"tez\" means \"fast\" and \"roq\" could",
+   "understood": true,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_07",
+   "kind": "command",
+   "input": "stt",
+   "text": "dedi so",
+   "restated": "Hmm, the user wrote \"dedi so\". That looks like it might be a typo or shorthand. Let me think... In some contexts, \"dedi\" could be short for \"dedicate\", and \"so\" might mean \"so what\" or just \"so\". But the instruction says",
+   "understood": false,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_08",
+   "kind": "command",
+   "input": "clean",
+   "text": "Kutubxonaga olib bor.",
+   "restated": "Okay, let's see. The user wrote \"Kutubxonaga olib bor.\" I need to restate that in one short English sentence.\n\nFirst, I should translate the Uzbek phrase. \"Kutubxonaga\" means \"library\" in Uzbek. \"Olib bor\" is",
+   "understood": true,
+   "latency": 3.07,
+   "first_call": false
+  },
+  {
+   "id": "cmd_08",
+   "kind": "command",
+   "input": "stt",
+   "text": "kutubxonaga bolib bor",
+   "restated": "Okay, let's see. The user wrote \"kutubxonaga bolib bor\". I need to restate this in one short English sentence.\n\nFirst, I should figure out what \"kutubxonaga\" means. In Uzbek, \"kutubxona\" is \"library",
+   "understood": true,
+   "latency": 3.08,
+   "first_call": false
+  },
+  {
+   "id": "cmd_09",
+   "kind": "command",
+   "input": "clean",
+   "text": "Eshikni och.",
+   "restated": "Hmm, the user wrote \"Eshikni och.\" That's in what seems like a mix of languages. Let me break it down.\n\nFirst, \"Eshikni\" – I think that's a transliteration of \"Eshikni\" which might be a name or a place",
+   "understood": false,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_09",
+   "kind": "command",
+   "input": "stt",
+   "text": "eshikni u",
+   "restated": "Hmm, the user wrote \"eshikni u\". That looks like it might be a typo or shorthand. Let me think... In some contexts, especially in informal texting, people use abbreviations. \"U\" is commonly short for \"you\". But \"eshikni\" isn't a standard",
+   "understood": false,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_10",
+   "kind": "command",
+   "input": "clean",
+   "text": "Ha.",
+   "restated": "Hmm, the user just said \"Ha.\" That's a very short message. \n\nI need to restate what they said in one short English sentence. The key is to be precise and only output that sentence without adding anything else. \n\n\"Ha\" is an interjection - it could mean laughter",
+   "understood": false,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_11",
+   "kind": "command",
+   "input": "clean",
+   "text": "Yo'q.",
+   "restated": "Hmm, the user wrote \"Yo'q.\" That's in Uzbek language. Let me think... \"Yo'q\" means \"no\" or \"not\" in Uzbek. So they're saying something like \"No\" in English.\n\nThe instruction says to restate the user's message in one",
+   "understood": true,
+   "latency": 3.06,
+   "first_call": false
+  },
+  {
+   "id": "cmd_11",
+   "kind": "command",
+   "input": "stt",
+   "text": "yoʻgʻ e",
+   "restated": "Hmm, the user wrote \"yoʻgʻ e\". That looks like it's in Uzbek script. Let me think... \"yoʻgʻ\" is probably \"yo'g'\" which is a transliteration of the Uzbek word \"yo'g'\". In Uzbek, \"yo'g",
+   "understood": false,
+   "latency": 3.08,
+   "first_call": false
+  },
+  {
+   "id": "cmd_12",
+   "kind": "command",
+   "input": "clean",
+   "text": "To'xta, to'xta, to'xta!",
+   "restated": "Hmm, the user wrote \"To'xta, to'xta, to'xta!\" with multiple exclamation points. I need to restate this in one short English sentence without answering anything. \n\nFirst, I should figure out what \"to'xta\" means. It looks",
+   "understood": false,
+   "latency": 3.17,
+   "first_call": false
+  },
+  {
+   "id": "cmd_12",
+   "kind": "command",
+   "input": "stt",
+   "text": "doʻxta toʻxtam",
+   "restated": "Okay, let's see. The user wrote \"doʻxta toʻxtam\". Hmm, I need to restate this in one short English sentence.\n\nFirst, I should figure out what these words mean. \"Doʻxta\" might be a transliteration of \"doxta",
+   "understood": false,
+   "latency": 3.06,
+   "first_call": false
+  }
+ ]
+}

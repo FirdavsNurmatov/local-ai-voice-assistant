@@ -1,0 +1,435 @@
+{
+ "pipeline": "direct:qwen3:4b-instruct",
+ "language": "ru",
+ "server_model": null,
+ "results": [
+  {
+   "id": "r01",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей России?",
+   "keywords": [
+    "москв"
+   ],
+   "answer": "Столицей России является город Москва.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 63,
+    "output_tokens": 11,
+    "thinking_chars": 0,
+    "generation_s": 0.49
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 1.27,
+   "first_call": true
+  },
+  {
+   "id": "r02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько дней в неделе?",
+   "keywords": [
+    "7",
+    "семь"
+   ],
+   "answer": "В неделе 7 дней. Они называются понедельник, вторник, среда, четверг, пятница, суббота и воскресенье.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 61,
+    "output_tokens": 42,
+    "thinking_chars": 0,
+    "generation_s": 1.98
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.18,
+   "first_call": false
+  },
+  {
+   "id": "r03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько месяцев в году?",
+   "keywords": [
+    "12",
+    "двенадцат"
+   ],
+   "answer": "В году 12 месяцев.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 60,
+    "output_tokens": 8,
+    "thinking_chars": 0,
+    "generation_s": 0.34
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.53,
+   "first_call": false
+  },
+  {
+   "id": "r04",
+   "kind": "question",
+   "input": "clean",
+   "text": "При какой температуре кипит вода?",
+   "keywords": [
+    "100",
+    "сто"
+   ],
+   "answer": "Вода кипит при температуре 100 градусов Цельсия при нормальном атмосферном давлении.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 66,
+    "output_tokens": 37,
+    "thinking_chars": 0,
+    "generation_s": 1.74
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.03,
+   "first_call": false
+  },
+  {
+   "id": "r05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько будет два плюс три?",
+   "keywords": [
+    "5",
+    "пят"
+   ],
+   "answer": "Два плюс три равно пяти.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 63,
+    "output_tokens": 11,
+    "thinking_chars": 0,
+    "generation_s": 0.48
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.71,
+   "first_call": false
+  },
+  {
+   "id": "r06",
+   "kind": "question",
+   "input": "clean",
+   "text": "С какой стороны восходит солнце?",
+   "keywords": [
+    "восток"
+   ],
+   "answer": "Солнце восходит с востока.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 62,
+    "output_tokens": 11,
+    "thinking_chars": 0,
+    "generation_s": 0.48
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.68,
+   "first_call": false
+  },
+  {
+   "id": "r07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой самый большой океан на Земле?",
+   "keywords": [
+    "тих"
+   ],
+   "answer": "Самый большой океан на Земле — Тихий океан. Он охватывает более половины поверхности планеты и имеет наибольшую площадь.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 65,
+    "output_tokens": 41,
+    "thinking_chars": 0,
+    "generation_s": 1.93
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.22,
+   "first_call": false
+  },
+  {
+   "id": "r08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто написал роман «Война и мир»?",
+   "keywords": [
+    "толст"
+   ],
+   "answer": "Роман «Война и мир» написал Лев Толстой.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 67,
+    "output_tokens": 20,
+    "thinking_chars": 0,
+    "generation_s": 0.92
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 1.22,
+   "first_call": false
+  },
+  {
+   "id": "r09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей Узбекистана?",
+   "keywords": [
+    "ташкент"
+   ],
+   "answer": "Столицей Узбекистана является город Ташкент.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 68,
+    "output_tokens": 19,
+    "thinking_chars": 0,
+    "generation_s": 0.87
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 1.16,
+   "first_call": false
+  },
+  {
+   "id": "r10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое животное называют кораблём пустыни?",
+   "keywords": [
+    "верблюд"
+   ],
+   "answer": "Животное, которое называют «кораблём пустыни», — это курица. Это выражение используется в контексте метафоры, описывающей способность курицы перемещаться по пустыне, как корабль по морю.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 68,
+    "output_tokens": 66,
+    "thinking_chars": 0,
+    "generation_s": 3.15
+   },
+   "correct": false,
+   "answer_language": "russian",
+   "latency": 3.44,
+   "first_call": false
+  },
+  {
+   "id": "r11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько минут в одном часе?",
+   "keywords": [
+    "60",
+    "шестьдесят"
+   ],
+   "answer": "В одном часе 60 минут.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 62,
+    "output_tokens": 10,
+    "thinking_chars": 0,
+    "generation_s": 0.44
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.64,
+   "first_call": false
+  },
+  {
+   "id": "r12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какого цвета снег?",
+   "keywords": [
+    "бел"
+   ],
+   "answer": "Снег белый.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 61,
+    "output_tokens": 7,
+    "thinking_chars": 0,
+    "generation_s": 0.29
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.49,
+   "first_call": false
+  },
+  {
+   "id": "r13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какая самая высокая гора в мире?",
+   "keywords": [
+    "эверест",
+    "джомолунгм"
+   ],
+   "answer": "Самая высокая гора в мире — Эверест. Его высота составляет 8848 метров над уровнем моря. Гору расположили в Гималайском хребте, на границе Непала и Таджикистана.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 65,
+    "output_tokens": 63,
+    "thinking_chars": 0,
+    "generation_s": 3.0
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 3.2,
+   "first_call": false
+  },
+  {
+   "id": "r14",
+   "kind": "question",
+   "input": "clean",
+   "text": "На какой планете мы живём?",
+   "keywords": [
+    "земл"
+   ],
+   "answer": "Мы живём на Земле. Земля — третья планета от Солнца. Она единственная известная планета, где есть жизнь.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 61,
+    "output_tokens": 38,
+    "thinking_chars": 0,
+    "generation_s": 1.79
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 1.99,
+   "first_call": false
+  },
+  {
+   "id": "r15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое насекомое делает мёд?",
+   "keywords": [
+    "пчел"
+   ],
+   "answer": "Мёд делают пчёлы. Пчёлы собирают нектар из цветов и превращают его в мёд. Это делают только пчёлы, а не другие насекомые.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 65,
+    "output_tokens": 51,
+    "thinking_chars": 0,
+    "generation_s": 2.43
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.73,
+   "first_call": false
+  },
+  {
+   "id": "r16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько часов в сутках?",
+   "keywords": [
+    "24",
+    "двадцать четыре"
+   ],
+   "answer": "В сутках 24 часа.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 62,
+    "output_tokens": 10,
+    "thinking_chars": 0,
+    "generation_s": 0.47
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.67,
+   "first_call": false
+  },
+  {
+   "id": "r17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое время года наступает после зимы?",
+   "keywords": [
+    "весн"
+   ],
+   "answer": "После зимы наступает весна.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 64,
+    "output_tokens": 12,
+    "thinking_chars": 0,
+    "generation_s": 0.53
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.74,
+   "first_call": false
+  },
+  {
+   "id": "r18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько углов у треугольника?",
+   "keywords": [
+    "3",
+    "=три"
+   ],
+   "answer": "У треугольника 3 угла.",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 64,
+    "output_tokens": 11,
+    "thinking_chars": 0,
+    "generation_s": 0.49
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 0.7,
+   "first_call": false
+  },
+  {
+   "id": "r19",
+   "kind": "question",
+   "input": "clean",
+   "text": "Как по-английски будет слово «книга»?",
+   "keywords": [
+    "book"
+   ],
+   "answer": "The word \"книга\" in English is \"book\".",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 69,
+    "output_tokens": 14,
+    "thinking_chars": 0,
+    "generation_s": 0.63
+   },
+   "correct": true,
+   "answer_language": "mixed/latin",
+   "latency": 0.95,
+   "first_call": false
+  },
+  {
+   "id": "r20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто был первым человеком в космосе?",
+   "keywords": [
+    "гагарин"
+   ],
+   "answer": "Первым человеком в космосе был Юрий Гагарин. Он совершил исторический полёт 12 апреля 1961 года на корабле «Восток-1».",
+   "llm": {
+    "model": "qwen3:4b-instruct",
+    "prompt_tokens": 67,
+    "output_tokens": 50,
+    "thinking_chars": 0,
+    "generation_s": 2.37
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.66,
+   "first_call": false
+  }
+ ]
+}

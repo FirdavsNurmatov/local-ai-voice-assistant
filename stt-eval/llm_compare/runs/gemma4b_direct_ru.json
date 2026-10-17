@@ -1,0 +1,435 @@
+{
+ "pipeline": "direct:gemma3:4b",
+ "language": "ru",
+ "server_model": null,
+ "results": [
+  {
+   "id": "r01",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей России?",
+   "keywords": [
+    "москв"
+   ],
+   "answer": "Столица России – Москва. Это крупнейший и самый важный город нашей страны. В Москве находится множество исторических и культурных достопримечательностей.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 63,
+    "output_tokens": 31,
+    "thinking_chars": 0,
+    "generation_s": 2.41
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 3.31,
+   "first_call": true
+  },
+  {
+   "id": "r02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько дней в неделе?",
+   "keywords": [
+    "7",
+    "семь"
+   ],
+   "answer": "В неделе семь дней. Обычно это понедельник, вторник, среда, четверг, пятница, суббота и воскресенье.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 63,
+    "output_tokens": 32,
+    "thinking_chars": 0,
+    "generation_s": 2.49
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 3.14,
+   "first_call": false
+  },
+  {
+   "id": "r03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько месяцев в году?",
+   "keywords": [
+    "12",
+    "двенадцат"
+   ],
+   "answer": "В году 12 месяцев. Это стандартное количество. Надеюсь, это поможет!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 62,
+    "output_tokens": 19,
+    "thinking_chars": 0,
+    "generation_s": 1.43
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.06,
+   "first_call": false
+  },
+  {
+   "id": "r04",
+   "kind": "question",
+   "input": "clean",
+   "text": "При какой температуре кипит вода?",
+   "keywords": [
+    "100",
+    "сто"
+   ],
+   "answer": "Вода кипит при 100 градусах Цельсия. Это происходит при нормальном атмосферном давлении.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 63,
+    "output_tokens": 28,
+    "thinking_chars": 0,
+    "generation_s": 2.16
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.73,
+   "first_call": false
+  },
+  {
+   "id": "r05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько будет два плюс три?",
+   "keywords": [
+    "5",
+    "пят"
+   ],
+   "answer": "Пять. Это пять, если сложить два и три.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 63,
+    "output_tokens": 15,
+    "thinking_chars": 0,
+    "generation_s": 1.11
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 1.73,
+   "first_call": false
+  },
+  {
+   "id": "r06",
+   "kind": "question",
+   "input": "clean",
+   "text": "С какой стороны восходит солнце?",
+   "keywords": [
+    "восток"
+   ],
+   "answer": "Солнце восходит на востоке. Это связано с вращением Земли вокруг своей оси.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 63,
+    "output_tokens": 23,
+    "thinking_chars": 0,
+    "generation_s": 1.74
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.3,
+   "first_call": false
+  },
+  {
+   "id": "r07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой самый большой океан на Земле?",
+   "keywords": [
+    "тих"
+   ],
+   "answer": "Самый большой океан – Тихий океан. Он занимает около 20% поверхности Земли. Его площадь составляет примерно 168,710,000 квадратных километров.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 65,
+    "output_tokens": 44,
+    "thinking_chars": 0,
+    "generation_s": 3.53
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 4.13,
+   "first_call": false
+  },
+  {
+   "id": "r08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто написал роман «Война и мир»?",
+   "keywords": [
+    "толст"
+   ],
+   "answer": "Роман «Война и мир» написал Лев Толстой. Это одно из самых известных произведений русской литературы.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 66,
+    "output_tokens": 26,
+    "thinking_chars": 0,
+    "generation_s": 1.99
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.66,
+   "first_call": false
+  },
+  {
+   "id": "r09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какой город является столицей Узбекистана?",
+   "keywords": [
+    "ташкент"
+   ],
+   "answer": "Ташкент – столица Узбекистана. Это крупный и красивый город. Приятного вам дня!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 64,
+    "output_tokens": 25,
+    "thinking_chars": 0,
+    "generation_s": 1.9
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.53,
+   "first_call": false
+  },
+  {
+   "id": "r10",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое животное называют кораблём пустыни?",
+   "keywords": [
+    "верблюд"
+   ],
+   "answer": "Это верблюд. Он идеально приспособлен к жизни в засушливых условиях и часто ассоциируется с путешествиями по пустыне.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 67,
+    "output_tokens": 33,
+    "thinking_chars": 0,
+    "generation_s": 2.56
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 3.2,
+   "first_call": false
+  },
+  {
+   "id": "r11",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько минут в одном часе?",
+   "keywords": [
+    "60",
+    "шестьдесят"
+   ],
+   "answer": "В одном часе 60 минут. Это стандартное значение. Надеюсь, это поможет!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 64,
+    "output_tokens": 22,
+    "thinking_chars": 0,
+    "generation_s": 1.66
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.31,
+   "first_call": false
+  },
+  {
+   "id": "r12",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какого цвета снег?",
+   "keywords": [
+    "бел"
+   ],
+   "answer": "Снег обычно белый. Это связано с отражением солнечного света. Иногда снег может быть и других оттенков.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 62,
+    "output_tokens": 27,
+    "thinking_chars": 0,
+    "generation_s": 2.07
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.63,
+   "first_call": false
+  },
+  {
+   "id": "r13",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какая самая высокая гора в мире?",
+   "keywords": [
+    "эверест",
+    "джомолунгм"
+   ],
+   "answer": "Самая высокая гора в мире – это Эверест. Её высота составляет 8 848,86 метров над уровнем моря. Это впечатляющее достижение природы!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 65,
+    "output_tokens": 40,
+    "thinking_chars": 0,
+    "generation_s": 3.18
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 3.8,
+   "first_call": false
+  },
+  {
+   "id": "r14",
+   "kind": "question",
+   "input": "clean",
+   "text": "На какой планете мы живём?",
+   "keywords": [
+    "земл"
+   ],
+   "answer": "Мы живём на Земле. Это наш дом, прекрасный и уникальный!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 64,
+    "output_tokens": 19,
+    "thinking_chars": 0,
+    "generation_s": 1.42
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.12,
+   "first_call": false
+  },
+  {
+   "id": "r15",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое насекомое делает мёд?",
+   "keywords": [
+    "пчел"
+   ],
+   "answer": "Это пчела. Пчелы производят мед, собирая нектар с цветов. Это очень важный продукт для пчел и людей.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 64,
+    "output_tokens": 33,
+    "thinking_chars": 0,
+    "generation_s": 2.77
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 3.34,
+   "first_call": false
+  },
+  {
+   "id": "r16",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько часов в сутках?",
+   "keywords": [
+    "24",
+    "двадцать четыре"
+   ],
+   "answer": "Двадцать четыре часа в сутках. Это стандартная система измерения времени. Надеюсь, это поможет!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 64,
+    "output_tokens": 25,
+    "thinking_chars": 0,
+    "generation_s": 1.95
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.62,
+   "first_call": false
+  },
+  {
+   "id": "r17",
+   "kind": "question",
+   "input": "clean",
+   "text": "Какое время года наступает после зимы?",
+   "keywords": [
+    "весн"
+   ],
+   "answer": "После зимы наступает весна. Это время цветения и тепла. Весна прекрасна!",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 66,
+    "output_tokens": 22,
+    "thinking_chars": 0,
+    "generation_s": 1.67
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.3,
+   "first_call": false
+  },
+  {
+   "id": "r18",
+   "kind": "question",
+   "input": "clean",
+   "text": "Сколько углов у треугольника?",
+   "keywords": [
+    "3",
+    "=три"
+   ],
+   "answer": "У треугольника три угла. Они всегда равны сумме 180 градусов.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 64,
+    "output_tokens": 20,
+    "thinking_chars": 0,
+    "generation_s": 1.51
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.13,
+   "first_call": false
+  },
+  {
+   "id": "r19",
+   "kind": "question",
+   "input": "clean",
+   "text": "Как по-английски будет слово «книга»?",
+   "keywords": [
+    "book"
+   ],
+   "answer": "Книга переводится на английский как \"book\". Это слово обозначает письменное произведение.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 69,
+    "output_tokens": 21,
+    "thinking_chars": 0,
+    "generation_s": 1.59
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 2.23,
+   "first_call": false
+  },
+  {
+   "id": "r20",
+   "kind": "question",
+   "input": "clean",
+   "text": "Кто был первым человеком в космосе?",
+   "keywords": [
+    "гагарин"
+   ],
+   "answer": "Юрий Гагарин был первым человеком, совершившим полёт в космос. Он совершил этот исторический полёт 12 апреля 1961 года. Это был величайший подвиг в истории человечества.",
+   "llm": {
+    "model": "gemma3:4b",
+    "prompt_tokens": 64,
+    "output_tokens": 50,
+    "thinking_chars": 0,
+    "generation_s": 4.04
+   },
+   "correct": true,
+   "answer_language": "russian",
+   "latency": 4.65,
+   "first_call": false
+  }
+ ]
+}

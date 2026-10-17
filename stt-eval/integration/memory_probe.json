@@ -1,0 +1,92 @@
+[
+ {
+  "step": "start",
+  "rss_mb": 19,
+  "commit_mb": 10,
+  "process_peak_commit_mb": 10,
+  "process_peak_rss_mb": 19,
+  "system_free_commit_mb": 12940,
+  "seconds": null
+ },
+ {
+  "step": "import faster_whisper",
+  "rss_mb": 53,
+  "commit_mb": 296,
+  "process_peak_commit_mb": 296,
+  "process_peak_rss_mb": 53,
+  "system_free_commit_mb": 12654,
+  "seconds": null
+ },
+ {
+  "step": "base model loaded",
+  "rss_mb": 381,
+  "commit_mb": 2603,
+  "process_peak_commit_mb": 2788,
+  "process_peak_rss_mb": 729,
+  "system_free_commit_mb": 10361,
+  "seconds": 1.2
+ },
+ {
+  "step": "base model after RU inference (16 s audio)",
+  "rss_mb": 426,
+  "commit_mb": 2708,
+  "process_peak_commit_mb": 2870,
+  "process_peak_rss_mb": 729,
+  "system_free_commit_mb": 10260,
+  "seconds": 3.46
+ },
+ {
+  "step": "NavAI loaded next to base",
+  "rss_mb": 746,
+  "commit_mb": 5006,
+  "process_peak_commit_mb": 5192,
+  "process_peak_rss_mb": 929,
+  "system_free_commit_mb": 7959,
+  "seconds": 0.69
+ },
+ {
+  "step": "both loaded, after NavAI inference (9 s audio)",
+  "rss_mb": 754,
+  "commit_mb": 5053,
+  "process_peak_commit_mb": 5223,
+  "process_peak_rss_mb": 929,
+  "system_free_commit_mb": 7910,
+  "seconds": 3.43
+ },
+ {
+  "step": "both loaded, after base inference",
+  "rss_mb": 753,
+  "commit_mb": 5052,
+  "process_peak_commit_mb": 5223,
+  "process_peak_rss_mb": 929,
+  "system_free_commit_mb": 7929,
+  "seconds": 3.29
+ },
+ {
+  "step": "NavAI unloaded (del + gc)",
+  "rss_mb": 434,
+  "commit_mb": 2761,
+  "process_peak_commit_mb": 5223,
+  "process_peak_rss_mb": 929,
+  "system_free_commit_mb": 10215,
+  "seconds": null
+ },
+ {
+  "step": "NavAI reloaded",
+  "rss_mb": 757,
+  "commit_mb": 5061,
+  "process_peak_commit_mb": 5247,
+  "process_peak_rss_mb": 938,
+  "system_free_commit_mb": 7917,
+  "seconds": 0.43
+ },
+ {
+  "step": "both unloaded",
+  "rss_mb": 117,
+  "commit_mb": 463,
+  "process_peak_commit_mb": 5247,
+  "process_peak_rss_mb": 938,
+  "system_free_commit_mb": 12515,
+  "seconds": null
+ }
+]

@@ -286,7 +286,23 @@ Answers as soon as the port is bound, including while the model loads.
  "memory_mb": {"rss": 380, "commit": 2587}, "free_commit_mb": 6141}
 ```
 
-`ok` = `ready`. `error` holds the load failure (missing model, not enough memory, …); the server never substitutes another model.
+`ok` = `ready`. `error` holds the load failure of the base model (missing model, not enough memory, …).
+
+Since 2026-10-16 the response also has a `uz_model` object (real example after a test run):
+
+```json
+"uz_model": {"enabled": true, "model": "navai-whisper-small-uzbek",
+ "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+ "loaded": true, "base_model_loaded": true, "load_policy": "on first Uzbek request",
+ "memory_policy": "auto", "model_swaps": 0,
+ "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+ "decoding": {"beam_size": 5, "vad_filter": true, "condition_on_previous_text": false,
+              "without_timestamps": true, "no_repeat_ngram_size": 4},
+ "error": null, "load_seconds": 1.12, "requests": 93, "fallbacks_to_base_model": 0}
+```
+
+`loaded: false` with `error` set means Uzbek requests are being served by the base model (previous behaviour).
+Through the chat server the same JSON is available at `GET :8765/api/stt/health`.
 
 ### `OPTIONS *`
 
@@ -295,6 +311,11 @@ Answers as soon as the port is bound, including while the model loads.
 ### `POST /api/transcribe`
 
 Query: `language=auto` (default) | `uz` | `ru` | `en`. Forcing a language that does not match the speech makes Whisper translate; leave it on `auto` unless sure.
+
+Model selection (since 2026-10-16, details in [STT.md](STT.md#uzbek-routing-navai--integrated-2026-10-16)):
+`uz` → Uzbek NavAI model without language detection; `ru`/`en` → base model (unchanged);
+`auto` → base-model detection as before, then NavAI only if the result is Uzbek **and** p(ru), p(en) < 0.2.
+If NavAI is unavailable, the base model answers as before.
 
 Body — either:
 
@@ -310,13 +331,13 @@ Response `200`:
 | `ok` | bool | `true` |
 | `text` | string | transcript in the spoken language (never translated) |
 | `language` | string | `uz`, `ru` or `en` — the language used for transcription and to pass to `/api/chat` |
-| `language_probability` | number | Whisper's probability for that language; near 0 when `uz` was chosen by the exclusion rule |
+| `language_probability` | number \| null | Whisper's probability for that language; near 0 when `uz` was chosen by the exclusion rule; `null` for `?language=uz` (no detection) |
 | `language_forced` | bool | `true` if `?language=` was given |
-| `detected_language`, `detected_language_probability` | string, number | Whisper's raw best guess over all its languages (e.g. `hy`, `az` for Uzbek speech) |
-| `language_probabilities` | object | probabilities for `uz`, `ru`, `en` |
+| `detected_language`, `detected_language_probability` | string, number \| null | Whisper's raw best guess over all its languages (e.g. `hy`, `az` for Uzbek speech); `null` for `?language=uz` |
+| `language_probabilities` | object | probabilities for `uz`, `ru`, `en`; `{}` for `?language=uz` |
 | `duration` | number | seconds of audio |
 | `processing_time` | number | seconds spent decoding, detecting and transcribing |
-| `model` | string | `small` |
+| `model` | string | model that produced the text: `small` or `navai-whisper-small-uzbek` |
 
 Example (real response, Russian test clip):
 
@@ -327,11 +348,15 @@ Example (real response, Russian test clip):
  "duration": 5.14, "processing_time": 3.87, "model": "small"}
 ```
 
-**Proposed change (not implemented, see [STT_EVALUATION.md §9](STT_EVALUATION.md#9-recommendation-and-proposed-production-change-not-implemented)):**
-the request and response format would stay the same; only the model behind `language=uz` (and
-auto-detected Uzbek) would change to the NavAI Uzbek model. `/api/health` would then report both
-models. Clients that know the user speaks Uzbek should already send `?language=uz` — it skips
-detection (≈ 1.7 s) and, with the evaluated model, would select the Uzbek-specialised path.
+Example with `?language=uz` (real response, robot command, 2026-10-16):
+
+```json
+{"ok": true, "text": "kutubxonaga bolib bor", "language": "uz", "language_probability": null,
+ "language_forced": true, "detected_language": null, "detected_language_probability": null,
+ "language_probabilities": {}, "duration": 1.36, "processing_time": 1.9, "model": "navai-whisper-small-uzbek"}
+```
+
+(The reference was "Kutubxonaga olib bor." — accuracy on short commands is still limited, see [STT.md](STT.md).)
 
 Errors — `{"ok": false, "error": "…"}` (all observed except `500`):
 

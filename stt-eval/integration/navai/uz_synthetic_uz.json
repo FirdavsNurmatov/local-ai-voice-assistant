@@ -1,0 +1,307 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\synthetic_uz.csv",
+ "language_param": "uz",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 761,
+   "commit": 5055
+  },
+  "free_commit_mb": 7903,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": true,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": 1.12,
+   "requests": 150,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 761,
+   "commit": 5055
+  },
+  "free_commit_mb": 7906,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": true,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": 1.12,
+   "requests": 162,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "results": [
+  {
+   "id": "synth_01",
+   "status": 200,
+   "latency": 2.213,
+   "response": {
+    "ok": true,
+    "text": "salom menga bugungi kun uchun qisqa yarasha tuzib ber",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 3.16,
+    "processing_time": 2.2,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_02",
+   "status": 422,
+   "latency": 0.036,
+   "response": {
+    "ok": false,
+    "error": "Nutq aniqlanmadi (faqat sukunat yoki shovqin)"
+   }
+  },
+  {
+   "id": "synth_03",
+   "status": 200,
+   "latency": 2.109,
+   "response": {
+    "ok": true,
+    "text": "buvim havo juda yaxshi sayrga chiqamizmi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 2.81,
+    "processing_time": 2.09,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_04",
+   "status": 200,
+   "latency": 2.047,
+   "response": {
+    "ok": true,
+    "text": "qutugʻini soat nechada ochiladi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 2.3,
+    "processing_time": 2.02,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_05",
+   "status": 200,
+   "latency": 2.093,
+   "response": {
+    "ok": true,
+    "text": "iltimos menga eng yaqin dorixonani koʻrsatdi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 2.66,
+    "processing_time": 2.08,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_06",
+   "status": 200,
+   "latency": 2.259,
+   "response": {
+    "ok": true,
+    "text": "toshkentdan samarqandgacha poyezdda qancha vaqti ketadi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 3.04,
+    "processing_time": 2.23,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_07",
+   "status": 200,
+   "latency": 2.213,
+   "response": {
+    "ok": true,
+    "text": "borliga uch pesholda kepti sakkiz toʻqqiz oldi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 3.16,
+    "processing_time": 2.2,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_08",
+   "status": 200,
+   "latency": 1.904,
+   "response": {
+    "ok": true,
+    "text": "ha da albatta albatta",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 1.58,
+    "processing_time": 1.88,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_09",
+   "status": 200,
+   "latency": 2.062,
+   "response": {
+    "ok": true,
+    "text": "yoʻl yoʻlga bunday emas",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 1.4,
+    "processing_time": 2.04,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_10",
+   "status": 200,
+   "latency": 1.978,
+   "response": {
+    "ok": true,
+    "text": "bilmayman lekin harakat qilaman",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 2.1,
+    "processing_time": 1.96,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_11",
+   "status": 200,
+   "latency": 3.064,
+   "response": {
+    "ok": true,
+    "text": "ertalab soat sakkizda universitetga borishim kerakki doʻstlarim bilan uchrashaman da kechqurun esa uyga qaytib onamga ovqat tayyorlashda yordam beraman",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 8.49,
+    "processing_time": 3.05,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "synth_12",
+   "status": 200,
+   "latency": 2.246,
+   "response": {
+    "ok": true,
+    "text": "assalomu alaykum xush kelibsiz sizga qanday yordam berolaman",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 3.77,
+    "processing_time": 2.23,
+    "model": "navai-whisper-small-uzbek"
+   }
+  }
+ ]
+}

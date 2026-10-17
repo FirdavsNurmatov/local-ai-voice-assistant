@@ -1,0 +1,155 @@
+[
+ {
+  "file": "ru_req.wav",
+  "language_param": "auto",
+  "status": 200,
+  "latency": 4.01,
+  "language": "ru",
+  "model": "small",
+  "text": "Привет. Расскажи мне короткую интересную историю.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 425,
+   "commit": 2706
+  },
+  "free_commit_mb": 10173
+ },
+ {
+  "file": "cmd_04.wav",
+  "language_param": "uz",
+  "status": 200,
+  "latency": 2.82,
+  "language": "uz",
+  "model": "navai-whisper-small-uzbek",
+  "text": "dangga yur",
+  "uz_loaded": true,
+  "base_loaded": false,
+  "swaps": 1,
+  "memory": {
+   "rss": 435,
+   "commit": 2756
+  },
+  "free_commit_mb": 10124
+ },
+ {
+  "file": "en_req.wav",
+  "language_param": "auto",
+  "status": 200,
+  "latency": 4.79,
+  "language": "en",
+  "model": "small",
+  "text": "Hello, please explain how artificial intelligence works.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 2,
+  "memory": {
+   "rss": 444,
+   "commit": 2792
+  },
+  "free_commit_mb": 10092
+ },
+ {
+  "file": "cmd_02.wav",
+  "language_param": "uz",
+  "status": 200,
+  "latency": 2.3,
+  "language": "uz",
+  "model": "navai-whisper-small-uzbek",
+  "text": "kam kam",
+  "uz_loaded": true,
+  "base_loaded": false,
+  "swaps": 3,
+  "memory": {
+   "rss": 449,
+   "commit": 2822
+  },
+  "free_commit_mb": 10065
+ },
+ {
+  "file": "ru_req.wav",
+  "language_param": "ru",
+  "status": 200,
+  "latency": 4.91,
+  "language": "ru",
+  "model": "small",
+  "text": "Привет. Расскажи мне короткую интересную историю.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 4,
+  "memory": {
+   "rss": 456,
+   "commit": 2855
+  },
+  "free_commit_mb": 10030
+ },
+ {
+  "file": "uz_long.wav",
+  "language_param": "uz",
+  "status": 200,
+  "latency": 3.85,
+  "language": "uz",
+  "model": "navai-whisper-small-uzbek",
+  "text": "bugun havodida yaxshi ertalab erta turdim va idishga bordim shulikdan keyin doʻs",
+  "uz_loaded": true,
+  "base_loaded": false,
+  "swaps": 5,
+  "memory": {
+   "rss": 465,
+   "commit": 2890
+  },
+  "free_commit_mb": 9993
+ },
+ {
+  "file": "en_short.wav",
+  "language_param": "en",
+  "status": 200,
+  "latency": 4.58,
+  "language": "en",
+  "model": "small",
+  "text": "Thank you.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 6,
+  "memory": {
+   "rss": 473,
+   "commit": 2925
+  },
+  "free_commit_mb": 9972
+ },
+ {
+  "file": "uz_long.wav",
+  "language_param": "auto",
+  "status": 200,
+  "latency": 5.67,
+  "language": "uz",
+  "model": "navai-whisper-small-uzbek",
+  "text": "bugun havodida yaxshi ertalab erta turdim va idishga bordim shulikdan keyin doʻs",
+  "uz_loaded": true,
+  "base_loaded": false,
+  "swaps": 7,
+  "memory": {
+   "rss": 484,
+   "commit": 2977
+  },
+  "free_commit_mb": 9936
+ },
+ {
+  "file": "ru_short.wav",
+  "language_param": "auto",
+  "status": 200,
+  "latency": 4.57,
+  "language": "ru",
+  "model": "small",
+  "text": "Спасибо!",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 8,
+  "memory": {
+   "rss": 488,
+   "commit": 3005
+  },
+  "free_commit_mb": 9908
+ }
+]

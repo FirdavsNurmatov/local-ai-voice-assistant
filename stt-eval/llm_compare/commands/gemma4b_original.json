@@ -1,0 +1,399 @@
+{
+ "model": "gemma3:4b",
+ "mode": "original",
+ "think": false,
+ "system": "You control a small robot. The user message is a command spoken in Uzbek; it comes from speech recognition and may contain recognition errors. Reply with exactly one label from this list and nothing else: stop, turn_left, turn_right, forward, backward, slow_down, speed_up, go_to_library, open_door, yes, no, unknown. Use unknown if the command is unclear.",
+ "results": [
+  {
+   "id": "cmd_01",
+   "input": "clean",
+   "text": "To'xta.",
+   "english_input": "Stop.",
+   "raw": "stop",
+   "label": "stop",
+   "expected": "stop",
+   "correct": true,
+   "latency": 1.0,
+   "first_call": true,
+   "llm": {
+    "prompt_tokens": 106,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_01",
+   "input": "stt",
+   "text": "boʻp",
+   "english_input": "boʻp",
+   "raw": "unknown",
+   "label": "unknown",
+   "expected": "stop",
+   "correct": false,
+   "latency": 0.96,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 104,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_02",
+   "input": "clean",
+   "text": "Chapga buril.",
+   "english_input": "You're a fool.",
+   "raw": "forward",
+   "label": "forward",
+   "expected": "turn_left",
+   "correct": false,
+   "latency": 0.99,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 106,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_02",
+   "input": "stt",
+   "text": "kam kam",
+   "english_input": "kam kam",
+   "raw": "unknown",
+   "label": "unknown",
+   "expected": "turn_left",
+   "correct": false,
+   "latency": 0.97,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 103,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_03",
+   "input": "clean",
+   "text": "O'ngga buril.",
+   "english_input": "Turn away from him.",
+   "raw": "turn_right",
+   "label": "turn_right",
+   "expected": "turn_right",
+   "correct": true,
+   "latency": 1.12,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 108,
+    "output_tokens": 5,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_03",
+   "input": "stt",
+   "text": "oʻngga boʻlin",
+   "english_input": "split right",
+   "raw": "turn_right",
+   "label": "turn_right",
+   "expected": "turn_right",
+   "correct": true,
+   "latency": 1.13,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 108,
+    "output_tokens": 5,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_04",
+   "input": "clean",
+   "text": "Oldinga yur.",
+   "english_input": "Go ahead.",
+   "raw": "unknown",
+   "label": "unknown",
+   "expected": "forward",
+   "correct": false,
+   "latency": 0.98,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 105,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_04",
+   "input": "stt",
+   "text": "dangga yur",
+   "english_input": "dangga yur",
+   "raw": "unknown",
+   "label": "unknown",
+   "expected": "forward",
+   "correct": false,
+   "latency": 0.96,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 104,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_05",
+   "input": "clean",
+   "text": "Orqaga yur.",
+   "english_input": "Back off.",
+   "raw": "backward",
+   "label": "backward",
+   "expected": "backward",
+   "correct": true,
+   "latency": 0.96,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 106,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_05",
+   "input": "stt",
+   "text": "xalqaga",
+   "english_input": "xalqaga",
+   "raw": "unknown",
+   "label": "unknown",
+   "expected": "backward",
+   "correct": false,
+   "latency": 0.98,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 104,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_06",
+   "input": "clean",
+   "text": "Sekinroq yur.",
+   "english_input": "Slow down.",
+   "raw": "unknown",
+   "label": "unknown",
+   "expected": "slow_down",
+   "correct": false,
+   "latency": 0.96,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 107,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_06",
+   "input": "stt",
+   "text": "debkin bu oq kuyov",
+   "english_input": "Did this white groom say",
+   "raw": "unknown",
+   "label": "unknown",
+   "expected": "slow_down",
+   "correct": false,
+   "latency": 0.98,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 108,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_07",
+   "input": "clean",
+   "text": "Tezroq yur.",
+   "english_input": "Go faster.",
+   "raw": "forward",
+   "label": "forward",
+   "expected": "speed_up",
+   "correct": false,
+   "latency": 0.96,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 107,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_07",
+   "input": "stt",
+   "text": "dedi so",
+   "english_input": "said so",
+   "raw": "unknown",
+   "label": "unknown",
+   "expected": "speed_up",
+   "correct": false,
+   "latency": 0.96,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 104,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_08",
+   "input": "clean",
+   "text": "Kutubxonaga olib bor.",
+   "english_input": "Take it to the library.",
+   "raw": "go_to_library",
+   "label": "go_to_library",
+   "expected": "go_to_library",
+   "correct": true,
+   "latency": 1.23,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 110,
+    "output_tokens": 6,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_08",
+   "input": "stt",
+   "text": "kutubxonaga bolib bor",
+   "english_input": "go to library",
+   "raw": "go_to_library",
+   "label": "go_to_library",
+   "expected": "go_to_library",
+   "correct": true,
+   "latency": 1.2,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 108,
+    "output_tokens": 6,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_09",
+   "input": "clean",
+   "text": "Eshikni och.",
+   "english_input": "Open the door.",
+   "raw": "open_door",
+   "label": "open_door",
+   "expected": "open_door",
+   "correct": true,
+   "latency": 1.13,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 107,
+    "output_tokens": 5,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_09",
+   "input": "stt",
+   "text": "eshikni u",
+   "english_input": "The door is closed.",
+   "raw": "open_door",
+   "label": "open_door",
+   "expected": "open_door",
+   "correct": true,
+   "latency": 1.12,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 105,
+    "output_tokens": 5,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_10",
+   "input": "clean",
+   "text": "Ha.",
+   "english_input": "Ha.",
+   "raw": "yes",
+   "label": "yes",
+   "expected": "yes",
+   "correct": true,
+   "latency": 0.96,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 103,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_11",
+   "input": "clean",
+   "text": "Yo'q.",
+   "english_input": "No, no.",
+   "raw": "no",
+   "label": "no",
+   "expected": "no",
+   "correct": true,
+   "latency": 0.96,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 105,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_11",
+   "input": "stt",
+   "text": "yoʻgʻ e",
+   "english_input": "no",
+   "raw": "unknown",
+   "label": "unknown",
+   "expected": "no",
+   "correct": false,
+   "latency": 1.0,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 106,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_12",
+   "input": "clean",
+   "text": "To'xta, to'xta, to'xta!",
+   "english_input": "Stop, stop, stop!",
+   "raw": "stop",
+   "label": "stop",
+   "expected": "stop",
+   "correct": true,
+   "latency": 0.99,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 116,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  },
+  {
+   "id": "cmd_12",
+   "input": "stt",
+   "text": "doʻxta toʻxtam",
+   "english_input": "doʻxta toʻxtam",
+   "raw": "stop",
+   "label": "stop",
+   "expected": "stop",
+   "correct": true,
+   "latency": 0.96,
+   "first_call": false,
+   "llm": {
+    "prompt_tokens": 109,
+    "output_tokens": 3,
+    "thinking_chars": 0
+   }
+  }
+ ]
+}

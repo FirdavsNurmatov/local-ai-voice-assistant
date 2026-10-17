@@ -1,0 +1,254 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\ru_formats.csv",
+ "language_param": "ru",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 432,
+   "commit": 2713
+  },
+  "free_commit_mb": 9970,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": false,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": null,
+   "requests": 0,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 430,
+   "commit": 2709
+  },
+  "free_commit_mb": 10081,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": false,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": null,
+   "requests": 0,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "results": [
+  {
+   "id": "ru_req_wav",
+   "status": 200,
+   "latency": 4.547,
+   "response": {
+    "ok": true,
+    "text": "Привет. Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.9419,
+    "language_forced": true,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9419,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9419,
+     "en": 0.0089
+    },
+    "duration": 5.14,
+    "processing_time": 4.54,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_req_webm",
+   "status": 200,
+   "latency": 4.777,
+   "response": {
+    "ok": true,
+    "text": "Привет. Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.9563,
+    "language_forced": true,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9563,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9563,
+     "en": 0.0078
+    },
+    "duration": 5.14,
+    "processing_time": 4.77,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_req_m4a",
+   "status": 200,
+   "latency": 4.809,
+   "response": {
+    "ok": true,
+    "text": "Привет. Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.987,
+    "language_forced": true,
+    "detected_language": "ru",
+    "detected_language_probability": 0.987,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.987,
+     "en": 0.0019
+    },
+    "duration": 5.16,
+    "processing_time": 4.81,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_req_mp3",
+   "status": 200,
+   "latency": 4.783,
+   "response": {
+    "ok": true,
+    "text": "Привет. Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.9875,
+    "language_forced": true,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9875,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9875,
+     "en": 0.002
+    },
+    "duration": 5.14,
+    "processing_time": 4.78,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_short_wav",
+   "status": 200,
+   "latency": 3.847,
+   "response": {
+    "ok": true,
+    "text": "Спасибо!",
+    "language": "ru",
+    "language_probability": 0.9896,
+    "language_forced": true,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9896,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9896,
+     "en": 0.0029
+    },
+    "duration": 1.6,
+    "processing_time": 3.84,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_long_wav",
+   "status": 200,
+   "latency": 5.369,
+   "response": {
+    "ok": true,
+    "text": "Сегодня очень хорошая погода, утром я рано встал и пошел на работу. После обеда я встретился с друзьями в парке. А вечером хочу почитать книгу, потому что завтра у меня важный экзамен.",
+    "language": "ru",
+    "language_probability": 0.9791,
+    "language_forced": true,
+    "detected_language": "ru",
+    "detected_language_probability": 0.9791,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.9791,
+     "en": 0.0047
+    },
+    "duration": 15.91,
+    "processing_time": 5.37,
+    "model": "small"
+   }
+  },
+  {
+   "id": "ru_req_noise_wav",
+   "status": 200,
+   "latency": 4.314,
+   "response": {
+    "ok": true,
+    "text": "Привет! Расскажи мне короткую интересную историю.",
+    "language": "ru",
+    "language_probability": 0.967,
+    "language_forced": true,
+    "detected_language": "ru",
+    "detected_language_probability": 0.967,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.967,
+     "en": 0.0041
+    },
+    "duration": 5.14,
+    "processing_time": 4.31,
+    "model": "small"
+   }
+  }
+ ]
+}

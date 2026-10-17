@@ -1,0 +1,421 @@
+{
+ "pipeline": "server_direct",
+ "language": "uz",
+ "server_model": "qwen3:4b",
+ "results": [
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning poytaxti qaysi shahar?",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": "I need to answer in English concisely. The capital of Uzbekistan is Tashkent. Okay, the user asked in Uzbek: \"O'zbekistonning poytaxti qaysi shahar?\" Let me translate that. \"O'zbekistonning\" is Uzbek for \"Uzbekistan's\", \"poytaxti\" means \"capital\", \"qaysi shahar\" translates to \"which city\". So the question is \"What city is the capital of Uzbekistan?\"IIIIIIIIIIIIIIIIIIIIIIIIIIIII",
+   "answer_english": "Okay, the user asked in Uzbek: \"O'zbekistonning poytaxti qaysi shahar?\" Let me translate that. \"O'zbekistonning\" is Uzbek for \"Uzbekistan's\", \"poytaxti\" means \"capital\", \"qaysi shahar\" translates to \"which city\". So the question is \"What city is the capital of Uzbekistan?\"\n\nI need to answer in English concisely. The capital of Uzbekistan is",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 6.55,
+    "output_translation": 15.39,
+    "total": 21.99
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 86,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 21.99,
+   "first_call": true
+  },
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning poytaxti qaysi shahar",
+   "keywords": [
+    "toshkent"
+   ],
+   "answer": "I know that the capital of Uzbekistan is Tashkent. I should translate that. \"Oʻzbekistonning\" is Uzbek for \"Uzbekistan's\", \"poytaxti\" means \"capital\", \"qaysi shahar\" translates to \"which city\". So the question is \"What city is the capital of Uzbekistan?\". Okay, the user asked in Uzbek: \"oʻzbekistonning poytaxti qaysi shahar\". Let me translate that. \"I knowI know thatI know thatI know thatI know thatI know thatI know thatI know thatI know thatI know",
+   "answer_english": "Okay, the user asked in Uzbek: \"oʻzbekistonning poytaxti qaysi shahar\". Let me translate that. \"Oʻzbekistonning\" is Uzbek for \"Uzbekistan's\", \"poytaxti\" means \"capital\", \"qaysi shahar\" translates to \"which city\". So the question is \"What city is the capital of Uzbekistan?\"\n\nI know that the capital of Uzbekistan is Tashkent. I should",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.7,
+    "output_translation": 14.79,
+    "total": 20.5
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 85,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.5,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir haftada necha kun bor?",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": "'s why I'm trying to answer in English. I'm not sure how to translate \"bir haftada necha kun bor\" to English. I'm trying to translate \"bir haftada necha kun bor\" to English. I'm trying to translate \"bir haftada necha kun bor\" to English. I'm trying to translate \"bir haftada necha kun bor\" to English. I'm trying to translate \"bir haftada necha kun bor\" to English.First,FirstFirst,FirstFirst,FirstFirst,FirstFirst,FirstFirst,FirstFirst,FirstFirst,First",
+   "answer_english": "Okay, the user asked \"Bir haftada necha kun bor?\" which is Uzbek for \"How many days are in a week?\" I need to answer in English concisely.\n\nFirst, I'll confirm the translation. \"Bir hafta\" means \"a week\", \"necha kun\" is \"how many days\", \"bor\" is \"are\". So the question is straightforward.\n\nIn English, a week has 7 days. I should state that clearly and briefly",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.65,
+    "output_translation": 14.41,
+    "total": 20.07
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 20.07,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir haftada necha kun bor",
+   "keywords": [
+    "7",
+    "yetti"
+   ],
+   "answer": "'s why I'm using the word \"bir hafta\" in the English translation. I'm not sure how to translate \"bir haftada necha kun bor\" to \"a week has 7 days\". I'm not sure how to translate \"bir haftada necha kun bor\" to \"a week has 7 days\". I'm not sure how to translate \"bir haftada necha kun bor\" to \"a week has 7 days\". So I'm not sure.First,The answerThe answerThe answer is 7 daysThe answer is 7 daysThe answer is 7 daysThe",
+   "answer_english": "Okay, the user asked \"bir haftada necha kun bor\" which is Uzbek for \"How many days are in a week?\" I need to answer in English concisely.\n\nFirst, I'll confirm the translation. \"Bir hafta\" means \"a week\", \"necha kun\" is \"how many days\", \"bor\" is \"are\". So the question is straightforward.\n\nThe answer is 7 days. I should phrase it as \"A week has 7",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.53,
+    "output_translation": 14.5,
+    "total": 20.04
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 20.05,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir yilda necha oy bor?",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "'s why I'm trying to answer in English. I'm not sure how to answer in English. I'm not sure how to answer in English. I'm not sure how to answer in English. I'm not sure how to answer in English. I'm not sure how to answer in English. I'm not sure how to answer in English. I'm not sure how to answer in English. I'm not sure how to answer in English. I'm not sure.First,The answerThe answerThe answer is 12 monthsThe answer is 12 monthsThe answer",
+   "answer_english": "Okay, the user asked \"Bir yilda necha oy bor?\" which is Uzbek for \"How many months are in a year?\" I need to answer in English concisely.\n\nFirst, I'll confirm the translation. \"Bir yilda\" means \"in a year\", \"necha oy\" is \"how many months\". So the question is straightforward.\n\nThe answer is 12 months. I should state it clearly and briefly. Let me check if there's any possible confusion",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.37,
+    "output_translation": 14.47,
+    "total": 19.84
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 100
+   },
+   "correct": true,
+   "answer_language": "english",
+   "latency": 19.86,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir yilda necha oy bor",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "'s why I'm asking you to check the translation. In English, \"in a year\" means \"in a year\", \"necha\" is \"how many\", \"oy\" is \"month\", \"bor\" is \"are\". So the question is straightforward. So, I'm asking you to check the translation. In English, \"in a year\" means \"in a year\", \"necha\" is \"how many\", \"oy\" is \"month\".IIIIIIIIIIIIIIIIIIIIIIII",
+   "answer_english": "Okay, the user asked \"bir yilda necha oy bor\" which is Uzbek for \"how many months are in a year\". Let me confirm the translation. In Uzbek, \"bir yilda\" means \"in a year\", \"necha\" is \"how many\", \"oy\" is \"month\", \"bor\" is \"are\". So the question is straightforward.\n\nI know that a standard year has 12 months. The answer should be 12. The user might have",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.36,
+    "output_translation": 14.3,
+    "total": 19.68
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.68,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "clean",
+   "text": "Suv necha darajada qaynaydi?",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "'s why I'm using the English word \"boil\" instead of the Uzbek word \"boil\". I'm using the English word \"boil\" instead of the Uzbek word \"boil\". I'm using the English word \"boil\" instead of the Uzbek word \"boil\". I'm using the English word \"boil\" instead of the Uzbek word \"boil\". I'm using the English word \"boil\" instead of the Uzbek word \"boil\".First,First,First,First,First,First,First,First,First,First,First,First,First",
+   "answer_english": "Okay, the user asked \"Suv necha darajada qaynaydi?\" which is Uzbek for \"At what temperature does water boil?\" I need to answer in English concisely.\n\nFirst, confirm the language. The question is in Uzbek, so I should respond in English as per the instructions. The answer is that water boils at 100 degrees Celsius at standard atmospheric pressure. But the user might be expecting a simple answer without extra details. Let me check if there",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.65,
+    "output_translation": 14.24,
+    "total": 19.92
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 83,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 19.92,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "stt",
+   "text": "suvlicha darajada qaynaydi",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "\"Suvlicha darajada qaynaydi\" degan soʻz oʻzbekcha. Men buni tarjima qilay. \"Suvlicha\" oʻzbekchada \"suv\", \"darajda\" \"daraja\" yoki \"daraja\" degani, \"qaynaydi\" esa \"qaynaydi\". Shuning uchun bu jumla \"Suv qaynaydi daraja...\" deb tarjima qilinadi. Qoʻy, ehtimol, bu biroz notoʻgʻri. Oʻzbekchada \"qaynaydi\" degani \"suv qaynaydi daraja\" degani.",
+   "answer_english": "Okay, the user wrote \"suvlicha darajada qaynaydi\" which is in Uzbek. Let me translate that. \"Suvlicha\" is \"water\" in Uzbek, \"darajada\" means \"at the level\" or \"degree\", and \"qaynaydi\" is \"boils\". So the sentence translates to \"Water boils at the degree...\" Wait, maybe it's a bit off. In Uzbek, \"qaynaydi",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.57,
+    "output_translation": 13.5,
+    "total": 19.09
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 19.09,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ikki qo'shuv uch necha bo'ladi?",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "\"Ikki qoʻshish uch necha boʻladi?\" degan savolga javob topish uchun, \"Ikki\" deganda ikki, \"qoʻshish\" deganda qoʻshish, \"uch\" deganda uch, \"necha\" deganda qancha, \"boʻladi\" deganda boʻladi, degan manoni anglatadi. \"Ikki qoʻshish uch qancha boʻladi?\" degan savolga javob topish uchun, \"Ikki qoʻshish uch qancha boʻladi?\" degan savolni berish kerak.",
+   "answer_english": "Okay, the user wrote \"Ikki qo'shuv uch necha bo'ladi?\" in Uzbek. Let me translate that. \"Ikki\" means two, \"qo'shuv\" is addition, \"uch\" is three, \"necha\" is how many, \"bo'ladi\" is becomes. So the question is \"How many is two addition three?\" Wait, maybe they mean \"How much is two plus three?\" But in Uzbek, \"qo",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.59,
+    "output_translation": 11.26,
+    "total": 16.86
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 85,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 16.86,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "stt",
+   "text": "ikki qoʻshi uch necha boʻladi",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "'s a question that I've been asking myself for a while. I'm not sure what the meaning of the words is. I'm not sure what the meaning of the words is. I'm not sure what the meaning of the words is. I'm not sure what the meaning of the words is. I'm not sure what the meaning of the words is. I'm not sure what the meaning of the words is. I'm not sure if\"ikki\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"",
+   "answer_english": "Okay, the user wrote \"ikki qoʻshi uch necha boʻladi\". Let me try to figure out what they're asking. The words here are in Uzbek. Let me translate each part.\n\n\"ikki\" means \"two\" in Uzbek. \"qoʻshi\" might be a typo. Wait, in Uzbek, \"qoʻshish\" is \"addition\" (to add), but \"qoʻshi\" could be a misspelling.",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.58,
+    "output_translation": 15.07,
+    "total": 20.65
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 83,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.67,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "clean",
+   "text": "Quyosh qaysi tomondan chiqadi?",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "'s not a question of \"Which side does the sun rise from?\". The user asked \"Quyosh qaysi tomondan chiqadi?\" which is Uzbek for \"Which side does the sun rise from?\". So the answer is straightforward. \"Quyosh qaysi tomondan chiqadi?\" is \"Sun\" in Uzbek. So the answer is straightforward. \"Quyosh qaysi tomondan chiqadi?\" is \"Sun\" in Uzbek. So the answer is straightforward. \"WaitIIIWait, the user might have speech recognition errors, but",
+   "answer_english": "Okay, the user asked \"Quyosh qaysi tomondan chiqadi?\" which is Uzbek for \"From which side does the sun rise?\".\n\nI need to answer in English concisely, 1-3 sentences. The sun rises in the east. So the answer is straightforward.\n\nWait, the user might have speech recognition errors, but the question seems clear in Uzbek. Let me confirm: \"Quyosh\" is sun, \"qaysi tomondan\"",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.89,
+    "output_translation": 14.54,
+    "total": 20.44
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 83,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.44,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "stt",
+   "text": "bu yosh qaysi tomondan chiqadi",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "\"Bu yosh qaysi tomondan chiqadi\" deganda, \"bu yosh\" degani \"bu yosh\" yoki \"bu yil\" degani, \"qaysi tomondan\" degani \"qanday tomondan\" degani, \"chiqadi\" degani \"chiqadi\" degani. Demak, bu jumla \"Bu yosh qaysi tomondan chiqadi\" degan manoni bildiradi. Ammo bu ingliz tilida juda ham manosiz. Balki bu xato tarjimadir.",
+   "answer_english": "Okay, the user wrote \"bu yosh qaysi tomondan chiqadi\" in Uzbek. Let me translate that. \"Bu yosh\" means \"this age\" or \"this year\", \"qaysi tomondan\" is \"from which side\", \"chiqadi\" is \"comes out\". So the sentence translates to \"From which side does this age come out?\" Hmm, but that doesn't make much sense in English. Maybe it's a mistranslation",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.46,
+    "output_translation": 11.98,
+    "total": 17.44
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 17.44,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng katta okean qaysi?",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "'s why I'm going to answer in English. I'm going to answer in English. I'm going to answer in English. I'm going to answer in English. I'm going to answer in English. I'm going to answer in English. I'm going to answer in English. I'm going to answer in English. I'm going to answer in English. I'm going to answer in English. I'm going to answer in English.First,FirstFirst,FirstFirst,FirstFirst,FirstFirst,FirstFirst,FirstFirst,FirstFirst,FirstFirst,",
+   "answer_english": "Okay, the user asked in Uzbek: \"Dunyodagi eng katta okean qaysi?\" which translates to \"Which is the largest ocean in the world?\" I need to answer in English concisely.\n\nFirst, I know the largest ocean is the Pacific Ocean. Let me confirm that. Yes, the Pacific Ocean is the largest, covering about 165 million square kilometers. The Atlantic is the second largest. So the answer should be \"The Pacific Ocean.\"",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.52,
+    "output_translation": 14.21,
+    "total": 19.75
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 85,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 19.75,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng katta okean qaysi",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "'s the largest ocean in the world. The largest ocean in the world is the Pacific Ocean. The largest ocean in the world is the Indian Ocean. The largest ocean in the world is the Indian Ocean. The largest ocean in the world is the Indian Ocean. The largest ocean in the world is the Indian Ocean. The largest ocean in the world is the Pacific Ocean. The largest ocean in the world is the Pacific Ocean. The largest ocean in the world is the Pacific Ocean. I thinkIIIIIIIIIIIIIIIIIIIIIIIIIIIII",
+   "answer_english": "Okay, the user asked in Uzbek: \"dunyodagi eng katta okean qaysi\". Let me translate that. \"Dunyodagi eng katta okean\" means \"the largest ocean in the world\", and \"qaysi\" is \"which\". So they're asking which is the largest ocean.\n\nI remember that the Pacific Ocean is the largest. Let me confirm. Yes, the Pacific Ocean is the largest, covering about 165",
+   "english_input": null,
+   "timings": {
+    "input_translation": 0.0,
+    "qwen": 5.75,
+    "output_translation": 14.74,
+    "total": 20.5
+   },
+   "dual_input": false,
+   "direct_input": true,
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 84,
+    "output_tokens": 100
+   },
+   "correct": false,
+   "answer_language": "english",
+   "latency": 20.5,
+   "first_call": false
+  }
+ ]
+}

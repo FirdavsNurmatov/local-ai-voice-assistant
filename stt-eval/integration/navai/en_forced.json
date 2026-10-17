@@ -1,0 +1,254 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\en_formats.csv",
+ "language_param": "en",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 430,
+   "commit": 2709
+  },
+  "free_commit_mb": 10080,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": false,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": null,
+   "requests": 0,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 431,
+   "commit": 2711
+  },
+  "free_commit_mb": 10104,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": false,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": null,
+   "requests": 0,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "results": [
+  {
+   "id": "en_req_wav",
+   "status": 200,
+   "latency": 4.063,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.9964,
+    "language_forced": true,
+    "detected_language": "en",
+    "detected_language_probability": 0.9964,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9964
+    },
+    "duration": 3.75,
+    "processing_time": 4.06,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_req_webm",
+   "status": 200,
+   "latency": 4.091,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.996,
+    "language_forced": true,
+    "detected_language": "en",
+    "detected_language_probability": 0.996,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.996
+    },
+    "duration": 3.75,
+    "processing_time": 4.08,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_req_m4a",
+   "status": 200,
+   "latency": 4.149,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.9979,
+    "language_forced": true,
+    "detected_language": "en",
+    "detected_language_probability": 0.9979,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9979
+    },
+    "duration": 3.75,
+    "processing_time": 4.13,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_req_ogg",
+   "status": 200,
+   "latency": 4.198,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.9979,
+    "language_forced": true,
+    "detected_language": "en",
+    "detected_language_probability": 0.9979,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9979
+    },
+    "duration": 3.75,
+    "processing_time": 4.2,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_short_wav",
+   "status": 200,
+   "latency": 3.915,
+   "response": {
+    "ok": true,
+    "text": "Thank you.",
+    "language": "en",
+    "language_probability": 0.9903,
+    "language_forced": true,
+    "detected_language": "en",
+    "detected_language_probability": 0.9903,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9903
+    },
+    "duration": 1.43,
+    "processing_time": 3.91,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_long_wav",
+   "status": 200,
+   "latency": 5.273,
+   "response": {
+    "ok": true,
+    "text": "The weather is very nice today. I woke up early in the morning and went to work. After lunch, I met my friends in the park. In the evening I want to read a book, because tomorrow I have an important exam.",
+    "language": "en",
+    "language_probability": 0.9954,
+    "language_forced": true,
+    "detected_language": "en",
+    "detected_language_probability": 0.9954,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9954
+    },
+    "duration": 12.43,
+    "processing_time": 5.26,
+    "model": "small"
+   }
+  },
+  {
+   "id": "en_req_noise_wav",
+   "status": 200,
+   "latency": 4.08,
+   "response": {
+    "ok": true,
+    "text": "Hello, please explain how artificial intelligence works.",
+    "language": "en",
+    "language_probability": 0.9946,
+    "language_forced": true,
+    "detected_language": "en",
+    "detected_language_probability": 0.9946,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0,
+     "en": 0.9946
+    },
+    "duration": 3.75,
+    "processing_time": 4.08,
+    "model": "small"
+   }
+  }
+ ]
+}

@@ -5,6 +5,39 @@ The project was put under version control on 2026-10-13. Everything before that 
 recorded work of 2026-10-13 — inferences from timestamps and file contents, not from commit history.
 No version numbers have been assigned.
 
+## 2026-10-17 — LLM pipeline comparison (evaluation)
+
+- `server.py` (evaluation version): `CHAT_MODEL` env (default still `qwen3:1.7b`); request flags
+  `dual_input` (the LLM also sees the original text next to the MADLAD translation; `CHAT_DUAL_INPUT`) and
+  `direct_input` (no input translation, the LLM reads the original and answers in English for MADLAD;
+  `CHAT_DIRECT_INPUT`); `think:false` sent only to Qwen3; response has `llm` token counts.
+  Backups: `server.py.before_navai.bak`, `server.py.before_dual_input.bak`.
+- `stt-eval/dual_input/`: first dual-input experiment (qwen3:1.7b; no gain).
+- `stt-eval/llm_compare/`: qwen3:1.7b, qwen3:4b-instruct and gemma3:4b × madlad / dual / hybrid / direct on
+  25 Uzbek questions (clean + STT text), 20 Russian, 20 English, 12 robot commands (clean + STT); the
+  Qwen3-4B Thinking model on 17 Uzbek questions. Scripts `llm_compare*.py/ps1`, `command_compare*.py/ps1`,
+  `llm_compare_report.py`. Winner: gemma3:4b with the hybrid pipeline (see
+  `docs/LLM_COMPARISON.md`).
+
+## 2026-10-16 — NavAI Uzbek STT integrated
+
+- `stt_server.py`: Uzbek routing. `?language=uz` → `navai-whisper-small-uzbek` (CT2 int8; no prompt,
+  `without_timestamps=True`, `no_repeat_ngram_size=4`, no language detection). `?language=ru|en` and
+  Russian/English in auto mode stay on the base `small` model with unchanged settings. Auto mode uses NavAI
+  only when the base model says Uzbek and p(ru), p(en) < 0.2. NavAI is loaded on first use after a SHA256
+  check; memory policy `auto` keeps both models when ≥ 3 GB commit is free, otherwise swaps; any NavAI
+  problem falls back to the previous behaviour (`/api/health` → `uz_model`). Switches: `STT_UZ_MODEL`,
+  `STT_UZ_MEMORY`, `STT_UZ_PRELOAD`, `STT_UZ_AUTO_MAX_RUEN`, `STT_UZ_REQUIRED_FREE_MB`.
+  Backup: `stt_server.py.before_navai.bak`.
+- `local_voice_chat.html`: STT language selector next to the microphone (Avto / O‘zbekcha / Русский / English;
+  default Avto = previous behaviour); "(tanlangan)" shown for a chosen language. Backup: `local_voice_chat.html.before_navai.bak`.
+- Tests (`stt-eval/integration/`): Russian/English and edge cases identical to the pre-integration code
+  (52/52); 40 new FLEURS Uzbek recordings WER 1.164 → 0.223; synthetic robot commands WER 3.70 → 0.91
+  (still unreliable); real service identical to the test process (111/111). Not tested: male voices.
+  iPhone Safari through the HTTPS tunnel was tested by the owner on 2026-10-16 (works). STT next to chat +
+  Ollama on the 8 GB PC exceeds the measured memory budget; the owner accepted the risk and runs them together.
+- Docs: `docs/STT.md`, `docs/API_REFERENCE.md` (backups `*.before_navai.bak`).
+
 ## 2026-10-14 — Uzbek STT evaluation and hardware notes (no production change)
 
 - Evaluated `navai-uz/whisper-small-uzbek` (CTranslate2 int8) against the production Faster-Whisper `small`

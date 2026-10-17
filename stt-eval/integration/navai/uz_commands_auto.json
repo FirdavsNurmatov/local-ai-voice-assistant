@@ -1,0 +1,351 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\uz_commands_synthetic.csv",
+ "language_param": "none",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 766,
+   "commit": 5061
+  },
+  "free_commit_mb": 7846,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": true,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": 1.12,
+   "requests": 60,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 764,
+   "commit": 5060
+  },
+  "free_commit_mb": 7879,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": true,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": 1.12,
+   "requests": 65,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "results": [
+  {
+   "id": "cmd_01",
+   "status": 200,
+   "latency": 9.319,
+   "response": {
+    "ok": true,
+    "text": "Thank you for watching. I'll see you in the next video. Bye. Bye. Bye. Bye. Bye. Bye.",
+    "language": "en",
+    "language_probability": 0.7787,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.7787,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.017,
+     "en": 0.7787
+    },
+    "duration": 0.58,
+    "processing_time": 9.31,
+    "model": "small"
+   }
+  },
+  {
+   "id": "cmd_02",
+   "status": 200,
+   "latency": 3.627,
+   "response": {
+    "ok": true,
+    "text": "kam kam",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": false,
+    "detected_language": "ko",
+    "detected_language_probability": 0.402,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0072,
+     "en": 0.1224
+    },
+    "duration": 1.23,
+    "processing_time": 3.62,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "cmd_03",
+   "status": 200,
+   "latency": 3.652,
+   "response": {
+    "ok": true,
+    "text": "ʻibun.",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": false,
+    "detected_language": "ko",
+    "detected_language_probability": 0.4405,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0807,
+     "en": 0.2003
+    },
+    "duration": 0.79,
+    "processing_time": 3.64,
+    "model": "small"
+   }
+  },
+  {
+   "id": "cmd_04",
+   "status": 200,
+   "latency": 3.615,
+   "response": {
+    "ok": true,
+    "text": "Deng yord.",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.2414,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0329,
+     "en": 0.2414
+    },
+    "duration": 0.85,
+    "processing_time": 3.6,
+    "model": "small"
+   }
+  },
+  {
+   "id": "cmd_05",
+   "status": 200,
+   "latency": 3.526,
+   "response": {
+    "ok": true,
+    "text": "again.",
+    "language": "en",
+    "language_probability": 0.9136,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.9136,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0031,
+     "en": 0.9136
+    },
+    "duration": 0.58,
+    "processing_time": 3.5,
+    "model": "small"
+   }
+  },
+  {
+   "id": "cmd_06",
+   "status": 200,
+   "latency": 3.69,
+   "response": {
+    "ok": true,
+    "text": "debkin bu oq kuyov",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": false,
+    "detected_language": "ja",
+    "detected_language_probability": 0.7748,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0078,
+     "en": 0.0988
+    },
+    "duration": 1.28,
+    "processing_time": 3.67,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "cmd_07",
+   "status": 200,
+   "latency": 4.071,
+   "response": {
+    "ok": true,
+    "text": "ndi ndi ndi ndi ndi ndi ndi.",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.4235,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0033,
+     "en": 0.4235
+    },
+    "duration": 0.75,
+    "processing_time": 4.05,
+    "model": "small"
+   }
+  },
+  {
+   "id": "cmd_08",
+   "status": 200,
+   "latency": 3.749,
+   "response": {
+    "ok": true,
+    "text": "kutubxonaga bolib bor",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": false,
+    "detected_language": "hu",
+    "detected_language_probability": 0.4701,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0041,
+     "en": 0.0738
+    },
+    "duration": 1.36,
+    "processing_time": 3.72,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "cmd_09",
+   "status": 200,
+   "latency": 3.623,
+   "response": {
+    "ok": true,
+    "text": "eshikni u",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": false,
+    "detected_language": "de",
+    "detected_language_probability": 0.235,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0723,
+     "en": 0.0197
+    },
+    "duration": 1.0,
+    "processing_time": 3.59,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "cmd_10",
+   "status": 422,
+   "latency": 1.734,
+   "response": {
+    "ok": false,
+    "error": "Nutq aniqlanmadi (faqat sukunat yoki shovqin)"
+   }
+  },
+  {
+   "id": "cmd_11",
+   "status": 200,
+   "latency": 3.482,
+   "response": {
+    "ok": true,
+    "text": "No.",
+    "language": "en",
+    "language_probability": 0.5223,
+    "language_forced": false,
+    "detected_language": "en",
+    "detected_language_probability": 0.5223,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.0043,
+     "en": 0.5223
+    },
+    "duration": 0.69,
+    "processing_time": 3.46,
+    "model": "small"
+   }
+  },
+  {
+   "id": "cmd_12",
+   "status": 200,
+   "latency": 3.671,
+   "response": {
+    "ok": true,
+    "text": "doʻxta toʻxtam",
+    "language": "uz",
+    "language_probability": 0.0,
+    "language_forced": false,
+    "detected_language": "ru",
+    "detected_language_probability": 0.1854,
+    "language_probabilities": {
+     "uz": 0.0,
+     "ru": 0.1854,
+     "en": 0.0467
+    },
+    "duration": 1.51,
+    "processing_time": 3.67,
+    "model": "navai-whisper-small-uzbek"
+   }
+  }
+ ]
+}

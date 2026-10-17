@@ -1,0 +1,6 @@
+﻿run,language_param,multipart,n,status,returned_language,model,micro_WER,CER,exact,repetition,latency_median_s,latency_p95_s,memory_before,memory_after
+edge_uz,uz,False,5,"{""422"": 4, ""400"": 1}","{""null"": 5}","{""null"": 5}",,,,,0.02,0.06,"{""rss"": 760, ""commit"": 5056}","{""rss"": 762, ""commit"": 5058}"
+ruen_auto,none,False,14,"{""200"": 14}","{""ru"": 7, ""en"": 7}","{""small"": 14}",0.007,0.0011,13/14,0,3.82,4.93,"{""rss"": 381, ""commit"": 2604}","{""rss"": 430, ""commit"": 2712}"
+uz_commands_uz,uz,False,12,"{""200"": 11, ""422"": 1}","{""uz"": 11, ""null"": 1}","{""navai-whisper-small-uzbek"": 11, ""null"": 1}",0.913,0.4923,0/12,0,1.88,2.66,"{""rss"": 430, ""commit"": 2712}","{""rss"": 760, ""commit"": 5058}"
+uz_holdout_auto,none,False,40,"{""200"": 40}","{""uz"": 40}","{""navai-whisper-small-uzbek"": 40}",0.2234,0.0933,7/40,0,4.78,5.91,"{""rss"": 762, ""commit"": 5058}","{""rss"": 759, ""commit"": 5055}"
+uz_holdout_uz,uz,False,40,"{""200"": 40}","{""uz"": 40}","{""navai-whisper-small-uzbek"": 40}",0.2234,0.0933,7/40,0,3.05,4.21,"{""rss"": 760, ""commit"": 5058}","{""rss"": 760, ""commit"": 5056}"

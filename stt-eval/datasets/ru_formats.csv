@@ -1,0 +1,8 @@
+id,file,dataset,speech,lang,kind,seconds,sha256,ref_raw
+ru_req_wav,C:\local-ai-translator\stt-test-audio\ru_req.wav,ruen_formats,synthetic (Kokoro),ru,wav,,,Привет! Расскажи мне короткую интересную историю.
+ru_req_webm,C:\local-ai-translator\stt-test-audio\ru_req.webm,ruen_formats,synthetic (Kokoro),ru,webm,,,Привет! Расскажи мне короткую интересную историю.
+ru_req_m4a,C:\local-ai-translator\stt-test-audio\ru_req.m4a,ruen_formats,synthetic (Kokoro),ru,m4a,,,Привет! Расскажи мне короткую интересную историю.
+ru_req_mp3,C:\local-ai-translator\stt-test-audio\ru_req.mp3,ruen_formats,synthetic (Kokoro),ru,mp3,,,Привет! Расскажи мне короткую интересную историю.
+ru_short_wav,C:\local-ai-translator\stt-test-audio\ru_short.wav,ruen_formats,synthetic (Kokoro),ru,wav,,,Спасибо.
+ru_long_wav,C:\local-ai-translator\stt-test-audio\ru_long.wav,ruen_formats,synthetic (Kokoro),ru,wav,,,"Сегодня очень хорошая погода. Утром я рано встал и пошёл на работу. После обеда я встретился с друзьями в парке. А вечером хочу почитать книгу, потому что завтра у меня важный экзамен."
+ru_req_noise_wav,C:\local-ai-translator\stt-test-audio\ru_req_noise.wav,ruen_formats,synthetic (Kokoro),ru,wav,,,Привет! Расскажи мне короткую интересную историю.

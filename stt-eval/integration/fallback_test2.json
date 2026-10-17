@@ -1,0 +1,155 @@
+[
+ {
+  "file": "ru_req.wav",
+  "language_param": "auto",
+  "status": 200,
+  "latency": 4.05,
+  "language": "ru",
+  "model": "small",
+  "text": "Привет. Расскажи мне короткую интересную историю.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 424,
+   "commit": 2706
+  },
+  "free_commit_mb": 10213
+ },
+ {
+  "file": "cmd_04.wav",
+  "language_param": "uz",
+  "status": 200,
+  "latency": 4.21,
+  "language": "uz",
+  "model": "small",
+  "text": "Deng yord.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 425,
+   "commit": 2708
+  },
+  "free_commit_mb": 10211
+ },
+ {
+  "file": "en_req.wav",
+  "language_param": "auto",
+  "status": 200,
+  "latency": 3.72,
+  "language": "en",
+  "model": "small",
+  "text": "Hello, please explain how artificial intelligence works.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 426,
+   "commit": 2708
+  },
+  "free_commit_mb": 10210
+ },
+ {
+  "file": "cmd_02.wav",
+  "language_param": "uz",
+  "status": 200,
+  "latency": 3.72,
+  "language": "uz",
+  "model": "small",
+  "text": "Gyan, gyan.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 425,
+   "commit": 2707
+  },
+  "free_commit_mb": 10212
+ },
+ {
+  "file": "ru_req.wav",
+  "language_param": "ru",
+  "status": 200,
+  "latency": 3.89,
+  "language": "ru",
+  "model": "small",
+  "text": "Привет. Расскажи мне короткую интересную историю.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 425,
+   "commit": 2708
+  },
+  "free_commit_mb": 10220
+ },
+ {
+  "file": "uz_long.wav",
+  "language_param": "uz",
+  "status": 200,
+  "latency": 6.59,
+  "language": "uz",
+  "model": "small",
+  "text": "Bugun khavadi de yaxshi, man e'r talap e'r taturdam, wajiske bardam. Shulik tank",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 428,
+   "commit": 2710
+  },
+  "free_commit_mb": 10215
+ },
+ {
+  "file": "en_short.wav",
+  "language_param": "en",
+  "status": 200,
+  "latency": 3.58,
+  "language": "en",
+  "model": "small",
+  "text": "Thank you.",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 425,
+   "commit": 2706
+  },
+  "free_commit_mb": 10169
+ },
+ {
+  "file": "uz_long.wav",
+  "language_param": "auto",
+  "status": 200,
+  "latency": 6.6,
+  "language": "uz",
+  "model": "small",
+  "text": "Bugun khavadi de yaxshi, man e'r talap e'r taturdam, wajiske bardam. Shulik tank",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 427,
+   "commit": 2709
+  },
+  "free_commit_mb": 10207
+ },
+ {
+  "file": "ru_short.wav",
+  "language_param": "auto",
+  "status": 200,
+  "latency": 3.56,
+  "language": "ru",
+  "model": "small",
+  "text": "Спасибо!",
+  "uz_loaded": false,
+  "base_loaded": true,
+  "swaps": 0,
+  "memory": {
+   "rss": 428,
+   "commit": 2711
+  },
+  "free_commit_mb": 10218
+ }
+]

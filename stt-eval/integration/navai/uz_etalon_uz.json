@@ -1,0 +1,460 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\fleurs_parity.csv",
+ "language_param": "uz",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 760,
+   "commit": 5055
+  },
+  "free_commit_mb": 7883,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": true,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": 1.12,
+   "requests": 66,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.52,
+  "memory_mb": {
+   "rss": 766,
+   "commit": 5060
+  },
+  "free_commit_mb": 7854,
+  "uz_model": {
+   "enabled": true,
+   "model": "navai-whisper-small-uzbek",
+   "model_path": "C:\\local-ai-translator\\stt-models\\navai-whisper-small-uzbek-ct2-int8",
+   "loaded": true,
+   "base_model_loaded": true,
+   "load_policy": "on first Uzbek request",
+   "memory_policy": "auto",
+   "model_swaps": 0,
+   "routing": "?language=uz always; auto only if p(ru) and p(en) < 0.2; never ru/en",
+   "decoding": {
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "without_timestamps": true,
+    "no_repeat_ngram_size": 4
+   },
+   "error": null,
+   "load_seconds": 1.12,
+   "requests": 86,
+   "fallbacks_to_base_model": 0
+  }
+ },
+ "results": [
+  {
+   "id": "fleurs_003",
+   "status": 200,
+   "latency": 2.175,
+   "response": {
+    "ok": true,
+    "text": "hamkasb kurashchilar ham lunaga hurmat bajo keltirishdi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 5.4,
+    "processing_time": 2.16,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_009",
+   "status": 200,
+   "latency": 3.307,
+   "response": {
+    "ok": true,
+    "text": "aziz avlarni oʻzlarining eng dahshatli yirtqichi boʻlguncha sovgʻa boshqa mavzul zavrlaridan boshqaga yetish narsadan qoʻrqmagan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 6.54,
+    "processing_time": 3.29,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_015",
+   "status": 200,
+   "latency": 2.974,
+   "response": {
+    "ok": true,
+    "text": "natijada ijrochilar sahnada kanabis oʻramalanib chekishdi va teatrning oʻz tomoshabinlarini qoʻshilishga undadi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 7.14,
+    "processing_time": 2.96,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_021",
+   "status": 200,
+   "latency": 2.988,
+   "response": {
+    "ok": true,
+    "text": "rosbi soni qanchalik kichik boʻlsa yulduzning magnitik oʻzgarishlarga nisbatan faolligi shuncha past boʻldi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 7.62,
+    "processing_time": 2.99,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_027",
+   "status": 200,
+   "latency": 2.885,
+   "response": {
+    "ok": true,
+    "text": "vodorod iyullari elektronlar olib tashlangan protonlardir sababi vodorod atomlar bitta proton va bitta elektronni tarkib topgan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 8.04,
+    "processing_time": 2.88,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_033",
+   "status": 200,
+   "latency": 3.195,
+   "response": {
+    "ok": true,
+    "text": "finlyandiya qayiqda suzishga borish uchun eng yaxshi manzil ming kun mamlakatning gollarida va qirgʻoqda arxipelaglarda ham ming nafar onlar bor",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 9.18,
+    "processing_time": 3.19,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_039",
+   "status": 200,
+   "latency": 2.881,
+   "response": {
+    "ok": true,
+    "text": "qoʻshinlar yetib kelishdan avval goyimida bir ming sakkiz yillardan buyon mazkur kasallik bilan bogʻliq muammolar kuzatilmagan",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 9.6,
+    "processing_time": 2.86,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_045",
+   "status": 200,
+   "latency": 3.73,
+   "response": {
+    "ok": true,
+    "text": "oʻtgan hafta media apple kompaniyasi jiddiy emas tubatdagi xatdan ortiq qizib ketish bilan boku oʻttiz toʻrt taqoʻshimcha holat toʻgʻrisida xabar bergani eʻlon qildi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 10.26,
+    "processing_time": 3.7,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_051",
+   "status": 200,
+   "latency": 2.458,
+   "response": {
+    "ok": true,
+    "text": "piramida tovushi va chiroqlar shousi bolalar uchun hududdagi eng qiziqarli narsalardan biri",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 10.5,
+    "processing_time": 2.44,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_057",
+   "status": 200,
+   "latency": 3.341,
+   "response": {
+    "ok": true,
+    "text": "fa daʻvo qilishicha meksikin samolyotlarga qisqa yoʻnalishda uchish va har yili millionlab gallon yonida tejash hamda uglerod chiqindini kamaytirish imkonini beruvchi tizimdir",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 10.8,
+    "processing_time": 3.32,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_063",
+   "status": 200,
+   "latency": 2.5,
+   "response": {
+    "ok": true,
+    "text": "internetdan urush muhiti kursi deb izlash hoynahoy mahalliy kompaniya manzilini chiqarib beradi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 11.34,
+    "processing_time": 2.48,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_069",
+   "status": 200,
+   "latency": 3.147,
+   "response": {
+    "ok": true,
+    "text": "kundalini yoga bilan kundalini quvvati maʻrifat quvvori yoga poʻzalari nafas mashqlari mantiqlar hamda vizualizatsiyalar yordamida uygʻotiladi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 11.88,
+    "processing_time": 3.14,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_075",
+   "status": 200,
+   "latency": 3.017,
+   "response": {
+    "ok": true,
+    "text": "u kamaytirishlar boʻyicha biror raqamni keltirmadi ularning xitoy iqtisodiyoti natijalari asosida amalga oshirilishini aytdi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 12.48,
+    "processing_time": 2.99,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_081",
+   "status": 200,
+   "latency": 2.983,
+   "response": {
+    "ok": true,
+    "text": "yigirma asrdagi tadqiqotlar genetik oʻzgarishning ikki havzasi yashirin va ochiq ifodalangan havzalari mavjudligini koʻrsatdi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 13.26,
+    "processing_time": 2.96,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_087",
+   "status": 200,
+   "latency": 3.92,
+   "response": {
+    "ok": true,
+    "text": "uning yetmish sakkiz taʻsiridan birinchisi shu kechki yil oxiriga qadar iroq chegaralarini tajovuzlardan himoya qilish va qoʻshnar va diplomatik aloqalarni qayd etishga oid yangi diplomaviy choralarini boshlashlansin",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 13.74,
+    "processing_time": 3.9,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_093",
+   "status": 200,
+   "latency": 3.133,
+   "response": {
+    "ok": true,
+    "text": "shuni yodda tutingki garchi asosiy sahnadagi musiqa tugagan boʻlsa ham festivalning yarim tungacha musiqa ijrosi davom etiladigan boʻlimlari boʻlishi mumkin",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 14.76,
+    "processing_time": 3.1,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_099",
+   "status": 200,
+   "latency": 3.364,
+   "response": {
+    "ok": true,
+    "text": "biroq sardor bekitini yoʻqotganidan keyin hindiston uzatmalarini yakunlash uchun yettita bekit yoʻ qotishlar bilan faqatgina oʻttiz oltita ranni amalga oshirdi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 16.32,
+    "processing_time": 3.35,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_105",
+   "status": 200,
+   "latency": 4.54,
+   "response": {
+    "ok": true,
+    "text": "arslon toʻdalari xuddi boʻrilar yoki itlar toʻdagʻiga oʻxshab harakat qiladi hayvonlar lekin boshqa katta mushuklarimiz hayratlanarli darajada sheʻrlarga xatti harakat va shuningdek oʻljalar uchun halokatli ekanligi bilan oʻ xushashdir",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 19.14,
+    "processing_time": 4.53,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_111",
+   "status": 200,
+   "latency": 4.355,
+   "response": {
+    "ok": true,
+    "text": "bosh vazir bilan uchrashuv paytida layton konservatorlarning atrof muhit haqidagi qonun loyihasini batafsil va toʻliq qayta yozishni konservator partiyasining atrof mudhit haqida qonun roʻyxasiga oʻzgartirishlar kiritishini soʻradi",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 21.18,
+    "processing_time": 4.35,
+    "model": "navai-whisper-small-uzbek"
+   }
+  },
+  {
+   "id": "fleurs_117",
+   "status": 200,
+   "latency": 3.811,
+   "response": {
+    "ok": true,
+    "text": "ananaviyroq cherkovlar tez tez masʻixning qayta tirilishini nishonlashni buzish uchun yarim tunda jamoat bilan pashaning dam olish kunlari davomida shanba oqshomida pasxa hushyorligini oʻtkazadilar",
+    "language": "uz",
+    "language_probability": null,
+    "language_forced": true,
+    "detected_language": null,
+    "detected_language_probability": null,
+    "language_probabilities": {},
+    "duration": 22.62,
+    "processing_time": 3.78,
+    "model": "navai-whisper-small-uzbek"
+   }
+  }
+ ]
+}

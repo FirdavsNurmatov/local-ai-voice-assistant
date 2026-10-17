@@ -20,7 +20,7 @@
 <section class="chat">
 <div class="chat-head"><strong>Chat</strong><span id="chatCount">0 ta xabar</span></div>
 <div id="messages" aria-live="polite"><div class="welcome" id="welcome"><div class="welcome-icon">🤖</div><h2>AI bilan suhbatni boshlang</h2><p>Matn yuboring. Server MADLAD va Qwen orqali javob beradi; ovozni brauzer yoki mahalliy Uzbek TTS yaratadi.</p></div></div>
-<form class="composer" id="chatForm"><textarea id="messageInput" placeholder="Savolingizni yozing..." aria-label="Savol matni" required></textarea><div class="composer-bottom"><span class="hint">Enter — yuborish · Shift+Enter — yangi qator</span><span style="display:flex;gap:8px"><button class="secondary" id="micBtn" type="button" title="Ovoz bilan kiritish (STT)" style="width:auto;padding:0 14px">🎤 Gapirish</button><button class="primary" id="sendBtn" type="submit">▶ Yuborish</button></span></div><div id="notice" role="status"></div></form>
+<form class="composer" id="chatForm"><textarea id="messageInput" placeholder="Savolingizni yozing..." aria-label="Savol matni" required></textarea><div class="composer-bottom"><span class="hint">Enter — yuborish · Shift+Enter — yangi qator</span><span style="display:flex;gap:8px"><select id="sttLang" title="Ovozli kiritish tili. «O‘zbekcha» — maxsus o‘zbekcha model (NavAI)" style="width:auto"><option value="auto" selected>🎤 Avto</option><option value="uz">O‘zbekcha</option><option value="ru">Русский</option><option value="en">English</option></select><button class="secondary" id="micBtn" type="button" title="Ovoz bilan kiritish (STT)" style="width:auto;padding:0 14px">🎤 Gapirish</button><button class="primary" id="sendBtn" type="submit">▶ Yuborish</button></span></div><div id="notice" role="status"></div></form>
 </section>
 <aside class="settings">
 <h2>Til va ovoz</h2>
@@ -278,7 +278,9 @@
       if (!blob || blob.size === 0) throw new Error('audio yozilmadi (bo‘sh yozuv)');
       let response;
       try {
-        response = await fetch(STT_URL, {method:'POST', headers:{'Content-Type': blob.type || 'application/octet-stream'}, body: blob});
+        const sttLangValue = document.getElementById('sttLang').value;
+        const url = sttLangValue === 'auto' ? STT_URL : `${STT_URL}?language=${sttLangValue}`;
+        response = await fetch(url, {method:'POST', headers:{'Content-Type': blob.type || 'application/octet-stream'}, body: blob});
       } catch { throw new Error('serverga ulanib bo‘lmadi (tarmoq xatosi). Internet yoki tunnelni tekshiring.'); }
       const data = await response.json().catch(() => ({}));
       if (!response.ok || !data.ok) throw new Error(data.error || `HTTP ${response.status}`);
@@ -287,7 +289,9 @@
       sttLang = data.language;
       if ([...languageSelect.options].some(o => o.value === data.language)) languageSelect.value = data.language;
       // O'zbekcha "ru/en emas" qoidasi bilan tanlanadi, shuning uchun unda foiz ko'rsatilmaydi.
-      const pct = data.language_probability >= 0.5 ? `, ishonch ${Math.round(data.language_probability * 100)}%` : ' (taxminiy — tilni «Suhbat tili»dan o‘zgartirish mumkin)';
+      const pct = data.language_forced ? ' (tanlangan)'
+        : data.language_probability >= 0.5 ? `, ishonch ${Math.round(data.language_probability * 100)}%`
+        : ' (taxminiy — tilni «Suhbat tili»dan o‘zgartirish mumkin)';
       showNotice(`Transkript tayyor · til: ${data.language}${pct} · ${data.duration}s audio, ${data.processing_time}s. Matnni tekshirib, «Yuborish»ni bosing.`);
       input.focus();
     } catch (e) {

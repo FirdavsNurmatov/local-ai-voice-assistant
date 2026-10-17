@@ -1,0 +1,22 @@
+[
+ {"id": "e01", "text": "What is the capital city of Uzbekistan?", "answer_keywords": ["tashkent"]},
+ {"id": "e02", "text": "How many days are there in a week?", "answer_keywords": ["7", "seven"]},
+ {"id": "e03", "text": "How many months are there in a year?", "answer_keywords": ["12", "twelve"]},
+ {"id": "e04", "text": "At what temperature does water boil at sea level in Celsius?", "answer_keywords": ["100", "hundred"]},
+ {"id": "e05", "text": "What is two plus three?", "answer_keywords": ["5", "five"]},
+ {"id": "e06", "text": "In which direction does the sun rise?", "answer_keywords": ["east"]},
+ {"id": "e07", "text": "What is the largest ocean on Earth?", "answer_keywords": ["pacific"]},
+ {"id": "e08", "text": "Who wrote the novel War and Peace?", "answer_keywords": ["tolstoy"]},
+ {"id": "e09", "text": "Which animal is called the ship of the desert?", "answer_keywords": ["camel"]},
+ {"id": "e10", "text": "How many minutes are there in one hour?", "answer_keywords": ["60", "sixty"]},
+ {"id": "e11", "text": "What color is snow?", "answer_keywords": ["white"]},
+ {"id": "e12", "text": "What is the highest mountain in the world?", "answer_keywords": ["everest"]},
+ {"id": "e13", "text": "Which planet do we live on?", "answer_keywords": ["earth"]},
+ {"id": "e14", "text": "Which insect makes honey?", "answer_keywords": ["bee"]},
+ {"id": "e15", "text": "How many hours are there in a day?", "answer_keywords": ["24", "twenty-four", "twenty four"]},
+ {"id": "e16", "text": "Which season comes after winter?", "answer_keywords": ["spring"]},
+ {"id": "e17", "text": "How many sides does a triangle have?", "answer_keywords": ["3", "=three"]},
+ {"id": "e18", "text": "What is the Uzbek word for book?", "answer_keywords": ["kitob"]},
+ {"id": "e19", "text": "Who was the first human in space?", "answer_keywords": ["gagarin"]},
+ {"id": "e20", "text": "What is the famous square in Samarkand called?", "answer_keywords": ["registan"]}
+]

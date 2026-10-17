@@ -1,0 +1,101 @@
+{
+ "base": "http://127.0.0.1:8779",
+ "dataset": "stt-eval\\datasets\\edge.csv",
+ "language_param": "none",
+ "multipart": false,
+ "health_before": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.44,
+  "memory_mb": {
+   "rss": 431,
+   "commit": 2712
+  },
+  "free_commit_mb": 10143
+ },
+ "health_after": {
+  "ok": true,
+  "service": "Local Faster-Whisper STT",
+  "ready": true,
+  "loading": false,
+  "error": null,
+  "model": "small",
+  "model_path": "C:\\local-ai-translator\\stt-models\\faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "cpu_threads": 4,
+  "language_detection": "auto (Whisper): ru/en if probability >= 0.5, otherwise uz; override with ?language=",
+  "supported_languages": [
+   "uz",
+   "ru",
+   "en"
+  ],
+  "load_seconds": 1.44,
+  "memory_mb": {
+   "rss": 431,
+   "commit": 2710
+  },
+  "free_commit_mb": 10145
+ },
+ "results": [
+  {
+   "id": "silence",
+   "status": 422,
+   "latency": 0.032,
+   "response": {
+    "ok": false,
+    "error": "Audio jim: ovoz yozilmagan"
+   }
+  },
+  {
+   "id": "noise_only",
+   "status": 422,
+   "latency": 1.806,
+   "response": {
+    "ok": false,
+    "error": "Nutq aniqlanmadi (faqat sukunat yoki shovqin)"
+   }
+  },
+  {
+   "id": "tiny",
+   "status": 422,
+   "latency": 0.021,
+   "response": {
+    "ok": false,
+    "error": "Audio bo'sh yoki juda qisqa (0.10 s)"
+   }
+  },
+  {
+   "id": "garbage",
+   "status": 422,
+   "latency": 0.008,
+   "response": {
+    "ok": false,
+    "error": "Audio faylni o'qib bo'lmadi (InvalidDataError). WebM/Opus, WAV, OGG yoki MP3 yuboring."
+   }
+  },
+  {
+   "id": "zero_bytes",
+   "status": 400,
+   "latency": 0.015,
+   "response": {
+    "ok": false,
+    "error": "Audio yuborilmadi (bo'sh so'rov)"
+   }
+  }
+ ]
+}

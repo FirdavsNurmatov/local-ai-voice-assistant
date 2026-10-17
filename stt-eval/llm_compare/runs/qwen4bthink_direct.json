@@ -1,0 +1,377 @@
+{
+ "pipeline": "direct-think:qwen3:4b",
+ "language": "uz",
+ "server_model": null,
+ "results": [
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "clean",
+   "text": "O'zbekistonning poytaxti qaysi shahar?",
+   "keywords": [
+    "toshkent",
+    "tashkent"
+   ],
+   "answer": "O'zbekistonning poytaxti Tashkent.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 81,
+    "output_tokens": 1655,
+    "thinking_chars": 5670,
+    "generation_s": 118.95
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 127.0,
+   "first_call": true
+  },
+  {
+   "id": "q01",
+   "kind": "question",
+   "input": "stt",
+   "text": "oʻzbekistonning poytaxti qaysi shahar",
+   "keywords": [
+    "toshkent",
+    "tashkent"
+   ],
+   "answer": "Oʻzbekistonning poytaxti Tashkent.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 1819,
+    "thinking_chars": 6328,
+    "generation_s": 131.26
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 131.82,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir haftada necha kun bor?",
+   "keywords": [
+    "7",
+    "yetti",
+    "etti"
+   ],
+   "answer": "Bir haftada 7 kun bor.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 75,
+    "output_tokens": 1154,
+    "thinking_chars": 4303,
+    "generation_s": 78.34
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 78.92,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir haftada necha kun bor",
+   "keywords": [
+    "7",
+    "yetti",
+    "etti"
+   ],
+   "answer": "Bir haftada 7 kun bor.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 73,
+    "output_tokens": 332,
+    "thinking_chars": 1173,
+    "generation_s": 20.42
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 20.85,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "clean",
+   "text": "Bir yilda necha oy bor?",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "Bir yilda 12 oy bor.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 74,
+    "output_tokens": 1098,
+    "thinking_chars": 3898,
+    "generation_s": 74.54
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 74.87,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "kind": "question",
+   "input": "stt",
+   "text": "bir yilda necha oy bor",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "answer": "Bir yilda 12 oy bor.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 72,
+    "output_tokens": 1101,
+    "thinking_chars": 4124,
+    "generation_s": 74.5
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 74.88,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "clean",
+   "text": "Suv necha darajada qaynaydi?",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "Suv 100 darajada qaynaydi.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 605,
+    "thinking_chars": 2190,
+    "generation_s": 38.37
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 38.9,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "kind": "question",
+   "input": "stt",
+   "text": "suvlicha darajada qaynaydi",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "answer": "",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 2048,
+    "thinking_chars": 6648,
+    "generation_s": 150.59
+   },
+   "correct": false,
+   "answer_language": "empty",
+   "latency": 151.1,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "clean",
+   "text": "Ikki qo'shuv uch necha bo'ladi?",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "5",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 1532,
+    "thinking_chars": 5230,
+    "generation_s": 108.34
+   },
+   "correct": true,
+   "answer_language": "empty",
+   "latency": 108.97,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "kind": "question",
+   "input": "stt",
+   "text": "ikki qoʻshi uch necha boʻladi",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "answer": "",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 2048,
+    "thinking_chars": 7102,
+    "generation_s": 151.17
+   },
+   "correct": false,
+   "answer_language": "empty",
+   "latency": 151.74,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "clean",
+   "text": "Quyosh qaysi tomondan chiqadi?",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "Quyosh sharqdan chiqadi.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 78,
+    "output_tokens": 765,
+    "thinking_chars": 2608,
+    "generation_s": 53.45
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 54.04,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "kind": "question",
+   "input": "stt",
+   "text": "bu yosh qaysi tomondan chiqadi",
+   "keywords": [
+    "sharq"
+   ],
+   "answer": "Yosh so'zi Uzbek tilida \"yosh\" yoki \"yil\" ma'noni beradi. Shuning uchun, \"yosh\" so'zining qaysi tomondan chiqishini tushunish uchun \"yil\" so'zini qo'llang.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 77,
+    "output_tokens": 2038,
+    "thinking_chars": 6088,
+    "generation_s": 151.08
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 151.55,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "clean",
+   "text": "Dunyodagi eng katta okean qaysi?",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Dunyodagi eng katta okean Pacifik okeani.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 80,
+    "output_tokens": 1641,
+    "thinking_chars": 5869,
+    "generation_s": 118.43
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 119.12,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "kind": "question",
+   "input": "stt",
+   "text": "dunyodagi eng katta okean qaysi",
+   "keywords": [
+    "tinch"
+   ],
+   "answer": "Dunyodagi eng katta okean Pacific okeani.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 793,
+    "thinking_chars": 2803,
+    "generation_s": 52.35
+   },
+   "correct": false,
+   "answer_language": "uzbek-latin",
+   "latency": 52.91,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "clean",
+   "text": "Navro'z bayrami qaysi oyda nishonlanadi?",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Navro'z bayrami Mart oyida nishonlanadi.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 83,
+    "output_tokens": 564,
+    "thinking_chars": 2096,
+    "generation_s": 36.23
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 36.77,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "kind": "question",
+   "input": "stt",
+   "text": "navroʻz bayrami qaysi oyda nishonlanadi",
+   "keywords": [
+    "mart"
+   ],
+   "answer": "Navroʻz bayrami Mart oyida nishonlanadi.",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 82,
+    "output_tokens": 1034,
+    "thinking_chars": 3689,
+    "generation_s": 70.25
+   },
+   "correct": true,
+   "answer_language": "uzbek-latin",
+   "latency": 70.73,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "kind": "question",
+   "input": "clean",
+   "text": "Amir Temur qaysi shaharda tug'ilgan?",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "answer": "",
+   "llm": {
+    "model": "qwen3:4b",
+    "prompt_tokens": 79,
+    "output_tokens": 2048,
+    "thinking_chars": 7680,
+    "generation_s": 152.54
+   },
+   "correct": false,
+   "answer_language": "empty",
+   "latency": 153.08,
+   "first_call": false
+  }
+ ]
+}

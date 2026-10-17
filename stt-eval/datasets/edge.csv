@@ -1,0 +1,6 @@
+id,file,dataset,speech,lang,kind,seconds,sha256,ref_raw
+silence,C:\local-ai-translator\stt-test-audio\silence.wav,edge,none,,edge,,,
+noise_only,C:\local-ai-translator\stt-test-audio\noise_only.wav,edge,none,,edge,,,
+tiny,C:\local-ai-translator\stt-test-audio\tiny.wav,edge,none,,edge,,,
+garbage,C:\local-ai-translator\stt-test-audio\garbage.webm,edge,none,,edge,,,
+zero_bytes,C:\local-ai-translator\stt-test-audio\does_not_exist.wav,edge,none,,edge,,,

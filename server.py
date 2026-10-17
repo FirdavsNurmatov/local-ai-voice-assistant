@@ -20,6 +20,10 @@ TTS_URL = "http://127.0.0.1:8766/api/tts"                 # Uzbek female voice (
 TTS_HEALTH_URL = "http://127.0.0.1:8766/api/health"
 MALE_TTS_URL = "http://127.0.0.1:8770/api/tts"            # Uzbek male voice (uz_male_tts_server.py, GPU)
 MALE_TTS_HEALTH_URL = "http://127.0.0.1:8770/api/health"
+# Russian/English voices, proxied so they also work from a phone through an HTTPS tunnel
+# (the page used to call 127.0.0.1:8767/8768 directly, which on a phone is the phone itself).
+RUEN_TTS = {"/api/tts/kokoro": ("http://127.0.0.1:8768/api/tts", 8768),
+            "/api/tts/piper": ("http://127.0.0.1:8767/api/tts", 8767)}
 STT_URL = "http://127.0.0.1:8769/api/transcribe"
 STT_HEALTH_URL = "http://127.0.0.1:8769/api/health"
 STT_MAX_BODY = 25 * 1024 * 1024
@@ -157,12 +161,14 @@ def run_chat(text: str, requested_language: str):
 class Handler(BaseHTTPRequestHandler):
     server_version = "LocalVoiceChat/1.1"
 
-    def _send(self, status, body, content_type="application/json; charset=utf-8"):
+    def _send(self, status, body, content_type="application/json; charset=utf-8", extra_headers=None):
         data = body if isinstance(body, bytes) else body.encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(data)))
         self.send_header("Cache-Control", "no-store")
+        for name, value in (extra_headers or {}).items():
+            self.send_header(name, value)
         self.end_headers()
         self.wfile.write(data)
 
@@ -270,6 +276,21 @@ class Handler(BaseHTTPRequestHandler):
                                tts_response.headers.get("Content-Type", "application/json; charset=utf-8"))
                     return
                 self._send(200, tts_response.content, "audio/wav")
+                return
+
+            if path in RUEN_TTS:
+                # Kokoro / Piper: the JSON body ({text, language, voice, speed}) is passed on unchanged
+                url, port = RUEN_TTS[path]
+                try:
+                    tts_response = requests.post(url, json=payload, timeout=180)
+                except requests.RequestException:
+                    self._send(502, json.dumps({"ok": False, "error": f"server ishlamayapti ({port})"},
+                                               ensure_ascii=False))
+                    return
+                self._send(tts_response.status_code, tts_response.content,
+                           tts_response.headers.get("Content-Type", "application/json; charset=utf-8"),
+                           {h: tts_response.headers[h] for h in ("X-TTS-Voice", "X-TTS-Model", "X-TTS-Duration",
+                                                                 "X-TTS-Elapsed") if h in tts_response.headers})
                 return
 
             if path != "/api/chat":

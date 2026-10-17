@@ -26,6 +26,7 @@ microphone ──► STT :8769 ──────────────► cha
 | TTS Uzbek, default | **female**: fine-tuned VITS, ONNX, CPU | `noise_scale 0.667`, `noise_scale_w 0.8`, `length_scale 1.0` (owner-approved sample `stt-tts-uz\outputs\finetuned_test.wav`) | `tts_onnx_server.py`, port 8766 |
 | TTS Uzbek, optional | **male**: Uzbek_TTS (F5-style flow matching), CUDA | reference `test_erkak.wav`, `nfe_step 8`, `speed 1.0`, `cfg_strength 2` (owner-approved sample `Uzbek_TTS-test\test_uzbek_tts.wav`) | `uz_male_tts_server.py`, port 8770 |
 | TTS Russian / English | Kokoro: `masha` / male `dima` (RU), `af_heart` / male `am_michael` (EN) | default page mode "Kokoro"; Piper (`irina`/`lessac`, male `dmitri`/`ryan`) only in "Piper" mode; no browser voices | `kokoro_tts_server.py` :8768, `piper_tts_server.py` :8767 |
+| Proxies in `server.py` | `/api/transcribe` (STT), `/api/tts` (Uzbek), `/api/tts/kokoro`, `/api/tts/piper` — every request from the page goes to 8765, so a phone through the HTTPS tunnel gets all voices | — | `server.py` |
 | Page | `local_voice_chat.html` | microphone language selector (Avto/O‘zbekcha/Русский/English), "Ovoz" (Ayol/Erkak, all languages), "Ruscha / inglizcha ovoz" (Kokoro/Piper) | served by `server.py` |
 
 ## Why — the numbers
@@ -169,9 +170,6 @@ Then open <http://localhost:8765>. Details: [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK
 - **STT mistakes are not caught**: a misheard word changes the question and the model answers the wrong question;
   the page shows the transcript, but nothing asks for confirmation.
 - The model sometimes explains or restates the question ("That translates to …") instead of answering.
-- **Russian/English voices do not work on a phone through the tunnel**: the page calls Kokoro/Piper at
-  `http://127.0.0.1:8768/8767` directly, which on a phone is the phone itself; only Uzbek TTS and STT are proxied
-  through `server.py`.
 - On the 8 GB PC the full stack does not fit: with chat + STT + both Uzbek voices running, only ≈ 1.2 GB commit is
   left, so Kokoro (Russian/English voices) cannot be started at the same time.
 - No conversation history: every question is answered on its own.

@@ -59,7 +59,7 @@ Kokoro/Piper from the page (K14), no automated tests (K36), unrecorded provenanc
 
 ### Robustness and operations
 
-- Same-origin proxy for Kokoro and Piper (fixes LAN clients, allows tightening CORS) (K14, K32).
+- ~~Same-origin proxy for Kokoro and Piper~~ — done 2026-10-17 (K14). Still open: tighten Kokoro/Piper CORS (K32).
 - Truthful aggregate health endpoint (Ollama, all TTS engines) and periodic refresh in the page (K28–K31).
 - Log files with rotation; a start/stop script set; optional Windows service wrappers (K34).
 - Proper HTTP status codes in Piper and `server.py` (K18, K33).

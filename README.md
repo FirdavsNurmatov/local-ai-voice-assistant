@@ -47,9 +47,9 @@ flowchart LR
     S -->|"chat"| O["Ollama :11434<br/>gemma3:4b"]
     S -->|"proxy Uzbek TTS (female)"| U["tts_onnx_server.py :8766<br/>Uzbek VITS ONNX"]
     S -.->|"proxy Uzbek TTS (male)"| M["uz_male_tts_server.py :8770<br/>Uzbek F5-style, GPU"]
-    B -->|"ru / en"| K["kokoro_tts_server.py :8768<br/>masha / af_heart"]
+    S -->|"proxy ru / en"| K["kokoro_tts_server.py :8768<br/>masha / af_heart, dima / am_michael"]
     B -->|"recorded speech"| W["stt_server.py :8769<br/>Faster-Whisper small"]
-    B -.->|"Piper mode only"| P["piper_tts_server.py :8767<br/>irina / lessac"]
+    S -.->|"Piper mode only"| P["piper_tts_server.py :8767<br/>irina / lessac, dmitri / ryan"]
 ```
 
 Details and sequence diagrams: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).

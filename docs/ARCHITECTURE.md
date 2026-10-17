@@ -35,10 +35,10 @@ flowchart TB
     S -- "POST /api/chat" --> O
     O --- Q
     U --- UM
-    UI -- "POST /api/tts (ru,en) — CORS" --> K
-    UI -- "POST /api/transcribe (recorded audio) — CORS" --> W["stt_server.py<br/>127.0.0.1:8769"]
+    S -- "/api/tts/kokoro (ru,en)" --> K
+    S -- "/api/transcribe (recorded audio)" --> W["stt_server.py<br/>127.0.0.1:8769"]
     W --- WM[("Faster-Whisper small<br/>CTranslate2 int8")]
-    UI -. "Piper mode only: POST /api/tts (ru,en) — CORS" .-> P
+    S -. "Piper mode only: /api/tts/piper (ru,en)" .-> P
     K --- KE
     K --- KR
     P --> PC --- PM
@@ -47,10 +47,10 @@ flowchart TB
 Key structural facts (`SOURCE-CODE CONFIRMED`):
 
 - All four Python services are plain `http.server.ThreadingHTTPServer` programs — no web framework.
-- The **browser**, not the backend, decides which TTS engine speaks. The backend only proxies Uzbek TTS.
-- Kokoro and Piper are called by the browser directly at hard-coded `http://127.0.0.1:8768` / `:8767`
-  (cross-origin; both servers send `Access-Control-Allow-Origin: *`). The Uzbek service has no CORS
-  headers and is reached only through the same-origin proxy `POST /api/tts` on 8765.
+- The **browser**, not the backend, decides which TTS engine speaks; every TTS request goes through `server.py`:
+  `POST /api/tts` (Uzbek, 8766/8770), `POST /api/tts/kokoro` (8768) and `POST /api/tts/piper` (8767).
+  Until 2026-10-17 the page called Kokoro and Piper directly at `http://127.0.0.1:8768` / `:8767`, which failed
+  on phones and other devices. Kokoro and Piper still send `Access-Control-Allow-Origin: *` for direct use.
 - Voice input is also browser-driven: the page records audio, sends it to `stt_server.py` (8769),
   puts the transcript into the message box and, when the user submits, passes the recognised
   language to `/api/chat`. Details and measurements: [STT.md](STT.md).
@@ -116,7 +116,8 @@ sequenceDiagram
         S-->>UI: audio/wav
         Note over UI: on any error: notice "Mahalliy TTS xatosi…", stop (no fallback)
     else lang in (ru, en) and mode == kokoro
-        UI->>K: POST /api/tts {text, language, speed}
+        UI->>S: POST /api/tts/kokoro {text, language, voice, speed}
+        S->>K: same body
         alt 200
             K-->>UI: audio/wav 24 kHz (masha | af_heart)
             Note over UI: playback error → notice only
@@ -125,7 +126,8 @@ sequenceDiagram
             Note over UI: notice shows the real Kokoro error, then stop, no Piper request
         end
     else lang in (ru, en) and mode == piper
-        UI->>P: POST /api/tts {text, language}
+        UI->>S: POST /api/tts/piper {text, language, voice}
+        S->>P: same body
         P-->>UI: audio/wav or error notice (no further fallback)
     else any other language
         Note over UI: notice "Bu til uchun mahalliy TTS yo'q"

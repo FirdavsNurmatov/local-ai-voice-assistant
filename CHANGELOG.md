@@ -5,6 +5,17 @@ The project was put under version control on 2026-10-13. Everything before that 
 recorded work of 2026-10-13 — inferences from timestamps and file contents, not from commit history.
 No version numbers have been assigned.
 
+## 2026-10-17 — Russian/English voices through server.py (phones)
+
+- `server.py`: `POST /api/tts/kokoro` and `POST /api/tts/piper` forward the JSON body to 8768 / 8767 and return the
+  audio, status and `X-TTS-*` headers unchanged; `502 server ishlamayapti (port)` when the service is down.
+  Backup `server.py.before_ruen_proxy.bak`.
+- `local_voice_chat.html`: calls those relative paths instead of `http://127.0.0.1:8768/8767`, so Russian/English
+  speech works on a phone through the tunnel. Backup `local_voice_chat.html.before_ruen_proxy.bak`.
+- Tested through the LAN address (`172.20.10.2:8765`): all six voices (Kokoro EN female/male, Piper RU/EN
+  female/male) and the Kokoro 503 / Piper 422 error bodies; the page's requests go to `/api/tts/kokoro|piper`.
+  Not yet tested on the iPhone itself.
+
 ## 2026-10-17 — End-to-end voice test
 
 - `stt-eval/scripts/e2e_voice_test.py`, `stt-eval/e2e/`: spoken Uzbek questions through `server.py`

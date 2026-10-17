@@ -69,7 +69,7 @@ Contents: [Port in use](#port-already-in-use) · [Health unavailable while loadi
 ## Piper fallback NetworkError
 
 1. **Symptom:** status line `…Piper ham ishlamadi: NetworkError when attempting to fetch resource.` (Firefox) or `…Failed to fetch` (Chromium), or `Piper TTS xatosi: …` in `piper` mode.
-2. **Causes:** *Confirmed by code:* the browser could not reach `http://127.0.0.1:8767` — (a) Piper server not running; (b) the page is open on a different device than the servers (127.0.0.1 is then that device). *Possible:* (c) browser blocks requests from a LAN origin to loopback (private-network access rules); (d) an extension/firewall.
+2. **Causes:** since 2026-10-17 the page calls `/api/tts/piper` on `server.py`, which forwards to `127.0.0.1:8767`: (a) Piper server not running → the notice says `server ishlamayapti (8767)`; (b) `Failed to fetch` means the page lost `server.py` (8765) itself. (Before 2026-10-17 the page called 8767 directly, which failed from other devices.)
 3. **Diagnostics:** D1 for 8767; `irm http://127.0.0.1:8767/api/health` on the server machine; check the address bar — is it `localhost`/`127.0.0.1` or an IP?
 4. **Interpretation:** health fails → (a). Health OK but the page URL is not local → (b)/(c).
 5. **Fix:** start `piper_tts_server.py`; use a browser on the server machine.

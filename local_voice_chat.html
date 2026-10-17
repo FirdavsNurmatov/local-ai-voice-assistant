@@ -100,7 +100,8 @@
       let gotAudio = false;
       showNotice(`Kokoro (${voiceName}) audio yaratmoqda...`);
       try {
-        const response = await fetch('http://127.0.0.1:8768/api/tts', {
+        // server.py orqali (8765 -> 8768): telefon/HTTPS tunnel orqali ham ishlaydi.
+        const response = await fetch('/api/tts/kokoro', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({text, language: lang, voice: genderSelect.value, speed: Number(document.getElementById('rate').value)})
@@ -130,7 +131,7 @@
         if (gotAudio) { showNotice(`Kokoro audio ijro etilmadi: ${e.message}`); return; }
         // Kokoro rejimida Piper'ga avtomatik o'tilmaydi: haqiqiy xato ko'rsatiladi.
         // (Piper kerak bo'lsa, "Ovoz tizimi"dan Piper rejimini tanlang.)
-        const reason = /Failed to fetch|NetworkError/i.test(e.message) ? 'server ishlamayapti (8768)' : e.message;
+        const reason = /Failed to fetch|NetworkError/i.test(e.message) ? 'server.py bilan aloqa yo‘q (8765)' : e.message;
         stopAllAudio();
         showNotice(`Kokoro (${voiceName}) TTS xatosi: ${reason}`);
         return;
@@ -139,7 +140,7 @@
     if ((ttsModeSelect.value === 'piper' || kokoroError) && (lang === 'ru' || lang === 'en')) {
       showNotice(kokoroError ? `Kokoro TTS xatosi: ${kokoroError}. Piper zaxira ovozi ishlatilmoqda...` : 'Piper audio yaratmoqda...');
       try {
-        const response = await fetch('http://127.0.0.1:8767/api/tts', {
+        const response = await fetch('/api/tts/piper', {     // server.py orqali (8765 -> 8767)
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({text, language: lang, voice: genderSelect.value})

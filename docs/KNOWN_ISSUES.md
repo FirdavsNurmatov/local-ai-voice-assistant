@@ -31,7 +31,7 @@
 
 | # | Issue | Tag |
 |---|---|---|
-| K14 | Kokoro and Piper URLs are hard-coded to `127.0.0.1` in the page: from another device these voices fail (the page itself and Uzbek TTS still work over the LAN). | CODE |
+| K14 | *Fixed 2026-10-17:* Kokoro and Piper are now reached through `server.py` (`/api/tts/kokoro`, `/api/tts/piper`), so they work from other devices and through the tunnel. | CODE |
 | K15 | The friendly message "server ishlamayapti (8768)" appears only when the browser's error text is exactly `Failed to fetch` (Chromium). Firefox reports `NetworkError when attempting to fetch resource.`, shown verbatim. Cosmetic. | CODE |
 | K16 | No streaming: time to first audio equals full synthesis time (≈ 56 s for a 1 920-character English text). | OBSERVED |
 | K17 | Piper reloads its model on every request (3–5 s for one sentence). | CODE + OBSERVED |

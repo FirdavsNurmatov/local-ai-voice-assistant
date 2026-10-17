@@ -111,6 +111,19 @@ status and body passed through unchanged (e.g. `422`).
 Send-Json http://127.0.0.1:8765/api/tts @{ text = 'Assalomu alaykum! Xush kelibsiz.' } -OutFile uz.wav
 ```
 
+### `POST /api/tts/kokoro` and `POST /api/tts/piper` (added 2026-10-17)
+
+Same-origin proxies for the Russian/English voices, so they also work from a phone or another device (the page
+used to call `127.0.0.1:8768` / `:8767` directly, which on a phone is the phone itself). The JSON body
+(`text`, `language`, `voice`, `speed`) is passed to `http://127.0.0.1:8768/api/tts` or `:8767/api/tts` unchanged;
+status code, body, `Content-Type` and the `X-TTS-*` headers come back unchanged. If the service cannot be reached:
+`502 {"ok": false, "error": "server ishlamayapti (8768)"}` (or `8767`). Timeout 180 s. ✔ (2026-10-17: all six
+voices through the LAN address `172.20.10.2:8765`; Kokoro `503` and Piper `422` error bodies passed through.)
+
+```powershell
+Send-Json http://127.0.0.1:8765/api/tts/kokoro @{ text = 'Hello!'; language = 'en'; voice = 'male' } -OutFile k.wav
+```
+
 ### `POST /api/transcribe` (STT proxy, added 2026-10-14)
 
 Forwards the request body unchanged (raw audio or `multipart/form-data`, with its `Content-Type`)

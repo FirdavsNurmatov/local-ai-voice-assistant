@@ -159,8 +159,8 @@ built-in browser opened on the tunnel URL (secure context), the microphone butto
 simulated stream, uploaded 65 KB of WebM/Opus to `/api/transcribe` → `200`, and the transcript was
 inserted. **A real iPhone was not available to the tester** — that check is still open.
 
-Through the tunnel, Kokoro (`127.0.0.1:8768`) and Piper (`127.0.0.1:8767`) are still called
-directly by the page, so Russian/English **speech output** does not work on the phone; Uzbek TTS does (it is proxied).
+Since 2026-10-17 Kokoro and Piper are also reached through `server.py` (`/api/tts/kokoro`, `/api/tts/piper`), so
+Russian/English **speech output** works through the tunnel too (before, the page called `127.0.0.1:8768/8767`, i.e. the phone itself).
 
 ## Connection to chat and TTS
 

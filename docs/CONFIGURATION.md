@@ -85,8 +85,8 @@ Because the interpreter path is a constant, the server script itself may be star
 | Item | Value |
 |---|---|
 | Chat / Uzbek TTS / health URLs | relative: `/api/chat`, `/api/tts`, `/api/health` (same origin as the page) |
-| Kokoro URL | literal `http://127.0.0.1:8768/api/tts` |
-| Piper URL | literal `http://127.0.0.1:8767/api/tts` |
+| Kokoro URL | relative `/api/tts/kokoro` (proxied by `server.py` to `127.0.0.1:8768`; until 2026-10-17 the literal `http://127.0.0.1:8768/api/tts`) |
+| Piper URL | relative `/api/tts/piper` (proxied to `127.0.0.1:8767`; until 2026-10-17 the literal `http://127.0.0.1:8767/api/tts`) |
 | Default voice system | `<option value="kokoro" selected>` |
 | Default chat language | first option, `uz` |
 | Voice systems | `kokoro` (Uzbek ONNX + Kokoro RU/EN, default) and `piper` (Uzbek ONNX + Piper RU/EN); no browser voice since 2026-10-17 |

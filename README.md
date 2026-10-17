@@ -45,13 +45,16 @@ See [docs/DATA_FLOW.md](docs/DATA_FLOW.md) and [docs/TROUBLESHOOTING.md](docs/TR
 flowchart LR
     B["Browser<br/>local_voice_chat.html"] -->|"chat, Uzbek TTS, health"| S["server.py :8765<br/>MADLAD-400 + language detection"]
     S -->|"chat"| O["Ollama :11434<br/>gemma3:4b"]
-    S -->|"proxy Uzbek TTS"| U["tts_onnx_server.py :8766<br/>Uzbek VITS ONNX"]
+    S -->|"proxy Uzbek TTS (female)"| U["tts_onnx_server.py :8766<br/>Uzbek VITS ONNX"]
+    S -.->|"proxy Uzbek TTS (male)"| M["uz_male_tts_server.py :8770<br/>Uzbek F5-style, GPU"]
     B -->|"ru / en"| K["kokoro_tts_server.py :8768<br/>masha / af_heart"]
     B -->|"recorded speech"| W["stt_server.py :8769<br/>Faster-Whisper small"]
     B -.->|"Piper mode only"| P["piper_tts_server.py :8767<br/>irina / lessac"]
 ```
 
 Details and sequence diagrams: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
+**Current best configuration and the numbers behind every choice:** [docs/CURRENT_SETUP.md](docs/CURRENT_SETUP.md).
 
 ## Components and ports
 
@@ -63,17 +66,18 @@ Details and sequence diagrams: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 | Piper TTS | `piper_tts_server.py` | `127.0.0.1` | 8767 | system/any Python + `.venv-piper` (subprocess) |
 | Kokoro TTS | `kokoro_tts_server.py` | `127.0.0.1` | 8768 | `.venv-kokoro` |
 | STT | `stt_server.py` | `127.0.0.1` | 8769 | `.venv-stt` |
+| Uzbek male voice TTS (optional, GPU) | `uz_male_tts_server.py` | `127.0.0.1` | 8770 | `Uzbek_TTS-test\.venv` |
 | LLM | Ollama | `127.0.0.1` | 11434 | external application |
 
 ## Models and voices
 
 | Language | Voice (default "Kokoro" mode) | If unavailable |
 |---|---|---|
-| Uzbek (`uz`) | `vits_uzbek_finetuned.onnx` via 8766 | error is shown |
+| Uzbek (`uz`) | female: `vits_uzbek_finetuned.onnx` via 8766 (default); male: `Uzbek_TTS-test` model via 8770 ("O‘zbekcha ovoz" selector) | error is shown |
 | Russian (`ru`) | Kokoro-RU `masha` via 8768 — **only if memory allowed it to load** | the real Kokoro error is shown (no automatic fallback) |
 | English (`en`) | Kokoro-82M `af_heart` via 8768 | the real Kokoro error is shown |
 
-Routing depends on the "Ovoz tizimi" (voice system) selector in the page. Piper
+Russian/English routing depends on the "Ruscha / inglizcha ovoz" selector in the page; only local voices are offered. Piper
 (`ru_RU-irina-medium`, `en_US-lessac-medium`, port 8767) is used only when its own mode is selected.
 See [docs/MODELS_AND_VOICES.md](docs/MODELS_AND_VOICES.md).
 
@@ -99,6 +103,7 @@ Set-Location C:\local-ai-translator
 .\.venv\Scripts\python.exe .\server.py                              # window 3, port 8765
 .\.venv-kokoro\Scripts\python.exe .\kokoro_tts_server.py            # window 4, port 8768
 .\.venv-stt\Scripts\python.exe .\stt_server.py                      # window 5, port 8769 (voice input)
+.\Uzbek_TTS-test\.venv\Scripts\python.exe .\uz_male_tts_server.py   # window 6, port 8770 (optional Uzbek male voice, GPU)
 ```
 
 Piper (window 2) is optional. On the 8 GB reference machine chat + STT + Kokoro do **not** fit in
@@ -145,10 +150,13 @@ Times are wall-clock for one short utterance or answer unless stated.
 | Speech-to-text, Whisper `small` int8, 3–5 s of speech | 3.5–5 s (CPU) | 2–3 s | 0.3–0.8 s |
 | Speech-to-text on 12 s average FLEURS clips, current model | median 5.9 s (CPU); 1.1 s (GTX 1650) | 3–4 s | 0.5–1 s |
 | Same, NavAI Uzbek model (120 clips) | median 3.1–3.3 s (CPU); 0.9 s (GTX 1650, +474 MB VRAM) | 2–2.5 s | 0.3–0.6 s |
-| Translation in (MADLAD-400 3B int8) | 0.8–1.8 s | 0.5–1 s | 0.2–0.5 s |
-| Chat answer (Ollama `qwen3:1.7b`, ≤ 100 tokens) | 0.2–1.0 s warm; 4.6–7.3 s when the model was cold | 0.2–0.6 s warm | < 0.5 s |
+| Translation in (MADLAD-400 3B int8) — not used since 2026-10-17 (hybrid pipeline) | 0.8–1.8 s | 0.5–1 s | 0.2–0.5 s |
+| Chat answer (Ollama `qwen3:1.7b`, ≤ 100 tokens; until 2026-10-17) | 0.2–1.0 s warm; 4.6–7.3 s when the model was cold | 0.2–0.6 s warm | < 0.5 s |
+| Chat answer (Ollama `gemma3:4b`, current) | median 3.1 s (Uzbek), 3.2 s (English, whole request) | 1–2 s | < 1 s |
+| Uzbek chat request, text → text (gemma3:4b + MADLAD out, current) | median 6.7 s, p95 12.4 s | 3–4 s | 1–2 s |
 | Translation out (MADLAD) | 1.0–6.4 s (longer answers take longer) | 0.6–3.5 s | 0.2–1 s |
-| Uzbek TTS (VITS ONNX), ≈ 3 s of audio | 0.5–0.6 s | 0.3–0.4 s | (CPU is enough) |
+| Uzbek TTS (VITS ONNX), ≈ 3 s of audio | 0.5–0.6 s (2026-10-13); 1.0 s median on 4 sentences (2026-10-17) | 0.3–0.4 s | (CPU is enough) |
+| Uzbek male voice (Uzbek_TTS, `nfe_step` 8), 3–7 s of audio | 15.9–29.4 s on the GTX 1650 (median 18.2 s); 23–42 s on the CPU | — (use the GPU) | 1–3 s |
 | Kokoro English, ≈ 3 s of audio | 0.9–1.2 s | 0.5–0.8 s | 0.1–0.3 s |
 | Kokoro Russian `masha`, ≈ 5–7 s of audio | 1.6–2.4 s | 1–1.5 s | 0.2–0.5 s |
 | Piper (new process per request) | 3.4–5.4 s | 1.5–3 s | — |
@@ -166,7 +174,9 @@ Per-service memory, measured on the reference PC (commit = memory Windows reserv
 | Kokoro, English only | ≈ 1.8 GB | ≈ 1.4 GB |
 | STT (Faster-Whisper small) | 2.6–3.4 GB | 0.4–1.1 GB |
 | Uzbek TTS | 0.4–0.7 GB | 0.1–0.3 GB |
-| Ollama with `qwen3:1.7b` | — | ≈ 1.4 GB |
+| Ollama with `qwen3:1.7b` (until 2026-10-17) | — | ≈ 1.4 GB |
+| Ollama with `gemma3:4b` (current) | — | ≈ 3.3 GB (1.6 GB of it in VRAM on the GTX 1650) |
+| Uzbek male voice TTS | — | 0.68 GB VRAM loaded, 1.94 GB peak |
 | **Everything together** | **≈ 20 GB** | **≈ 9–11 GB** |
 
 | Configuration | Reference PC, 8 GB (measured) | 16 GB RAM (estimate) | Ubuntu server, 64 GB (estimate) |
@@ -183,7 +193,9 @@ Per-service memory, measured on the reference PC (commit = memory Windows reserv
 |---|---|
 | STT small / NavAI small (int8_float16) | ≈ 0.5 GB (measured +472 MB on the GTX 1650) |
 | STT medium | ≈ 1.5–2 GB |
-| Ollama `qwen3:1.7b` | ≈ 1.5–2 GB |
+| Ollama `gemma3:4b` (current) | ≈ 3.5–4 GB |
+| Uzbek male voice TTS | ≈ 2 GB (measured peak 1.94 GB on the GTX 1650) |
+| Ollama `qwen3:1.7b` (previous) | ≈ 1.5–2 GB |
 | MADLAD-400 3B int8 | ≈ 3–3.5 GB |
 | Kokoro (PyTorch, EN + RU) | ≈ 1–1.5 GB |
 

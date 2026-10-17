@@ -190,6 +190,7 @@ No service refuses to start because another service is down.
 | 8767 | `127.0.0.1` | `.venv-piper\Scripts\python.exe .\piper_tts_server.py` | spawns `python -m piper` per request |
 | 8768 | `127.0.0.1` | `.venv-kokoro\Scripts\python.exe [-X utf8] .\kokoro_tts_server.py` | re-launches itself with `-X utf8` if needed |
 | 8769 | `127.0.0.1` | `.venv-stt\Scripts\python.exe .\stt_server.py` | Faster-Whisper `small`; ≈ 2.6 GB commit |
+| 8770 | `127.0.0.1` | `Uzbek_TTS-test\.venv\Scripts\python.exe .\uz_male_tts_server.py` | Uzbek male voice; CUDA GPU; ≈ 0.7 GB VRAM loaded, 1.9 GB peak |
 | 11434 | `127.0.0.1` | `ollama.exe serve` (child of `ollama app.exe`) | `VERIFIED` listening 2026-10-13, Ollama 0.40.3 |
 
 **Each venv-launched service appears as two `python.exe` processes** (`VERIFIED` earlier on

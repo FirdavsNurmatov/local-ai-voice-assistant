@@ -16,8 +16,10 @@ HTML_FILE = BASE_DIR / "local_voice_chat.html"
 
 MODEL_DIR = str(BASE_DIR / "madlad400-3b-ct2-int8")
 OLLAMA_URL = "http://127.0.0.1:11434/api/chat"
-TTS_URL = "http://127.0.0.1:8766/api/tts"
+TTS_URL = "http://127.0.0.1:8766/api/tts"                 # Uzbek female voice (VITS ONNX)
 TTS_HEALTH_URL = "http://127.0.0.1:8766/api/health"
+MALE_TTS_URL = "http://127.0.0.1:8770/api/tts"            # Uzbek male voice (uz_male_tts_server.py, GPU)
+MALE_TTS_HEALTH_URL = "http://127.0.0.1:8770/api/health"
 STT_URL = "http://127.0.0.1:8769/api/transcribe"
 STT_HEALTH_URL = "http://127.0.0.1:8769/api/health"
 STT_MAX_BODY = 25 * 1024 * 1024
@@ -178,12 +180,18 @@ class Handler(BaseHTTPRequestHandler):
                 tts_ok = tts_response.ok and tts_response.json().get("ok", False)
             except requests.RequestException:
                 tts_ok = False
+            try:
+                male_response = requests.get(MALE_TTS_HEALTH_URL, timeout=1.5)
+                male_ok = male_response.ok and male_response.json().get("ready", False)
+            except requests.RequestException:
+                male_ok = False
             self._send(200, json.dumps({
                 "ok": True,
                 "model": CHAT_MODEL,
                 "translation_model": "MADLAD-400-3B INT8",
                 "local_tts": bool(tts_ok),
                 "tts_model": "vits_uzbek_finetuned.onnx" if tts_ok else None,
+                "male_tts": bool(male_ok),
             }, ensure_ascii=False))
             return
         if path == "/api/stt/health":
@@ -245,14 +253,16 @@ class Handler(BaseHTTPRequestHandler):
                 if len(text) > 2000:
                     self._send(400, json.dumps({"ok": False, "error": "Matn 2000 belgidan oshmasin"}))
                     return
+                # "voice": "female" (default, 8766) or "male" (8770; slow on a small GPU)
+                male = str(payload.get("voice", "female")).lower() == "male"
                 try:
                     tts_response = requests.post(
-                        TTS_URL, json={"text": text}, timeout=120
+                        MALE_TTS_URL if male else TTS_URL, json={"text": text}, timeout=600 if male else 120
                     )
                 except requests.RequestException as exc:
                     self._send(502, json.dumps({
                         "ok": False,
-                        "error": f"Mahalliy TTS serveriga ulanib bo'lmadi: {exc}",
+                        "error": f"Mahalliy TTS serveriga ulanib bo'lmadi ({'8770' if male else '8766'}): {exc}",
                     }, ensure_ascii=False))
                     return
                 if not tts_response.ok:

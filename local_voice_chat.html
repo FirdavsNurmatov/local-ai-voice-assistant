@@ -24,12 +24,13 @@
 </section>
 <aside class="settings">
 <h2>Til va ovoz</h2>
-<div class="field"><label for="ttsMode">Ovoz tizimi</label><select id="ttsMode"><option value="kokoro" selected>Uzbek ONNX + Kokoro (RU Masha / EN Heart)</option><option value="piper">Uzbek ONNX + Piper (RU Irina / EN Lessac)</option></select></div>
+<div class="field"><label for="uzVoice">O‘zbekcha ovoz</label><select id="uzVoice"><option value="female" selected>Ayol ovozi (VITS ONNX, tez)</option><option value="male">Erkak ovozi (Uzbek F5, GPU, sekin)</option></select></div>
+<div class="field"><label for="ttsMode">Ruscha / inglizcha ovoz</label><select id="ttsMode"><option value="kokoro" selected>Kokoro (RU Masha / EN Heart)</option><option value="piper">Piper (RU Irina / EN Lessac)</option></select></div>
 <div class="field"><label for="language">Suhbat tili</label><select id="language"><option value="uz">O‘zbekcha</option><option value="ru">Ruscha</option><option value="en">Inglizcha</option><option value="auto">Avtomatik aniqlash</option></select></div>
 <div class="field"><label for="rate">Tezlik</label><input id="rate" type="range" min="0.65" max="1.35" step="0.05" value="1"><div class="range-row"><span>Sekin</span><span id="rateValue">1.00×</span><span>Tez</span></div></div>
 <div class="field"><label for="volume">Ovoz balandligi</label><input id="volume" type="range" min="0" max="1" step="0.05" value="1"><div class="range-row"><span>0%</span><span id="volumeValue">100%</span><span>100%</span></div></div>
 <div class="actions"><button class="secondary" id="testVoice" type="button">Test ovozi</button><button class="secondary" id="stopVoice" type="button">■ To‘xtatish</button></div>
-<div class="note">Hamma ovozlar kompyuterning o‘zida yaratiladi: o‘zbekcha — Uzbek ONNX (port 8766); ruscha va inglizcha — Kokoro rejimida Masha / Heart (port 8768), Piper rejimida Irina / Lessac (port 8767). Tanlangan TTS ishlamasa, xato ko‘rsatiladi (boshqa ovozga avtomatik o‘tilmaydi). «🎤 Gapirish» tugmasi nutqni matnga aylantiradi (port 8769): ruscha va inglizcha — Faster-Whisper small, o‘zbekcha — NavAI o‘zbekcha modeli.</div>
+<div class="note">Hamma ovozlar kompyuterning o‘zida yaratiladi: o‘zbekcha — ayol ovozi Uzbek ONNX (port 8766), erkak ovozi Uzbek F5 (port 8770, GPU kerak, sekin); ruscha va inglizcha — Kokoro rejimida Masha / Heart (port 8768), Piper rejimida Irina / Lessac (port 8767). Tanlangan TTS ishlamasa, xato ko‘rsatiladi (boshqa ovozga avtomatik o‘tilmaydi). «🎤 Gapirish» tugmasi nutqni matnga aylantiradi (port 8769): ruscha va inglizcha — Faster-Whisper small, o‘zbekcha — NavAI o‘zbekcha modeli.</div>
 </aside>
 </div></div>
 <script>
@@ -38,6 +39,7 @@
   const input = document.getElementById('messageInput');
   const messages = document.getElementById('messages');
   const ttsModeSelect = document.getElementById('ttsMode');
+  const uzVoiceSelect = document.getElementById('uzVoice');
   let currentAudio = null, currentAudioUrl = null;
   const languageSelect = document.getElementById('language');
   const notice = document.getElementById('notice');
@@ -61,12 +63,14 @@
     stopAllAudio();
     // Faqat kompyuterdagi TTS: o'zbekcha — Uzbek ONNX (8766), ruscha/inglizcha — Kokoro (8768) yoki Piper (8767).
     if (lang === 'uz') {
-      showNotice('Mahalliy Uzbek TTS audio yaratmoqda…');
+      const male = uzVoiceSelect.value === 'male';
+      const voiceLabel = male ? 'erkak' : 'ayol';
+      showNotice(male ? 'Erkak ovozi yaratilmoqda (GPU; bu kompyuterda har bir gapga 15–30 s)…' : 'Mahalliy Uzbek TTS (ayol ovozi) audio yaratmoqda…');
       try {
         const response = await fetch('/api/tts', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({text})
+          body: JSON.stringify({text, voice: uzVoiceSelect.value})
         });
         if (!response.ok) {
           let detail = `HTTP ${response.status}`;
@@ -82,10 +86,10 @@
           currentAudio = null; currentAudioUrl = null;
         };
         currentAudio.onerror = () => showNotice('Audio ijro etilmadi.');
-        showNotice('Mahalliy Uzbek TTS ovozi ijro etilmoqda…');
+        showNotice(`O‘zbekcha ${voiceLabel} ovozi ijro etilmoqda…`);
         await currentAudio.play();
       } catch (e) {
-        showNotice(`Mahalliy TTS xatosi: ${e.message}`);
+        showNotice(`O‘zbekcha ${voiceLabel} ovozi TTS xatosi: ${e.message}`);
       }
       return;
     }
@@ -188,7 +192,7 @@
       const r = await fetch('/api/health');
       if (!r.ok) throw new Error('server');
       const data = await r.json();
-      status.textContent = data.translation_model + ' + ' + data.model + (data.local_tts ? ' + Uzbek TTS ✓' : ' · TTS ulanmagan');
+      status.textContent = data.translation_model + ' + ' + data.model + (data.local_tts ? ' + Uzbek TTS ✓' : ' · TTS ulanmagan') + (data.male_tts ? ' + erkak ovozi ✓' : '');
       showNotice(data.local_tts ? 'AI server va mahalliy Uzbek TTS ulangan.' : 'AI server ulangan; mahalliy TTS serverini ham ishga tushiring.');
       try {
         const stt = await (await fetch('/api/stt/health')).json();

@@ -1,0 +1,56 @@
+{
+ "voice": "male",
+ "device": "cuda",
+ "date": "2026-10-17",
+ "load_s": 14.5,
+ "settings": {
+  "model": "UZ.safetensors",
+  "ref_audio": "test_erkak.wav",
+  "nfe_step": 8,
+  "speed": 1.0,
+  "device": "NVIDIA GeForce GTX 1650",
+  "torch_threads": 8,
+  "torch": "2.14.1+cu126"
+ },
+ "median_generation_s": 18.22,
+ "median_real_time_factor": 3.955,
+ "sentences": [
+  {
+   "text": "Assalomu alaykum! Men OrionStar robotining mahalliy ovoz yordamchisiman. Sizga qanday yordam bera olaman?",
+   "chars": 105,
+   "audio_s": 7.47,
+   "generation_s": 29.35,
+   "real_time_factor": 3.93,
+   "transformer_s": 29.32,
+   "transformer_calls": 8
+  },
+  {
+   "text": "Oʻzbekiston poytaxti Toshkent shahridir.",
+   "chars": 40,
+   "audio_s": 2.9,
+   "generation_s": 15.85,
+   "real_time_factor": 5.46,
+   "transformer_s": 15.82,
+   "transformer_calls": 8
+  },
+  {
+   "text": "Haftada etti kun bor. Yana biror narsani bilishingiz kerakmi?",
+   "chars": 61,
+   "audio_s": 4.33,
+   "generation_s": 17.22,
+   "real_time_factor": 3.98,
+   "transformer_s": 17.19,
+   "transformer_calls": 8
+  },
+  {
+   "text": "Kutubxona ikkinchi qavatda joylashgan, liftdan chiqib chapga buriling.",
+   "chars": 70,
+   "audio_s": 4.97,
+   "generation_s": 19.22,
+   "real_time_factor": 3.87,
+   "transformer_s": 19.19,
+   "transformer_calls": 8
+  }
+ ],
+ "vram_peak_gb": 1.94
+}

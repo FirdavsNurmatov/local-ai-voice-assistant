@@ -50,7 +50,8 @@ Always `200` while the process is up. Probes the Uzbek TTS health endpoint with 
  "local_tts": true, "tts_model": "vits_uzbek_finetuned.onnx"}
 ```
 
-✔ `local_tts` is `false` and `tts_model` is `null` when 8766 is unreachable. `ok` and `model` are
+✔ `local_tts` is `false` and `tts_model` is `null` when 8766 is unreachable. `male_tts` (added 2026-10-17) is
+`true` only when 8770 answers with `ready: true`. `ok` and `model` are
 constants: this endpoint does **not** check that Ollama is running or that the model exists.
 
 ```powershell
@@ -95,13 +96,14 @@ Send-Json http://127.0.0.1:8765/api/chat @{ text = 'Hello, how are you?'; langua
 
 ### `POST /api/tts`
 
-Proxy to the Uzbek TTS service; always Uzbek, no `language` field.
+Proxy to an Uzbek TTS service; always Uzbek, no `language` field.
 
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `text` | string | yes | trimmed; 1–2000 characters |
+| `voice` | string | no | `"female"` (default) → `tts_onnx_server.py` (8766, 120 s timeout); `"male"` → `uz_male_tts_server.py` (8770, 600 s timeout). Added 2026-10-17 |
 
-`200 audio/wav` ✔ (WAV, 22 050 Hz, mono, 16-bit PCM). Errors: `400` (size / empty / too long),
+`200 audio/wav` ✔ (WAV, mono, 16-bit PCM; 22 050 Hz female, 24 000 Hz male). Errors: `400` (size / empty / too long),
 `502` (`Mahalliy TTS serveriga ulanib bo'lmadi: …`, including the 120 s timeout), or the upstream
 status and body passed through unchanged (e.g. `422`).
 
@@ -152,6 +154,30 @@ Bind `127.0.0.1`. No CORS headers (a browser page cannot call it cross-origin). 
 ```powershell
 Send-Json http://127.0.0.1:8766/api/tts @{ text = 'Salom, dunyo!' } -OutFile uz.wav
 ```
+
+---
+
+## Uzbek male voice TTS — `uz_male_tts_server.py`, port 8770 (added 2026-10-17)
+
+Started with `Uzbek_TTS-test\.venv\Scripts\python.exe uz_male_tts_server.py`; binds `127.0.0.1`. The port opens
+at once; the model loads in a background thread (≈ 8–16 s, including SHA256 checks of `UZ.safetensors` and the
+reference recording). Needs a CUDA GPU. Details: [MODELS_AND_VOICES.md](MODELS_AND_VOICES.md#uzbek-tts--male-voice-uzbek_tts-f5-style).
+
+### `GET /api/health`
+
+```json
+{"ok": true, "voice": "male", "model": "UZ.safetensors", "ref_audio": "test_erkak.wav", "nfe_step": 8,
+ "ready": true, "loading": false, "error": null, "device": "NVIDIA GeForce GTX 1650", "sample_rate": 24000, "load_s": 15.6}
+```
+
+`ready` is `false` while loading (`loading: true`) or after a failed load (`error` set). ✔
+
+### `POST /api/tts`
+
+`{"text": "..."}` (1–2000 characters) → `200 audio/wav` (24 000 Hz, mono, 16-bit PCM). The text is split into
+sentences (merged up to 160 UTF-8 bytes), each is generated separately and joined with 0.15 s pauses.
+`503` while the model is not ready, `422` generation error, `400` bad request. On the GTX 1650: ≈ 15 s per sentence
+(80 characters → 5.8 s of audio in 23 s). ✔
 
 ---
 

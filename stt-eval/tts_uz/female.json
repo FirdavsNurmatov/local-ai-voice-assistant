@@ -1,0 +1,44 @@
+{
+ "voice": "female",
+ "device": "cpu",
+ "date": "2026-10-17",
+ "load_s": null,
+ "settings": {
+  "model": "vits_uzbek_finetuned.onnx",
+  "provider": [
+   "CPUExecutionProvider"
+  ]
+ },
+ "median_generation_s": 1.005,
+ "median_real_time_factor": 0.3,
+ "sentences": [
+  {
+   "text": "Assalomu alaykum! Men OrionStar robotining mahalliy ovoz yordamchisiman. Sizga qanday yordam bera olaman?",
+   "chars": 105,
+   "audio_s": 6.35,
+   "generation_s": 1.82,
+   "real_time_factor": 0.29
+  },
+  {
+   "text": "Oʻzbekiston poytaxti Toshkent shahridir.",
+   "chars": 40,
+   "audio_s": 2.38,
+   "generation_s": 0.74,
+   "real_time_factor": 0.31
+  },
+  {
+   "text": "Haftada etti kun bor. Yana biror narsani bilishingiz kerakmi?",
+   "chars": 61,
+   "audio_s": 3.37,
+   "generation_s": 1.01,
+   "real_time_factor": 0.3
+  },
+  {
+   "text": "Kutubxona ikkinchi qavatda joylashgan, liftdan chiqib chapga buriling.",
+   "chars": 70,
+   "audio_s": 3.31,
+   "generation_s": 1.0,
+   "real_time_factor": 0.3
+  }
+ ]
+}

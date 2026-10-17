@@ -10,7 +10,8 @@ None of these files belong in version control. They must be obtained separately 
 
 | Language | Voice | Engine / port | Loaded when | Status |
 |---|---|---|---|---|
-| Uzbek | single-speaker fine-tuned VITS | ONNX, 8766 | service start | working (tested 2026-10-13) |
+| Uzbek (female, default) | single-speaker fine-tuned VITS | ONNX, 8766 | service start | working (tested 2026-10-13); owner-approved sample `stt-tts-uz\outputs\finetuned_test.wav` (same model and settings as the service) |
+| Uzbek (male, optional) | voice cloned from `test_erkak.wav` | Uzbek_TTS (F5-style), 8770, CUDA | service start | working (tested 2026-10-17); owner-approved sample `Uzbek_TTS-test\test_uzbek_tts.wav` |
 | English | `af_heart` | Kokoro-82M, 8768 | Kokoro start, if ≥ 2200 MB commit free | working (tested 2026-10-13) |
 | Russian | `masha` | Kokoro-RU, 8768 | Kokoro start, if ≥ 4000 MB commit free **after** English loaded | worked when loaded; normally not loaded on the reference machine |
 | Russian (fallback) | `irina` | Piper, 8767 | per request | working (tested 2026-10-13) |
@@ -53,6 +54,19 @@ To pin provenance, find the Hugging Face repository whose commit `fd0b5572…` m
 | Output | WAV 22 050 Hz mono 16-bit | `HISTORICAL TEST RESULT` (header parsed 2026-10-13) |
 
 Do not modify this model, its config, or the service.
+
+## Uzbek TTS — male voice (Uzbek_TTS, F5-style)
+
+| Item | Value | Status |
+|---|---|---|
+| Code | `Uzbek_TTS-test\` = clone of `github.com/Saidakmal02/Uzbek_TTS` @ `37b7400` (Conditional Flow Matching + DiT, F5-TTS architecture: dim 1024, depth 22) with local changes ([patches/](patches/README.md)) | `VERIFIED` |
+| Checkpoint | `Uzbek_TTS-test\ckpts\UZ.safetensors`, 1.3 GB, SHA256 `27e7dc127b78453f539cfe5c5b23d4b542c5537ac179f3aa2c877d8cece2ca12` (checked at service start) | `VERIFIED` |
+| Vocoder | `charactr/vocos-mel-24khz` from the Hugging Face cache (the service runs with `HF_HUB_OFFLINE=1`) | `VERIFIED` |
+| Voice | cloned from the reference recording `test_data\test_erkak.wav` (SHA256 `900b6337…`) with its transcript "Jizzax kollejlarida infraqizil aniqlagichli turniketlar o'rnatilmoqda." Who is speaking in it is not recorded. | `NOT VERIFIED` origin |
+| Settings | exactly those of `test_generate.py` (owner-approved sample): `nfe_step=8`, `speed=1.0`, `cfg_strength=2`, Euler, fp16 on CUDA | `VERIFIED` |
+| Output | WAV 24 000 Hz mono 16-bit (service) | `VERIFIED` 2026-10-17 |
+| Speed / memory | GTX 1650: ≈ 1.8 s per flow step, 8 steps → ≈ 15 s per sentence; 0.68 GB VRAM loaded, 1.94 GB peak | `VERIFIED` 2026-10-17 |
+| Environment | `Uzbek_TTS-test\.venv` (Python 3.12.10, torch 2.14.1+cu126, torchaudio 2.11.0, vocos 0.1.0) | `VERIFIED` |
 
 ## Piper voices
 
@@ -120,7 +134,7 @@ untouched; instead `kokoro_tts_server.py` re-launches itself with `python -X utf
 | Path | What | Used by services |
 |---|---|---|
 | `nllb-int8\` (600 MB) | NLLB-200 distilled 600M, CTranslate2 INT8 (per legacy scripts) | no |
-| `Uzbek_TTS-test\ckpts\` (inside a 7.1 GB folder) | checkpoints of a different Uzbek TTS experiment | no |
+| `Uzbek_TTS-test\ckpts\UZ.safetensors` | used since 2026-10-17 by the male voice service (see below) | yes, 8770 |
 
 ## Integrity re-check commands
 

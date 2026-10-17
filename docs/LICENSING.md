@@ -32,6 +32,8 @@ Points that still deserve attention (`PROPOSED`, not legal advice):
 | `qwen3:1.7b` (Ollama), used until 2026-10-17 | believed Apache-2.0 (Qwen3) | check `ollama show qwen3:1.7b --license` | `NOT VERIFIED` |
 | Piper voices `ru_RU-irina-medium`, `en_US-lessac-medium` | per-voice terms in the Piper voices collection (each voice has a `MODEL_CARD`) | <https://huggingface.co/rhasspy/piper-voices> | `NOT VERIFIED` — read both model cards before any redistribution or commercial use |
 | Uzbek VITS model `vits_uzbek_finetuned.onnx` | **unknown** — origin and training data not recorded | — | `NOT VERIFIED` |
+| `Uzbek_TTS-test` code and `UZ.safetensors` (male voice, since 2026-10-17) | **no license file** in `github.com/Saidakmal02/Uzbek_TTS`; the architecture is F5-TTS (code MIT), and F5-TTS base weights are CC-BY-NC-4.0 — if this checkpoint was fine-tuned from them, non-commercial terms may apply | local clone | `NOT VERIFIED` |
+| Male voice reference recording `test_erkak.wav` | **unknown** speaker and consent; the service clones this person's voice | — | `NOT VERIFIED` |
 | `stt-tts-uz` source (`text/` front end) | **no license file** in the repository (`github.com/3936010/STT-TTS-Uz`) → no explicit permission to redistribute | local clone | `VERIFIED` absence |
 | NLLB-200 (legacy, unused) | believed CC-BY-NC-4.0 (non-commercial) | not recorded locally | `NOT VERIFIED` |
 

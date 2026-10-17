@@ -54,6 +54,7 @@ were deliberately not started. Therefore all runtime behaviour of the services i
 | [STT.md](STT.md) | Speech-to-text (Faster-Whisper `small`, port 8769): install, API, language handling, measured accuracy/speed/memory, limits. **Added 2026-10-14** |
 | [STT_EVALUATION.md](STT_EVALUATION.md) | Uzbek STT model comparison (current `small` vs NavAI) on real human speech: method, results, error analysis, recommendation. **Added 2026-10-14** |
 | [STT_EVALUATION_REPRODUCE.md](STT_EVALUATION_REPRODUCE.md) | Exact commands to reproduce that evaluation |
+| [CURRENT_SETUP.md](CURRENT_SETUP.md) | **The current best configuration** (STT → chat → TTS), every choice with its numbers, what was rejected, how to start it. **Added 2026-10-17** |
 | [LLM_COMPARISON.md](LLM_COMPARISON.md) | Chat model and pipeline comparison (qwen3:1.7b / qwen3:4b / gemma3:4b × madlad / dual / hybrid / direct) and why the chat now uses gemma3:4b with the hybrid pipeline. **Added 2026-10-17** |
 | [API_REFERENCE.md](API_REFERENCE.md) | Every HTTP route of the five services with examples |
 | [DEVELOPMENT_SETUP.md](DEVELOPMENT_SETUP.md) | Rebuilding environments and obtaining models |

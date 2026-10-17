@@ -5,6 +5,29 @@ The project was put under version control on 2026-10-13. Everything before that 
 recorded work of 2026-10-13 — inferences from timestamps and file contents, not from commit history.
 No version numbers have been assigned.
 
+## 2026-10-17 — Decision record and TTS statistics
+
+- `docs/CURRENT_SETUP.md`: the current best combination (NavAI/`small` STT → gemma3:4b hybrid + MADLAD →
+  female VITS / optional male Uzbek voice, Kokoro for ru/en) with all supporting numbers and rejected options.
+- `stt-eval/scripts/tts_uz_benchmark.py`, `stt-eval/tts_uz/`: female voice 1.0 s median per sentence (CPU),
+  male voice 18.2 s (GTX 1650) and 28.3 s (CPU) on the same 4 sentences.
+- `README.md`: speed and memory tables include gemma3:4b and the male voice.
+
+## 2026-10-17 — Uzbek male voice (optional, GPU)
+
+- New `uz_male_tts_server.py` (port 8770, `Uzbek_TTS-test\.venv`): the Uzbek_TTS model (F5-style,
+  `UZ.safetensors`) with exactly the settings of `Uzbek_TTS-test\test_generate.py`, which produced the
+  owner-approved male sample `test_uzbek_tts.wav` (reference `test_erkak.wav`, nfe_step 8, CUDA). SHA256 checks
+  of the checkpoint and reference; sentence-by-sentence generation for longer answers.
+- `server.py`: `POST /api/tts` takes `"voice": "female" | "male"` (8766 / 8770); `/api/health` adds `male_tts`.
+  Backup `server.py.before_male_voice.bak`.
+- `local_voice_chat.html`: "O‘zbekcha ovoz" selector — Ayol (VITS ONNX, default) / Erkak (GPU); the Russian/English
+  selector is now labelled "Ruscha / inglizcha ovoz". Backup `local_voice_chat.html.before_male_voice.bak`.
+- The existing Uzbek ONNX voice is the female voice (owner-approved sample `stt-tts-uz\outputs\finetuned_test.wav`,
+  same model and settings as the service).
+- `docs/patches/uzbek-tts-male-voice.patch`: the local fp32/diagnostic changes the model code needs.
+- Measured on the GTX 1650: ≈ 15 s per sentence (80 characters → 5.8 s audio in 23 s); 1.94 GB VRAM peak.
+
 ## 2026-10-17 — Chat uses gemma3:4b with the hybrid pipeline; local voices only
 
 - `server.py`: model `gemma3:4b` (was `qwen3:1.7b`); no input translation — the model reads the user's

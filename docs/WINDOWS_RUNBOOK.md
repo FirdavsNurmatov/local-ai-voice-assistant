@@ -121,6 +121,16 @@ voices; with chat and Kokoro (English) loaded there is no room for STT. Choose p
 
 Details: [STT.md](STT.md#memory).
 
+**Window 6 — Uzbek male voice (8770).** Optional; needs the CUDA GPU; wait for `Erkak ovozi modeli tayyor`:
+
+```powershell
+Set-Location C:\local-ai-translator
+.\Uzbek_TTS-test\.venv\Scripts\python.exe -X utf8 .\uz_male_tts_server.py
+```
+
+The page then shows `+ erkak ovozi ✓` and the "O‘zbekcha ovoz" selector can use "Erkak ovozi". On the GTX 1650 each
+sentence takes ≈ 15 s. The female voice (window 1) stays the default.
+
 About the Kokoro start: `.\start_kokoro_tts.ps1` is equivalent to the Window 4 command. The script only does `Set-Location` to its own folder and runs
 the same interpreter with `-X utf8`. Neither form is "preferred" functionally: without `-X utf8`
 the server re-launches itself in UTF-8 mode (one extra process). The script is location-independent

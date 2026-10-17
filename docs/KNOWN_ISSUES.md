@@ -45,6 +45,7 @@
 | K25 | *Superseded 2026-10-14:* Kokoro mode never falls back to Piper any more (see K51). K15 no longer applies: both browsers' network-error texts are now mapped to "server ishlamayapti (8768)". | CODE (by design) |
 | K26 | `ru_g2p.py` fails on non-UTF-8 Windows locales unless Python runs in UTF-8 mode (worked around in the server). | OBSERVED |
 | K27 | `tts_onnx_server.py` contains a stray `from email.mime import text` (harmless, shadowed on the next import). | CODE |
+| K28 | The Uzbek male voice (8770) is slow on the reference PC: ≈ 15 s per sentence on the GTX 1650 (8 flow steps × ≈ 1.8 s, each step runs the 22-layer transformer over the 5.1 s reference + the new speech, twice for guidance). On the CPU (i7-9700K, 8 threads) the same sentence took 24.5 s, so the GPU stays. Not caused by GPU memory (same time with Ollama unloaded). Faster options not applied, because they change the approved sound: fewer steps, a shorter reference clip, playing the first sentence while the rest is generated, or an RTX-class GPU. | VERIFIED 2026-10-17 |
 
 ## Speech-to-text (added 2026-10-14, details in [STT.md](STT.md))
 
@@ -82,5 +83,5 @@
 | K38 | *Resolved 2026-10-13:* MIT `LICENSE` for the project's own code. | VERIFIED |
 | K39 | Runtime depends on a third-party repository without a license (`stt-tts-uz`) carrying an uncommitted local patch. | VERIFIED |
 | K40 | Provenance of the MADLAD conversion, the Uzbek model and the Piper voice downloads is not recorded. | VERIFIED (absence) |
-| K41 | ≈ 7.7 GB of unused legacy material sits in the working directory (`Uzbek_TTS-test\`, `nllb-int8\`). | VERIFIED |
+| K41 | ≈ 7.7 GB of legacy material sits in the working directory (`nllb-int8\` unused; `Uzbek_TTS-test\` is used by the male voice since 2026-10-17). | VERIFIED |
 | K42 | `README.txt` and the in-page help text partly describe older behaviour (e.g. "STT hali qo‘shilmagan" is still true; the header subtitle still says "brauzer yoki mahalliy Uzbek ONNX TTS"). | VERIFIED |

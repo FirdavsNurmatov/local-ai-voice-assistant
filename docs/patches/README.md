@@ -24,3 +24,19 @@ Other untracked local files in that clone: `models\` (the Uzbek model and config
 
 The upstream repository has **no license file**; this patch is kept as a record for reproducibility,
 not as a redistribution of upstream code beyond the few context lines of the diff. See [../LICENSING.md](../LICENSING.md).
+
+## `uzbek-tts-male-voice.patch`
+
+- **Applies to:** `tts.py`, `uz_tts/model/backbones/dit.py`, `uz_tts/model/cfm.py`, `uz_tts/model/modules.py` in
+  <https://github.com/Saidakmal02/Uzbek_TTS> at commit `37b7400` (the clone in `Uzbek_TTS-test\`).
+- **Generated:** 2026-10-17 with `git -C Uzbek_TTS-test diff --output=… -- <the four files>`; checked with
+  `git apply --check --reverse` against the working tree (exit code 0). Applying it to a fresh clone has not been tested.
+- **What it does:** the model runs in fp16 on CUDA, but the convolutional position embedding is computed in fp32
+  (`modules.py`; fp16 produced NaN/Inf on the GTX 1650); `dit.py`/`cfm.py`/`tts.py` add NaN/Inf diagnostics (printed
+  lines; `uz_male_tts_server.py` swallows them), `torch.compile` is disabled.
+- **Why it matters:** `uz_male_tts_server.py` imports this code; the approved sample `test_uzbek_tts.wav` was made with it.
+- **Who made it / when:** 2026-10-12 (before this session; not recorded further).
+
+Other untracked local files in that clone: `ckpts\UZ.safetensors`, `.venv\`, `test_generate*.py`, `test_load.py`,
+`check_*.py`, `*.backup`, `uz_tts\model\modules.py.*.bak`, the generated test WAVs.
+The upstream repository has **no license file**; see [../LICENSING.md](../LICENSING.md).

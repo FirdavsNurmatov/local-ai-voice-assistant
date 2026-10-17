@@ -20,7 +20,7 @@ microphone ──► STT :8769 ──────────────► cha
 |---|---|---|---|
 | Speech-to-text, Uzbek | `navai-uz/whisper-small-uzbek`, CTranslate2 int8, CPU | `?language=uz` (or auto with p(ru), p(en) < 0.2); beam 5, VAD, `without_timestamps=True`, `no_repeat_ngram_size=4`, no prompt; SHA256-checked; memory policy `auto` | `stt_server.py`, port 8769, `.venv-stt` |
 | Speech-to-text, Russian / English | Faster-Whisper `small`, int8, CPU | unchanged production settings; also does language detection in auto mode | same |
-| Chat model | **`gemma3:4b`** (Ollama, Q4_K_M) | `temperature 0.4`, `num_predict 100`, `num_ctx 2048`, no history | Ollama :11434 |
+| Chat model | **`gemma3:4b`** (Ollama, Q4_K_M) | `temperature 0.4`, `num_predict 100`, `num_ctx 2048`, no history; loaded when `server.py` starts and never unloaded (`keep_alive -1`) | Ollama :11434 |
 | Chat pipeline | **hybrid**: no input translation; the model reads the user's Uzbek/Russian text, answers in English; MADLAD translates the answer | system prompt: answer in English in 1–3 sentences; for uz/ru "the user may write in Uzbek or Russian, possibly with speech-recognition errors; understand the message in that language, but always answer in English" | `server.py`, port 8765, `.venv` |
 | Output translation | MADLAD-400 3B, CTranslate2 int8, CPU | greedy, ≤ 128 tokens; Uzbek Cyrillic → Latin | in `server.py` |
 | TTS Uzbek, default | **female**: fine-tuned VITS, ONNX, CPU | `noise_scale 0.667`, `noise_scale_w 0.8`, `length_scale 1.0` (owner-approved sample `stt-tts-uz\outputs\finetuned_test.wav`) | `tts_onnx_server.py`, port 8766 |
@@ -103,6 +103,10 @@ Running at the same time: 8765, 8766, 8769, 8770 and Ollama (free commit fell to
 | Male | 3 | 3/3 | 2.7 s | 8.1 s | 29.1 s | **39.6 s** | 40.2 s |
 
 - The **first** question after start took 25.8 s (Ollama loading gemma3:4b: LLM 15.6 s); later ones 7–13 s.
+  **Fixed the same day:** `server.py` now preloads gemma3:4b at start (≈ 12 s, in the background) and keeps it
+  loaded; the first question after a cold start then took 3.0 s (chat part), like any other question.
+  Quality and normal latency unchanged (Uzbek 39/50, Russian 19/20, English 20/20; `stt-eval/chat_eval/keep_alive_*`).
+  Cost: gemma3:4b stays in memory (≈ 3.3 GB, 1.6 GB of it VRAM) even when nobody asks anything.
 - Times are until the answer audio is ready (the page then plays it).
 - The two wrong answers show the two main weaknesses: STT heard *Quyosh* as *bu yosh* and the model answered the
   misheard question; and for "cho‘l kemasi" gemma answered correctly (*camel*) but MADLAD turned the English answer
@@ -161,6 +165,7 @@ Then open <http://localhost:8765>. Details: [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK
 | dual input (original + translation) | gemma 16/25 STT text; qwen3:1.7b worse than before | below hybrid |
 | direct (model answers in Uzbek itself) | gemma 13/25 STT text | the 4B models write Uzbek worse than MADLAD translates |
 | Browser voices | — | removed on the owner's request: only local voices |
+| Shorter answers (prompt: no restating, no follow-up questions) | Uzbek median 6.7 → 4.7 s, but correct 39/50 → **28/50**; MADLAD lost 11 answers instead of 6 | MADLAD mistranslates very short English answers (*Spring.* → *Bas, chiq!*) |
 | Male voice on the CPU | 28.3 s median | slower than the GTX 1650 |
 
 ## Known limits of this setup
@@ -190,5 +195,6 @@ Then open <http://localhost:8765>. Details: [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK
 | Dual-input experiment | `stt-eval/dual_input/experiment.json` |
 | LLM × pipeline comparison | `stt-eval/llm_compare/` (`RESULTS.md`, `summary.json`, `runs/`, `commands/`) |
 | Uzbek TTS speed (female / male GPU / male CPU) | `stt-eval/tts_uz/*.json` (`stt-eval/scripts/tts_uz_benchmark.py`) |
+| Chat speed-up test (keep_alive/preload; shorter-answer prompt) | `stt-eval/chat_eval/` (`stt-eval/scripts/chat_eval.py`) |
 | End-to-end voice test (audio → STT → chat → TTS) | `stt-eval/e2e/results.json`, `results_male.json` (`stt-eval/scripts/e2e_voice_test.py`) |
 | Russian/English TTS speed, female vs male (Kokoro, Piper) | `stt-eval/tts_ruen/results.json` (`stt-eval/scripts/tts_ruen_benchmark.py`) |

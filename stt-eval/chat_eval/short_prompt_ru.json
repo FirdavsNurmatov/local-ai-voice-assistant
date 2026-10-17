@@ -1,0 +1,423 @@
+{
+ "name": "short_prompt",
+ "language": "ru",
+ "date": "2026-10-17 17:12",
+ "summary": {
+  "n": 20,
+  "correct": 20,
+  "latency_median": 5.3,
+  "latency_mean": 5.21,
+  "latency_p95": 8.7,
+  "output_tokens_median": 19.5
+ },
+ "results": [
+  {
+   "id": "r01",
+   "input": "clean",
+   "text": "Какой город является столицей России?",
+   "answer": "Москва – столица России. Это большой и важный город.",
+   "answer_english": "Moscow is the capital of Russia. It is a large and important city.",
+   "keywords": [
+    "москв"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.56,
+   "timings": {
+    "llm": 2.01,
+    "output_translation": 1.53,
+    "total": 3.55
+   },
+   "output_tokens": 16,
+   "first_call": true
+  },
+  {
+   "id": "r02",
+   "input": "clean",
+   "text": "Сколько дней в неделе?",
+   "answer": "В неделю входит семь дней. Дни недели: понедельник, вторник, среда, четверг, пятница, суббота и воскресенье.",
+   "answer_english": "There are seven days in a week. The days are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+   "keywords": [
+    "7",
+    "семь"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 6.77,
+   "timings": {
+    "llm": 3.15,
+    "output_translation": 3.6,
+    "total": 6.75
+   },
+   "output_tokens": 27,
+   "first_call": false
+  },
+  {
+   "id": "r03",
+   "input": "clean",
+   "text": "Сколько месяцев в году?",
+   "answer": "Есть двенадцать месяцев в году. Это стандартное измерение. Вам нужно знать что-то еще о месяцах?",
+   "answer_english": "There are twelve months in a year. It is a standard measurement. Do you need to know anything else about months?",
+   "keywords": [
+    "12",
+    "двенадцат"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 6.06,
+   "timings": {
+    "llm": 2.92,
+    "output_translation": 3.13,
+    "total": 6.06
+   },
+   "output_tokens": 25,
+   "first_call": false
+  },
+  {
+   "id": "r04",
+   "input": "clean",
+   "text": "При какой температуре кипит вода?",
+   "answer": "Вода кипит при 100 градусах Цельсия.",
+   "answer_english": "Water boils at 100 degrees Celsius.",
+   "keywords": [
+    "100",
+    "сто"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.54,
+   "timings": {
+    "llm": 1.91,
+    "output_translation": 1.61,
+    "total": 3.52
+   },
+   "output_tokens": 11,
+   "first_call": false
+  },
+  {
+   "id": "r05",
+   "input": "clean",
+   "text": "Сколько будет два плюс три?",
+   "answer": "Пять.",
+   "answer_english": "Five.",
+   "keywords": [
+    "5",
+    "пят"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 1.65,
+   "timings": {
+    "llm": 1.17,
+    "output_translation": 0.47,
+    "total": 1.65
+   },
+   "output_tokens": 3,
+   "first_call": false
+  },
+  {
+   "id": "r06",
+   "input": "clean",
+   "text": "С какой стороны восходит солнце?",
+   "answer": "Солнце восходит на востоке. Это восточный горизонт, который мы видим освещенным первым светом солнца.",
+   "answer_english": "The sun rises in the east. It is the eastern horizon that we see illuminated by the sun's first light.",
+   "keywords": [
+    "восток"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 5.71,
+   "timings": {
+    "llm": 2.73,
+    "output_translation": 2.97,
+    "total": 5.7
+   },
+   "output_tokens": 25,
+   "first_call": false
+  },
+  {
+   "id": "r07",
+   "input": "clean",
+   "text": "Какой самый большой океан на Земле?",
+   "answer": "Тихий океан является самым большим океаном на Земле. Он покрывает около 30% поверхности Земли. Он известен своими огромными размерами и разнообразием морской жизни.",
+   "answer_english": "The Pacific Ocean is the largest ocean on Earth. It covers approximately 30% of the Earth's surface. It is known for its vast size and diverse marine life.",
+   "keywords": [
+    "тих"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 8.7,
+   "timings": {
+    "llm": 4.04,
+    "output_translation": 4.63,
+    "total": 8.67
+   },
+   "output_tokens": 37,
+   "first_call": false
+  },
+  {
+   "id": "r08",
+   "input": "clean",
+   "text": "Кто написал роман «Война и мир»?",
+   "answer": "Лев Толстой написал роман «Война и мир».",
+   "answer_english": "Leo Tolstoy wrote the novel \"War and Peace.\"",
+   "keywords": [
+    "толст"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.21,
+   "timings": {
+    "llm": 1.85,
+    "output_translation": 1.35,
+    "total": 3.21
+   },
+   "output_tokens": 11,
+   "first_call": false
+  },
+  {
+   "id": "r09",
+   "input": "clean",
+   "text": "Какой город является столицей Узбекистана?",
+   "answer": "Столица Узбекистана - Ташкент. Это крупный город и политический, экономический и культурный центр страны.",
+   "answer_english": "The capital of Uzbekistan is Tashkent. It is a major city and the political, economic, and cultural center of the country.",
+   "keywords": [
+    "ташкент"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 6.01,
+   "timings": {
+    "llm": 3.1,
+    "output_translation": 2.89,
+    "total": 5.99
+   },
+   "output_tokens": 27,
+   "first_call": false
+  },
+  {
+   "id": "r10",
+   "input": "clean",
+   "text": "Какое животное называют кораблём пустыни?",
+   "answer": "Животное, называемое кораблем пустыни, это верблюд. Верблюды хорошо приспособлены к выживанию в засушливых условиях.",
+   "answer_english": "The animal called the ship of the desert is a camel. Camels are well-adapted to survive in arid environments.",
+   "keywords": [
+    "верблюд"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 6.72,
+   "timings": {
+    "llm": 2.96,
+    "output_translation": 3.74,
+    "total": 6.7
+   },
+   "output_tokens": 25,
+   "first_call": false
+  },
+  {
+   "id": "r11",
+   "input": "clean",
+   "text": "Сколько минут в одном часе?",
+   "answer": "В часе 60 минут.",
+   "answer_english": "There are 60 minutes in one hour.",
+   "keywords": [
+    "60",
+    "шестьдесят"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.98,
+   "timings": {
+    "llm": 1.99,
+    "output_translation": 0.98,
+    "total": 2.97
+   },
+   "output_tokens": 11,
+   "first_call": false
+  },
+  {
+   "id": "r12",
+   "input": "clean",
+   "text": "Какого цвета снег?",
+   "answer": "Снег белый. Он отражает все цвета света.",
+   "answer_english": "Snow is white. It reflects all colors of light.",
+   "keywords": [
+    "бел"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.36,
+   "timings": {
+    "llm": 1.83,
+    "output_translation": 1.51,
+    "total": 3.34
+   },
+   "output_tokens": 12,
+   "first_call": false
+  },
+  {
+   "id": "r13",
+   "input": "clean",
+   "text": "Какая самая высокая гора в мире?",
+   "answer": "Эверест – самая высокая гора в мире. Она расположена в Гималаях, на границе Непала и Китая. Ее вершина достигает 8848,86 метров (29031,7 футов).",
+   "answer_english": "Mount Everest is the highest mountain in the world. It is located in the Himalayas, on the border between Nepal and China. Its summit reaches 8,848.86 meters (29,031.7 feet).",
+   "keywords": [
+    "эверест",
+    "джомолунгм"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 11.18,
+   "timings": {
+    "llm": 5.1,
+    "output_translation": 6.06,
+    "total": 11.17
+   },
+   "output_tokens": 50,
+   "first_call": false
+  },
+  {
+   "id": "r14",
+   "input": "clean",
+   "text": "На какой планете мы живём?",
+   "answer": "Мы живем на планете Земля. Это наш дом и единственная планета, известная как убежище жизни.",
+   "answer_english": "We live on the planet Earth. It is our home and the only planet known to harbor life.",
+   "keywords": [
+    "земл"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 5.3,
+   "timings": {
+    "llm": 2.72,
+    "output_translation": 2.58,
+    "total": 5.3
+   },
+   "output_tokens": 21,
+   "first_call": false
+  },
+  {
+   "id": "r15",
+   "input": "clean",
+   "text": "Какое насекомое делает мёд?",
+   "answer": "Пчёлы производят мед. Они собирают нектар с цветов и превращают его в мед.",
+   "answer_english": "Bees make honey. They collect nectar from flowers and transform it into honey.",
+   "keywords": [
+    "пчел"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 4.84,
+   "timings": {
+    "llm": 2.29,
+    "output_translation": 2.53,
+    "total": 4.82
+   },
+   "output_tokens": 17,
+   "first_call": false
+  },
+  {
+   "id": "r16",
+   "input": "clean",
+   "text": "Сколько часов в сутках?",
+   "answer": "В день 24 часа.",
+   "answer_english": "There are 24 hours in a day.",
+   "keywords": [
+    "24",
+    "двадцать четыре"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.68,
+   "timings": {
+    "llm": 1.78,
+    "output_translation": 0.88,
+    "total": 2.66
+   },
+   "output_tokens": 11,
+   "first_call": false
+  },
+  {
+   "id": "r17",
+   "input": "clean",
+   "text": "Какое время года наступает после зимы?",
+   "answer": "Весна следует за зимой.",
+   "answer_english": "Spring follows winter.",
+   "keywords": [
+    "весн"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.07,
+   "timings": {
+    "llm": 1.13,
+    "output_translation": 0.91,
+    "total": 2.05
+   },
+   "output_tokens": 5,
+   "first_call": false
+  },
+  {
+   "id": "r18",
+   "input": "clean",
+   "text": "Сколько углов у треугольника?",
+   "answer": "Треугольник имеет три угла. Каждый угол меньше 180 градусов.",
+   "answer_english": "A triangle has three angles. Each angle measures less than 180 degrees.",
+   "keywords": [
+    "3",
+    "=три"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 4.43,
+   "timings": {
+    "llm": 2.2,
+    "output_translation": 2.23,
+    "total": 4.43
+   },
+   "output_tokens": 18,
+   "first_call": false
+  },
+  {
+   "id": "r19",
+   "input": "clean",
+   "text": "Как по-английски будет слово «книга»?",
+   "answer": "Английское слово \"книга\" означает \"book\". Оно относится к набору страниц, переплетенных вместе, содержащих текст или изображения.",
+   "answer_english": "The English word for \"книга\" is \"book\". It refers to a set of pages bound together, containing text or images.",
+   "keywords": [
+    "book"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 6.98,
+   "timings": {
+    "llm": 3.21,
+    "output_translation": 3.74,
+    "total": 6.96
+   },
+   "output_tokens": 28,
+   "first_call": false
+  },
+  {
+   "id": "r20",
+   "input": "clean",
+   "text": "Кто был первым человеком в космосе?",
+   "answer": "Юрий Гагарин был первым человеком в космосе. Он совершил свой полет 12 апреля 1961 года.",
+   "answer_english": "Юрий Гагарин был первым человеком в космосе. Он совершил свой полет 12 апреля 1961 года.",
+   "keywords": [
+    "гагарин"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 6.72,
+   "timings": {
+    "llm": 3.42,
+    "output_translation": 3.27,
+    "total": 6.7
+   },
+   "output_tokens": 30,
+   "first_call": false
+  }
+ ]
+}

@@ -5,6 +5,15 @@ The project was put under version control on 2026-10-13. Everything before that 
 recorded work of 2026-10-13 — inferences from timestamps and file contents, not from commit history.
 No version numbers have been assigned.
 
+## 2026-10-17 — Chat model preloaded and kept in memory
+
+- `server.py`: at start a background thread asks Ollama to load gemma3:4b (same `num_ctx` as the chat requests,
+  otherwise Ollama reloads it), and requests use `keep_alive=-1`. First question after a cold start: chat part
+  20.5 s → 3.0 s. Quality unchanged (Uzbek 39/50, Russian 19/20, English 20/20). Backup `server.py.before_speedup.bak`.
+- Tested and **rejected**: a prompt asking for shorter answers (no restating, no follow-up questions). Faster
+  (Uzbek median 6.7 → 4.7 s) but Uzbek correct answers fell 39/50 → 28/50 because MADLAD mistranslates very short
+  answers more often. Data: `stt-eval/chat_eval/` (`short_prompt_*`, `keep_alive_*`), script `chat_eval.py`.
+
 ## 2026-10-17 — Russian/English voices through server.py (phones)
 
 - `server.py`: `POST /api/tts/kokoro` and `POST /api/tts/piper` forward the JSON body to 8768 / 8767 and return the

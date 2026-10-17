@@ -1,0 +1,64 @@
+{
+ "uz": {
+  "baseline": {
+   "n": 50,
+   "correct": 39,
+   "clean_correct": 20,
+   "stt_correct": 19,
+   "latency_median": 6.69,
+   "latency_mean": 7.31,
+   "latency_p95": 12.39,
+   "output_tokens_median": 28.5,
+   "english_answer_correct": 42,
+   "lost_in_output_translation": 6
+  },
+  "new": {
+   "n": 50,
+   "correct": 39,
+   "clean_correct": 21,
+   "stt_correct": 18,
+   "latency_median": 7.14,
+   "latency_mean": 7.39,
+   "latency_p95": 11.87,
+   "output_tokens_median": 29.5,
+   "english_answer_correct": 43,
+   "lost_in_output_translation": 6
+  }
+ },
+ "ru": {
+  "baseline": {
+   "n": 20,
+   "correct": 19,
+   "latency_median": 6.34,
+   "latency_mean": 6.45,
+   "latency_p95": 9.52,
+   "output_tokens_median": 26.0
+  },
+  "new": {
+   "n": 20,
+   "correct": 19,
+   "latency_median": 5.93,
+   "latency_mean": 6.19,
+   "latency_p95": 8.76,
+   "output_tokens_median": 24.5
+  }
+ },
+ "en": {
+  "baseline": {
+   "n": 20,
+   "correct": 20,
+   "latency_median": 3.21,
+   "latency_mean": 3.23,
+   "latency_p95": 5.06,
+   "output_tokens_median": 33.5
+  },
+  "new": {
+   "n": 20,
+   "correct": 20,
+   "latency_median": 3.01,
+   "latency_mean": 3.17,
+   "latency_p95": 5.12,
+   "output_tokens_median": 32.0
+  }
+ }
+}

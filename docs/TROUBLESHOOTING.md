@@ -92,7 +92,7 @@ Contents: [Port in use](#port-already-in-use) · [Health unavailable while loadi
 2. **Causes (from code):** (a) Ollama not running → connection refused; (b) model `gemma3:4b` not pulled → Ollama returns 404, surfaced as the same 502; (c) generation exceeded 180 s → timeout; *Possible:* (d) Ollama itself out of memory.
 3. **Diagnostics:** `irm http://127.0.0.1:11434/api/version`; `(irm http://127.0.0.1:11434/api/tags).models.name`; read the text after `xatosi:`.
 4. **Interpretation:** version call fails → (a); model absent from tags → (b); `Read timed out` → (c).
-5. **Fix:** start the Ollama app; `ollama pull gemma3:4b`; for timeouts check memory (the first request after 10 idle minutes reloads the model).
+5. **Fix:** start the Ollama app; `ollama pull gemma3:4b`; for timeouts check memory. Since 2026-10-17 `server.py` preloads the model at start and keeps it loaded (`keep_alive=-1`); the console shows `gemma3:4b Ollama'da yuklandi` or `…oldindan yuklanmadi: <error>`.
 6. **Recovery:** resend the message; no restart of `server.py` needed.
 7. **Do not:** trust `GET :8765/api/health` for this — it never contacts Ollama.
 

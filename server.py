@@ -35,6 +35,14 @@ CHAT_MODEL = "gemma3:4b"
 SYSTEM_PROMPT = ("You are a helpful, friendly assistant. "
                  "Answer in English in 1-3 concise sentences. "
                  "Do not include reasoning or thinking.")
+# Tested 2026-10-17 and rejected: asking for shorter answers (no restating, no follow-up questions) was faster
+# (Uzbek median 6.7 -> 4.7 s) but Uzbek correct answers fell 39/50 -> 28/50, because MADLAD mistranslates very
+# short English answers more often (stt-eval/chat_eval/short_prompt_*.json).
+# Keep the model loaded in Ollama (no unload after 10 idle minutes) and load it when server.py starts,
+# so the first question does not wait 15-25 s for the model.
+OLLAMA_KEEP_ALIVE = -1
+# The preload must use the same num_ctx as the chat requests, otherwise Ollama reloads the model.
+OLLAMA_OPTIONS = {"num_ctx": 2048, "num_predict": 100, "temperature": 0.4}
 NON_ENGLISH_SYSTEM = (" The user may write in Uzbek or Russian, possibly with speech-recognition errors; "
                       "understand the message in that language, but always answer in English.")
 HOST = "0.0.0.0"
@@ -131,8 +139,8 @@ def run_chat(text: str, requested_language: str):
                 {"role": "user", "content": text},
             ],
             "stream": False,
-            "keep_alive": "10m",
-            "options": {"num_ctx": 2048, "num_predict": 100, "temperature": 0.4},
+            "keep_alive": OLLAMA_KEEP_ALIVE,
+            "options": OLLAMA_OPTIONS,
         },
         timeout=180,
     )
@@ -323,5 +331,17 @@ if __name__ == "__main__":
     print("TTS proxy: /api/tts -> http://127.0.0.1:8766/api/tts")
     print("STT proxy: /api/transcribe, /api/stt/health -> http://127.0.0.1:8769")
     print("Faqat ishonchli lokal tarmoqda ishlating; autentifikatsiya yo'q.")
+
+    def preload_chat_model():
+        # an empty chat request makes Ollama load the model; failures only mean the first question is slower
+        started = time.perf_counter()
+        try:
+            requests.post(OLLAMA_URL, json={"model": CHAT_MODEL, "messages": [], "keep_alive": OLLAMA_KEEP_ALIVE,
+                                            "options": OLLAMA_OPTIONS}, timeout=300).raise_for_status()
+            print(f"{CHAT_MODEL} Ollama'da yuklandi ({time.perf_counter() - started:.1f}s)", flush=True)
+        except requests.RequestException as exc:
+            print(f"{CHAT_MODEL} oldindan yuklanmadi: {exc}", flush=True)
+
+    threading.Thread(target=preload_chat_model, daemon=True).start()
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()
 

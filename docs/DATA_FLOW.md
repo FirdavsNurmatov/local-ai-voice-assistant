@@ -38,7 +38,7 @@ with `<2en> {text}`.
 `POST http://127.0.0.1:11434/api/chat` with model `gemma3:4b`, a fixed English system prompt
 ("Answer in English in 1-3 concise sentences…"; for Uzbek/Russian plus "the user may write in Uzbek or
 Russian, possibly with speech-recognition errors; understand the message in that language, but always answer
-in English"), the user's original text, `stream: false`, `keep_alive: "10m"`, `num_ctx: 2048`,
+in English"), the user's original text, `stream: false`, `keep_alive: -1` (never unload; preloaded at server start), `num_ctx: 2048`,
 `num_predict: 100`, `temperature: 0.4`. No conversation history is sent. Timeout 180 s.
 
 ## Stage 5 — output translation

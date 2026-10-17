@@ -33,7 +33,8 @@ No other service reads environment variables (`SOURCE-CODE CONFIRMED`). Ollama h
 | `CYRILLIC_TO_LATIN` | 36 | char map | Uzbek output transliteration |
 | translator options | 77–80 | `device="cpu"`, `compute_type="int8"`, `inter_threads=1`, `intra_threads=4` | CTranslate2 |
 | translate options | 92–94 | `max_decoding_length=128`, `beam_size=1` | output cap and greedy decoding |
-| Ollama payload | 111–125 | `stream=False`, `think=False`, `keep_alive="10m"`, `num_ctx=2048`, `num_predict=100`, `temperature=0.4`, system prompt | LLM behaviour |
+| Ollama payload | `run_chat` | `stream=False`, `keep_alive=-1` (`OLLAMA_KEEP_ALIVE`: never unload; was `"10m"` until 2026-10-17), `OLLAMA_OPTIONS` = `num_ctx=2048`, `num_predict=100`, `temperature=0.4`, system prompt | LLM behaviour |
+| Model preload | `__main__` | at start a background thread sends an empty chat request with the same options, so Ollama loads `gemma3:4b` before the first question (≈ 12 s) | first-answer latency |
 | Ollama timeout | 126 | 180 s | |
 | request limits | 188, 198, 226 | body ≤ 100 000 bytes; TTS text ≤ 2000; chat text ≤ 5000 chars | |
 | TTS proxy timeout | 203 | 120 s | |

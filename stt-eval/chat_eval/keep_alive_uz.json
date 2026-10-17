@@ -1,0 +1,1181 @@
+{
+ "name": "keep_alive",
+ "language": "uz",
+ "date": "2026-10-17 17:20",
+ "summary": {
+  "n": 50,
+  "correct": 39,
+  "clean_correct": 21,
+  "stt_correct": 18,
+  "latency_median": 7.14,
+  "latency_mean": 7.39,
+  "latency_p95": 11.87,
+  "output_tokens_median": 29.5,
+  "english_answer_correct": 43,
+  "lost_in_output_translation": 6
+ },
+ "results": [
+  {
+   "id": "q01",
+   "input": "clean",
+   "text": "O'zbekistonning poytaxti qaysi shahar?",
+   "answer": "Oʻzbekiston poytaxti Toshkent shahridir. Bu mamlakatning shimolida joylashgan katta shahardir. Toshkent haqida koʻproq bilish istagi bormi?",
+   "answer_english": "The capital of Uzbekistan is Tashkent. It is a large city located in the north of the country. Would you like to know more about Tashkent?",
+   "keywords": [
+    "toshkent",
+    "tashkent"
+   ],
+   "keywords_en": [
+    "tashkent"
+   ],
+   "correct": true,
+   "latency": 6.41,
+   "timings": {
+    "llm": 3.04,
+    "output_translation": 3.33,
+    "total": 6.37
+   },
+   "output_tokens": 32,
+   "first_call": true
+  },
+  {
+   "id": "q01",
+   "input": "stt",
+   "text": "oʻzbekistonning poytaxti qaysi shahar",
+   "answer": "Oʻzbekiston poytaxti Toshkent shahridir. Bu mamlakatning shimolida joylashgan katta, zamonaviy shahardir. Toshkent haqida koʻproq bilish istagi bormi?",
+   "answer_english": "The capital of Uzbekistan is Tashkent. It is a large, modern city located in the north of the country. Would you like to know more about Tashkent?",
+   "keywords": [
+    "toshkent",
+    "tashkent"
+   ],
+   "keywords_en": [
+    "tashkent"
+   ],
+   "correct": true,
+   "latency": 7.37,
+   "timings": {
+    "llm": 3.69,
+    "output_translation": 3.66,
+    "total": 7.35
+   },
+   "output_tokens": 34,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "input": "clean",
+   "text": "Bir haftada necha kun bor?",
+   "answer": "Haftada etti kun bor. Bu siz haftadagi kunlar sonini etti deb hisoblashingiz mumkin degani. Yana biror narsani bilishingiz kerakmi?",
+   "answer_english": "There are seven days in a week. This means you can count the number of days in a week as seven. Would you like to know something else?",
+   "keywords": [
+    "7",
+    "yetti",
+    "etti"
+   ],
+   "keywords_en": [
+    "7",
+    "seven"
+   ],
+   "correct": true,
+   "latency": 7.41,
+   "timings": {
+    "llm": 3.47,
+    "output_translation": 3.92,
+    "total": 7.4
+   },
+   "output_tokens": 32,
+   "first_call": false
+  },
+  {
+   "id": "q02",
+   "input": "stt",
+   "text": "bir haftada necha kun bor",
+   "answer": "Bu esa, \"haftada qancha kun bor?\" degan savolga javob boʻladi. Haftada etti kun bor.",
+   "answer_english": "That translates to \"how many days in a week?\". There are seven days in a week.",
+   "keywords": [
+    "7",
+    "yetti",
+    "etti"
+   ],
+   "keywords_en": [
+    "7",
+    "seven"
+   ],
+   "correct": true,
+   "latency": 5.12,
+   "timings": {
+    "llm": 2.36,
+    "output_translation": 2.75,
+    "total": 5.12
+   },
+   "output_tokens": 20,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "input": "clean",
+   "text": "Bir yilda necha oy bor?",
+   "answer": "Bir yilda 12 oy bor. Bu vaqtni standart oʻlchashdir. Oylar haqida yana nimanidir bilishingiz kerakmi?",
+   "answer_english": "There are 12 months in a year. This is the standard measurement for time. Do you need to know anything else about months?",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "keywords_en": [
+    "12",
+    "twelve"
+   ],
+   "correct": true,
+   "latency": 6.57,
+   "timings": {
+    "llm": 3.19,
+    "output_translation": 3.35,
+    "total": 6.55
+   },
+   "output_tokens": 29,
+   "first_call": false
+  },
+  {
+   "id": "q03",
+   "input": "stt",
+   "text": "bir yilda necha oy bor",
+   "answer": "Bir yilda oʻn ikki oy bor. Bu vaqtni standart oʻlchashdir. Kalendar haqida yana nimanidir bilishingiz kerakmi?",
+   "answer_english": "There are twelve months in a year. This is the standard measurement of time. Do you need to know anything else about calendars?",
+   "keywords": [
+    "12",
+    "o'n ikki"
+   ],
+   "keywords_en": [
+    "12",
+    "twelve"
+   ],
+   "correct": true,
+   "latency": 6.38,
+   "timings": {
+    "llm": 3.05,
+    "output_translation": 3.3,
+    "total": 6.36
+   },
+   "output_tokens": 27,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "input": "clean",
+   "text": "Suv necha darajada qaynaydi?",
+   "answer": "Suv qaynaganda 100 daraja issiq boʻladi.  Suvning harorati haqida boshqa narsalarni bilishingiz kerakmi?",
+   "answer_english": "Water boils at 100 degrees Celsius or 212 degrees Fahrenheit.  Do you need to know anything else about water temperature?",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "keywords_en": [
+    "100",
+    "hundred"
+   ],
+   "correct": true,
+   "latency": 6.65,
+   "timings": {
+    "llm": 3.29,
+    "output_translation": 3.32,
+    "total": 6.62
+   },
+   "output_tokens": 30,
+   "first_call": false
+  },
+  {
+   "id": "q04",
+   "input": "stt",
+   "text": "suvlicha darajada qaynaydi",
+   "answer": "Suv 100 daraja issiqlikda qaynaydi. Suv harorati haqida qoʻshimcha malumotga ehtiyojingiz bormi?",
+   "answer_english": "Water boils at 100 degrees Celsius or 212 degrees Fahrenheit. Do you need any more information about water temperature?",
+   "keywords": [
+    "100",
+    "yuz"
+   ],
+   "keywords_en": [
+    "100",
+    "hundred"
+   ],
+   "correct": true,
+   "latency": 6.34,
+   "timings": {
+    "llm": 3.12,
+    "output_translation": 3.2,
+    "total": 6.33
+   },
+   "output_tokens": 28,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "input": "clean",
+   "text": "Ikki qo'shuv uch necha bo'ladi?",
+   "answer": "Ikkiga uch qoʻshish beshga teng. Yana hisoblashda yordam kerakmi?",
+   "answer_english": "Two plus three equals five. Do you need help with another calculation?",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "keywords_en": [
+    "5",
+    "five"
+   ],
+   "correct": true,
+   "latency": 4.07,
+   "timings": {
+    "llm": 2.03,
+    "output_translation": 2.03,
+    "total": 4.07
+   },
+   "output_tokens": 15,
+   "first_call": false
+  },
+  {
+   "id": "q05",
+   "input": "stt",
+   "text": "ikki qoʻshi uch necha boʻladi",
+   "answer": "Bu beshga teng.  Boshqa alifbo masalasida yordam kerakmi?",
+   "answer_english": "That equals five.  Do you need help with another math problem?",
+   "keywords": [
+    "5",
+    "besh"
+   ],
+   "keywords_en": [
+    "5",
+    "five"
+   ],
+   "correct": true,
+   "latency": 3.84,
+   "timings": {
+    "llm": 1.93,
+    "output_translation": 1.88,
+    "total": 3.82
+   },
+   "output_tokens": 15,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "input": "clean",
+   "text": "Quyosh qaysi tomondan chiqadi?",
+   "answer": "Quyosh chiqish joyidan chiqadi, botadigan joyidan botadi.",
+   "answer_english": "The sun rises in the east. It sets in the west.",
+   "keywords": [
+    "sharq"
+   ],
+   "keywords_en": [
+    "east"
+   ],
+   "correct": false,
+   "latency": 3.56,
+   "timings": {
+    "llm": 1.87,
+    "output_translation": 1.69,
+    "total": 3.56
+   },
+   "output_tokens": 14,
+   "first_call": false
+  },
+  {
+   "id": "q06",
+   "input": "stt",
+   "text": "bu yosh qaysi tomondan chiqadi",
+   "answer": "Bu \"Bu yosh qaysi tomondan kelib chiqqan?\" degan manoni anglatadi. Sizning odamning yoshi yoki sanasi haqida soʻrayotganingizni tushundim.  Nima haqida gapirayotganingizni aniq aytib bersangiz?",
+   "answer_english": "That translates to \"Which side does this age come from?\" I understand you're asking about a person's age or a date.  Could you please clarify what you're referring to?",
+   "keywords": [
+    "sharq"
+   ],
+   "keywords_en": [
+    "east"
+   ],
+   "correct": false,
+   "latency": 9.48,
+   "timings": {
+    "llm": 4.15,
+    "output_translation": 5.3,
+    "total": 9.46
+   },
+   "output_tokens": 41,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "input": "clean",
+   "text": "Dunyodagi eng katta okean qaysi?",
+   "answer": "Dunyodagi eng katta okean Tinch okeanidir. U Er yuzasining 30% dan koʻprogʻini qoplaydi. U oʻzining kattaligi va turli xil dengiz jonzotlari bilan mashhur.",
+   "answer_english": "The largest ocean in the world is the Pacific Ocean. It covers more than 30% of the Earth's surface. It's known for its vast size and diverse marine life.",
+   "keywords": [
+    "tinch"
+   ],
+   "keywords_en": [
+    "pacific"
+   ],
+   "correct": true,
+   "latency": 8.89,
+   "timings": {
+    "llm": 4.04,
+    "output_translation": 4.8,
+    "total": 8.86
+   },
+   "output_tokens": 40,
+   "first_call": false
+  },
+  {
+   "id": "q07",
+   "input": "stt",
+   "text": "dunyodagi eng katta okean qaysi",
+   "answer": "Dunyodagi eng katta okean Tinch okeanidir. U Er yuzasining 30% dan koʻprogʻini qoplaydi. U oʻzining kattaligi va turli xil dengiz jonzotlari bilan mashhur.",
+   "answer_english": "The largest ocean in the world is the Pacific Ocean. It covers more than 30% of the Earth's surface. It's known for its vast size and diverse marine life.",
+   "keywords": [
+    "tinch"
+   ],
+   "keywords_en": [
+    "pacific"
+   ],
+   "correct": true,
+   "latency": 9.28,
+   "timings": {
+    "llm": 4.17,
+    "output_translation": 5.1,
+    "total": 9.27
+   },
+   "output_tokens": 40,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "input": "clean",
+   "text": "Navro'z bayrami qaysi oyda nishonlanadi?",
+   "answer": "Navroʻz mart oyida nishonlanadi. U Eron yangi yilining boshlanishini nishonlaydi.  Muborak boʻlsin Navroʻz!",
+   "answer_english": "Nowruz is celebrated in March. It marks the beginning of the Persian New Year.  Happy Nowruz!",
+   "keywords": [
+    "mart"
+   ],
+   "keywords_en": [
+    "march"
+   ],
+   "correct": true,
+   "latency": 5.9,
+   "timings": {
+    "llm": 2.8,
+    "output_translation": 3.09,
+    "total": 5.9
+   },
+   "output_tokens": 23,
+   "first_call": false
+  },
+  {
+   "id": "q08",
+   "input": "stt",
+   "text": "navroʻz bayrami qaysi oyda nishonlanadi",
+   "answer": "Navroʻz bahorda nishonlanadi. U Eron quyosh taqvimi boʻyicha mart oyining birinchi kuniga toʻgʻri keladi. Navroʻz muborak boʻlsin!",
+   "answer_english": "Nowruz is celebrated in the spring. It falls on the first day of the Persian solar calendar, which is typically in March. Happy Nowruz!",
+   "keywords": [
+    "mart"
+   ],
+   "keywords_en": [
+    "march"
+   ],
+   "correct": true,
+   "latency": 6.99,
+   "timings": {
+    "llm": 3.33,
+    "output_translation": 3.61,
+    "total": 6.97
+   },
+   "output_tokens": 31,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "input": "clean",
+   "text": "Amir Temur qaysi shaharda tug'ilgan?",
+   "answer": "Amir Temur (Tamerlan) Shahrisabzda tugʻilgan. U hozirgi Oʻzbekiston hududida tugʻilgan.",
+   "answer_english": "Amir Temur (Tamerlane) was born in Shakhrisabz. He was born in present-day Uzbekistan.",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "keywords_en": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "correct": true,
+   "latency": 5.7,
+   "timings": {
+    "llm": 3.08,
+    "output_translation": 2.6,
+    "total": 5.69
+   },
+   "output_tokens": 28,
+   "first_call": false
+  },
+  {
+   "id": "q09",
+   "input": "stt",
+   "text": "anir temur qaysi shaharda tugʻilgan",
+   "answer": "Uning ismi «Tamerlan» boʻlib, u hozirgi Oʻzbekiston hududida joylashgan Shahrisabzda tugʻilgan va keyinchalik poytaxtini Samarkandga koʻchirgan.",
+   "answer_english": "Temur (Tamerlane) was born in Shahrisabz, which is now in Uzbekistan. He later established his capital in Samarkand.",
+   "keywords": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "keywords_en": [
+    "kesh",
+    "shahrisabz"
+   ],
+   "correct": true,
+   "latency": 7.56,
+   "timings": {
+    "llm": 3.45,
+    "output_translation": 4.08,
+    "total": 7.54
+   },
+   "output_tokens": 32,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "input": "clean",
+   "text": "Alisher Navoiy kim bo'lgan?",
+   "answer": "Alisher Navoiy XV asrning mashhur oʻzbek shoiri va olimlaridan biri boʻlib, u Markaziy Osiyo adabiyotining eng buyuk namoyandalaridan biri sifatida tan olingan va uning asarlari sevgi, ruhiyat va ijtimoiy adolat mavzularini yoritgan.",
+   "answer_english": "Alisher Navoiy was a renowned 15th-century poet and scholar of Uzbekistan. He is considered one of the greatest figures in Central Asian literature and is celebrated for his contributions to Persian and Arabic literature. His works explored themes of love, spirituality, and social justice.",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "keywords_en": [
+    "poet",
+    "thinker",
+    "writer"
+   ],
+   "correct": true,
+   "latency": 11.87,
+   "timings": {
+    "llm": 5.85,
+    "output_translation": 5.99,
+    "total": 11.85
+   },
+   "output_tokens": 58,
+   "first_call": false
+  },
+  {
+   "id": "q10",
+   "input": "stt",
+   "text": "rashir navoiy kim boʻlgan",
+   "answer": "Navoiy 19-asrning mashhur tojik shoiri va dramaturgi boʻlib, u Markaziy Osiyo adabiyotining eng buyuk namoyandalaridan biri sifatida tan olingan. U oʻzining romantik va falsafiy asarlari bilan mashhur. Uning eng mashhur sheri \"Mahbub\"dir.",
+   "answer_english": "Navoiy was a renowned 19th-century Tajik poet and playwright. He is considered one of the greatest figures in Central Asian literature, known for his romantic and philosophical works. His most famous poem is \"Mahbub.\"",
+   "keywords": [
+    "shoir",
+    "mutafakkir",
+    "adib"
+   ],
+   "keywords_en": [
+    "poet",
+    "thinker",
+    "writer"
+   ],
+   "correct": true,
+   "latency": 11.57,
+   "timings": {
+    "llm": 4.78,
+    "output_translation": 6.76,
+    "total": 11.55
+   },
+   "output_tokens": 48,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "input": "clean",
+   "text": "Qaysi hayvon cho'l kemasi deb ataladi?",
+   "answer": "Tuyaning ismi «qumli tuya»dir. U qumli joylarda yashovchi odamlar uchun juda muhim hayvondir. U issiq va quruq joylarda yaxshi yashashi uchun moslashgan.",
+   "answer_english": "The camel is called a desert camel. It is a very important animal for people living in desert environments. They are well-adapted to survive in hot, dry conditions.",
+   "keywords": [
+    "tuya"
+   ],
+   "keywords_en": [
+    "camel"
+   ],
+   "correct": true,
+   "latency": 8.76,
+   "timings": {
+    "llm": 3.8,
+    "output_translation": 4.92,
+    "total": 8.74
+   },
+   "output_tokens": 35,
+   "first_call": false
+  },
+  {
+   "id": "q11",
+   "input": "stt",
+   "text": "qaysi hayvon choʻl kemasi deb ataladi",
+   "answer": "Bu hayvon tuya deb ataladi. Tuyalarning quruqlikdagi muhitda yashash qobiliyati yaxshi malum. Ular koʻpgina quruqlik ekosistemalarining muhim qismidir.",
+   "answer_english": "That animal is called a camel. Camels are well-known for their ability to survive in desert environments. They are a vital part of many desert ecosystems.",
+   "keywords": [
+    "tuya"
+   ],
+   "keywords_en": [
+    "camel"
+   ],
+   "correct": true,
+   "latency": 8.09,
+   "timings": {
+    "llm": 3.72,
+    "output_translation": 4.34,
+    "total": 8.07
+   },
+   "output_tokens": 33,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "input": "clean",
+   "text": "Bir soatda necha daqiqa bor?",
+   "answer": "Bir soat 60 daqiqadan iborat. Shuning uchun, bir soat 60 daqiqaga teng.",
+   "answer_english": "There are 60 minutes in an hour. So, one hour is equal to 60 minutes.",
+   "keywords": [
+    "60",
+    "oltmish",
+    "oltmush"
+   ],
+   "keywords_en": [
+    "60",
+    "sixty"
+   ],
+   "correct": true,
+   "latency": 5.13,
+   "timings": {
+    "llm": 2.73,
+    "output_translation": 2.4,
+    "total": 5.13
+   },
+   "output_tokens": 23,
+   "first_call": false
+  },
+  {
+   "id": "q12",
+   "input": "stt",
+   "text": "bir soatda necha daqiqa bor",
+   "answer": "(Ushbu oyatda Alloh taolo Quroni Karimning ulkan moʻjiza ekanini, Allohning biru borligiga, biru borligiga, biru borligiga, biru borligiga, biru borligiga, biru borligiga, biru borligiga dalolat qilmoqda.)",
+   "answer_english": "There are 60 minutes in an hour.  Therefore, there are 3600 seconds in an hour.",
+   "keywords": [
+    "60",
+    "oltmish",
+    "oltmush"
+   ],
+   "keywords_en": [
+    "60",
+    "sixty"
+   ],
+   "correct": false,
+   "latency": 10.32,
+   "timings": {
+    "llm": 2.84,
+    "output_translation": 7.45,
+    "total": 10.29
+   },
+   "output_tokens": 26,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "input": "clean",
+   "text": "Qor qanday rangda bo'ladi?",
+   "answer": "Barglar oq. U yorugʻlikning barcha ranglarini aks ettiradi.",
+   "answer_english": "Snow is white. It reflects all colors of light.",
+   "keywords": [
+    "oq"
+   ],
+   "keywords_en": [
+    "white"
+   ],
+   "correct": true,
+   "latency": 3.95,
+   "timings": {
+    "llm": 1.85,
+    "output_translation": 2.08,
+    "total": 3.94
+   },
+   "output_tokens": 12,
+   "first_call": false
+  },
+  {
+   "id": "q13",
+   "input": "stt",
+   "text": "qor qanday rangda boʻladi",
+   "answer": "Buz uning tarkibiga va qanchalik yorugʻlikni aks ettirishiga qarab turli ranglarda boʻlishi mumkin. Uning eng koʻp uchraydigan rangi oq, lekin u oq, koʻk yoki hatto qizgʻish rangda ham koʻrinishi mumkin. Bu oʻzgarishlar yorugʻlikning buz kristallari bilan oʻzaro tasirlashuvi tufayli yuzaga keladi.",
+   "answer_english": "Snow can be many different colors, depending on its composition and how much light it reflects. It is most commonly white, but it can also appear gray, blue, or even pink. These variations are caused by the way light interacts with the ice crystals.",
+   "keywords": [
+    "oq"
+   ],
+   "keywords_en": [
+    "white"
+   ],
+   "correct": true,
+   "latency": 13.87,
+   "timings": {
+    "llm": 5.09,
+    "output_translation": 8.76,
+    "total": 13.87
+   },
+   "output_tokens": 52,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "input": "clean",
+   "text": "O'zbekistonning davlat tili qaysi?",
+   "answer": "Oʻzbekiston Respublikasining davlat tili oʻzbek tilidir. Bu sharqiy slavyan tili boʻlib, asosan Oʻzbekiston Respublikasida soʻzlashiladi.",
+   "answer_english": "The state language of Uzbekistan is Uzbek. It is an East Slavic language spoken primarily in Uzbekistan.",
+   "keywords": [
+    "o'zbek"
+   ],
+   "keywords_en": [
+    "uzbek"
+   ],
+   "correct": true,
+   "latency": 5.31,
+   "timings": {
+    "llm": 2.59,
+    "output_translation": 2.69,
+    "total": 5.29
+   },
+   "output_tokens": 20,
+   "first_call": false
+  },
+  {
+   "id": "q14",
+   "input": "stt",
+   "text": "oʻzbekistonning davlat tili qaysi",
+   "answer": "Oʻzbekiston Respublikasining davlat tili oʻzbek tilidir. Bu xalqning koʻpchiligi gapiradigan sharqiy turk tillaridan biridir.  Sizga Oʻzbekiston haqida yana nima kerak?",
+   "answer_english": "The state language of Uzbekistan is Uzbek. It is an Eastern Turkic language spoken by the majority of the population.  Do you need anything else about Uzbekistan?",
+   "keywords": [
+    "o'zbek"
+   ],
+   "keywords_en": [
+    "uzbek"
+   ],
+   "correct": true,
+   "latency": 7.14,
+   "timings": {
+    "llm": 3.49,
+    "output_translation": 3.62,
+    "total": 7.12
+   },
+   "output_tokens": 33,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "input": "clean",
+   "text": "Samarqanddagi mashhur maydonning nomi nima?",
+   "answer": "Samarkanddagi mashhur maydon Registon maydoni deb ataladi. U YuNESKOning jahon merosi obektlari roʻyxatiga kiritilgan va uning gʻaroyib madrasalari bilan mashhur. Bu haqda koʻproq bilish istagi bormi?",
+   "answer_english": "The famous field in Samarkand is called the Registan Square. It is a UNESCO World Heritage Site known for its stunning madrasahs. Would you like to know more about it?",
+   "keywords": [
+    "registon"
+   ],
+   "keywords_en": [
+    "registan"
+   ],
+   "correct": true,
+   "latency": 10.07,
+   "timings": {
+    "llm": 4.03,
+    "output_translation": 6.03,
+    "total": 10.07
+   },
+   "output_tokens": 39,
+   "first_call": false
+  },
+  {
+   "id": "q15",
+   "input": "stt",
+   "text": "samarqanddagi mashhur maydonning nominiman",
+   "answer": "Samarkanddagi mashhur maydon Registon maydoni deb ataladi. Bu YuNESKOning jahon merosi obektlaridan biri boʻlib, uning gʻaroyib madrasalari bilan mashhur. Bu haqda koʻproq bilish istagi bormi?",
+   "answer_english": "The famous square in Samarkand is called Registan Square. It’s a UNESCO World Heritage site known for its stunning madrasahs. Would you like to know more about it?",
+   "keywords": [
+    "registon"
+   ],
+   "keywords_en": [
+    "registan"
+   ],
+   "correct": true,
+   "latency": 9.79,
+   "timings": {
+    "llm": 4.08,
+    "output_translation": 5.7,
+    "total": 9.78
+   },
+   "output_tokens": 39,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "input": "clean",
+   "text": "Dunyodagi eng baland tog' qaysi?",
+   "answer": "Dunyodagi eng baland togʻ - Everest togʻi. U Gimalaylar, Nepal va Xitoy chegarasida joylashgan. U haqida koʻproq bilishingiz kerakmi?",
+   "answer_english": "The highest mountain in the world is Mount Everest. It is located in the Himalayas, on the border between Nepal and China. Would you like to know more about it?",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "keywords_en": [
+    "everest"
+   ],
+   "correct": true,
+   "latency": 7.72,
+   "timings": {
+    "llm": 3.77,
+    "output_translation": 3.93,
+    "total": 7.7
+   },
+   "output_tokens": 35,
+   "first_call": false
+  },
+  {
+   "id": "q16",
+   "input": "stt",
+   "text": "dunyodagi eng baland togʻ qaysi",
+   "answer": "Dunyodagi eng baland togʻ — Everest. U Gimalaylar togʻlarida, Nepal va Xitoy chegarasida joylashgan.  Uning balandligi 8848,86 metr (29031,7 oyoq) ga etadi.",
+   "answer_english": "The highest mountain in the world is Mount Everest. It is located in the Himalayas, on the border between Nepal and China.  It reaches an elevation of 8,848.86 meters (29,031.7 feet).",
+   "keywords": [
+    "everest",
+    "jomolungma"
+   ],
+   "keywords_en": [
+    "everest"
+   ],
+   "correct": true,
+   "latency": 11.66,
+   "timings": {
+    "llm": 5.33,
+    "output_translation": 6.32,
+    "total": 11.66
+   },
+   "output_tokens": 53,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "input": "clean",
+   "text": "Kutubxonada nima qilish mumkin?",
+   "answer": "Siz kitoblarni varaqlaysiz, jimgina oʻqiysiz yoki oʻqiysiz. kutubxonalar oʻrganish va tadqiqotlar uchun tinch muhitni taqdim etadi. kutubxonada vaqtingizni mazmunli oʻtkazing!",
+   "answer_english": "You can browse the books, read quietly, or study there. Libraries offer a peaceful environment for learning and research. Enjoy your time at the library!",
+   "keywords": [
+    "kitob"
+   ],
+   "keywords_en": [
+    "book",
+    "read"
+   ],
+   "correct": true,
+   "latency": 8.59,
+   "timings": {
+    "llm": 3.36,
+    "output_translation": 5.22,
+    "total": 8.59
+   },
+   "output_tokens": 31,
+   "first_call": false
+  },
+  {
+   "id": "q17",
+   "input": "stt",
+   "text": "tutqonida nima qilish mumkin",
+   "answer": "Iltimos, bu narsa bilan nima qilishni xohlayotganingizni aniq ayting. Siz nimani nazarda tutayotganingizni menga tushuntirib bersangiz, men sizga yaxshiroq yordam bera olaman.",
+   "answer_english": "Please clarify what you would like to do with the item. Could you describe what you are referring to so I can assist you better?",
+   "keywords": [
+    "kitob"
+   ],
+   "keywords_en": [
+    "book",
+    "read"
+   ],
+   "correct": false,
+   "latency": 7.92,
+   "timings": {
+    "llm": 3.2,
+    "output_translation": 4.69,
+    "total": 7.9
+   },
+   "output_tokens": 28,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "input": "clean",
+   "text": "Bir kunda necha soat bor?",
+   "answer": "Bir kunning 24 soati bor. Bu kunning 24 ta davri borligidandir.",
+   "answer_english": "There are 24 hours in a day. This is because a day is divided into 24 periods of time.",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "keywords_en": [
+    "24",
+    "twenty-four",
+    "twenty four"
+   ],
+   "correct": true,
+   "latency": 5.42,
+   "timings": {
+    "llm": 2.88,
+    "output_translation": 2.52,
+    "total": 5.41
+   },
+   "output_tokens": 26,
+   "first_call": false
+  },
+  {
+   "id": "q18",
+   "input": "stt",
+   "text": "bir kundan necha soat bor",
+   "answer": "Bu 24 soat. Bir kun 24 soatdan iborat. Vaqt haqida boshqa narsalarni bilishingiz kerakmi?",
+   "answer_english": "That's 24 hours. One day contains 24 hours. Do you need to know anything else about time?",
+   "keywords": [
+    "24",
+    "yigirma to'rt"
+   ],
+   "keywords_en": [
+    "24",
+    "twenty-four",
+    "twenty four"
+   ],
+   "correct": true,
+   "latency": 5.94,
+   "timings": {
+    "llm": 2.93,
+    "output_translation": 2.98,
+    "total": 5.92
+   },
+   "output_tokens": 27,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "input": "clean",
+   "text": "O'zbekiston qaysi qit'ada joylashgan?",
+   "answer": "Oʻzbekiston Markaziy Osiyoda joylashgan. U Evraziya qitasining bir qismidir.",
+   "answer_english": "Uzbekistan is located in Central Asia. It's part of the Eurasian continent.",
+   "keywords": [
+    "osiyo"
+   ],
+   "keywords_en": [
+    "asia"
+   ],
+   "correct": true,
+   "latency": 4.63,
+   "timings": {
+    "llm": 2.45,
+    "output_translation": 2.16,
+    "total": 4.62
+   },
+   "output_tokens": 19,
+   "first_call": false
+  },
+  {
+   "id": "q19",
+   "input": "stt",
+   "text": "oʻzbekiston qaysi qitada joylashgan",
+   "answer": "Oʻzbekiston Markaziy Osiyoda joylashgan. U asosan, serhosil Fergʻana vodiysida joylashgan. Mamlakat Rossiya, Qozogʻiston va Qirgʻiziston kabi bir necha davlatlar bilan chegaradosh.",
+   "answer_english": "Uzbekistan is located in Central Asia. It's primarily situated in the fertile Fergana Valley. The country borders several nations, including Russia, Kazakhstan, and Kyrgyzstan.",
+   "keywords": [
+    "osiyo"
+   ],
+   "keywords_en": [
+    "asia"
+   ],
+   "correct": true,
+   "latency": 8.13,
+   "timings": {
+    "llm": 3.78,
+    "output_translation": 4.32,
+    "total": 8.11
+   },
+   "output_tokens": 36,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "input": "clean",
+   "text": "Ingliz tilida kitob so'zi qanday aytiladi?",
+   "answer": "Kitob ingliz tilida \"kitob\" deb talaffuz qilinadi. Bu oʻzbek tilidan olingan soʻz. Boshqa soʻzni qanday talaffuz qilishni bilmoqchimisiz?",
+   "answer_english": "A book is pronounced \"kitob\" in English. It's a word from the Uzbek language. Would you like to know how to say another word?",
+   "keywords": [
+    "book"
+   ],
+   "keywords_en": [
+    "book"
+   ],
+   "correct": false,
+   "latency": 7.88,
+   "timings": {
+    "llm": 3.65,
+    "output_translation": 4.2,
+    "total": 7.85
+   },
+   "output_tokens": 33,
+   "first_call": false
+  },
+  {
+   "id": "q20",
+   "input": "stt",
+   "text": "inliz tilida kitob soʻzi qanday aytiladi",
+   "answer": "(Ushbu oyatda Alloh taolo Quroni Karimda zikr qilingan moʻminlarning ajrlari haqida soʻz yuritmoqda.)",
+   "answer_english": "\"Inliz tilida kitob soʻzi 'book' deganidir.\"  It translates to \"In English, the word for book is 'book'.\"",
+   "keywords": [
+    "book"
+   ],
+   "keywords_en": [
+    "book"
+   ],
+   "correct": false,
+   "latency": 7.22,
+   "timings": {
+    "llm": 3.76,
+    "output_translation": 3.43,
+    "total": 7.2
+   },
+   "output_tokens": 34,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "input": "clean",
+   "text": "Uchburchakning nechta burchagi bor?",
+   "answer": "Uchburchak uch burchakdan iborat. Bu burchaklarning umumiy miqdori doimo 180 darajaga teng. Uchburchaklar haqida koʻproq bilishingiz kerakmi?",
+   "answer_english": "A triangle has three angles. These angles always add up to 180 degrees. Do you need to know more about triangles?",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "keywords_en": [
+    "3",
+    "=three"
+   ],
+   "correct": true,
+   "latency": 7.12,
+   "timings": {
+    "llm": 3.13,
+    "output_translation": 3.97,
+    "total": 7.11
+   },
+   "output_tokens": 28,
+   "first_call": false
+  },
+  {
+   "id": "q21",
+   "input": "stt",
+   "text": "gul gulchakni meyishda gulchaga bor",
+   "answer": "- Ha, men tushundim, siz bogʻga olma terish uchun bormoqchisiz, agar sizga olma bogʻini topishda yordam kerak boʻlsa, menga xabar bering.",
+   "answer_english": "Okay, I understand you want to go to the orchard to pick plums. Let me know if you need help finding a plum orchard!",
+   "keywords": [
+    "3",
+    "uch"
+   ],
+   "keywords_en": [
+    "3",
+    "=three"
+   ],
+   "correct": true,
+   "latency": 7.05,
+   "timings": {
+    "llm": 3.09,
+    "output_translation": 3.92,
+    "total": 7.02
+   },
+   "output_tokens": 28,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "input": "clean",
+   "text": "Qaysi sayyorada biz yashaymiz?",
+   "answer": "Siz Erda yashaysiz. U quyoshdan uchta kattaroq sayyoradir!",
+   "answer_english": "You live on Earth. It's the third planet from the Sun!",
+   "keywords": [
+    "yer",
+    "erda",
+    "er yuz",
+    "=er"
+   ],
+   "keywords_en": [
+    "earth"
+   ],
+   "correct": true,
+   "latency": 4.1,
+   "timings": {
+    "llm": 2.1,
+    "output_translation": 1.98,
+    "total": 4.08
+   },
+   "output_tokens": 16,
+   "first_call": false
+  },
+  {
+   "id": "q22",
+   "input": "stt",
+   "text": "qaysi sayyorada biz yashaymiz",
+   "answer": "Siz Erda yashaysiz. U quyosh tizimimizdagi quyoshdan keyingi uchinchi sayyoradir.",
+   "answer_english": "You live on Earth. It's the third planet from the Sun in our solar system.",
+   "keywords": [
+    "yer",
+    "erda",
+    "er yuz",
+    "=er"
+   ],
+   "keywords_en": [
+    "earth"
+   ],
+   "correct": true,
+   "latency": 4.91,
+   "timings": {
+    "llm": 2.44,
+    "output_translation": 2.47,
+    "total": 4.91
+   },
+   "output_tokens": 20,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "input": "clean",
+   "text": "Asal qaysi hasharot tomonidan tayyorlanadi?",
+   "answer": "Uning tutilishi esa, bu aralashma bilan tayyorlanadi.",
+   "answer_english": "Seshel hasharoti, aslal aralashmasi, asosan aslal aralashmasi tomonidan tayyorlanadi. Uning ushlanishi aslal aralashmasi bo'lib, aslal aralashmasi tomonidan ishlab chiqariladi.",
+   "keywords": [
+    "ari"
+   ],
+   "keywords_en": [
+    "bee"
+   ],
+   "correct": false,
+   "latency": 7.69,
+   "timings": {
+    "llm": 5.93,
+    "output_translation": 1.73,
+    "total": 7.67
+   },
+   "output_tokens": 59,
+   "first_call": false
+  },
+  {
+   "id": "q23",
+   "input": "stt",
+   "text": "saqaysi hasharot tomonidan tayyorlanadi",
+   "answer": "Bu savol balni qanday tayyorlash haqida. Achiq mevalarni yigʻadigan asalarilar uni bugʻlanish va fermentlar tasiri orqali balga aylantiradi. Bali ishlab chiqarish haqida koʻproq bilish uchun bu erda klik qiling.",
+   "answer_english": "That question is about how honey is made. Bees collect nectar and transform it into honey through a process of evaporation and enzyme activity. Would you like to know more about honey production?",
+   "keywords": [
+    "ari"
+   ],
+   "keywords_en": [
+    "bee"
+   ],
+   "correct": false,
+   "latency": 9.51,
+   "timings": {
+    "llm": 3.8,
+    "output_translation": 5.69,
+    "total": 9.5
+   },
+   "output_tokens": 37,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "input": "clean",
+   "text": "O'n besh ayiruv besh necha bo'ladi?",
+   "answer": "Allohning oyatlari haqida tortishishdan saqlaning. Albatta, Alloh har bir narsaga qodirdir.",
+   "answer_english": "That would be twenty-five.  It’s the same as adding five and twenty together.",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "keywords_en": [
+    "10",
+    "=ten"
+   ],
+   "correct": false,
+   "latency": 5.24,
+   "timings": {
+    "llm": 2.53,
+    "output_translation": 2.7,
+    "total": 5.23
+   },
+   "output_tokens": 21,
+   "first_call": false
+  },
+  {
+   "id": "q24",
+   "input": "stt",
+   "text": "oʻn besh ayilru besh necha boʻladi",
+   "answer": "Bu qirq beshta boʻladi, yana hisoblashda yordam kerakmi?",
+   "answer_english": "That would be forty-five. Do you need help with another calculation?",
+   "keywords": [
+    "10",
+    "o'n"
+   ],
+   "keywords_en": [
+    "10",
+    "=ten"
+   ],
+   "correct": false,
+   "latency": 3.91,
+   "timings": {
+    "llm": 2.1,
+    "output_translation": 1.81,
+    "total": 3.91
+   },
+   "output_tokens": 16,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "input": "clean",
+   "text": "Qishdan keyin qaysi fasl keladi?",
+   "answer": "Qishdan keyin bahor keladi. Bu yangi oʻsish va iliq ob-havo vaqtidir.",
+   "answer_english": "Spring follows winter. It’s a time of new growth and warmer weather.",
+   "keywords": [
+    "bahor"
+   ],
+   "keywords_en": [
+    "spring"
+   ],
+   "correct": true,
+   "latency": 4.6,
+   "timings": {
+    "llm": 2.13,
+    "output_translation": 2.44,
+    "total": 4.58
+   },
+   "output_tokens": 17,
+   "first_call": false
+  },
+  {
+   "id": "q25",
+   "input": "stt",
+   "text": "qishdan keyin qaysi fasl keladi",
+   "answer": "Koʻzi ojiz, qulogʻi kar, tili kar, koʻzi ojiz, qulogʻi kar, qulogʻi ojiz, koʻzi kar, qulogʻi ojiz, qulogʻi kar, qulogʻi ojiz, qulogʻi kar, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz, qulogʻi ojiz,",
+   "answer_english": "Spring follows winter. It is a time of new growth and warmer weather.",
+   "keywords": [
+    "bahor"
+   ],
+   "keywords_en": [
+    "spring"
+   ],
+   "correct": false,
+   "latency": 15.65,
+   "timings": {
+    "llm": 2.16,
+    "output_translation": 13.47,
+    "total": 15.63
+   },
+   "output_tokens": 17,
+   "first_call": false
+  }
+ ]
+}

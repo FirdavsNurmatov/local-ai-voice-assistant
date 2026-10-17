@@ -1,0 +1,423 @@
+{
+ "name": "short_prompt",
+ "language": "en",
+ "date": "2026-10-17 17:13",
+ "summary": {
+  "n": 20,
+  "correct": 20,
+  "latency_median": 2.37,
+  "latency_mean": 2.71,
+  "latency_p95": 4.12,
+  "output_tokens_median": 23.0
+ },
+ "results": [
+  {
+   "id": "e01",
+   "input": "clean",
+   "text": "What is the capital city of Uzbekistan?",
+   "answer": "The capital city of Uzbekistan is Tashkent. It is located in the north of the country. Tashkent is a modern and vibrant city.",
+   "answer_english": "The capital city of Uzbekistan is Tashkent. It is located in the north of the country. Tashkent is a modern and vibrant city.",
+   "keywords": [
+    "tashkent"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.13,
+   "timings": {
+    "llm": 3.11,
+    "output_translation": 0.0,
+    "total": 3.11
+   },
+   "output_tokens": 29,
+   "first_call": true
+  },
+  {
+   "id": "e02",
+   "input": "clean",
+   "text": "How many days are there in a week?",
+   "answer": "There are seven days in a week. This is a standard measurement used in many cultures. It’s a fundamental part of our calendar system.",
+   "answer_english": "There are seven days in a week. This is a standard measurement used in many cultures. It’s a fundamental part of our calendar system.",
+   "keywords": [
+    "7",
+    "seven"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.13,
+   "timings": {
+    "llm": 3.11,
+    "output_translation": 0.0,
+    "total": 3.11
+   },
+   "output_tokens": 30,
+   "first_call": false
+  },
+  {
+   "id": "e03",
+   "input": "clean",
+   "text": "How many months are there in a year?",
+   "answer": "There are 12 months in a year. This includes January through December.",
+   "answer_english": "There are 12 months in a year. This includes January through December.",
+   "keywords": [
+    "12",
+    "twelve"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.04,
+   "timings": {
+    "llm": 2.02,
+    "output_translation": 0.0,
+    "total": 2.02
+   },
+   "output_tokens": 17,
+   "first_call": false
+  },
+  {
+   "id": "e04",
+   "input": "clean",
+   "text": "At what temperature does water boil at sea level in Celsius?",
+   "answer": "Water boils at 100 degrees Celsius at sea level. This is the temperature at which water changes from a liquid to a gas.",
+   "answer_english": "Water boils at 100 degrees Celsius at sea level. This is the temperature at which water changes from a liquid to a gas.",
+   "keywords": [
+    "100",
+    "hundred"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.92,
+   "timings": {
+    "llm": 2.91,
+    "output_translation": 0.0,
+    "total": 2.91
+   },
+   "output_tokens": 29,
+   "first_call": false
+  },
+  {
+   "id": "e05",
+   "input": "clean",
+   "text": "What is two plus three?",
+   "answer": "Two plus three equals five. It is the sum of the two numbers.",
+   "answer_english": "Two plus three equals five. It is the sum of the two numbers.",
+   "keywords": [
+    "5",
+    "five"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 1.94,
+   "timings": {
+    "llm": 1.93,
+    "output_translation": 0.0,
+    "total": 1.93
+   },
+   "output_tokens": 16,
+   "first_call": false
+  },
+  {
+   "id": "e06",
+   "input": "clean",
+   "text": "In which direction does the sun rise?",
+   "answer": "The sun rises in the east. It sets in the west.",
+   "answer_english": "The sun rises in the east. It sets in the west.",
+   "keywords": [
+    "east"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 1.69,
+   "timings": {
+    "llm": 1.69,
+    "output_translation": 0.0,
+    "total": 1.69
+   },
+   "output_tokens": 14,
+   "first_call": false
+  },
+  {
+   "id": "e07",
+   "input": "clean",
+   "text": "What is the largest ocean on Earth?",
+   "answer": "The Pacific Ocean is the largest ocean on Earth. It covers approximately 30% of the Earth’s surface. It is the deepest and largest of Earth’s oceanic divisions.",
+   "answer_english": "The Pacific Ocean is the largest ocean on Earth. It covers approximately 30% of the Earth’s surface. It is the deepest and largest of Earth’s oceanic divisions.",
+   "keywords": [
+    "pacific"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.77,
+   "timings": {
+    "llm": 3.77,
+    "output_translation": 0.0,
+    "total": 3.77
+   },
+   "output_tokens": 38,
+   "first_call": false
+  },
+  {
+   "id": "e08",
+   "input": "clean",
+   "text": "Who wrote the novel War and Peace?",
+   "answer": "Leo Tolstoy wrote the novel *War and Peace*. It is considered one of his most significant works.",
+   "answer_english": "Leo Tolstoy wrote the novel *War and Peace*. It is considered one of his most significant works.",
+   "keywords": [
+    "tolstoy"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.36,
+   "timings": {
+    "llm": 2.36,
+    "output_translation": 0.0,
+    "total": 2.36
+   },
+   "output_tokens": 21,
+   "first_call": false
+  },
+  {
+   "id": "e09",
+   "input": "clean",
+   "text": "Which animal is called the ship of the desert?",
+   "answer": "The camel is called the ship of the desert. It was named this due to its ability to travel long distances across the desert without water. Camels are essential for transportation and survival in arid regions.",
+   "answer_english": "The camel is called the ship of the desert. It was named this due to its ability to travel long distances across the desert without water. Camels are essential for transportation and survival in arid regions.",
+   "keywords": [
+    "camel"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.99,
+   "timings": {
+    "llm": 3.97,
+    "output_translation": 0.0,
+    "total": 3.97
+   },
+   "output_tokens": 41,
+   "first_call": false
+  },
+  {
+   "id": "e10",
+   "input": "clean",
+   "text": "How many minutes are there in one hour?",
+   "answer": "There are 60 minutes in one hour. This is a standard measurement.",
+   "answer_english": "There are 60 minutes in one hour. This is a standard measurement.",
+   "keywords": [
+    "60",
+    "sixty"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.12,
+   "timings": {
+    "llm": 2.12,
+    "output_translation": 0.0,
+    "total": 2.12
+   },
+   "output_tokens": 17,
+   "first_call": false
+  },
+  {
+   "id": "e11",
+   "input": "clean",
+   "text": "What color is snow?",
+   "answer": "Snow is white. It appears white because it is made of ice crystals that reflect all wavelengths of light.",
+   "answer_english": "Snow is white. It appears white because it is made of ice crystals that reflect all wavelengths of light.",
+   "keywords": [
+    "white"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.37,
+   "timings": {
+    "llm": 2.37,
+    "output_translation": 0.0,
+    "total": 2.37
+   },
+   "output_tokens": 22,
+   "first_call": false
+  },
+  {
+   "id": "e12",
+   "input": "clean",
+   "text": "What is the highest mountain in the world?",
+   "answer": "Mount Everest is the highest mountain in the world. It reaches a height of 8,848.86 meters (29,031.7 feet). It is located in the Himalayas.",
+   "answer_english": "Mount Everest is the highest mountain in the world. It reaches a height of 8,848.86 meters (29,031.7 feet). It is located in the Himalayas.",
+   "keywords": [
+    "everest"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 4.32,
+   "timings": {
+    "llm": 4.3,
+    "output_translation": 0.0,
+    "total": 4.3
+   },
+   "output_tokens": 44,
+   "first_call": false
+  },
+  {
+   "id": "e13",
+   "input": "clean",
+   "text": "Which planet do we live on?",
+   "answer": "We live on Earth. It is the third planet from the Sun. Earth is our home!",
+   "answer_english": "We live on Earth. It is the third planet from the Sun. Earth is our home!",
+   "keywords": [
+    "earth"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.31,
+   "timings": {
+    "llm": 2.31,
+    "output_translation": 0.0,
+    "total": 2.31
+   },
+   "output_tokens": 20,
+   "first_call": false
+  },
+  {
+   "id": "e14",
+   "input": "clean",
+   "text": "Which insect makes honey?",
+   "answer": "Bees make honey. Specifically, honeybees produce the honey we know and love. It’s a sweet, golden product made from nectar.",
+   "answer_english": "Bees make honey. Specifically, honeybees produce the honey we know and love. It’s a sweet, golden product made from nectar.",
+   "keywords": [
+    "bee"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.0,
+   "timings": {
+    "llm": 3.0,
+    "output_translation": 0.0,
+    "total": 3.0
+   },
+   "output_tokens": 30,
+   "first_call": false
+  },
+  {
+   "id": "e15",
+   "input": "clean",
+   "text": "How many hours are there in a day?",
+   "answer": "There are 24 hours in a day. This is based on a 24-hour clock system.",
+   "answer_english": "There are 24 hours in a day. This is based on a 24-hour clock system.",
+   "keywords": [
+    "24",
+    "twenty-four",
+    "twenty four"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.58,
+   "timings": {
+    "llm": 2.58,
+    "output_translation": 0.0,
+    "total": 2.58
+   },
+   "output_tokens": 24,
+   "first_call": false
+  },
+  {
+   "id": "e16",
+   "input": "clean",
+   "text": "Which season comes after winter?",
+   "answer": "Spring comes after winter. It is the season following the cold months.",
+   "answer_english": "Spring comes after winter. It is the season following the cold months.",
+   "keywords": [
+    "spring"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 1.82,
+   "timings": {
+    "llm": 1.82,
+    "output_translation": 0.0,
+    "total": 1.82
+   },
+   "output_tokens": 15,
+   "first_call": false
+  },
+  {
+   "id": "e17",
+   "input": "clean",
+   "text": "How many sides does a triangle have?",
+   "answer": "A triangle has three sides. It is a basic geometric shape.",
+   "answer_english": "A triangle has three sides. It is a basic geometric shape.",
+   "keywords": [
+    "3",
+    "=three"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 1.73,
+   "timings": {
+    "llm": 1.71,
+    "output_translation": 0.0,
+    "total": 1.71
+   },
+   "output_tokens": 14,
+   "first_call": false
+  },
+  {
+   "id": "e18",
+   "input": "clean",
+   "text": "What is the Uzbek word for book?",
+   "answer": "The Uzbek word for book is kitob. It is pronounced “kit-ob.”",
+   "answer_english": "The Uzbek word for book is kitob. It is pronounced “kit-ob.”",
+   "keywords": [
+    "kitob"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 2.01,
+   "timings": {
+    "llm": 2.01,
+    "output_translation": 0.0,
+    "total": 2.01
+   },
+   "output_tokens": 18,
+   "first_call": false
+  },
+  {
+   "id": "e19",
+   "input": "clean",
+   "text": "Who was the first human in space?",
+   "answer": "Yuri Gagarin was the first human in space. He made a single orbit around Earth on April 12, 1961. This historic flight was part of the Soviet space program.",
+   "answer_english": "Yuri Gagarin was the first human in space. He made a single orbit around Earth on April 12, 1961. This historic flight was part of the Soviet space program.",
+   "keywords": [
+    "gagarin"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 4.12,
+   "timings": {
+    "llm": 4.1,
+    "output_translation": 0.0,
+    "total": 4.1
+   },
+   "output_tokens": 42,
+   "first_call": false
+  },
+  {
+   "id": "e20",
+   "input": "clean",
+   "text": "What is the famous square in Samarkand called?",
+   "answer": "The famous square in Samarkand is called Registan Square. It is renowned for its stunning madrasahs. It is a UNESCO World Heritage Site.",
+   "answer_english": "The famous square in Samarkand is called Registan Square. It is renowned for its stunning madrasahs. It is a UNESCO World Heritage Site.",
+   "keywords": [
+    "registan"
+   ],
+   "keywords_en": null,
+   "correct": true,
+   "latency": 3.28,
+   "timings": {
+    "llm": 3.28,
+    "output_translation": 0.0,
+    "total": 3.28
+   },
+   "output_tokens": 32,
+   "first_call": false
+  }
+ ]
+}

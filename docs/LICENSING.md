@@ -28,7 +28,8 @@ Points that still deserve attention (`PROPOSED`, not legal advice):
 | `ru_g2p.py`, `espeak-data` (from Kokoro-RU) | code Apache-2.0 per the card; `espeak-data` is derived from espeak-ng (GPL-3.0) | model card; espeak-ng project | card `VERIFIED`; espeak-data terms `NOT VERIFIED` |
 | RUAccent package and models | package: Apache Software License (classifier); model files: not checked | package metadata; <https://github.com/Den4ikAI/ruaccent> | package `VERIFIED`, models `NOT VERIFIED` |
 | MADLAD-400 3B (and the CTranslate2 conversion) | believed Apache-2.0 (Google MADLAD-400) | not recorded locally; conversion repository unknown | `NOT VERIFIED` |
-| `qwen3:1.7b` (Ollama) | believed Apache-2.0 (Qwen3) | check `ollama show qwen3:1.7b --license` | `NOT VERIFIED` |
+| `gemma3:4b` (Ollama), used since 2026-10-17 | Gemma Terms of Use (Google; not an OSI licence, use restrictions apply) | check `ollama show gemma3:4b --license` | `NOT VERIFIED` |
+| `qwen3:1.7b` (Ollama), used until 2026-10-17 | believed Apache-2.0 (Qwen3) | check `ollama show qwen3:1.7b --license` | `NOT VERIFIED` |
 | Piper voices `ru_RU-irina-medium`, `en_US-lessac-medium` | per-voice terms in the Piper voices collection (each voice has a `MODEL_CARD`) | <https://huggingface.co/rhasspy/piper-voices> | `NOT VERIFIED` — read both model cards before any redistribution or commercial use |
 | Uzbek VITS model `vits_uzbek_finetuned.onnx` | **unknown** — origin and training data not recorded | — | `NOT VERIFIED` |
 | `stt-tts-uz` source (`text/` front end) | **no license file** in the repository (`github.com/3936010/STT-TTS-Uz`) → no explicit permission to redistribute | local clone | `VERIFIED` absence |

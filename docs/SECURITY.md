@@ -27,7 +27,7 @@ Implications:
 |---|---|---|
 | User message, translations, answer | `server.py` memory → Ollama on localhost | not by this project; Ollama's own logging/history behaviour was not audited (`NOT VERIFIED`) |
 | Text to speak | the selected local TTS service | no (Piper: temp files deleted per request) |
-| Text in "browser voice" mode | the browser's speech engine — may be a cloud service depending on browser/voice | outside this project's control |
+| Text in "browser voice" mode (removed 2026-10-17) | the browser's speech engine — may be a cloud service depending on browser/voice | no longer possible: the page offers only local voices |
 | Console output | service windows: request lines, character counts; **full text on Uzbek TTS synthesis errors** | only if the operator redirects output to a file |
 
 "Local" here means: no code in this repository sends request data to an external host

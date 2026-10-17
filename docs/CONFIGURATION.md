@@ -26,7 +26,7 @@ No other service reads environment variables (`SOURCE-CODE CONFIRMED`). Ollama h
 | `MODEL_DIR` | 16 | `<repo>/madlad400-3b-ct2-int8` | MADLAD CTranslate2 model folder |
 | `OLLAMA_URL` | 17 | `http://127.0.0.1:11434/api/chat` | LLM endpoint |
 | `TTS_URL`, `TTS_HEALTH_URL` | 18–19 | `http://127.0.0.1:8766/api/…` | Uzbek TTS (proxy target) |
-| `QWEN_MODEL` | 20 | `qwen3:1.7b` | Ollama model tag |
+| `CHAT_MODEL` | 28 | `gemma3:4b` | Ollama model tag (was `QWEN_MODEL = qwen3:1.7b` until 2026-10-17) |
 | `HOST` | 21 | `0.0.0.0` | listens on all interfaces |
 | `PORT` | 22 | `8765` | |
 | `UZ_WORDS` | 24 | ≈ 45 Uzbek words | language-detection keywords |
@@ -89,7 +89,8 @@ Because the interpreter path is a constant, the server script itself may be star
 | Piper URL | literal `http://127.0.0.1:8767/api/tts` |
 | Default voice system | `<option value="kokoro" selected>` |
 | Default chat language | first option, `uz` |
-| Sliders | rate 0.65–1.35, pitch 0.7–1.3, volume 0–1 |
+| Voice systems | `kokoro` (Uzbek ONNX + Kokoro RU/EN, default) and `piper` (Uzbek ONNX + Piper RU/EN); no browser voice since 2026-10-17 |
+| Sliders | rate 0.65–1.35, volume 0–1 |
 | Test sentences | one per language in the `testVoice` handler |
 
 ## Start scripts

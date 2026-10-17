@@ -2,7 +2,7 @@
 
 A local, multilingual (Uzbek / Russian / English) text chat with spoken answers. A browser page
 talks to a small Python backend that detects the language, translates the question to English
-with MADLAD-400, asks a local Ollama model (Qwen3) for an answer, translates the answer back,
+with MADLAD-400, asks a local Ollama model (Gemma 3 4B) for an answer, translates the answer back,
 and the browser then requests speech from one of three local TTS services.
 
 > **Status (2026-10-13):** working prototype on one Windows 11 machine (8 GB RAM, CPU only).
@@ -14,7 +14,7 @@ Full documentation: **[docs/INDEX.md](docs/INDEX.md)**.
 ## Main features
 
 - Text chat in Uzbek, Russian or English; the reply is spoken aloud.
-- Local translation (MADLAD-400 3B, CTranslate2 INT8) and local LLM (Ollama `qwen3:1.7b`).
+- Local translation (MADLAD-400 3B, CTranslate2 INT8) and local LLM (Ollama `gemma3:4b`; chosen in [docs/LLM_COMPARISON.md](docs/LLM_COMPARISON.md)).
 - Voice input: a microphone button records speech and a local Faster-Whisper `small` service
   transcribes it into the message box for review (Russian and English accurate; **Uzbek recognition is poor** — see [docs/STT.md](docs/STT.md)).
   An Uzbek-specialised model was evaluated on real speech and cuts Uzbek errors by ≈ 80 % (WER 1.24 → 0.21); it is not deployed yet — see [docs/STT_EVALUATION.md](docs/STT_EVALUATION.md).
@@ -30,7 +30,7 @@ A chat turn passes through four independent stages. Each can fail on its own, fo
 |---|---|---|
 | 1. Language detection | heuristic in `server.py` | wrong language chosen (e.g. Uzbek in Cyrillic is treated as Russian) |
 | 2. Translation | MADLAD-400 in `server.py` | poor/truncated translation, out-of-memory at startup |
-| 3. Chat generation | Ollama (`qwen3:1.7b`) | Ollama not running, model not pulled, timeout |
+| 3. Chat generation | Ollama (`gemma3:4b`) | Ollama not running, model not pulled, timeout |
 | 4. Speech synthesis | TTS service chosen by the **browser** | TTS service down, model not loaded (HTTP 503), playback blocked |
 
 Optional voice input adds a stage 0 — **speech recognition** (`stt_server.py`) — whose errors
@@ -44,7 +44,7 @@ See [docs/DATA_FLOW.md](docs/DATA_FLOW.md) and [docs/TROUBLESHOOTING.md](docs/TR
 ```mermaid
 flowchart LR
     B["Browser<br/>local_voice_chat.html"] -->|"chat, Uzbek TTS, health"| S["server.py :8765<br/>MADLAD-400 + language detection"]
-    S -->|"chat"| O["Ollama :11434<br/>qwen3:1.7b"]
+    S -->|"chat"| O["Ollama :11434<br/>gemma3:4b"]
     S -->|"proxy Uzbek TTS"| U["tts_onnx_server.py :8766<br/>Uzbek VITS ONNX"]
     B -->|"ru / en"| K["kokoro_tts_server.py :8768<br/>masha / af_heart"]
     B -->|"recorded speech"| W["stt_server.py :8769<br/>Faster-Whisper small"]
@@ -82,7 +82,7 @@ Speech recognition: Faster-Whisper `small` (CPU, int8) on port 8769 — [docs/ST
 ## Prerequisites
 
 - Windows 10/11, Windows PowerShell 5.1, Python 3.12 (verified: 3.12.10).
-- [Ollama](https://ollama.com) with `qwen3:1.7b` pulled.
+- [Ollama](https://ollama.com) with `gemma3:4b` pulled.
 - The four Python environments and all model files, which are **not** part of the source tree
   (≈ 8 GB). See [docs/DEVELOPMENT_SETUP.md](docs/DEVELOPMENT_SETUP.md).
 - Enough **commit memory** (RAM + pagefile). On the 8 GB reference machine not everything fits
@@ -221,7 +221,6 @@ offline mode. This is **not** the same as "fully offline":
 
 - Models, Python packages and Ollama models must be downloaded once from the internet.
 - Ollama is a separate application whose own network behaviour (update checks, telemetry) has not been audited here.
-- "Browser voice" mode uses the browser's speech synthesis, which in some browsers sends text to an online service.
 - The chat backend binds to `0.0.0.0` without authentication, so other devices on the LAN can reach it.
 
 See [docs/SECURITY.md](docs/SECURITY.md).

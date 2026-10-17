@@ -10,7 +10,6 @@
 flowchart TB
     subgraph Browser["Browser (same machine for full functionality)"]
         UI["local_voice_chat.html<br/>chat UI + speak() TTS router"]
-        SS["window.speechSynthesis<br/>(browser voice)"]
     end
 
     subgraph Host["Windows host — C:\local-ai-translator"]
@@ -25,7 +24,7 @@ flowchart TB
         KE[("Kokoro-82M + af_heart")]
         KR[("Kokoro-RU + masha<br/>+ RuG2P / RUAccent / espeak-ng")]
         O["Ollama<br/>127.0.0.1:11434"]
-        Q[("qwen3:1.7b")]
+        Q[("gemma3:4b")]
     end
 
     UI -- "GET / , GET /api/health<br/>POST /api/chat" --> S
@@ -43,7 +42,6 @@ flowchart TB
     K --- KE
     K --- KR
     P --> PC --- PM
-    UI -. "browser mode" .-> SS
 ```
 
 Key structural facts (`SOURCE-CODE CONFIRMED`):
@@ -75,11 +73,8 @@ sequenceDiagram
     UI->>S: POST /api/chat {text, language}
     Note over S: language is uz, ru or en only for transcribed speech, typed text sends auto
     S->>S: use the given language, or detect_language(text) when it is auto
-    alt detected language is not en
-        S->>M: translate(text, "en") with MADLAD target tag 2en
-        M-->>S: English text
-    end
-    S->>O: POST /api/chat {model: qwen3:1.7b, system+user, stream:false, think:false}
+    Note over S: no input translation since 2026-10-17, the model reads the original text
+    S->>O: POST /api/chat {model: gemma3:4b, system+user (original text), stream:false}
     O-->>S: message.content (English answer)
     alt detected language is not en
         S->>M: translate(answer, lang) with target tag 2ru or 2uz
@@ -113,9 +108,8 @@ sequenceDiagram
     participant U as Uzbek TTS :8766
     participant K as Kokoro :8768
     participant P as Piper :8767
-    participant B as speechSynthesis
 
-    alt lang == uz and mode in (local, piper, kokoro)
+    alt lang == uz (both modes)
         UI->>S: POST /api/tts {text}
         S->>U: POST /api/tts {text}
         U-->>S: audio/wav 22.05 kHz
@@ -133,8 +127,8 @@ sequenceDiagram
     else lang in (ru, en) and mode == piper
         UI->>P: POST /api/tts {text, language}
         P-->>UI: audio/wav or error notice (no further fallback)
-    else everything else (mode == browser, or mode == local with ru/en)
-        UI->>B: SpeechSynthesisUtterance(text)
+    else any other language
+        Note over UI: notice "Bu til uchun mahalliy TTS yo'q"
     end
 ```
 
@@ -148,7 +142,8 @@ Routing table for the default `kokoro` mode:
 
 There is **no automatic fallback** between engines. Until 2026-10-14 Kokoro mode fell back to
 Piper; that was removed on the owner's request so that a missing voice is never masked by a
-different one. Piper speaks only in `piper` mode; the browser voice only in `browser` mode, or in `local` mode for Russian/English.
+different one. Piper speaks only in `piper` mode. Since 2026-10-17 the page offers only the local voices
+(modes `kokoro` and `piper`); the browser voice (`speechSynthesis`) and the Uzbek-only `local` mode were removed.
 
 ## 4. Component dependencies
 
@@ -157,7 +152,7 @@ flowchart LR
     html["local_voice_chat.html"] --> server["server.py"]
     html --> kokoro["kokoro_tts_server.py"]
     html -.-> piper["piper_tts_server.py"]
-    server --> ollama[("Ollama + qwen3:1.7b")]
+    server --> ollama[("Ollama + gemma3:4b")]
     server --> madlad[("madlad400-3b-ct2-int8")]
     server --> uz["tts_onnx_server.py"]
     server --> venv[".venv: ctranslate2, transformers, sentencepiece, requests"]
@@ -182,7 +177,7 @@ Start-up dependencies (who must be up for whom):
 | `piper_tts_server.py` | nothing (does not check models until a request) | `.venv-piper` Python, model + `.json` |
 | `kokoro_tts_server.py` | model files, voicepacks with matching SHA256, free commit per language | nothing |
 | `stt_server.py` | `stt-models\faster-whisper-small\`, free commit | nothing |
-| Ollama | — | `qwen3:1.7b` pulled |
+| Ollama | — | `gemma3:4b` pulled |
 
 No service refuses to start because another service is down.
 
@@ -214,7 +209,9 @@ started without `-X utf8`, because it re-launches itself via `subprocess`.
   word in `UZ_WORDS` (≈45 words) or the substrings `oʻ` / `gʻ` → `uz`; else `en`.
 - `translate(text, target)`: prompt `<2{target}> {text}`, greedy (`beam_size=1`),
   `max_decoding_length=128`, guarded by a global lock.
-- `run_chat`: detect → (translate to en) → Ollama → (translate back) → (Uzbek Cyrillic→Latin).
+- `run_chat`: detect → Ollama `gemma3:4b` reads the original text and answers in English → (MADLAD translates
+  the answer to uz/ru) → (Uzbek Cyrillic→Latin). Until 2026-10-17 the input was first translated to English with
+  MADLAD and the model was `qwen3:1.7b` ([LLM_COMPARISON.md](LLM_COMPARISON.md)).
   `requested_language` is used when it is `uz`, `ru` or `en` (the page sends this only for
   transcribed speech); any other value, including `auto`, means "detect from the text".
 - `uzbek_cyrillic_to_latin`: character map (including `ў қ ғ ҳ`) plus two word fixes

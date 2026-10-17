@@ -5,6 +5,19 @@ The project was put under version control on 2026-10-13. Everything before that 
 recorded work of 2026-10-13 — inferences from timestamps and file contents, not from commit history.
 No version numbers have been assigned.
 
+## 2026-10-17 — Chat uses gemma3:4b with the hybrid pipeline; local voices only
+
+- `server.py`: model `gemma3:4b` (was `qwen3:1.7b`); no input translation — the model reads the user's
+  Uzbek/Russian text and answers in English, MADLAD translates the answer. Only this pipeline is kept (no
+  switches, no request flags). Response: `english_input` removed, `llm` added, `timings` = `llm`,
+  `output_translation`, `total`. Reason and numbers: `docs/LLM_COMPARISON.md`.
+  Backup: `server.py.before_pipeline.bak` (evaluation version).
+- `local_voice_chat.html`: voice system offers only local voices — "Uzbek ONNX + Kokoro" (default) and
+  "Uzbek ONNX + Piper"; browser voice, its voice list and the pitch slider removed; labels say LLM instead of Qwen.
+  Backup: `local_voice_chat.html.before_pipeline.bak`.
+- Docs: `docs/LLM_COMPARISON.md` (new), API reference, architecture, data flow, configuration, runbook and
+  model/licence notes updated (backup `docs/API_REFERENCE.md.before_pipeline.bak`).
+
 ## 2026-10-17 — LLM pipeline comparison (evaluation)
 
 - `server.py` (evaluation version): `CHAT_MODEL` env (default still `qwen3:1.7b`); request flags

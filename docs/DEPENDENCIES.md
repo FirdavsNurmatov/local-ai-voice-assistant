@@ -86,7 +86,7 @@ that was not used to build this venv.
 | Dependency | Version / state | Status |
 |---|---|---|
 | Ollama | 0.40.3, `C:\Users\<user>\AppData\Local\Programs\Ollama\ollama.exe`, listening on `127.0.0.1:11434` | `VERIFIED` |
-| Ollama model `qwen3:1.7b` | present | `VERIFIED` |
+| Ollama model `gemma3:4b` (digest 68ceab7e…, 3.3 GB) | present (2026-10-17) | `VERIFIED` |
 | Windows PowerShell | 5.1 | `VERIFIED` |
 | Web browser | Tests on 2026-10-13 used the Claude desktop app's built-in (Chromium-based) browser; the project owner uses Firefox (seen running). Browser-specific behaviour is otherwise `NOT VERIFIED`. | partial |
 | espeak-ng | no system-wide install required; libraries come from `espeakng-loader` (Kokoro) and `piper-tts` (Piper) | `SOURCE-CODE CONFIRMED` for Kokoro |

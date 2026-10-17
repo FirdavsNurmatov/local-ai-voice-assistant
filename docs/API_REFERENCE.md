@@ -46,7 +46,7 @@ Returns the frontend. `200 text/html; charset=utf-8` ✔, or `404 text/plain` (`
 Always `200` while the process is up. Probes the Uzbek TTS health endpoint with a 1.5 s timeout.
 
 ```json
-{"ok": true, "model": "qwen3:1.7b", "translation_model": "MADLAD-400-3B INT8",
+{"ok": true, "model": "gemma3:4b", "translation_model": "MADLAD-400-3B INT8",
  "local_tts": true, "tts_model": "vits_uzbek_finetuned.onnx"}
 ```
 
@@ -59,14 +59,14 @@ Invoke-RestMethod http://127.0.0.1:8765/api/health
 
 ### `POST /api/chat`
 
-Runs the full pipeline (detect → translate → LLM → translate). Readiness: MADLAD loaded (always true once the port is open) and Ollama reachable.
+Runs the chat pipeline: detect language → `gemma3:4b` reads the original text and answers in English → MADLAD translates the answer into Uzbek/Russian (English answers are returned as is). There is no input translation since 2026-10-17 ([LLM_COMPARISON.md](LLM_COMPARISON.md)). Readiness: MADLAD loaded (always true once the port is open), Ollama reachable and `gemma3:4b` pulled.
 
 Request (`Content-Type: application/json`, body 1–100 000 bytes):
 
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `text` | string | yes | trimmed; 1–5000 characters |
-| `language` | string | no | `"uz"`, `"ru"` or `"en"` forces that language for both translation directions and the reply (the page sends the STT-detected language here); any other value or omission (default `"auto"`) → detect from the text. Changed 2026-10-14; before that the field was ignored. ✔ |
+| `language` | string | no | `"uz"`, `"ru"` or `"en"` forces the language of the reply (the page sends the STT-detected language here); any other value or omission (default `"auto"`) → detect from the text. Changed 2026-10-14; before that the field was ignored. ✔ |
 
 Response `200` ✔:
 
@@ -75,10 +75,10 @@ Response `200` ✔:
 | `ok` | bool | `true` |
 | `language` | string | language actually used: `"ru"`, `"uz"` or `"en"` (requested or detected) |
 | `input` | string | original text |
-| `english_input` | string | text sent to the LLM |
-| `answer_english` | string | raw LLM answer |
+| `answer_english` | string | raw LLM answer (English) |
 | `answer` | string | answer in the user's language |
-| `timings` | object | seconds, 2 decimals: `input_translation`, `qwen`, `output_translation`, `total` |
+| `llm` | object | `model`, `prompt_tokens`, `output_tokens` (from Ollama) |
+| `timings` | object | seconds, 2 decimals: `llm`, `output_translation`, `total`. Until 2026-10-17: `input_translation`, `qwen`, `output_translation`, `total`, plus the field `english_input` |
 
 Errors — body `{"ok": false, "error": "…"}`:
 

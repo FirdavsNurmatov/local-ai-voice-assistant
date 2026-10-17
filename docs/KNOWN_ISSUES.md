@@ -39,7 +39,7 @@
 | K19 | The Uzbek TTS has no lock around inference and no queue limit; concurrent requests run in parallel on one ONNX session. Not stress-tested. | CODE / effect UNVERIFIED |
 | K20 | The Uzbek TTS silently removes characters outside its symbol table (digits, other scripts) — numbers are not read out. Exact symbol set not documented here. | CODE / extent UNVERIFIED |
 | K21 | Uzbek TTS failure has no fallback voice; the page only shows an error. | CODE |
-| K22 | The volume slider does not affect Uzbek ONNX audio; rate affects only Kokoro and the browser voice; pitch only the browser voice. | CODE |
+| K22 | The volume slider does not affect Uzbek ONNX audio; rate affects only Kokoro. | CODE |
 | K23 | Russian homograph resolution is imperfect (upstream: 93.8 %); upstream also documents a darker timbre and fricative artifacts. | upstream claim, UNVERIFIED locally |
 | K24 | Voice quality/naturalness has never been measured (no listening test, no ASR round-trip). | — |
 | K25 | *Superseded 2026-10-14:* Kokoro mode never falls back to Piper any more (see K51). K15 no longer applies: both browsers' network-error texts are now mapped to "server ishlamayapti (8768)". | CODE (by design) |

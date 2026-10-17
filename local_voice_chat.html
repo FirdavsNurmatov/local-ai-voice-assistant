@@ -15,56 +15,37 @@
 </head>
 <body>
 <div class="app">
-<header><div class="logo">♪</div><div><h1>Local AI Voice Chat</h1><div class="subtitle">MADLAD + Qwen · brauzer yoki mahalliy Uzbek ONNX TTS</div></div><div class="status"><span class="dot"></span><span id="serverStatus">Server tekshirilmoqda</span></div></header>
+<header><div class="logo">♪</div><div><h1>Local AI Voice Chat</h1><div class="subtitle">Gemma + MADLAD · mahalliy TTS (Uzbek ONNX, Kokoro, Piper)</div></div><div class="status"><span class="dot"></span><span id="serverStatus">Server tekshirilmoqda</span></div></header>
 <div class="layout">
 <section class="chat">
 <div class="chat-head"><strong>Chat</strong><span id="chatCount">0 ta xabar</span></div>
-<div id="messages" aria-live="polite"><div class="welcome" id="welcome"><div class="welcome-icon">🤖</div><h2>AI bilan suhbatni boshlang</h2><p>Matn yuboring. Server MADLAD va Qwen orqali javob beradi; ovozni brauzer yoki mahalliy Uzbek TTS yaratadi.</p></div></div>
+<div id="messages" aria-live="polite"><div class="welcome" id="welcome"><div class="welcome-icon">🤖</div><h2>AI bilan suhbatni boshlang</h2><p>Matn yuboring. Server Gemma va MADLAD orqali javob beradi; ovozni kompyuterdagi mahalliy TTS yaratadi.</p></div></div>
 <form class="composer" id="chatForm"><textarea id="messageInput" placeholder="Savolingizni yozing..." aria-label="Savol matni" required></textarea><div class="composer-bottom"><span class="hint">Enter — yuborish · Shift+Enter — yangi qator</span><span style="display:flex;gap:8px"><select id="sttLang" title="Ovozli kiritish tili. «O‘zbekcha» — maxsus o‘zbekcha model (NavAI)" style="width:auto"><option value="auto" selected>🎤 Avto</option><option value="uz">O‘zbekcha</option><option value="ru">Русский</option><option value="en">English</option></select><button class="secondary" id="micBtn" type="button" title="Ovoz bilan kiritish (STT)" style="width:auto;padding:0 14px">🎤 Gapirish</button><button class="primary" id="sendBtn" type="submit">▶ Yuborish</button></span></div><div id="notice" role="status"></div></form>
 </section>
 <aside class="settings">
 <h2>Til va ovoz</h2>
-<div class="field"><label for="ttsMode">Ovoz tizimi</label><select id="ttsMode"><option value="local">Mahalliy Uzbek TTS (ONNX)</option><option value="browser">Brauzer ovozi</option><option value="piper">Mahalliy TTS (UZ + Piper RU/EN)</option><option value="kokoro" selected>Mahalliy TTS (UZ + Kokoro RU Masha / EN Heart)</option></select></div>
+<div class="field"><label for="ttsMode">Ovoz tizimi</label><select id="ttsMode"><option value="kokoro" selected>Uzbek ONNX + Kokoro (RU Masha / EN Heart)</option><option value="piper">Uzbek ONNX + Piper (RU Irina / EN Lessac)</option></select></div>
 <div class="field"><label for="language">Suhbat tili</label><select id="language"><option value="uz">O‘zbekcha</option><option value="ru">Ruscha</option><option value="en">Inglizcha</option><option value="auto">Avtomatik aniqlash</option></select></div>
-<div class="field"><label for="voice">Brauzer ovozi</label><select id="voice"><option value="">Tilga mos standart ovoz</option></select></div>
 <div class="field"><label for="rate">Tezlik</label><input id="rate" type="range" min="0.65" max="1.35" step="0.05" value="1"><div class="range-row"><span>Sekin</span><span id="rateValue">1.00×</span><span>Tez</span></div></div>
-<div class="field"><label for="pitch">Ovoz baland-pastligi</label><input id="pitch" type="range" min="0.7" max="1.3" step="0.05" value="1"><div class="range-row"><span>Past</span><span id="pitchValue">1.00</span><span>Yuqori</span></div></div>
 <div class="field"><label for="volume">Ovoz balandligi</label><input id="volume" type="range" min="0" max="1" step="0.05" value="1"><div class="range-row"><span>0%</span><span id="volumeValue">100%</span><span>100%</span></div></div>
 <div class="actions"><button class="secondary" id="testVoice" type="button">Test ovozi</button><button class="secondary" id="stopVoice" type="button">■ To‘xtatish</button></div>
-<div class="note">Mahalliy Uzbek TTS tanlansa, o‘zbekcha audio kompyuterda ONNX modeli bilan yaratiladi. Kokoro rejimida ruscha matn Masha, inglizcha matn Heart ovozida (port 8768) o‘qiladi; Kokoro ishlamasa xato ko‘rsatiladi (Piper faqat o‘z rejimida ishlaydi). Boshqa rejimlarda ruscha va inglizcha matnlar brauzer ovoziga o‘tadi. «🎤 Gapirish» tugmasi nutqni Faster-Whisper small (port 8769) orqali matnga aylantiradi; ruscha va inglizcha aniq, o‘zbekcha tanib olish hozircha sust.</div>
+<div class="note">Hamma ovozlar kompyuterning o‘zida yaratiladi: o‘zbekcha — Uzbek ONNX (port 8766); ruscha va inglizcha — Kokoro rejimida Masha / Heart (port 8768), Piper rejimida Irina / Lessac (port 8767). Tanlangan TTS ishlamasa, xato ko‘rsatiladi (boshqa ovozga avtomatik o‘tilmaydi). «🎤 Gapirish» tugmasi nutqni matnga aylantiradi (port 8769): ruscha va inglizcha — Faster-Whisper small, o‘zbekcha — NavAI o‘zbekcha modeli.</div>
 </aside>
 </div></div>
 <script>
 (() => {
-  const synth = window.speechSynthesis;
   const form = document.getElementById('chatForm');
   const input = document.getElementById('messageInput');
   const messages = document.getElementById('messages');
-  const voiceSelect = document.getElementById('voice');
   const ttsModeSelect = document.getElementById('ttsMode');
   let currentAudio = null, currentAudioUrl = null;
   const languageSelect = document.getElementById('language');
   const notice = document.getElementById('notice');
   const sendBtn = document.getElementById('sendBtn');
-  let voices = [], count = 0, busy = false;
+  let count = 0, busy = false;
 
   function showNotice(text) { notice.textContent = text; }
-  function loadVoices() {
-    if (!synth) { showNotice('Bu brauzer TTS ni qo‘llab-quvvatlamaydi. Chrome yoki Edge’dan foydalaning.'); return; }
-    const old = voiceSelect.value;
-    voices = synth.getVoices();
-    voiceSelect.innerHTML = '<option value="">Tilga mos standart ovoz</option>';
-    voices.forEach((v,i) => {
-      const o = document.createElement('option'); o.value = String(i);
-      o.textContent = `${v.name} — ${v.lang}${v.default ? ' (default)' : ''}`;
-      voiceSelect.appendChild(o);
-    });
-    if ([...voiceSelect.options].some(o => o.value === old)) voiceSelect.value = old;
-  }
-  function selectedVoice() { return voiceSelect.value === '' ? null : voices[Number(voiceSelect.value)] || null; }
-  function ttsLang(lang) { return ({uz:'uz-UZ',ru:'ru-RU',en:'en-US'})[lang] || 'en-US'; }
   function stopAllAudio() {
-    if (synth) synth.cancel();
     if (currentAudio) {
       currentAudio.pause();
       currentAudio.currentTime = 0;
@@ -78,8 +59,8 @@
   async function speak(text, lang) {
     if (!text) return;
     stopAllAudio();
-    const useLocal = ['local','piper','kokoro'].includes(ttsModeSelect.value) && lang === 'uz';
-    if (useLocal) {
+    // Faqat kompyuterdagi TTS: o'zbekcha — Uzbek ONNX (8766), ruscha/inglizcha — Kokoro (8768) yoki Piper (8767).
+    if (lang === 'uz') {
       showNotice('Mahalliy Uzbek TTS audio yaratmoqda…');
       try {
         const response = await fetch('/api/tts', {
@@ -183,18 +164,7 @@
       }
       return;
     }
-    if (!synth) { showNotice('Bu brauzer TTS ni qo‘llab-quvvatlamaydi.'); return; }
-    const u = new SpeechSynthesisUtterance(text);
-    const voice = selectedVoice();
-    u.lang = voice ? voice.lang : ttsLang(lang);
-    if (voice) u.voice = voice;
-    u.rate = Number(document.getElementById('rate').value);
-    u.pitch = Number(document.getElementById('pitch').value);
-    u.volume = Number(document.getElementById('volume').value);
-    u.onstart = () => showNotice('Brauzer ovozi ijro etilmoqda…');
-    u.onend = () => showNotice('Tayyor.');
-    u.onerror = e => showNotice(`TTS xatosi: ${e.error || 'noma’lum'}`);
-    synth.speak(u);
+    showNotice(`Bu til uchun mahalliy TTS yo‘q: ${lang}`);
   }
   function addMessage(role, text, lang, extra='') {
     document.getElementById('welcome')?.remove();
@@ -237,7 +207,7 @@
     addMessage('user', text, lang);
     input.value = '';
     busy = true; sendBtn.disabled = true; sendBtn.textContent = '⏳ Javob kutilmoqda…';
-    showNotice('MADLAD va Qwen javob tayyorlamoqda…');
+    showNotice('AI javob tayyorlamoqda…');
     try {
       const response = await fetch('/api/chat', {
         method:'POST', headers:{'Content-Type':'application/json'},
@@ -246,7 +216,7 @@
       const data = await response.json();
       if (!response.ok || !data.ok) throw new Error(data.error || `HTTP ${response.status}`);
       const t = data.timings || {};
-      const timing = `Kirish tarjimasi ${t.input_translation ?? '-'}s · Qwen ${t.qwen ?? '-'}s · Chiqish tarjimasi ${t.output_translation ?? '-'}s · Jami ${t.total ?? '-'}s`;
+      const timing = `LLM ${t.llm ?? '-'}s · Tarjima ${t.output_translation ?? '-'}s · Jami ${t.total ?? '-'}s`;
       addMessage('assistant', data.answer, data.language, timing);
       speak(data.answer, data.language);
       showNotice(`Javob tayyor · til: ${data.language}`);
@@ -337,9 +307,7 @@
   });
   document.getElementById('stopVoice').addEventListener('click', () => { stopAllAudio(); showNotice('Ovoz to‘xtatildi.'); });
   document.getElementById('rate').addEventListener('input',e=>document.getElementById('rateValue').textContent=Number(e.target.value).toFixed(2)+'×');
-  document.getElementById('pitch').addEventListener('input',e=>document.getElementById('pitchValue').textContent=Number(e.target.value).toFixed(2));
   document.getElementById('volume').addEventListener('input',e=>document.getElementById('volumeValue').textContent=Math.round(Number(e.target.value)*100)+'%');
-  if(synth){loadVoices();synth.onvoiceschanged=loadVoices;}
   checkServer();
 })();
 </script>

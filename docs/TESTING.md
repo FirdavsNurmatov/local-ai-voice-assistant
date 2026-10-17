@@ -35,7 +35,7 @@ function Test-Wav($Path) {   # a 200 response is not enough: check the audio its
 
 | Component | Test | Pass criteria |
 |---|---|---|
-| Ollama | `Invoke-RestMethod http://127.0.0.1:11434/api/tags` | list contains `qwen3:1.7b` |
+| Ollama | `Invoke-RestMethod http://127.0.0.1:11434/api/tags` | list contains `gemma3:4b` |
 | Uzbek TTS | `Send-Json http://127.0.0.1:8766/api/tts @{text='Assalomu alaykum!'} uz.wav; Test-Wav uz.wav` | 22050 Hz, 1 ch, 16 bit, not silent |
 | Uzbek TTS via proxy | same with port 8765 | same |
 | Piper | `Send-Json http://127.0.0.1:8767/api/tts @{text='Hello! This is a voice test.'; language='en'} p.wav; Test-Wav p.wav` | 22050 Hz, not silent |

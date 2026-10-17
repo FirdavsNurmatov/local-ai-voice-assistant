@@ -9,7 +9,7 @@ All commands are for **Windows PowerShell 5.1**. Run them from `C:\local-ai-tran
 ## 1. Prerequisites
 
 - The four Python environments and all model files exist (see [DEVELOPMENT_SETUP.md](DEVELOPMENT_SETUP.md)).
-- Ollama is installed and `qwen3:1.7b` is pulled.
+- Ollama is installed and `gemma3:4b` is pulled.
 - Free commit memory: see §3 before starting anything.
 
 Quick file check (prints `True` for everything that is present):
@@ -67,7 +67,7 @@ Recommended order (reasons below):
 
 ```powershell
 Invoke-RestMethod http://127.0.0.1:11434/api/version
-(Invoke-RestMethod http://127.0.0.1:11434/api/tags).models.name    # must include qwen3:1.7b
+(Invoke-RestMethod http://127.0.0.1:11434/api/tags).models.name    # must include gemma3:4b
 ```
 
 If the first command fails, start the Ollama application from the Start menu (or run `ollama serve` in its own window).
@@ -170,7 +170,7 @@ $h = Invoke-RestMethod http://127.0.0.1:8768/api/health
 
 ## 6. Frontend check
 
-Open <http://localhost:8765>. The header should read `MADLAD-400-3B INT8 + qwen3:1.7b + Uzbek TTS ✓`.
+Open <http://localhost:8765>. The header should read `MADLAD-400-3B INT8 + gemma3:4b + Uzbek TTS ✓`.
 Pick a language under "Suhbat tili" and press **Test ovozi**; watch the status line under the input box:
 
 | Language | Expected status line |
@@ -236,9 +236,9 @@ Nothing needs repair after a crash: the services keep no state on disk.
 ## 11. Determining the configured chat model
 
 ```powershell
-Select-String -Path .\server.py -Pattern '^QWEN_MODEL|^OLLAMA_URL'
+Select-String -Path .\server.py -Pattern '^CHAT_MODEL|^OLLAMA_URL'
 (Invoke-RestMethod http://127.0.0.1:8765/api/health).model          # what the running backend uses
 (Invoke-RestMethod http://127.0.0.1:11434/api/tags).models.name     # what Ollama has
 ```
 
-On 2026-10-13: code `qwen3:1.7b` (`VERIFIED`); Ollama had `qwen3:1.7b`, `qwen3:4b`, `qwen3-uz:latest`, `qwen3-fast:latest` (`VERIFIED`). Only `qwen3:1.7b` is used by the code.
+On 2026-10-13: code `qwen3:1.7b` (`VERIFIED`); Ollama had `qwen3:1.7b`, `qwen3:4b`, `qwen3-uz:latest`, `qwen3-fast:latest` (`VERIFIED`). Only `qwen3:1.7b` was used by the code then; since 2026-10-17 the code uses `gemma3:4b`.

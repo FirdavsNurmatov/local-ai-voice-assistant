@@ -22,12 +22,12 @@ None of these files belong in version control. They must be obtained separately 
 
 | Item | Value | Status |
 |---|---|---|
-| Model tag used | `qwen3:1.7b` (`QWEN_MODEL` in `server.py`) | `VERIFIED` in code and present in Ollama |
+| Model tag used | `gemma3:4b` (`CHAT_MODEL` in `server.py`; until 2026-10-17 `qwen3:1.7b`, see [LLM_COMPARISON.md](LLM_COMPARISON.md)) | `VERIFIED` in code and present in Ollama |
 | Size reported by Ollama | 1.27 GB on disk, 1.36 GB loaded | `VERIFIED` |
 | Other tags installed, unused by code | `qwen3:4b`, `qwen3-uz:latest`, `qwen3-fast:latest` | `VERIFIED` present; how the two custom tags were built is `NOT VERIFIED` (no Modelfile in this directory) |
 | Ollama version | 0.40.3 | `VERIFIED` |
 
-Stored by Ollama outside this directory. Obtain with `ollama pull qwen3:1.7b`.
+Stored by Ollama outside this directory. Obtain with `ollama pull gemma3:4b`.
 
 ## Translation model — MADLAD-400 3B (CTranslate2 INT8)
 

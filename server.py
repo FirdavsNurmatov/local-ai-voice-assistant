@@ -21,30 +21,16 @@ TTS_HEALTH_URL = "http://127.0.0.1:8766/api/health"
 STT_URL = "http://127.0.0.1:8769/api/transcribe"
 STT_HEALTH_URL = "http://127.0.0.1:8769/api/health"
 STT_MAX_BODY = 25 * 1024 * 1024
-QWEN_MODEL = os.environ.get("CHAT_MODEL", "qwen3:1.7b")   # Ollama model tag for the chat answer
-# "Dual input": for non-English messages the LLM also sees the ORIGINAL text next to its
-# machine translation, so it can recover meaning lost in translation (e.g. after speech
-# recognition errors). Default from CHAT_DUAL_INPUT (on/off); a request may override it
-# with "dual_input": true/false. Off = exactly the previous prompt. Evaluated in
-# stt-eval/dual_input/ (see docs/STT.md).
-DUAL_INPUT_DEFAULT = os.environ.get("CHAT_DUAL_INPUT", "off").lower() == "on"
-LANGUAGE_NAMES = {"uz": "Uzbek", "ru": "Russian"}
-DUAL_INPUT_TEMPLATE = (
-    "Original message in {language} (may come from speech recognition; may contain recognition or spelling errors):\n"
-    "{original}\n\n"
-    "Machine translation into English (may contain translation errors):\n"
-    "{translation}\n\n"
-    "If the translation and the original disagree, trust the meaning of the original."
-)
-# Without this the small model often just repeats or re-translates the message (seen in test v1).
-DUAL_INPUT_SYSTEM = (" The user's message is given twice: as the original text and as a machine translation. "
-                     "Answer the user's question or request itself; do not translate, restate or repeat the message.")
-# "Direct input": for non-English messages skip the input translation; the LLM reads the
-# original text and still answers in English, which MADLAD then translates back. Default from
-# CHAT_DIRECT_INPUT (on/off); a request may override it with "direct_input": true/false.
-DIRECT_INPUT_DEFAULT = os.environ.get("CHAT_DIRECT_INPUT", "off").lower() == "on"
-DIRECT_INPUT_SYSTEM = (" The user may write in Uzbek or Russian, possibly with speech-recognition errors; "
-                       "understand the message in that language, but always answer in English.")
+# Chat pipeline = the winner of the comparison in stt-eval/llm_compare (docs/LLM_COMPARISON.md):
+# gemma3:4b reads the user's Uzbek/Russian text itself (no input translation; this avoids MADLAD
+# mistranslating misspelled or misrecognised words), answers in English, and MADLAD translates the
+# answer into the user's language. English goes to the model and back unchanged.
+CHAT_MODEL = "gemma3:4b"
+SYSTEM_PROMPT = ("You are a helpful, friendly assistant. "
+                 "Answer in English in 1-3 concise sentences. "
+                 "Do not include reasoning or thinking.")
+NON_ENGLISH_SYSTEM = (" The user may write in Uzbek or Russian, possibly with speech-recognition errors; "
+                      "understand the message in that language, but always answer in English.")
 HOST = "0.0.0.0"
 PORT = 8765
 
@@ -124,52 +110,30 @@ def translate(text: str, target: str):
     output = tokenizer.decode(output_ids, skip_special_tokens=True).strip()
     return output, time.perf_counter() - started
 
-def run_chat(text: str, requested_language: str, dual_input=None, direct_input=None):
+def run_chat(text: str, requested_language: str):
     started = time.perf_counter()
     # An explicit language (e.g. the one detected by the STT service) wins;
     # "auto" or anything else falls back to text-based detection.
     lang = requested_language if requested_language in ("uz", "ru", "en") else detect_language(text)
-    use_direct = (DIRECT_INPUT_DEFAULT if direct_input is None else bool(direct_input)) and lang != "en"
-    if lang == "en":
-        english, input_time = text, 0.0
-    elif use_direct:
-        english, input_time = None, 0.0     # no input translation; the LLM reads the original
-    else:
-        english, input_time = translate(text, "en")
-    use_dual = (DUAL_INPUT_DEFAULT if dual_input is None else bool(dual_input)) and lang != "en" and not use_direct
-    if use_direct:
-        user_content = text
-    elif use_dual:
-        user_content = DUAL_INPUT_TEMPLATE.format(language=LANGUAGE_NAMES.get(lang, lang), original=text,
-                                                  translation=english)
-    else:
-        user_content = english
-
-    qwen_started = time.perf_counter()
+    llm_started = time.perf_counter()
     response = requests.post(
         OLLAMA_URL,
         json={
-            "model": QWEN_MODEL,
+            "model": CHAT_MODEL,
             "messages": [
-                {"role": "system", "content": (
-                    "You are a helpful, friendly assistant. "
-                    "Answer in English in 1-3 concise sentences. "
-                    "Do not include reasoning or thinking."
-                ) + (DIRECT_INPUT_SYSTEM if use_direct else "") + (DUAL_INPUT_SYSTEM if use_dual else "")},
-                {"role": "user", "content": user_content},
+                {"role": "system", "content": SYSTEM_PROMPT + ("" if lang == "en" else NON_ENGLISH_SYSTEM)},
+                {"role": "user", "content": text},
             ],
             "stream": False,
             "keep_alive": "10m",
             "options": {"num_ctx": 2048, "num_predict": 100, "temperature": 0.4},
-            # "think" is only understood by thinking-capable models such as Qwen3
-            **({"think": False} if QWEN_MODEL.startswith("qwen3") else {}),
         },
         timeout=180,
     )
     response.raise_for_status()
     ollama_json = response.json()
     answer_en = ollama_json["message"]["content"].strip()
-    qwen_time = time.perf_counter() - qwen_started
+    llm_time = time.perf_counter() - llm_started
     if lang == "en":
         answer, output_time = answer_en, 0.0
     else:
@@ -178,13 +142,11 @@ def run_chat(text: str, requested_language: str, dual_input=None, direct_input=N
             answer = uzbek_cyrillic_to_latin(answer)
     return {
         "ok": True, "language": lang, "input": text,
-        "english_input": english, "answer_english": answer_en, "answer": answer,
-        "dual_input": use_dual, "direct_input": use_direct,
-        "llm": {"model": QWEN_MODEL, "prompt_tokens": ollama_json.get("prompt_eval_count"),
+        "answer_english": answer_en, "answer": answer,
+        "llm": {"model": CHAT_MODEL, "prompt_tokens": ollama_json.get("prompt_eval_count"),
                 "output_tokens": ollama_json.get("eval_count")},
         "timings": {
-            "input_translation": round(input_time, 2),
-            "qwen": round(qwen_time, 2),
+            "llm": round(llm_time, 2),
             "output_translation": round(output_time, 2),
             "total": round(time.perf_counter() - started, 2),
         },
@@ -218,7 +180,7 @@ class Handler(BaseHTTPRequestHandler):
                 tts_ok = False
             self._send(200, json.dumps({
                 "ok": True,
-                "model": QWEN_MODEL,
+                "model": CHAT_MODEL,
                 "translation_model": "MADLAD-400-3B INT8",
                 "local_tts": bool(tts_ok),
                 "tts_model": "vits_uzbek_finetuned.onnx" if tts_ok else None,
@@ -311,10 +273,7 @@ class Handler(BaseHTTPRequestHandler):
             if len(text) > 5000:
                 self._send(400, json.dumps({"ok": False, "error": "Matn 5000 belgidan oshmasin"}))
                 return
-            dual_input, direct_input = payload.get("dual_input"), payload.get("direct_input")
-            result = run_chat(text, language,
-                              dual_input if isinstance(dual_input, bool) else None,
-                              direct_input if isinstance(direct_input, bool) else None)
+            result = run_chat(text, language)
             self._send(200, json.dumps(result, ensure_ascii=False))
         except requests.RequestException as exc:
             self._send(502, json.dumps({

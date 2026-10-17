@@ -7,7 +7,7 @@
 ## Stage 0 — page load
 
 1. Browser requests `GET /` from `server.py`; the file `local_voice_chat.html` is read from disk on every request (edits take effect on reload, no restart needed).
-2. The page calls `GET /api/health` once and shows `MADLAD-400-3B INT8 + qwen3:1.7b + Uzbek TTS ✓` or `· TTS ulanmagan`. It does **not** probe Ollama, Piper or Kokoro.
+2. The page calls `GET /api/health` once and shows `MADLAD-400-3B INT8 + gemma3:4b + Uzbek TTS ✓` or `· TTS ulanmagan`. It does **not** probe Ollama, Piper or Kokoro.
 
 ## Stage 1 — user input
 
@@ -27,18 +27,19 @@ Consequences: Uzbek Cyrillic → `ru`; Uzbek Latin without a listed keyword → 
 Latin-script language → `en`. This single decision controls both translation directions **and**
 which voice speaks, so a wrong detection propagates through every later stage.
 
-## Stage 3 — input translation
+## Stage 3 — input translation (removed 2026-10-17)
 
-Skipped when the detected language is `en`. Otherwise MADLAD translates with the prompt
-`<2en> {text}` (greedy decoding, at most 128 output tokens — long inputs are silently truncated).
-MADLAD infers the source language itself; the detected language is not passed as source.
+There is no input translation any more: MADLAD mistranslated misspelled or misrecognised Uzbek before the
+model saw it ([LLM_COMPARISON.md](LLM_COMPARISON.md)). Until 2026-10-17 MADLAD translated non-English input
+with `<2en> {text}`.
 
 ## Stage 4 — chat generation
 
-`POST http://127.0.0.1:11434/api/chat` with model `qwen3:1.7b`, a fixed English system prompt
-("Answer in English in 1-3 concise sentences…"), the English user text, `stream: false`,
-`think: false`, `keep_alive: "10m"`, `num_ctx: 2048`, `num_predict: 100`, `temperature: 0.4`.
-No conversation history is sent. Timeout 180 s.
+`POST http://127.0.0.1:11434/api/chat` with model `gemma3:4b`, a fixed English system prompt
+("Answer in English in 1-3 concise sentences…"; for Uzbek/Russian plus "the user may write in Uzbek or
+Russian, possibly with speech-recognition errors; understand the message in that language, but always answer
+in English"), the user's original text, `stream: false`, `keep_alive: "10m"`, `num_ctx: 2048`,
+`num_predict: 100`, `temperature: 0.4`. No conversation history is sent. Timeout 180 s.
 
 ## Stage 5 — output translation
 
@@ -49,14 +50,15 @@ For `uz` the result is passed through `uzbek_cyrillic_to_latin` (MADLAD may answ
 
 ```json
 {
-  "ok": true, "language": "en",
-  "input": "Hello, how are you?", "english_input": "Hello, how are you?",
-  "answer_english": "I'm doing well, thank you.", "answer": "I'm doing well, thank you.",
-  "timings": {"input_translation": 0.0, "qwen": 7.28, "output_translation": 0.0, "total": 7.28}
+  "ok": true, "language": "uz", "input": "bir haftada nesha kun bor",
+  "answer_english": "Okay, I understand you're asking about the number of days in a week. There are seven days in a week. Would you like to know something else?",
+  "answer": "Ha, siz haftada qancha kun borligi haqida soʻrayotganingizni tushundim. Haftada etti kun bor. Yana biror narsani bilishingiz kerakmi?",
+  "llm": {"model": "gemma3:4b", "prompt_tokens": …, "output_tokens": …},
+  "timings": {"llm": 3.65, "output_translation": 3.99, "total": 7.65}
 }
 ```
 
-(Real response recorded 2026-10-13.) The page renders `answer`, a timing line, and a "▶ Qayta eshitish" (replay) button.
+(Real response recorded 2026-10-17 on the reference PC; token counts omitted here.) The page renders `answer`, a timing line, and a "▶ Qayta eshitish" (replay) button.
 
 ## Stage 7 — speech synthesis
 
@@ -69,17 +71,15 @@ The page calls `speak(answer, language)` without awaiting it. Routing is describ
 | Kokoro EN | `POST :8768/api/tts {text, language:"en", speed}` | misaki English G2P (espeak fallback), chunked by `KPipeline` | WAV, 24 000 Hz, mono, 16-bit PCM |
 | Kokoro RU | `POST :8768/api/tts {text, language:"ru", speed}` | sentence split → RUAccent stress → respelling → espeak-ng → vowel reduction → ≤ 510 phonemes per chunk, 0.12 s gap between sentences | WAV, 24 000 Hz, mono, 16-bit PCM |
 | Piper | `POST :8767/api/tts {text, language}` | Piper's own espeak-ng phonemization (inside the CLI) | WAV, 22 050 Hz (model config; mono 16-bit `NOT VERIFIED` by header in this audit) |
-| Browser | `SpeechSynthesisUtterance` | browser | played directly, no file |
 
 Sample-rate/format facts for Uzbek and Kokoro were verified by parsing the WAV headers on 2026-10-13.
 
 ## Stage 8 — playback
 
 The WAV bytes become a `Blob` → `URL.createObjectURL` → `new Audio(url).play()`. On `ended` the URL
-is revoked. "■ To‘xtatish" stops both HTML audio and `speechSynthesis`. Starting a new `speak()`
-stops whatever is playing. UI sliders: **volume** applies to Kokoro, Piper and browser audio (not
-Uzbek ONNX); **rate** applies to Kokoro (`speed`) and the browser voice; **pitch** applies to the
-browser voice only.
+is revoked. "■ To‘xtatish" stops the HTML audio. Starting a new `speak()` stops whatever is playing.
+UI sliders: **volume** applies to Kokoro and Piper audio (not Uzbek ONNX); **rate** applies to Kokoro
+(`speed`) only. (The browser voice and its pitch slider were removed on 2026-10-17.)
 
 ## What is stored
 

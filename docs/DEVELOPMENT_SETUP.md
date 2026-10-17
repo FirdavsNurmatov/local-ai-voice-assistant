@@ -30,7 +30,7 @@ kokoro-models\kokoro-82m\  kokoro-models\kokoro-ru\
 Install Ollama, then:
 
 ```powershell
-ollama pull qwen3:1.7b
+ollama pull gemma3:4b
 Invoke-RestMethod http://127.0.0.1:11434/api/version
 ```
 

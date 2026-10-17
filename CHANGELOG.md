@@ -5,6 +5,14 @@ The project was put under version control on 2026-10-13. Everything before that 
 recorded work of 2026-10-13 — inferences from timestamps and file contents, not from commit history.
 No version numbers have been assigned.
 
+## 2026-10-17 — End-to-end voice test
+
+- `stt-eval/scripts/e2e_voice_test.py`, `stt-eval/e2e/`: spoken Uzbek questions through `server.py`
+  (transcribe → chat → TTS) with 8765, 8766, 8769, 8770 running together. Female voice: 4/6 correct, median
+  9.9 s (mean 12.3 s; first request 25.8 s while gemma3:4b loads). Male voice: 3/3, median 39.6 s.
+- `docs/CURRENT_SETUP.md`: end-to-end table and the list of known weaknesses (MADLAD output errors, uncaught STT
+  mistakes, Russian/English voices not proxied for phones, memory on the 8 GB PC).
+
 ## 2026-10-17 — Male voices for Russian and English
 
 - Downloaded (owner's approval, SHA256-verified against the pinned Hugging Face commits): Kokoro `am_michael`,

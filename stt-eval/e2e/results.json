@@ -1,0 +1,129 @@
+{
+ "summary": {
+  "stt_s": 2.39,
+  "chat_s": 6.43,
+  "tts_s": 0.91,
+  "total_s": 9.86,
+  "voice": "female",
+  "n": 6,
+  "correct": 4,
+  "date": "2026-10-17",
+  "mean_total_s": 12.29
+ },
+ "requests": [
+  {
+   "id": "q01",
+   "question": "O'zbekistonning poytaxti qaysi shahar?",
+   "transcript": "oʻzbekistonning poytaxti qaysi shahar",
+   "stt_model": "navai-whisper-small-uzbek",
+   "answer": "Toshkent. Bu Oʻzbekistonning poytaxti. Toshkent haqida koʻproq bilish istagi bormi?",
+   "answer_english": "Tashkent. It is the capital city of Uzbekistan. Would you like to know more about Tashkent?",
+   "correct": true,
+   "stt_s": 3.97,
+   "chat_s": 20.52,
+   "chat_timings": {
+    "llm": 15.61,
+    "output_translation": 4.82,
+    "total": 20.5
+   },
+   "tts_s": 1.29,
+   "answer_audio_s": 5.56,
+   "total_s": 25.77
+  },
+  {
+   "id": "q02",
+   "question": "Bir haftada necha kun bor?",
+   "transcript": "bir haftada necha kun bor",
+   "stt_model": "navai-whisper-small-uzbek",
+   "answer": "Bu esa, \"haftada qancha kun bor?\" degan savolga javob boʻladi. Haftada etti kun bor.",
+   "answer_english": "That translates to \"how many days in a week?\". There are seven days in a week.",
+   "correct": true,
+   "stt_s": 2.71,
+   "chat_s": 6.23,
+   "chat_timings": {
+    "llm": 2.64,
+    "output_translation": 3.56,
+    "total": 6.22
+   },
+   "tts_s": 0.78,
+   "answer_audio_s": 5.56,
+   "total_s": 9.73
+  },
+  {
+   "id": "q05",
+   "question": "Ikki qo'shuv uch necha bo'ladi?",
+   "transcript": "ikki qoʻshi uch necha boʻladi",
+   "stt_model": "navai-whisper-small-uzbek",
+   "answer": "Bu beshga teng.  Boshqa alifbo masalasida yordam kerakmi?",
+   "answer_english": "That equals five.  Do you need help with another math problem?",
+   "correct": true,
+   "stt_s": 2.46,
+   "chat_s": 4.29,
+   "chat_timings": {
+    "llm": 2.14,
+    "output_translation": 2.12,
+    "total": 4.27
+   },
+   "tts_s": 0.57,
+   "answer_audio_s": 3.73,
+   "total_s": 7.31
+  },
+  {
+   "id": "q06",
+   "question": "Quyosh qaysi tomondan chiqadi?",
+   "transcript": "bu yosh qaysi tomondan chiqadi",
+   "stt_model": "navai-whisper-small-uzbek",
+   "answer": "Bu \"Bu yosh qaysi tomondan kelib chiqqan?\" degan manoni anglatadi. Men sizning odamning yoshi haqida soʻrayotganingizni tushunaman.  Agar sizda boshqa savollar boʻlsa, men sizga yordam beraman!",
+   "answer_english": "That translates to \"Which side does this age come from?\" I understand you're asking about a person's age.  I can help you with other questions if you have them!",
+   "correct": false,
+   "stt_s": 2.17,
+   "chat_s": 9.64,
+   "chat_timings": {
+    "llm": 4.45,
+    "output_translation": 5.16,
+    "total": 9.63
+   },
+   "tts_s": 1.42,
+   "answer_audio_s": 9.22,
+   "total_s": 13.23
+  },
+  {
+   "id": "q11",
+   "question": "Qaysi hayvon cho'l kemasi deb ataladi?",
+   "transcript": "qaysi hayvon choʻl kemasi deb ataladi",
+   "stt_model": "navai-whisper-small-uzbek",
+   "answer": "Uni olovdan chiqarib oldik va unga olovni aralashtirib qoʻydik. Uni olovga solib, soʻngra ustidan suv quydik.",
+   "answer_english": "That animal is called a camel. Camels are well-known for their ability to survive in desert environments.",
+   "correct": false,
+   "stt_s": 2.32,
+   "chat_s": 6.62,
+   "chat_timings": {
+    "llm": 2.91,
+    "output_translation": 3.7,
+    "total": 6.62
+   },
+   "tts_s": 1.03,
+   "answer_audio_s": 7.31,
+   "total_s": 9.98
+  },
+  {
+   "id": "q22",
+   "question": "Qaysi sayyorada biz yashaymiz?",
+   "transcript": "qaysi sayyorada biz yashaymiz",
+   "stt_model": "navai-whisper-small-uzbek",
+   "answer": "Siz Erda yashaysiz. U quyosh tizimimizdagi quyoshdan keyingi uchinchi sayyoradir.",
+   "answer_english": "You live on Earth. It's the third planet from the Sun in our solar system.",
+   "correct": true,
+   "stt_s": 2.14,
+   "chat_s": 4.9,
+   "chat_timings": {
+    "llm": 2.4,
+    "output_translation": 2.49,
+    "total": 4.9
+   },
+   "tts_s": 0.71,
+   "answer_audio_s": 4.55,
+   "total_s": 7.75
+  }
+ ]
+}

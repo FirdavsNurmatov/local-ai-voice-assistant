@@ -1,0 +1,72 @@
+{
+ "summary": {
+  "stt_s": 2.7,
+  "chat_s": 8.12,
+  "tts_s": 29.14,
+  "total_s": 39.58,
+  "voice": "male",
+  "n": 3,
+  "correct": 3,
+  "date": "2026-10-17",
+  "mean_total_s": 40.18
+ },
+ "requests": [
+  {
+   "id": "q01",
+   "question": "O'zbekistonning poytaxti qaysi shahar?",
+   "transcript": "oʻzbekistonning poytaxti qaysi shahar",
+   "stt_model": "navai-whisper-small-uzbek",
+   "answer": "Oʻzbekiston poytaxti Toshkent shahridir. Bu mamlakatning shimolida joylashgan katta, zamonaviy shahardir. Toshkent haqida koʻproq bilish istagi bormi?",
+   "answer_english": "The capital of Uzbekistan is Tashkent. It is a large, modern city located in the north of the country. Would you like to know more about Tashkent?",
+   "correct": true,
+   "stt_s": 3.91,
+   "chat_s": 10.78,
+   "chat_timings": {
+    "llm": 4.5,
+    "output_translation": 6.25,
+    "total": 10.77
+   },
+   "tts_s": 34.39,
+   "answer_audio_s": 10.82,
+   "total_s": 49.08
+  },
+  {
+   "id": "q02",
+   "question": "Bir haftada necha kun bor?",
+   "transcript": "bir haftada necha kun bor",
+   "stt_model": "navai-whisper-small-uzbek",
+   "answer": "Bu esa, \"haftada qancha kun bor?\" degan savolga javob boʻladi. Haftada etti kun bor.",
+   "answer_english": "That translates to \"how many days in a week?\". There are seven days in a week.",
+   "correct": true,
+   "stt_s": 2.7,
+   "chat_s": 7.26,
+   "chat_timings": {
+    "llm": 2.66,
+    "output_translation": 4.57,
+    "total": 7.24
+   },
+   "tts_s": 21.91,
+   "answer_audio_s": 6.04,
+   "total_s": 31.87
+  },
+  {
+   "id": "q11",
+   "question": "Qaysi hayvon cho'l kemasi deb ataladi?",
+   "transcript": "qaysi hayvon choʻl kemasi deb ataladi",
+   "stt_model": "navai-whisper-small-uzbek",
+   "answer": "Bu hayvon tuya deb ataladi. Tuyalarning quruqlikdagi muhitda yaxshi rivojlanishi malum. Ular quruqlik ekosistemasining muhim qismidir.",
+   "answer_english": "That animal is called a camel. Camels are well-known for their ability to thrive in desert environments. They are a vital part of desert ecosystems.",
+   "correct": true,
+   "stt_s": 2.33,
+   "chat_s": 8.12,
+   "chat_timings": {
+    "llm": 3.47,
+    "output_translation": 4.62,
+    "total": 8.1
+   },
+   "tts_s": 29.14,
+   "answer_audio_s": 9.54,
+   "total_s": 39.58
+  }
+ ]
+}

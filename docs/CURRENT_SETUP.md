@@ -90,9 +90,26 @@ Russian/English, 3 sentences per voice, one warm-up excluded (`stt-eval/tts_ruen
 Male voices cost the same as female ones (Kokoro: same model, another 0.5 MB voicepack; Piper: another 63 MB
 voice file, one process per request). Kokoro stays the default (≈ 2–3× faster than Piper).
 
-## End-to-end expectation (reference PC)
+## End-to-end, measured (reference PC, 2026-10-17)
 
-Sum of the stage medians above for a short spoken Uzbek question (*not* a single end-to-end measurement):
+Spoken Uzbek questions (TTS recordings of `questions_uz.json`) sent through `server.py` exactly like the page does:
+`/api/transcribe?language=uz` → `/api/chat` → `/api/tts` (`stt-eval/scripts/e2e_voice_test.py`, `stt-eval/e2e/`).
+Running at the same time: 8765, 8766, 8769, 8770 and Ollama (free commit fell to 1.2 GB).
+
+| Voice | Questions | Correct | STT | Chat | TTS | **Total, median** | Total, mean |
+|---|---|---|---|---|---|---|---|
+| Female | 6 | 4/6 | 2.4 s | 6.4 s | 0.9 s | **9.9 s** | 12.3 s |
+| Male | 3 | 3/3 | 2.7 s | 8.1 s | 29.1 s | **39.6 s** | 40.2 s |
+
+- The **first** question after start took 25.8 s (Ollama loading gemma3:4b: LLM 15.6 s); later ones 7–13 s.
+- Times are until the answer audio is ready (the page then plays it).
+- The two wrong answers show the two main weaknesses: STT heard *Quyosh* as *bu yosh* and the model answered the
+  misheard question; and for "cho‘l kemasi" gemma answered correctly (*camel*) but MADLAD turned the English answer
+  into an unrelated Uzbek sentence.
+
+### Estimate per stage (before the end-to-end run)
+
+Sum of the stage medians above for a short spoken Uzbek question:
 
 | Path | STT | Chat (LLM + MADLAD out) | TTS | Spoken question → answer audio |
 |---|---|---|---|---|
@@ -147,6 +164,18 @@ Then open <http://localhost:8765>. Details: [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK
 
 ## Known limits of this setup
 
+- **MADLAD output translation can replace a correct answer with an unrelated sentence** (seen in the end-to-end
+  run and in 6 of 42 correct answers in the comparison). It is the largest remaining quality problem.
+- **STT mistakes are not caught**: a misheard word changes the question and the model answers the wrong question;
+  the page shows the transcript, but nothing asks for confirmation.
+- The model sometimes explains or restates the question ("That translates to …") instead of answering.
+- **Russian/English voices do not work on a phone through the tunnel**: the page calls Kokoro/Piper at
+  `http://127.0.0.1:8768/8767` directly, which on a phone is the phone itself; only Uzbek TTS and STT are proxied
+  through `server.py`.
+- On the 8 GB PC the full stack does not fit: with chat + STT + both Uzbek voices running, only ≈ 1.2 GB commit is
+  left, so Kokoro (Russian/English voices) cannot be started at the same time.
+- No conversation history: every question is answered on its own.
+- `server.py` listens on all interfaces without authentication.
 - Robot commands are not reliable from free speech (STT and LLM both); a fixed command grammar or confirmation step is needed.
 - Test sets are small (25 + 25 Uzbek, 20 Russian, 20 English); differences of 1–3 answers are within noise.
 - STT tests use FLEURS (female, read speech) and synthetic audio; no male or spontaneous Uzbek speech yet.
@@ -163,4 +192,5 @@ Then open <http://localhost:8765>. Details: [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK
 | Dual-input experiment | `stt-eval/dual_input/experiment.json` |
 | LLM × pipeline comparison | `stt-eval/llm_compare/` (`RESULTS.md`, `summary.json`, `runs/`, `commands/`) |
 | Uzbek TTS speed (female / male GPU / male CPU) | `stt-eval/tts_uz/*.json` (`stt-eval/scripts/tts_uz_benchmark.py`) |
+| End-to-end voice test (audio → STT → chat → TTS) | `stt-eval/e2e/results.json`, `results_male.json` (`stt-eval/scripts/e2e_voice_test.py`) |
 | Russian/English TTS speed, female vs male (Kokoro, Piper) | `stt-eval/tts_ruen/results.json` (`stt-eval/scripts/tts_ruen_benchmark.py`) |

@@ -188,7 +188,8 @@ Bind `127.0.0.1`. CORS: `Access-Control-Allow-Origin: *`, methods `GET, POST, OP
 ### `GET /api/health`
 
 ```json
-{"ok": true, "service": "Local Piper TTS", "models": {"ru": "ru_RU-irina-medium.onnx", "en": "en_US-lessac-medium.onnx"}}
+{"ok": true, "service": "Local Piper TTS", "models": {"ru": "ru_RU-irina-medium.onnx", "en": "en_US-lessac-medium.onnx"},
+ "male_models": {"ru": "ru_RU-dmitri-medium.onnx", "en": "en_US-ryan-medium.onnx"}}
 ```
 
 ✔ Static: it does not check that the model files or `.venv-piper` exist.
@@ -203,6 +204,7 @@ Bind `127.0.0.1`. CORS: `Access-Control-Allow-Origin: *`, methods `GET, POST, OP
 |---|---|---|---|
 | `text` | string | yes | trimmed; 1–2000 characters; body 1–20 000 bytes |
 | `language` | string | yes | `"ru"` or `"en"` (case-insensitive) |
+| `voice` | string | no | `"female"` (default: `irina` / `lessac`) or `"male"` (`dmitri` / `ryan`). Added 2026-10-17 ✔ |
 
 `200 audio/wav` ✔ — 22 050 Hz. Each request starts a new Piper process (seconds of latency).
 
@@ -231,13 +233,14 @@ Answers as soon as the process has bound the port, **including while models are 
   "service": "Local Kokoro TTS",
   "ready": {"ru": false, "en": true}, "languages": ["en"],
   "voices": {"ru": "masha", "en": "af_heart"},
+  "male_voices": {"ru": "dima", "en": "am_michael"},
   "models": {"ru": "zaakirio/kokoro-ru", "en": "hexgrad/Kokoro-82M"},
   "errors": {"ru": "MemoryError: xotira yetarli emas: bo'sh commit 1653 MB, kerak 4000 MB (…)"},
   "sample_rate": 24000, "load_seconds": 9.58, "memory_mb": 1385
 }
 ```
 
-(Real response, 2026-10-13.)
+(Real response, 2026-10-13; `male_voices` added 2026-10-17.)
 
 | Field | Meaning |
 |---|---|
@@ -246,7 +249,7 @@ Answers as soon as the process has bound the port, **including while models are 
 | `enabled` | languages allowed by `KOKORO_LANGS` |
 | `ready` | per-language readiness — **check this, not `ok`, to know whether a given voice works** |
 | `languages` | list of ready languages |
-| `voices`, `models` | configured voice and upstream model id per language (static, shown even if not loaded) |
+| `voices`, `male_voices`, `models` | configured female and male voice and upstream model id per language (static, shown even if not loaded) |
 | `errors` | per-language load error text, if any |
 | `free_commit_mb` | commit currently available to the process (Windows); `null` elsewhere |
 | `memory_mb` | RSS of the server process |
@@ -262,13 +265,14 @@ Answers as soon as the process has bound the port, **including while models are 
 |---|---|---|---|
 | `text` | string | yes | trimmed; 1–2000 characters; body 1–20 000 bytes |
 | `language` | string | yes | `"ru"` → `masha`, `"en"` → `af_heart` |
+| `voice` | string | no | `"female"` (default) or `"male"` → `dima` (ru) / `am_michael` (en); anything else → `400`. Added 2026-10-17 ✔ |
 | `speed` | number | no | default `1.0`, clamped to 0.5–2.0 |
 
 `200 audio/wav` ✔ — 24 000 Hz, mono, 16-bit PCM, with headers:
 
 | Header | Example |
 |---|---|
-| `X-TTS-Voice` | `masha` / `af_heart` |
+| `X-TTS-Voice` | `masha` / `af_heart` / `dima` / `am_michael` |
 | `X-TTS-Model` | `zaakirio/kokoro-ru` / `hexgrad/Kokoro-82M` |
 | `X-TTS-Duration` | audio seconds, e.g. `2.920` |
 | `X-TTS-Elapsed` | synthesis seconds, e.g. `1.120` |

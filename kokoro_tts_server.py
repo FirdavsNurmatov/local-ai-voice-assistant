@@ -1,11 +1,12 @@
-"""Local Kokoro TTS server: Russian (Kokoro-RU, masha) + English (Kokoro-82M, af_heart).
+"""Local Kokoro TTS server: Russian (Kokoro-RU, masha / male dima) + English (Kokoro-82M, af_heart / male am_michael).
 
 Run with the isolated environment:
     .venv-kokoro\\Scripts\\python.exe kokoro_tts_server.py
 
 API (same shape as piper_tts_server.py):
     GET  /api/health
-    POST /api/tts   {"text": "...", "language": "ru"|"en", "speed": 1.0 (optional)}
+    POST /api/tts   {"text": "...", "language": "ru"|"en", "speed": 1.0 (optional),
+                     "voice": "female" (default) | "male"}
                     -> audio/wav (24 kHz, mono, PCM16)
 """
 import os
@@ -58,6 +59,10 @@ VOICES = {
         "config": RU_DIR / "config.json",
         "voicepack": RU_DIR / "voices" / "masha.pt",
         "voicepack_sha256": "464d64ae793647c3b3f9d1f08ce5b11c641a61799f0bca65f111e6aad5d0a362",
+        # "voice": "male" in the request (added 2026-10-17, same commit of zaakirio/kokoro-ru)
+        "male_voice": "dima",
+        "male_voicepack": RU_DIR / "voices" / "dima.pt",
+        "male_voicepack_sha256": "80d4d216b5906c232ede48f2c07ab3aee0785e34d1df6ec6dc8cf44767d74c69",
     },
     "en": {
         "voice": "af_heart",
@@ -66,6 +71,10 @@ VOICES = {
         "config": EN_DIR / "config.json",
         "voicepack": EN_DIR / "voices" / "af_heart.pt",
         "voicepack_sha256": "0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff",
+        # "voice": "male" (added 2026-10-17, hexgrad/Kokoro-82M @ f3ff3571)
+        "male_voice": "am_michael",
+        "male_voicepack": EN_DIR / "voices" / "am_michael.pt",
+        "male_voicepack_sha256": "9a443b79a4b22489a5b0ab7c651a0bcd1a30bef675c28333f06971abbd47bd37",
     },
 }
 
@@ -92,12 +101,19 @@ class ApiError(Exception):
 
 def _check_files(lang):
     spec = VOICES[lang]
-    for key in ("checkpoint", "config", "voicepack"):
+    for key in ("checkpoint", "config", "voicepack", "male_voicepack"):
         if not spec[key].exists():
             raise FileNotFoundError(f"{spec[key]} topilmadi")
-    digest = hashlib.sha256(spec["voicepack"].read_bytes()).hexdigest()
-    if digest != spec["voicepack_sha256"]:
-        raise RuntimeError(f"{spec['voicepack'].name} SHA256 mos kelmadi: {digest}")
+    for key in ("voicepack", "male_voicepack"):
+        digest = hashlib.sha256(spec[key].read_bytes()).hexdigest()
+        if digest != spec[key + "_sha256"]:
+            raise RuntimeError(f"{spec[key].name} SHA256 mos kelmadi: {digest}")
+
+
+def _load_packs(spec):
+    import torch
+    return {gender: torch.load(str(spec[key]), map_location="cpu", weights_only=True)
+            for gender, key in (("female", "voicepack"), ("male", "male_voicepack"))}
 
 
 def load_english():
@@ -108,8 +124,7 @@ def load_english():
     model = KModel(repo_id=spec["model"], config=str(spec["config"]),
                    model=str(spec["checkpoint"])).eval()
     pipeline = KPipeline(lang_code="a", repo_id=spec["model"], model=model)
-    pack = torch.load(str(spec["voicepack"]), map_location="cpu", weights_only=True)
-    ENGINE["en"] = {"pipeline": pipeline, "pack": pack}
+    ENGINE["en"] = {"pipeline": pipeline, "packs": _load_packs(spec)}
 
 
 def load_russian():
@@ -122,8 +137,7 @@ def load_russian():
     g2p = RuG2P()
     model = KModel(repo_id=spec["model"], config=str(spec["config"]),
                    model=str(spec["checkpoint"])).eval()
-    pack = torch.load(str(spec["voicepack"]), map_location="cpu", weights_only=True)
-    ENGINE["ru"] = {"g2p": g2p, "model": model, "pack": pack}
+    ENGINE["ru"] = {"g2p": g2p, "model": model, "packs": _load_packs(spec)}
 
 
 def free_commit_mb():
@@ -206,22 +220,23 @@ def _ru_phoneme_chunks(g2p, text):
     return chunks
 
 
-def synthesize(lang, text, speed):
+def synthesize(lang, text, speed, gender="female"):
     import numpy as np
     import torch
     engine = ENGINE[lang]
+    pack = engine["packs"][gender]
     parts = []
     with torch.no_grad():
         if lang == "ru":
             gap = np.zeros(int(SAMPLE_RATE * SENTENCE_GAP), dtype=np.float32)
             for ipa in _ru_phoneme_chunks(engine["g2p"], text):
-                out = engine["model"](ipa, engine["pack"][len(ipa) - 1], speed,
+                out = engine["model"](ipa, pack[len(ipa) - 1], speed,
                                       return_output=True)
                 if parts:
                     parts.append(gap)
                 parts.append(out.audio.cpu().numpy())
         else:
-            for result in engine["pipeline"](text, voice=engine["pack"], speed=speed):
+            for result in engine["pipeline"](text, voice=pack, speed=speed):
                 if result.audio is not None:
                     parts.append(result.audio.cpu().numpy())
     if not parts:
@@ -286,6 +301,7 @@ class Handler(BaseHTTPRequestHandler):
             "ready": ready,
             "languages": [lang for lang, ok in ready.items() if ok],
             "voices": {lang: spec["voice"] for lang, spec in VOICES.items()},
+            "male_voices": {lang: spec["male_voice"] for lang, spec in VOICES.items()},
             "models": {lang: spec["model"] for lang, spec in VOICES.items()},
             "errors": STATE["errors"],
             "sample_rate": SAMPLE_RATE,
@@ -326,6 +342,9 @@ class Handler(BaseHTTPRequestHandler):
             except (TypeError, ValueError):
                 raise ApiError(400, "speed son bo'lishi kerak")
             speed = min(2.0, max(0.5, speed))
+            gender = str(payload.get("voice", "female")).strip().lower()
+            if gender not in ("female", "male"):
+                raise ApiError(400, "voice female yoki male bo'lishi kerak")
             if not STATE["ready"][lang]:
                 detail = STATE["errors"].get(lang, "model hali yuklanmoqda")
                 raise ApiError(503, f"{lang} modeli tayyor emas: {detail}")
@@ -335,16 +354,17 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 with INFER_LOCK:
                     started = time.perf_counter()
-                    audio, seconds = synthesize(lang, text, speed)
+                    audio, seconds = synthesize(lang, text, speed, gender)
                     elapsed = time.perf_counter() - started
             finally:
                 WAITING.release()
 
             spec = VOICES[lang]
-            print(f"[Kokoro] {lang}/{spec['voice']}: {len(text)} belgi -> "
+            voice_name = spec["male_voice"] if gender == "male" else spec["voice"]
+            print(f"[Kokoro] {lang}/{voice_name}: {len(text)} belgi -> "
                   f"{seconds:.2f}s audio, {elapsed:.2f}s generatsiya", flush=True)
             self.send_bytes(200, audio, "audio/wav", {
-                "X-TTS-Voice": spec["voice"],
+                "X-TTS-Voice": voice_name,
                 "X-TTS-Model": spec["model"],
                 "X-TTS-Duration": f"{seconds:.3f}",
                 "X-TTS-Elapsed": f"{elapsed:.3f}",

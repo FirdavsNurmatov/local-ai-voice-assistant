@@ -5,6 +5,19 @@ The project was put under version control on 2026-10-13. Everything before that 
 recorded work of 2026-10-13 — inferences from timestamps and file contents, not from commit history.
 No version numbers have been assigned.
 
+## 2026-10-17 — Male voices for Russian and English
+
+- Downloaded (owner's approval, SHA256-verified against the pinned Hugging Face commits): Kokoro `am_michael`,
+  `am_fenrir` (unused), Kokoro-RU `dima`, Piper `ru_RU-dmitri-medium`, `en_US-ryan-medium` (+ configs).
+- `kokoro_tts_server.py`: request field `"voice": "female" | "male"` (male = `dima` / `am_michael`), both voicepacks
+  SHA256-checked at start, `male_voices` in health. Backup `kokoro_tts_server.py.before_male_voice.bak`.
+- `piper_tts_server.py`: `"voice": "male"` → `dmitri` / `ryan`; `male_models` in health. Backup `piper_tts_server.py.before_male_voice.bak`.
+- `local_voice_chat.html`: the "O‘zbekcha ovoz" selector became "Ovoz" (Ayol / Erkak) for all languages; the choice is sent
+  to the Uzbek, Kokoro and Piper services. Backup `local_voice_chat.html.before_ruen_male.bak`.
+- `stt-eval/tts_ruen/results.json` (`tts_ruen_benchmark.py`): male voices as fast as the female ones
+  (Kokoro RU 1.41 s vs 1.52 s, EN 1.11 s vs 0.99 s; Piper ≈ 3.2–3.4 s).
+- Note: Piper `ryan` dataset is CC BY-NC-SA 4.0 (non-commercial).
+
 ## 2026-10-17 — Decision record and TTS statistics
 
 - `docs/CURRENT_SETUP.md`: the current best combination (NavAI/`small` STT → gemma3:4b hybrid + MADLAD →

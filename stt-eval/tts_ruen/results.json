@@ -1,0 +1,311 @@
+{
+ "date": "2026-10-17",
+ "summary": {
+  "kokoro/ru/female": {
+   "voice": "masha",
+   "median_generation_s": 1.52,
+   "median_real_time_factor": 0.36
+  },
+  "kokoro/ru/male": {
+   "voice": "dima",
+   "median_generation_s": 1.41,
+   "median_real_time_factor": 0.34
+  },
+  "kokoro/en/female": {
+   "voice": "af_heart",
+   "median_generation_s": 0.99,
+   "median_real_time_factor": 0.33
+  },
+  "kokoro/en/male": {
+   "voice": "am_michael",
+   "median_generation_s": 1.11,
+   "median_real_time_factor": 0.34
+  },
+  "piper/ru/female": {
+   "voice": "irina",
+   "median_generation_s": 3.37,
+   "median_real_time_factor": 1.08
+  },
+  "piper/ru/male": {
+   "voice": "dmitri",
+   "median_generation_s": 3.39,
+   "median_real_time_factor": 1.51
+  },
+  "piper/en/female": {
+   "voice": "lessac",
+   "median_generation_s": 3.24,
+   "median_real_time_factor": 1.33
+  },
+  "piper/en/male": {
+   "voice": "ryan",
+   "median_generation_s": 3.23,
+   "median_real_time_factor": 1.42
+  }
+ },
+ "requests": [
+  {
+   "engine": "kokoro",
+   "language": "ru",
+   "gender": "female",
+   "voice": "masha",
+   "text": "Здравствуйте! Чем я могу вам помочь?",
+   "audio_s": 4.47,
+   "generation_s": 1.52,
+   "real_time_factor": 0.34,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "ru",
+   "gender": "female",
+   "voice": "masha",
+   "text": "Столица Узбекистана — город Ташкент.",
+   "audio_s": 3.48,
+   "generation_s": 1.24,
+   "real_time_factor": 0.36,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "ru",
+   "gender": "female",
+   "voice": "masha",
+   "text": "В неделе семь дней: понедельник, вторник, среда, четверг, пятница, суббота и воскресенье.",
+   "audio_s": 6.88,
+   "generation_s": 2.69,
+   "real_time_factor": 0.39,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "ru",
+   "gender": "male",
+   "voice": "dima",
+   "text": "Здравствуйте! Чем я могу вам помочь?",
+   "audio_s": 4.14,
+   "generation_s": 1.41,
+   "real_time_factor": 0.34,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "ru",
+   "gender": "male",
+   "voice": "dima",
+   "text": "Столица Узбекистана — город Ташкент.",
+   "audio_s": 3.48,
+   "generation_s": 1.19,
+   "real_time_factor": 0.34,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "ru",
+   "gender": "male",
+   "voice": "dima",
+   "text": "В неделе семь дней: понедельник, вторник, среда, четверг, пятница, суббота и воскресенье.",
+   "audio_s": 6.28,
+   "generation_s": 2.64,
+   "real_time_factor": 0.42,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "en",
+   "gender": "female",
+   "voice": "af_heart",
+   "text": "Hello! How can I help you today?",
+   "audio_s": 2.33,
+   "generation_s": 0.77,
+   "real_time_factor": 0.33,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "en",
+   "gender": "female",
+   "voice": "af_heart",
+   "text": "The capital of Uzbekistan is Tashkent.",
+   "audio_s": 2.9,
+   "generation_s": 0.99,
+   "real_time_factor": 0.34,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "en",
+   "gender": "female",
+   "voice": "af_heart",
+   "text": "There are seven days in a week. Would you like to know something else?",
+   "audio_s": 3.95,
+   "generation_s": 1.32,
+   "real_time_factor": 0.33,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "en",
+   "gender": "male",
+   "voice": "am_michael",
+   "text": "Hello! How can I help you today?",
+   "audio_s": 2.62,
+   "generation_s": 0.86,
+   "real_time_factor": 0.33,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "en",
+   "gender": "male",
+   "voice": "am_michael",
+   "text": "The capital of Uzbekistan is Tashkent.",
+   "audio_s": 3.27,
+   "generation_s": 1.11,
+   "real_time_factor": 0.34,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "kokoro",
+   "language": "en",
+   "gender": "male",
+   "voice": "am_michael",
+   "text": "There are seven days in a week. Would you like to know something else?",
+   "audio_s": 4.7,
+   "generation_s": 1.73,
+   "real_time_factor": 0.37,
+   "sample_rate": 24000
+  },
+  {
+   "engine": "piper",
+   "language": "ru",
+   "gender": "female",
+   "voice": "irina",
+   "text": "Здравствуйте! Чем я могу вам помочь?",
+   "audio_s": 2.68,
+   "generation_s": 3.3,
+   "real_time_factor": 1.23,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "ru",
+   "gender": "female",
+   "voice": "irina",
+   "text": "Столица Узбекистана — город Ташкент.",
+   "audio_s": 3.12,
+   "generation_s": 3.37,
+   "real_time_factor": 1.08,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "ru",
+   "gender": "female",
+   "voice": "irina",
+   "text": "В неделе семь дней: понедельник, вторник, среда, четверг, пятница, суббота и воскресенье.",
+   "audio_s": 9.35,
+   "generation_s": 3.61,
+   "real_time_factor": 0.39,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "ru",
+   "gender": "male",
+   "voice": "dmitri",
+   "text": "Здравствуйте! Чем я могу вам помочь?",
+   "audio_s": 2.15,
+   "generation_s": 3.25,
+   "real_time_factor": 1.51,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "ru",
+   "gender": "male",
+   "voice": "dmitri",
+   "text": "Столица Узбекистана — город Ташкент.",
+   "audio_s": 2.14,
+   "generation_s": 3.39,
+   "real_time_factor": 1.58,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "ru",
+   "gender": "male",
+   "voice": "dmitri",
+   "text": "В неделе семь дней: понедельник, вторник, среда, четверг, пятница, суббота и воскресенье.",
+   "audio_s": 4.88,
+   "generation_s": 3.43,
+   "real_time_factor": 0.7,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "en",
+   "gender": "female",
+   "voice": "lessac",
+   "text": "Hello! How can I help you today?",
+   "audio_s": 2.14,
+   "generation_s": 3.2,
+   "real_time_factor": 1.5,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "en",
+   "gender": "female",
+   "voice": "lessac",
+   "text": "The capital of Uzbekistan is Tashkent.",
+   "audio_s": 2.44,
+   "generation_s": 3.24,
+   "real_time_factor": 1.33,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "en",
+   "gender": "female",
+   "voice": "lessac",
+   "text": "There are seven days in a week. Would you like to know something else?",
+   "audio_s": 3.31,
+   "generation_s": 3.27,
+   "real_time_factor": 0.99,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "en",
+   "gender": "male",
+   "voice": "ryan",
+   "text": "Hello! How can I help you today?",
+   "audio_s": 1.28,
+   "generation_s": 3.18,
+   "real_time_factor": 2.49,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "en",
+   "gender": "male",
+   "voice": "ryan",
+   "text": "The capital of Uzbekistan is Tashkent.",
+   "audio_s": 2.28,
+   "generation_s": 3.23,
+   "real_time_factor": 1.42,
+   "sample_rate": 22050
+  },
+  {
+   "engine": "piper",
+   "language": "en",
+   "gender": "male",
+   "voice": "ryan",
+   "text": "There are seven days in a week. Would you like to know something else?",
+   "audio_s": 2.77,
+   "generation_s": 3.38,
+   "real_time_factor": 1.22,
+   "sample_rate": 22050
+  }
+ ]
+}

@@ -24,13 +24,13 @@
 </section>
 <aside class="settings">
 <h2>Til va ovoz</h2>
-<div class="field"><label for="uzVoice">O‘zbekcha ovoz</label><select id="uzVoice"><option value="female" selected>Ayol ovozi (VITS ONNX, tez)</option><option value="male">Erkak ovozi (Uzbek F5, GPU, sekin)</option></select></div>
-<div class="field"><label for="ttsMode">Ruscha / inglizcha ovoz</label><select id="ttsMode"><option value="kokoro" selected>Kokoro (RU Masha / EN Heart)</option><option value="piper">Piper (RU Irina / EN Lessac)</option></select></div>
+<div class="field"><label for="voiceGender">Ovoz</label><select id="voiceGender"><option value="female" selected>Ayol ovozi</option><option value="male">Erkak ovozi (o‘zbekchada GPU, sekin)</option></select></div>
+<div class="field"><label for="ttsMode">Ruscha / inglizcha ovoz</label><select id="ttsMode"><option value="kokoro" selected>Kokoro (RU Masha · Dima / EN Heart · Michael)</option><option value="piper">Piper (RU Irina · Dmitri / EN Lessac · Ryan)</option></select></div>
 <div class="field"><label for="language">Suhbat tili</label><select id="language"><option value="uz">O‘zbekcha</option><option value="ru">Ruscha</option><option value="en">Inglizcha</option><option value="auto">Avtomatik aniqlash</option></select></div>
 <div class="field"><label for="rate">Tezlik</label><input id="rate" type="range" min="0.65" max="1.35" step="0.05" value="1"><div class="range-row"><span>Sekin</span><span id="rateValue">1.00×</span><span>Tez</span></div></div>
 <div class="field"><label for="volume">Ovoz balandligi</label><input id="volume" type="range" min="0" max="1" step="0.05" value="1"><div class="range-row"><span>0%</span><span id="volumeValue">100%</span><span>100%</span></div></div>
 <div class="actions"><button class="secondary" id="testVoice" type="button">Test ovozi</button><button class="secondary" id="stopVoice" type="button">■ To‘xtatish</button></div>
-<div class="note">Hamma ovozlar kompyuterning o‘zida yaratiladi: o‘zbekcha — ayol ovozi Uzbek ONNX (port 8766), erkak ovozi Uzbek F5 (port 8770, GPU kerak, sekin); ruscha va inglizcha — Kokoro rejimida Masha / Heart (port 8768), Piper rejimida Irina / Lessac (port 8767). Tanlangan TTS ishlamasa, xato ko‘rsatiladi (boshqa ovozga avtomatik o‘tilmaydi). «🎤 Gapirish» tugmasi nutqni matnga aylantiradi (port 8769): ruscha va inglizcha — Faster-Whisper small, o‘zbekcha — NavAI o‘zbekcha modeli.</div>
+<div class="note">Hamma ovozlar kompyuterning o‘zida yaratiladi: o‘zbekcha — ayol ovozi Uzbek ONNX (port 8766), erkak ovozi Uzbek F5 (port 8770, GPU kerak, sekin); ruscha va inglizcha — Kokoro rejimida Masha / Heart, erkak: Dima / Michael (port 8768), Piper rejimida Irina / Lessac, erkak: Dmitri / Ryan (port 8767). Tanlangan TTS ishlamasa, xato ko‘rsatiladi (boshqa ovozga avtomatik o‘tilmaydi). «🎤 Gapirish» tugmasi nutqni matnga aylantiradi (port 8769): ruscha va inglizcha — Faster-Whisper small, o‘zbekcha — NavAI o‘zbekcha modeli.</div>
 </aside>
 </div></div>
 <script>
@@ -39,7 +39,7 @@
   const input = document.getElementById('messageInput');
   const messages = document.getElementById('messages');
   const ttsModeSelect = document.getElementById('ttsMode');
-  const uzVoiceSelect = document.getElementById('uzVoice');
+  const genderSelect = document.getElementById('voiceGender');
   let currentAudio = null, currentAudioUrl = null;
   const languageSelect = document.getElementById('language');
   const notice = document.getElementById('notice');
@@ -63,14 +63,14 @@
     stopAllAudio();
     // Faqat kompyuterdagi TTS: o'zbekcha — Uzbek ONNX (8766), ruscha/inglizcha — Kokoro (8768) yoki Piper (8767).
     if (lang === 'uz') {
-      const male = uzVoiceSelect.value === 'male';
+      const male = genderSelect.value === 'male';
       const voiceLabel = male ? 'erkak' : 'ayol';
       showNotice(male ? 'Erkak ovozi yaratilmoqda (GPU; bu kompyuterda har bir gapga 15–30 s)…' : 'Mahalliy Uzbek TTS (ayol ovozi) audio yaratmoqda…');
       try {
         const response = await fetch('/api/tts', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({text, voice: uzVoiceSelect.value})
+          body: JSON.stringify({text, voice: genderSelect.value})
         });
         if (!response.ok) {
           let detail = `HTTP ${response.status}`;
@@ -95,14 +95,15 @@
     }
     let kokoroError = '';
     if (ttsModeSelect.value === 'kokoro' && (lang === 'ru' || lang === 'en')) {
-      const voiceName = lang === 'ru' ? 'Masha' : 'Heart';
+      const male = genderSelect.value === 'male';
+      const voiceName = lang === 'ru' ? (male ? 'Dima' : 'Masha') : (male ? 'Michael' : 'Heart');
       let gotAudio = false;
       showNotice(`Kokoro (${voiceName}) audio yaratmoqda...`);
       try {
         const response = await fetch('http://127.0.0.1:8768/api/tts', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({text, language: lang, speed: Number(document.getElementById('rate').value)})
+          body: JSON.stringify({text, language: lang, voice: genderSelect.value, speed: Number(document.getElementById('rate').value)})
         });
         if (!response.ok) {
           let detail = `HTTP ${response.status}`;
@@ -141,7 +142,7 @@
         const response = await fetch('http://127.0.0.1:8767/api/tts', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({text, language: lang})
+          body: JSON.stringify({text, language: lang, voice: genderSelect.value})
         });
         if (!response.ok) {
           let detail = `HTTP ${response.status}`;

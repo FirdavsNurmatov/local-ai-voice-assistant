@@ -74,11 +74,13 @@ Details and sequence diagrams: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 | Language | Voice (default "Kokoro" mode) | If unavailable |
 |---|---|---|
 | Uzbek (`uz`) | female: `vits_uzbek_finetuned.onnx` via 8766 (default); male: `Uzbek_TTS-test` model via 8770 ("O‘zbekcha ovoz" selector) | error is shown |
-| Russian (`ru`) | Kokoro-RU `masha` via 8768 — **only if memory allowed it to load** | the real Kokoro error is shown (no automatic fallback) |
-| English (`en`) | Kokoro-82M `af_heart` via 8768 | the real Kokoro error is shown |
+| Russian (`ru`) | Kokoro-RU `masha`, male `dima` via 8768 — **only if memory allowed it to load** | the real Kokoro error is shown (no automatic fallback) |
+| English (`en`) | Kokoro-82M `af_heart`, male `am_michael` via 8768 | the real Kokoro error is shown |
+
+The page's "Ovoz" selector (Ayol / Erkak) picks the female or male voice for every language.
 
 Russian/English routing depends on the "Ruscha / inglizcha ovoz" selector in the page; only local voices are offered. Piper
-(`ru_RU-irina-medium`, `en_US-lessac-medium`, port 8767) is used only when its own mode is selected.
+(`ru_RU-irina-medium`, `en_US-lessac-medium`; male `ru_RU-dmitri-medium`, `en_US-ryan-medium`; port 8767) is used only when its own mode is selected.
 See [docs/MODELS_AND_VOICES.md](docs/MODELS_AND_VOICES.md).
 
 Speech recognition: Faster-Whisper `small` (CPU, int8) on port 8769 — [docs/STT.md](docs/STT.md).

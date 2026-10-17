@@ -23,14 +23,15 @@ Points that still deserve attention (`PROPOSED`, not legal advice):
 
 | Asset | License | Source of the statement | Status |
 |---|---|---|---|
-| Kokoro-82M weights + `af_heart` voice | Apache-2.0 | Hugging Face model metadata, read 2026-10-13: <https://huggingface.co/hexgrad/Kokoro-82M> | `HISTORICAL` (read from the API during integration) |
-| Kokoro-RU weights + `masha` voice | **OpenRAIL** (weights/voices); code Apache-2.0 | Model card, saved locally as `kokoro-models\kokoro-ru\README.md`; <https://huggingface.co/zaakirio/kokoro-ru> | `VERIFIED` in the saved card |
+| Kokoro-82M weights + `af_heart`, `am_michael` (and unused `am_fenrir`) voices | Apache-2.0 | Hugging Face model metadata, read 2026-10-13: <https://huggingface.co/hexgrad/Kokoro-82M> | `HISTORICAL` (read from the API during integration) |
+| Kokoro-RU weights + `masha`, `dima` voices | **OpenRAIL** (weights/voices); code Apache-2.0 | Model card, saved locally as `kokoro-models\kokoro-ru\README.md`; <https://huggingface.co/zaakirio/kokoro-ru> | `VERIFIED` in the saved card |
 | `ru_g2p.py`, `espeak-data` (from Kokoro-RU) | code Apache-2.0 per the card; `espeak-data` is derived from espeak-ng (GPL-3.0) | model card; espeak-ng project | card `VERIFIED`; espeak-data terms `NOT VERIFIED` |
 | RUAccent package and models | package: Apache Software License (classifier); model files: not checked | package metadata; <https://github.com/Den4ikAI/ruaccent> | package `VERIFIED`, models `NOT VERIFIED` |
 | MADLAD-400 3B (and the CTranslate2 conversion) | believed Apache-2.0 (Google MADLAD-400) | not recorded locally; conversion repository unknown | `NOT VERIFIED` |
 | `gemma3:4b` (Ollama), used since 2026-10-17 | Gemma Terms of Use (Google; not an OSI licence, use restrictions apply) | check `ollama show gemma3:4b --license` | `NOT VERIFIED` |
 | `qwen3:1.7b` (Ollama), used until 2026-10-17 | believed Apache-2.0 (Qwen3) | check `ollama show qwen3:1.7b --license` | `NOT VERIFIED` |
 | Piper voices `ru_RU-irina-medium`, `en_US-lessac-medium` | per-voice terms in the Piper voices collection (each voice has a `MODEL_CARD`) | <https://huggingface.co/rhasspy/piper-voices> | `NOT VERIFIED` — read both model cards before any redistribution or commercial use |
+| Piper male voices (2026-10-17) `ru_RU-dmitri-medium` / `en_US-ryan-medium` | dataset licences per model card: **CC0** / **CC BY-NC-SA 4.0 (non-commercial)**; both fine-tuned from `lessac` | model cards at `rhasspy/piper-voices` @ `c10ece1a` | `VERIFIED` model cards (read 2026-10-17) |
 | Uzbek VITS model `vits_uzbek_finetuned.onnx` | **unknown** — origin and training data not recorded | — | `NOT VERIFIED` |
 | `Uzbek_TTS-test` code and `UZ.safetensors` (male voice, since 2026-10-17) | **no license file** in `github.com/Saidakmal02/Uzbek_TTS`; the architecture is F5-TTS (code MIT), and F5-TTS base weights are CC-BY-NC-4.0 — if this checkpoint was fine-tuned from them, non-commercial terms may apply | local clone | `NOT VERIFIED` |
 | Male voice reference recording `test_erkak.wav` | **unknown** speaker and consent; the service clones this person's voice | — | `NOT VERIFIED` |

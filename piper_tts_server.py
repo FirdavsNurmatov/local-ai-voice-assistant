@@ -11,6 +11,11 @@ MODELS = {
     "ru": BASE_DIR / "ru_RU-irina-medium.onnx",
     "en": BASE_DIR / "en_US-lessac-medium.onnx",
 }
+# "voice": "male" in the request (added 2026-10-17; rhasspy/piper-voices @ c10ece1a)
+MALE_MODELS = {
+    "ru": BASE_DIR / "ru_RU-dmitri-medium.onnx",
+    "en": BASE_DIR / "en_US-ryan-medium.onnx",
+}
 PORT = 8767
 
 
@@ -35,6 +40,7 @@ class Handler(BaseHTTPRequestHandler):
                 "ok": True,
                 "service": "Local Piper TTS",
                 "models": {lang: path.name for lang, path in MODELS.items()},
+                "male_models": {lang: path.name for lang, path in MALE_MODELS.items()},
             }
             self.send_bytes(200, json.dumps(result).encode(), "application/json")
         else:
@@ -62,8 +68,11 @@ class Handler(BaseHTTPRequestHandler):
                 raise ValueError("Matn bo'sh")
             if len(text) > 2000:
                 raise ValueError("Matn 2000 belgidan oshmasin")
+            gender = str(payload.get("voice", "female")).lower()
+            if gender not in ("female", "male"):
+                raise ValueError("voice female yoki male bo'lishi kerak")
 
-            model = MODELS[lang]
+            model = (MALE_MODELS if gender == "male" else MODELS)[lang]
             config = Path(str(model) + ".json")
             if not PYTHON.exists() or not model.exists() or not config.exists():
                 raise FileNotFoundError("Piper Python, model yoki config topilmadi")
@@ -93,7 +102,7 @@ class Handler(BaseHTTPRequestHandler):
                 if len(audio) < 44:
                     raise RuntimeError("Piper bo'sh yoki noto'g'ri WAV qaytardi")
 
-            print(f"[Piper] {lang}: {len(text)} belgi -> {len(audio)} bayt")
+            print(f"[Piper] {lang}/{model.stem}: {len(text)} belgi -> {len(audio)} bayt")
             self.send_bytes(200, audio, "audio/wav")
 
         except Exception as exc:
@@ -110,5 +119,5 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     print(f"Local Piper TTS: http://127.0.0.1:{PORT}")
-    print("Models:", {k: v.name for k, v in MODELS.items()})
+    print("Models:", {k: v.name for k, v in MODELS.items()}, "male:", {k: v.name for k, v in MALE_MODELS.items()})
     ThreadingHTTPServer(("127.0.0.1", PORT), Handler).serve_forever()

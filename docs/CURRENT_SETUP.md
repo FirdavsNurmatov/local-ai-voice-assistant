@@ -10,9 +10,10 @@ GTX 1650 4 GB) unless it says *estimate*. Raw data is in git under `stt-eval/` (
 microphone ──► STT :8769 ──────────────► chat :8765 ─────────────────────────────► TTS
                uz: NavAI whisper-small     gemma3:4b reads the original text,        uz: female VITS ONNX :8766 (default)
                    uzbek (CT2 int8)        answers in English;                           male Uzbek F5-style :8770 (GPU, optional)
-               ru/en: Faster-Whisper       MADLAD-400 3B translates the answer        ru: Kokoro masha :8768
-                   small (CT2 int8)        into uz/ru (English as is)                 en: Kokoro af_heart :8768
-                                                                                      (Piper irina/lessac :8767 only in its own mode)
+               ru/en: Faster-Whisper       MADLAD-400 3B translates the answer        ru: Kokoro masha / male dima :8768
+                   small (CT2 int8)        into uz/ru (English as is)                 en: Kokoro af_heart / male am_michael :8768
+                                                                                      (Piper irina/lessac, male dmitri/ryan :8767,
+                                                                                       only in its own mode)
 ```
 
 | Stage | Choice | Key settings | Service / file |
@@ -24,8 +25,8 @@ microphone ──► STT :8769 ──────────────► cha
 | Output translation | MADLAD-400 3B, CTranslate2 int8, CPU | greedy, ≤ 128 tokens; Uzbek Cyrillic → Latin | in `server.py` |
 | TTS Uzbek, default | **female**: fine-tuned VITS, ONNX, CPU | `noise_scale 0.667`, `noise_scale_w 0.8`, `length_scale 1.0` (owner-approved sample `stt-tts-uz\outputs\finetuned_test.wav`) | `tts_onnx_server.py`, port 8766 |
 | TTS Uzbek, optional | **male**: Uzbek_TTS (F5-style flow matching), CUDA | reference `test_erkak.wav`, `nfe_step 8`, `speed 1.0`, `cfg_strength 2` (owner-approved sample `Uzbek_TTS-test\test_uzbek_tts.wav`) | `uz_male_tts_server.py`, port 8770 |
-| TTS Russian / English | Kokoro: `masha` (RU), `af_heart` (EN) | default page mode "Kokoro"; Piper (`irina`/`lessac`) only in "Piper" mode; no browser voices | `kokoro_tts_server.py` :8768, `piper_tts_server.py` :8767 |
-| Page | `local_voice_chat.html` | microphone language selector (Avto/O‘zbekcha/Русский/English), "O‘zbekcha ovoz" (Ayol/Erkak), "Ruscha / inglizcha ovoz" (Kokoro/Piper) | served by `server.py` |
+| TTS Russian / English | Kokoro: `masha` / male `dima` (RU), `af_heart` / male `am_michael` (EN) | default page mode "Kokoro"; Piper (`irina`/`lessac`, male `dmitri`/`ryan`) only in "Piper" mode; no browser voices | `kokoro_tts_server.py` :8768, `piper_tts_server.py` :8767 |
+| Page | `local_voice_chat.html` | microphone language selector (Avto/O‘zbekcha/Русский/English), "Ovoz" (Ayol/Erkak, all languages), "Ruscha / inglizcha ovoz" (Kokoro/Piper) | served by `server.py` |
 
 ## Why — the numbers
 
@@ -75,8 +76,19 @@ Same 4 Uzbek sentences (40–105 characters), one warm-up excluded (`stt-eval/tt
 | Male, Uzbek_TTS, CPU (i7-9700K) | 28.3 s | 6.11 | 41.9 s | — (not used) |
 
 The male voice stays on the GPU (the CPU is 1.5× slower and is shared with MADLAD, Ollama and STT). It is optional and
-off by default because of its speed on this PC. Kokoro/Piper numbers (unchanged): Kokoro EN 0.9–1.2 s, RU 1.6–2.4 s,
-Piper 3.4–5.4 s ([MEMORY_AND_PERFORMANCE.md](MEMORY_AND_PERFORMANCE.md)).
+off by default because of its speed on this PC.
+
+Russian/English, 3 sentences per voice, one warm-up excluded (`stt-eval/tts_ruen/results.json`, 2026-10-17):
+
+| Engine | Language | Female voice, median | Male voice, median |
+|---|---|---|---|
+| Kokoro | Russian | `masha` 1.52 s | `dima` 1.41 s |
+| Kokoro | English | `af_heart` 0.99 s | `am_michael` 1.11 s |
+| Piper | Russian | `irina` 3.37 s | `dmitri` 3.39 s |
+| Piper | English | `lessac` 3.24 s | `ryan` 3.23 s |
+
+Male voices cost the same as female ones (Kokoro: same model, another 0.5 MB voicepack; Piper: another 63 MB
+voice file, one process per request). Kokoro stays the default (≈ 2–3× faster than Piper).
 
 ## End-to-end expectation (reference PC)
 
@@ -140,7 +152,7 @@ Then open <http://localhost:8765>. Details: [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK
 - STT tests use FLEURS (female, read speech) and synthetic audio; no male or spontaneous Uzbek speech yet.
 - MADLAD can turn short correct English answers into wrong Uzbek (e.g. *Spring.* → *Bas, chiq!*).
 - The male voice clones an unknown speaker's recording; licence of the Uzbek_TTS checkpoint is not verified ([LICENSING.md](LICENSING.md)).
-- Russian and English have female voices only (no male voices on disk).
+- Piper's English male voice `ryan` was trained on a CC BY-NC-SA 4.0 dataset (non-commercial); Kokoro `am_michael` is Apache-2.0.
 
 ## Where the data is
 
@@ -151,3 +163,4 @@ Then open <http://localhost:8765>. Details: [WINDOWS_RUNBOOK.md](WINDOWS_RUNBOOK
 | Dual-input experiment | `stt-eval/dual_input/experiment.json` |
 | LLM × pipeline comparison | `stt-eval/llm_compare/` (`RESULTS.md`, `summary.json`, `runs/`, `commands/`) |
 | Uzbek TTS speed (female / male GPU / male CPU) | `stt-eval/tts_uz/*.json` (`stt-eval/scripts/tts_uz_benchmark.py`) |
+| Russian/English TTS speed, female vs male (Kokoro, Piper) | `stt-eval/tts_ruen/results.json` (`stt-eval/scripts/tts_ruen_benchmark.py`) |

@@ -16,6 +16,8 @@ None of these files belong in version control. They must be obtained separately 
 | Russian | `masha` | Kokoro-RU, 8768 | Kokoro start, if ≥ 4000 MB commit free **after** English loaded | worked when loaded; normally not loaded on the reference machine |
 | Russian (fallback) | `irina` | Piper, 8767 | per request | working (tested 2026-10-13) |
 | English (fallback) | `lessac` | Piper, 8767 | per request | working (tested 2026-10-13) |
+| Russian, male | `dima` (Kokoro-RU, 8768) / `dmitri` (Piper, 8767) | `"voice": "male"` | with the female voice | working (tested 2026-10-17) |
+| English, male | `am_michael` (Kokoro-82M, 8768) / `ryan` (Piper, 8767) | `"voice": "male"` | with the female voice | working (tested 2026-10-17) |
 
 **Never assume `masha` is available.** Check `ready.ru` in `GET :8768/api/health`.
 
@@ -74,9 +76,12 @@ Do not modify this model, its config, or the service.
 |---|---|---|---|---|
 | Russian `irina` (medium) | `ru_RU-irina-medium.onnx` | 63 201 294 | `8ff38212d23da300bbe3705c645e6e5b9475f0bfde01558eb17813e22acaaaaa` | `ru_RU-irina-medium.onnx.json` |
 | English `lessac` (medium) | `en_US-lessac-medium.onnx` | 63 201 294 | `5efe09e69902187827af646e1a6e9d269dee769f9877d17b16b1b46eeaaf019f` | `en_US-lessac-medium.onnx.json` |
+| Russian `dmitri` (medium, **male**, 2026-10-17) | `ru_RU-dmitri-medium.onnx` | 63 201 294 | `f073356ebc4bd0f80c5af58df2953a5988bd5bdab1eb38635ce960b071fbefcb` | `ru_RU-dmitri-medium.onnx.json` |
+| English `ryan` (medium, **male**, 2026-10-17) | `en_US-ryan-medium.onnx` | 63 201 294 | `abf4c274862564ed647ba0d2c47f8ee7c9b717d27bdad9219100eb310db4047a` | `en_US-ryan-medium.onnx.json` |
 
 Both configs: 22 050 Hz, quality `medium`, 1 speaker, espeak voices `ru` / `en-us`, `piper_version 1.0.0` (`VERIFIED`).
 Upstream is presumably the `rhasspy/piper-voices` collection on Hugging Face; the download source and revision are not recorded (`NOT VERIFIED`).
+The two male voices were downloaded on 2026-10-17 from `rhasspy/piper-voices` @ `c10ece1aade47bb51c153c893d14e5bf8e5b7117`; SHA256 equal to the LFS object ids (`VERIFIED`). Model cards: `dmitri` — dataset OHF-Voice voice-datasets, **CC0**; `ryan` — RyanSpeech dataset, **CC BY-NC-SA 4.0** (non-commercial). Both fine-tuned from `lessac` medium.
 
 ## Kokoro English — Kokoro-82M + `af_heart`
 
@@ -85,6 +90,7 @@ Upstream is presumably the `rhasspy/piper-voices` collection on Hugging Face; th
 | Upstream | <https://huggingface.co/hexgrad/Kokoro-82M> @ commit `f3ff3571791e39611d31c381e3a41a3af07b4987` |
 | Weights | `kokoro-models\kokoro-82m\kokoro-v1_0.pth`, 327 212 226 bytes, SHA256 `496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4` |
 | Voicepack | `kokoro-models\kokoro-82m\voices\af_heart.pt`, 523 425 bytes, SHA256 `0ab5709b8ffab19bfd849cd11d98f75b60af7733253ad0d67b12382a102cb4ff` |
+| Male voicepack (2026-10-17) | `voices\am_michael.pt`, 523 435 bytes, SHA256 `9a443b79a4b22489a5b0ab7c651a0bcd1a30bef675c28333f06971abbd47bd37` (checked at start). Also downloaded, not used: `am_fenrir.pt` (SHA256 `98e507ec…`). Both rated C+ in the upstream VOICES.md, the best-rated American male voices. |
 | Config | `kokoro-models\kokoro-82m\config.json` |
 | G2P | `misaki` English (`KPipeline(lang_code="a")`, American English) with espeak-ng fallback; needs spaCy `en_core_web_sm` |
 
@@ -97,7 +103,8 @@ Status: downloaded 2026-10-13 from the pinned commit; SHA256 compared with the H
 | Upstream | <https://huggingface.co/zaakirio/kokoro-ru> @ commit `d649c57b239b18c4c384378127cbf01dba039bc1` |
 | Weights | `kokoro-models\kokoro-ru\kokoro-ru-v2-base.pth`, 327 220 619 bytes, SHA256 `3bbee5bc05cfa182afc365b9116eaed8355f939c3c0af8aa0e43fdc45343ca15` (shared by `sveta` and `masha`) |
 | Voicepack | `kokoro-models\kokoro-ru\voices\masha.pt`, 523 831 bytes, SHA256 `464d64ae793647c3b3f9d1f08ce5b11c641a61799f0bca65f111e6aad5d0a362` |
-| Not downloaded | `sveta`, `dima` voicepacks, the `dima` checkpoint, ONNX exports |
+| Male voicepack (2026-10-17) | `voices\dima.pt`, 523 831 bytes, SHA256 `80d4d216b5906c232ede48f2c07ab3aee0785e34d1df6ec6dc8cf44767d74c69` (checked at start); uses the same `kokoro-ru-v2-base.pth` |
+| Not downloaded | `sveta` voicepack, ONNX exports |
 | Config / vocab | `config.json`, `kokoro-config.json` |
 | G2P script | `ru_g2p.py` (unmodified; SHA256 `d45057711b453a6349dac9d56b24272feaba42fbbd9ce43304dc9d82404777b4`) |
 | espeak data | `espeak-data\` — 364 files; an espeak-ng data build whose Russian rules honour combining-acute stress marks. File sizes compared with upstream at download; `ru_dict` and `phondata` SHA256-checked. |
